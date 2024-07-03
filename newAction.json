@@ -16786,7 +16786,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-06-29T22:07:30.201Z",
-        "updatedAt": "2024-07-02T12:47:38.467Z",
+        "updatedAt": "2024-07-03T11:35:35.441Z",
         "deleted": false,
         "policies": [
             {
@@ -16817,7 +16817,7 @@
             "datasource": {
                 "name": "DEFAULT_REST_DATASOURCE",
                 "datasourceConfiguration": {
-                    "url": "{{main.env.nodeUrl}}/getKnowlegeDatas"
+                    "url": "{{main.env.nodeUrl}}/getKnowlegeDBAnalytic"
                 },
                 "invalids": [],
                 "isValid": true,
@@ -16842,7 +16842,11 @@
                     }
                 ]
             },
-            "dynamicBindingPathList": [],
+            "dynamicBindingPathList": [
+                {
+                    "key": "datasourceUrl"
+                }
+            ],
             "isValid": true,
             "invalids": [],
             "jsonPathKeys": [
@@ -16852,7 +16856,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-06-29T22:08:43.163Z",
-        "updatedAt": "2024-07-02T11:07:04.183Z",
+        "updatedAt": "2024-07-03T11:38:02.137Z",
         "deleted": false,
         "policies": [
             {
