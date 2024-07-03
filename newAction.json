@@ -16817,7 +16817,7 @@
             "datasource": {
                 "name": "DEFAULT_REST_DATASOURCE",
                 "datasourceConfiguration": {
-                    "url": "{{main.env.nodeUrl}}/getKnowlegeDBAnalytic"
+                    "url": "{{main.env.nodeUrl}}/getKnowlegeDatas"
                 },
                 "invalids": [],
                 "isValid": true,
@@ -16856,7 +16856,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-06-29T22:08:43.163Z",
-        "updatedAt": "2024-07-03T11:49:34.005Z",
+        "updatedAt": "2024-07-03T11:51:48.928Z",
         "deleted": false,
         "policies": [
             {
@@ -17332,6 +17332,72 @@
         },
         "createdAt": "2024-07-02T14:32:12.666Z",
         "updatedAt": "2024-07-02T14:33:50.273Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "66853b3bc02b9bf080800c3a",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "getKnowlegeDBAnalytic",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/getKnowlegeDBAnalytic"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": true,
+            "pageId": "Home",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "GET",
+                "headers": [],
+                "queryParameters": [],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ]
+            },
+            "dynamicBindingPathList": [],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-07-03T11:51:23.251Z",
+        "updatedAt": "2024-07-03T11:51:38.046Z",
         "deleted": false,
         "policies": [
             {
