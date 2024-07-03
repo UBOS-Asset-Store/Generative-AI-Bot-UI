@@ -16824,7 +16824,7 @@
                 "pluginId": "API",
                 "messages": []
             },
-            "executeOnLoad": false,
+            "executeOnLoad": true,
             "pageId": "Home",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
@@ -16856,7 +16856,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-06-29T22:08:43.163Z",
-        "updatedAt": "2024-07-03T11:38:02.137Z",
+        "updatedAt": "2024-07-03T11:49:34.005Z",
         "deleted": false,
         "policies": [
             {
