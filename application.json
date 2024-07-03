@@ -6,7 +6,7 @@
     "isPublic": true,
     "isShowPlatformTag": true,
     "createdAt": "2023-03-02T13:50:57.853Z",
-    "updatedAt": "2024-07-03T14:51:28.431Z",
+    "updatedAt": "2024-07-03T19:09:42.451Z",
     "deleted": false,
     "pages": [
         {
@@ -120,7 +120,6 @@
         "auth_node": "${env.get(\"nodeUrl\")}/check_token",
         "registry_id": "Registration",
         "other_pages": [
-            "Onboarding",
             "ResetPassword"
         ]
     },
@@ -359,7 +358,7 @@
                                     "children": [
                                         {
                                             "isVisible": true,
-                                            "text": "{{appsmith.user.auth_module.user.info.user.email}}",
+                                            "text": "{{main.user.auth_module.user.info.user.email}}",
                                             "fontSize": "PARAGRAPH",
                                             "fontStyle": "BOLD",
                                             "textAlign": "RIGHT",
@@ -536,7 +535,7 @@
                             "leftColumn": 18,
                             "rightColumn": 37,
                             "topRow": 0,
-                            "bottomRow": 7,
+                            "bottomRow": 5,
                             "parentId": "b8feb4cpvv",
                             "borderRadius": "ROUNDED",
                             "dynamicBindingPathList": [

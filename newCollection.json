@@ -73,7 +73,7 @@
         "id": "64a1c91cedd3b9b22ecf75de",
         "name": "JSObject2",
         "pageId": "Training",
-        "body": "export default {\n\tmyVar1: [],\n\tmyVar2: {},\n\tmyFun2: async (id) => {\n await storeValue('idToDeleteOb', id)\n await deleteObject.run()\n\tgetKnowlegeFiles.run()\n\t}\n}",
+        "body": "export default {\n\tmyVar1: [],\n\tmyVar2: {},\n\tmyFun2: async (id) => {\n await storeValue('idToDeleteOb', id)\n await deleteObject.run()\n\tgetKnowlegeFiles.run()\n\t},\n\tmyFun3: async() => {\n\t\tgetAllBases.run(()=>getKnowlegeFiles.run())\n\t}\n}",
         "variables": [
             {
                 "name": "myVar1",
@@ -85,6 +85,42 @@
             }
         ],
         "actions": [
+            {
+                "name": "myFun3",
+                "collectionId": "64a1c91cedd3b9b22ecf75de",
+                "executeOnLoad": true,
+                "pageId": "Training",
+                "actionConfiguration": {
+                    "body": "async() => {\n\t\tgetAllBases.run(()=>getKnowlegeFiles.run())\n\t}",
+                    "isAsync": true,
+                    "timeoutInMillisecond": 10000,
+                    "jsArguments": [],
+                    "paginationType": "NONE",
+                    "encodeParamsToggle": true
+                },
+                "_id": "6685803cc02b9bf080800c41",
+                "id": "6685803cc02b9bf080800c41",
+                "applicationId": "jetsondashboard",
+                "datasource": {
+                    "isValid": true,
+                    "messages": [],
+                    "name": "UNUSED_DATASOURCE",
+                    "new": true,
+                    "pluginId": "",
+                    "userPermissions": []
+                },
+                "dynamicBindingPathList": [
+                    {
+                        "key": "body"
+                    }
+                ],
+                "fullyQualifiedName": "JSObject2.myFun3",
+                "isValid": true,
+                "jsonPathKeys": [
+                    "async() => {\n\t\t\n\t}"
+                ],
+                "pluginType": "JS"
+            },
             {
                 "name": "myFun2",
                 "collectionId": "64a1c91cedd3b9b22ecf75de",
@@ -506,7 +542,7 @@
         "id": "6579b875a69a47e15535fc49",
         "name": "JSObject1",
         "pageId": "Login",
-        "body": "export default {\n\tmyVar1: [],\n\tmyVar2: {},\n\tmyFun1:async () => {\nconsole.log('Before calling demoUser.run()');\nawait demoUser.run()\n  .then((data) => {\n\tconsole.log(data)\nstoreValue(\"lg\",main.URL.queryParams.lg ?main.URL.queryParams.lg:\"En\");\n\tgetMenu.run()\n  if(data.email){\n\t\tnavigateTo('AI Chat',{})\n\t}\n  })\n  .catch((error) => {\n    console.error('Inside catch block');\n    console.error(error);\n  });\n\n\n\n\t},\n\tmyFun2: async () => {\n\t\t//use async-await or promises\n\t}\n}",
+        "body": "export default {\n\tmyVar1: [],\n\tmyVar2: {},\n\tmyFun1:async () => {\nconsole.log('Before calling demoUser.run()');\nawait demoUser.run()\n  .then((data) => {\n\tconsole.log(data)\nstoreValue(\"lg\",main.URL.queryParams.lg ?main.URL.queryParams.lg:\"En\");\n\tgetMenu.run()\n  if(data.email){\n\t\tnavigateTo('Onboarding',{})\n\t}\n  })\n  .catch((error) => {\n    console.error('Inside catch block');\n    console.error(error);\n  });\n\n\n\n\t},\n\tmyFun2: async () => {\n\t\t//use async-await or promises\n\t}\n}",
         "variables": [
             {
                 "name": "myVar1",
@@ -523,7 +559,7 @@
                 "pageId": "Login",
                 "executeOnLoad": true,
                 "actionConfiguration": {
-                    "body": "async () => {\nconsole.log('Before calling demoUser.run()');\nawait demoUser.run()\n  .then((data) => {\n\tconsole.log(data)\nstoreValue(\"lg\",main.URL.queryParams.lg ?main.URL.queryParams.lg:\"En\");\n\tgetMenu.run()\n  if(data.email){\n\t\tnavigateTo('AI Chat',{})\n\t}\n  })\n  .catch((error) => {\n    console.error('Inside catch block');\n    console.error(error);\n  });\n\n\n\n\t}",
+                    "body": "async () => {\nconsole.log('Before calling demoUser.run()');\nawait demoUser.run()\n  .then((data) => {\n\tconsole.log(data)\nstoreValue(\"lg\",main.URL.queryParams.lg ?main.URL.queryParams.lg:\"En\");\n\tgetMenu.run()\n  if(data.email){\n\t\tnavigateTo('Onboarding',{})\n\t}\n  })\n  .catch((error) => {\n    console.error('Inside catch block');\n    console.error(error);\n  });\n\n\n\n\t}",
                     "isAsync": true,
                     "timeoutInMillisecond": 10000,
                     "jsArguments": [],

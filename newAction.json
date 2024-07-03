@@ -7666,7 +7666,12 @@
                 "encodeParamsToggle": true,
                 "httpMethod": "GET",
                 "headers": [],
-                "queryParameters": [],
+                "queryParameters": [
+                    {
+                        "key": "id",
+                        "value": "{{Select1.selectedOptionValue}}"
+                    }
+                ],
                 "bodyFormData": [],
                 "formData": {
                     "apiContentType": "application/json"
@@ -7680,18 +7685,23 @@
             "dynamicBindingPathList": [
                 {
                     "key": "datasourceUrl"
+                },
+                {
+                    "key": "queryParameters[0].value"
                 }
             ],
             "isValid": true,
             "invalids": [],
             "jsonPathKeys": [
-                "main.env.nodeUrl"
+                "main.env.nodeUrl",
+                "sel",
+                "Select1.selectedOptionValue"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-10-12T13:23:29.623Z",
-        "updatedAt": "2024-05-15T13:55:37.113Z",
+        "updatedAt": "2024-07-03T16:52:51.329Z",
         "deleted": false,
         "policies": [
             {
@@ -10271,7 +10281,7 @@
         "pageId": "Login",
         "executeOnLoad": true,
         "actionConfiguration": {
-            "body": "async () => {\nconsole.log('Before calling demoUser.run()');\nawait demoUser.run()\n  .then((data) => {\n\tconsole.log(data)\nstoreValue(\"lg\",main.URL.queryParams.lg ?main.URL.queryParams.lg:\"En\");\n\tgetMenu.run()\n  if(data.email){\n\t\tnavigateTo('AI Chat',{})\n\t}\n  })\n  .catch((error) => {\n    console.error('Inside catch block');\n    console.error(error);\n  });\n\n\n\n\t}",
+            "body": "async () => {\nconsole.log('Before calling demoUser.run()');\nawait demoUser.run()\n  .then((data) => {\n\tconsole.log(data)\nstoreValue(\"lg\",main.URL.queryParams.lg ?main.URL.queryParams.lg:\"En\");\n\tgetMenu.run()\n  if(data.email){\n\t\tnavigateTo('Onboarding',{})\n\t}\n  })\n  .catch((error) => {\n    console.error('Inside catch block');\n    console.error(error);\n  });\n\n\n\n\t}",
             "isAsync": true,
             "timeoutInMillisecond": 10000,
             "jsArguments": [],
@@ -12268,7 +12278,16 @@
                         "value": "application/json"
                     }
                 ],
-                "queryParameters": [],
+                "queryParameters": [
+                    {
+                        "key": "email",
+                        "value": "{{main.user.auth_module.user.info.user.email}}"
+                    },
+                    {
+                        "key": "role",
+                        "value": "{{main.user.auth_module.user.info.user.role}}"
+                    }
+                ],
                 "bodyFormData": [],
                 "formData": {
                     "apiContentType": "application/json"
@@ -12280,17 +12299,26 @@
                 ],
                 "body": ""
             },
-            "dynamicBindingPathList": [],
+            "dynamicBindingPathList": [
+                {
+                    "key": "queryParameters[0].value"
+                },
+                {
+                    "key": "queryParameters[1].value"
+                }
+            ],
             "isValid": true,
             "invalids": [],
             "jsonPathKeys": [
-                "main.env.nodeUrl"
+                "main.env.nodeUrl",
+                "main.user.auth_module.user.info.user.email",
+                "main.user.auth_module.user.info.user.role"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-02-26T13:48:16.116Z",
-        "updatedAt": "2024-05-15T13:44:41.912Z",
+        "updatedAt": "2024-07-03T16:04:58.728Z",
         "deleted": false,
         "policies": [
             {
@@ -16506,7 +16534,7 @@
                         "value": true
                     }
                 ],
-                "body": "{\n\t\"answer_length\":{{JSON.stringify(answer_length.selectedOptionLabel)}},\n\t\"answer_as\":{{JSON.stringify(answer_as_onboarding.selectedOptionLabel)}},\n\t\"tone\":{{JSON.stringify(tone_onboarding.selectedOptionLabel)}},\n\t\"language\":{{JSON.stringify(language_onboarding.selectedOptionLabel)}},\n\t\"prompt_custom\":{{JSON.stringify(prompt_custom_onboarding.text)}},\n\t\"knowledge_base\":{{JSON.stringify(knowledge_base_onboarding.selectedOptionLabel)}},\n\t\"id_base\":{{JSON.stringify(knowledge_base_onboarding.selectedOptionValue)}},\n\t\"isPromptDefault\": false\n}"
+                "body": "{\n\t\"answer_length_onboarding\":{{JSON.stringify(answer_length_onboarding.selectedOptionLabel)}},\n\t\"answer_as\":{{JSON.stringify(answer_as_onboarding.selectedOptionLabel)}},\n\t\"tone\":{{JSON.stringify(tone_onboarding.selectedOptionLabel)}},\n\t\"language\":{{JSON.stringify(language_onboarding.selectedOptionLabel)}},\n\t\"prompt_custom\":{{JSON.stringify(prompt_custom_onboarding.text)}},\n\t\"knowledge_base\":{{JSON.stringify(knowledge_bdddase_onboarding.selectedOptionLabel)}},\n\t\"id_base\":{{JSON.stringify(knowledge_bdddase_onboarding.selectedOptionValue)}},\n\t\"isPromptDefault\": false\n}"
             },
             "dynamicBindingPathList": [
                 {
@@ -16588,7 +16616,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-06-29T16:50:58.348Z",
-        "updatedAt": "2024-06-29T16:52:47.127Z",
+        "updatedAt": "2024-07-03T14:28:36.629Z",
         "deleted": false,
         "policies": [
             {
@@ -16654,7 +16682,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-06-29T17:03:59.815Z",
-        "updatedAt": "2024-06-29T22:23:20.022Z",
+        "updatedAt": "2024-07-03T15:57:08.735Z",
         "deleted": false,
         "policies": [
             {
@@ -16720,7 +16748,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-06-29T17:04:56.138Z",
-        "updatedAt": "2024-06-29T22:22:14.978Z",
+        "updatedAt": "2024-07-03T14:28:38.374Z",
         "deleted": false,
         "policies": [
             {
@@ -17416,5 +17444,295 @@
                 "users": []
             }
         ]
+    },
+    {
+        "_id": "66855fe1c02b9bf080800c3e",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "saveOnboardingBotName",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/saveOnboardingBotName"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "Onboarding",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "POST",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ],
+                "body": "{\n\t\"name\":{{JSON.stringify(Input_name_bot.text)}},\n\t\"email\":{{JSON.stringify(main.user.auth_module.user.info.user.email)}}\n}"
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "datasourceUrl"
+                },
+                {
+                    "key": "body"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "JSON.stringify(Input_name_bot.text)",
+                "JSON.stringify(main.user.auth_module.user.info.user.email)"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-07-03T14:27:45.948Z",
+        "updatedAt": "2024-07-03T16:18:08.479Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "668574d1c02b9bf080800c3f",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "saveKnowladgeBase",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/saveKnowladgeBase"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "Onboarding",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "POST",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ],
+                "body": "{\n\"type\":{{JSON.stringify(main.store.type)}},\n\"content\":{{JSON.stringify(RichTextEditor1.text)}},\n\"email\":{{JSON.stringify(main.user.auth_module.user.info.user.email)}},\n\"link\":{{JSON.stringify(Input_www.text)}}\n}"
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "datasourceUrl"
+                },
+                {
+                    "key": "body"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "JSON.stringify(main.store.type)",
+                "JSON.stringify(RichTextEditor1.text)",
+                "JSON.stringify(main.user.auth_module.user.info.user.email)",
+                "JSON.stringify(Input_www.text)",
+                "main.env.nodeUrl,{JSON.stringify(Input_www.text),2024-07-03T15:57:05.374Z,2024-07-03T16:30:10.712Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,JSON.stringify(Input_www.text),2024-07-03T15:57:05.374Z,2024-07-03T16:30:13.540Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2024-07-03T15:57:05.374Z,2024-07-03T16:30:15.669Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2024-07-03T15:57:05.374Z,2024-07-03T16:30:17.511Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2024-07-03T15:57:05.374Z,2024-07-03T16:30:18.599Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2024-07-03T15:57:05.374Z,2024-07-03T17:02:53.590Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,JSON.stringify(main.user.auth_module.user.info.user.email),2024-07-03T15:57:05.374Z,2024-07-03T17:03:06.703Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2024-07-03T15:57:05.374Z,2024-07-03T17:03:08.154Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-07-03T15:57:05.374Z",
+        "updatedAt": "2024-07-03T17:03:10.346Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "668577bbc02b9bf080800c40",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "saveKnowladgeBaseAiSetup",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/saveKnowladgeBaseAiSetup"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "Onboarding",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "POST",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "body": "{\n\t  \"prompt\": {{JSON.stringify(prompt_custom_onboarding.text)}},\n     \"model\":{{JSON.stringify(\"gpt-4o\")}},\n    \"email\":{{JSON.stringify(main.user.auth_module.user.info.user.email)}},\n     \"answer_length_onboarding\":{{JSON.stringify(answer_length_onboarding.selectedOptionValue)}},\n     \"answer_as\":{{JSON.stringify(answer_as_onboarding.selectedOptionValue)}},\n     \"tone\":{{JSON.stringify(tone_onboarding.selectedOptionValue)}},\n     \"language\":{{JSON.stringify(language_onboarding.selectedOptionValue)}},\n     \"name_base\":{{JSON.stringify(knowledge_base_onboarding.text)}}\n}",
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ]
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "datasourceUrl"
+                },
+                {
+                    "key": "body"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "JSON.stringify(prompt_custom_onboarding.text)",
+                "JSON.stringify(\"gpt-4o\")",
+                "JSON.stringify(main.user.auth_module.user.info.user.email)",
+                "JSON.stringify(answer_length_onboarding.selectedOptionValue)",
+                "JSON.stringify(answer_as_onboarding.selectedOptionValue)",
+                "JSON.stringify(tone_onboarding.selectedOptionValue)",
+                "JSON.stringify(language_onboarding.selectedOptionValue)",
+                "JSON.stringify(knowledge_base_onboarding.)",
+                "main.env.nodeUrl,JSON.stringify(knowledge_base_onboarding.),2024-07-03T16:09:31.233Z,2024-07-03T16:24:26.662Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl",
+                "JSON.stringify(knowledge_base_onboarding.text)"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-07-03T16:09:31.233Z",
+        "updatedAt": "2024-07-03T16:24:28.021Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "name": "myFun3",
+        "collectionId": "64a1c91cedd3b9b22ecf75de",
+        "executeOnLoad": true,
+        "pageId": "Training",
+        "actionConfiguration": {
+            "body": "async() => {\n\t\tgetAllBases.run(()=>getKnowlegeFiles.run())\n\t}",
+            "isAsync": true,
+            "timeoutInMillisecond": 10000,
+            "jsArguments": [],
+            "paginationType": "NONE",
+            "encodeParamsToggle": true
+        },
+        "_id": "6685803cc02b9bf080800c41",
+        "id": "6685803cc02b9bf080800c41",
+        "applicationId": "jetsondashboard",
+        "datasource": {
+            "isValid": true,
+            "messages": [],
+            "name": "UNUSED_DATASOURCE",
+            "new": true,
+            "pluginId": "",
+            "userPermissions": []
+        },
+        "dynamicBindingPathList": [
+            {
+                "key": "body"
+            }
+        ],
+        "fullyQualifiedName": "JSObject2.myFun3",
+        "isValid": true,
+        "jsonPathKeys": [
+            "async() => {\n\t\t\n\t}"
+        ],
+        "pluginType": "JS"
     }
 ]
