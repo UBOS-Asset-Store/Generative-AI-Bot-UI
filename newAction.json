@@ -9195,7 +9195,7 @@
                         "value": true
                     }
                 ],
-                "body": "{\n    \"type\":{{JSON.stringify(type_knowledgebase.selectedOptionLabel)}},\n    \"name\": {{JSON.stringify(name_knowledgebase.text)}},\n\t\t\"email\": \"{{main.user.auth_module.user.info.user.email}}\"\n}"
+                "body": "{\n    \"type\":{{JSON.stringify(type_knowledgebase.selectedOptionLabel)}},\n    \"name\": {{JSON.stringify(name_knowledgebase.text)}},\n\t\t\"ownerID\": \"{{main.user.auth_module.user.info.user._id}}\"\n}"
             },
             "dynamicBindingPathList": [
                 {
@@ -9212,13 +9212,14 @@
                 "JSON.stringify(type_knowledgebase.selectedOptionLabel)",
                 "JSON.stringify(name_knowledgebase.text)",
                 "main.user.auth_module.user.info.user.email",
-                "main.env.nodeUrl,2023-10-31T11:26:33.701Z,2024-02-27T08:24:45.236Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl"
+                "main.env.nodeUrl,2023-10-31T11:26:33.701Z,2024-07-05T11:40:46.584Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl",
+                "main.user.auth_module.user.info.user._id"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-10-31T11:26:33.701Z",
-        "updatedAt": "2024-07-01T09:47:50.876Z",
+        "updatedAt": "2024-07-05T11:40:48.872Z",
         "deleted": false,
         "policies": [
             {
