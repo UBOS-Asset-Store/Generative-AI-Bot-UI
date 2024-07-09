@@ -18004,7 +18004,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-07-06T14:24:10.947Z",
-        "updatedAt": "2024-07-06T14:24:47.594Z",
+        "updatedAt": "2024-07-09T13:16:51.874Z",
         "deleted": false,
         "policies": [
             {
@@ -18514,5 +18514,83 @@
             "async () => {\n\t\t//use async-await or promises\n\t}"
         ],
         "pluginType": "JS"
+    },
+    {
+        "_id": "668d383df6b32c5cea69e2e9",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "saveCredentialsOpenAI",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/saveCredentialsOpenAI"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "Home",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "POST",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ],
+                "body": "{\n\temail:{{JSON.stringify(main.user.auth_module.user.info.user.email)}},\n openai_api:  \n}"
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "body"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "JSON.stringify()",
+                "JSON.stringify(main.user.auth_module.user.info.user.email)"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-07-09T13:16:45.324Z",
+        "updatedAt": "2024-07-09T13:17:45.742Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
     }
 ]
