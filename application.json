@@ -524,7 +524,7 @@
                         {
                             "isVisible": "{{main.user.auth_module.user.info.user.role==='demo'}}",
                             "animateLoading": true,
-                            "text": "Clone it! ",
+                            "text": "White Label",
                             "buttonColor": "#2E3D49",
                             "buttonVariant": "SECONDARY",
                             "placement": "CENTER",
@@ -560,7 +560,7 @@
                                     "key": "onClick"
                                 }
                             ],
-                            "iconName": "duplicate",
+                            "iconName": "double-chevron-up",
                             "iconAlign": "left",
                             "onClick": "{{postIframeMessageToParent({\n  type: 'SET_LAYOUT_ITEM',\n  payload: {\n    id: '{\"id\":\"TemplateManager\",\"type\":\"TemplateManager\"}',\n    component:\"TemplateManager\",\n    title: 'AI Bot',\n    props: {\n  templateId: \"65397499fe34080011cedbb5\"\n    }\n  }\n})}}\n",
                             "dynamicPropertyPathList": [
