@@ -743,7 +743,7 @@
     {
         "id": "6686fe6dc02b9bf080800c43",
         "name": "JSObject1",
-        "pageId": "Home",
+        "pageId": "Home old",
         "body": "export default {\n\tmyVar1: [],\n\tmyVar2: {},\n\tmyFun1: () => {\n\t},\n\tmyFun2: async () => {\nif(main.URL.queryParams.fromOnboarding=='true'){\n\tshowModal('Modal11')\n}\t}\n}",
         "variables": [
             {
@@ -840,5 +840,102 @@
         "actionIds": [],
         "archivedActionIds": [],
         "archivedActions": []
+    },
+    {
+        "id": "668af9c6c02b9bf080800c54",
+        "name": "JSObject1",
+        "pageId": "Home",
+        "body": "export default {\n\tmyVar1: [],\n\tmyVar2: {},\n\tmyFun1: () => {\n\t},\n\tmyFun2: async () => {\nif(main.URL.queryParams.fromOnboarding=='true'){\n\tshowModal('Modal_demobotSuccess')\n}\t}\n}",
+        "variables": [
+            {
+                "name": "myVar1",
+                "value": []
+            },
+            {
+                "name": "myVar2",
+                "value": {}
+            }
+        ],
+        "actions": [
+            {
+                "name": "myFun1",
+                "pageId": "Home",
+                "executeOnLoad": false,
+                "actionConfiguration": {
+                    "body": "() => {\n\t}",
+                    "isAsync": false,
+                    "timeoutInMillisecond": 10000,
+                    "jsArguments": [],
+                    "paginationType": "NONE",
+                    "encodeParamsToggle": true
+                },
+                "clientSideExecution": true,
+                "_id": "668af9c6c02b9bf080800c55",
+                "id": "668af9c6c02b9bf080800c55",
+                "collectionId": "668af9c6c02b9bf080800c54",
+                "confirmBeforeExecute": false,
+                "applicationId": "jetsondashboard",
+                "datasource": {
+                    "isValid": true,
+                    "messages": [],
+                    "name": "UNUSED_DATASOURCE",
+                    "new": true,
+                    "pluginId": "",
+                    "userPermissions": []
+                },
+                "dynamicBindingPathList": [
+                    {
+                        "key": "body"
+                    }
+                ],
+                "fullyQualifiedName": "JSObject1.myFun1",
+                "isValid": true,
+                "jsonPathKeys": [
+                    "() => {\n\t\t//write code here\n\t}"
+                ],
+                "pluginType": "JS"
+            },
+            {
+                "name": "myFun2",
+                "pageId": "Home",
+                "executeOnLoad": true,
+                "actionConfiguration": {
+                    "body": "async () => {\nif(main.URL.queryParams.fromOnboarding=='true'){\n\tshowModal('Modal_demobotSuccess')\n}\t}",
+                    "isAsync": true,
+                    "timeoutInMillisecond": 10000,
+                    "jsArguments": [],
+                    "paginationType": "NONE",
+                    "encodeParamsToggle": true
+                },
+                "clientSideExecution": true,
+                "_id": "668af9c6c02b9bf080800c56",
+                "id": "668af9c6c02b9bf080800c56",
+                "collectionId": "668af9c6c02b9bf080800c54",
+                "confirmBeforeExecute": false,
+                "applicationId": "jetsondashboard",
+                "datasource": {
+                    "isValid": true,
+                    "messages": [],
+                    "name": "UNUSED_DATASOURCE",
+                    "new": true,
+                    "pluginId": "",
+                    "userPermissions": []
+                },
+                "dynamicBindingPathList": [
+                    {
+                        "key": "body"
+                    }
+                ],
+                "fullyQualifiedName": "JSObject1.myFun2",
+                "isValid": true,
+                "jsonPathKeys": [
+                    "async () => {\n\t\t//use async-await or promises\n\t}"
+                ],
+                "pluginType": "JS"
+            }
+        ],
+        "applicationId": "jetsondashboard",
+        "pluginType": "JS",
+        "_id": "668af9c6c02b9bf080800c54"
     }
 ]

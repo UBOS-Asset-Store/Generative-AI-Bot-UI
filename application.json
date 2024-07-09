@@ -4,9 +4,9 @@
     "slug": "jetsondashboard",
     "organizationId": "Org",
     "isPublic": true,
-    "isShowPlatformTag": true,
+    "isShowPlatformTag": false,
     "createdAt": "2023-03-02T13:50:57.853Z",
-    "updatedAt": "2024-07-04T22:27:21.351Z",
+    "updatedAt": "2024-07-08T14:47:22.723Z",
     "deleted": false,
     "pages": [
         {
@@ -46,7 +46,7 @@
             "isDefault": false
         },
         {
-            "_id": "Demo",
+            "_id": "Demo old",
             "isDefault": false
         },
         {
@@ -78,11 +78,19 @@
             "isDefault": false
         },
         {
-            "_id": "Home",
+            "_id": "Home old",
             "isDefault": false
         },
         {
             "_id": "ResetPassword",
+            "isDefault": false
+        },
+        {
+            "_id": "Demo",
+            "isDefault": false
+        },
+        {
+            "_id": "Home",
             "isDefault": false
         }
     ],
@@ -111,7 +119,8 @@
     "global_setting": {
         "favicon": "",
         "title": "AI Chatbot",
-        "css": "${env.get(\"nodeUrl\")}/css"
+        "css": "${env.get(\"nodeUrl\")}/css",
+        "customScript": "<script>!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(\".\");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement(\"script\")).type=\"text/javascript\",p.async=!0,p.src=s.api_host+\"/static/array.js\",(r=t.getElementsByTagName(\"script\")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a=\"posthog\",u.people=u.people||[],u.toString=function(t){var e=\"posthog\";return\"posthog\"!==a&&(e+=\".\"+a),t||(e+=\" (stub)\"),e},u.people.toString=function(){return u.toString(1)+\".people (stub)\"},o=\"capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags\".split(\" \"),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);posthog.init('phc_brIJYYWZAW8qXyMm77g6vNKiK2uAUeqsPokceCbyola',{api_host:'https://app.posthog.com',persistence: 'localStorage+cookie',session_recording: {recordCrossOriginIframes: true}});posthog.identify('6177f82066eb021100000314', { email: 'user@gmail.com', name: 'admin'});</script><script>(function(w,d,t,u,n,a,m){w['MauticTrackingObject']=n;w[n]=w[n]||function(){(w[n].q=w[n].q||[]).push(arguments)},a=d.createElement(t),m=d.getElementsByTagName(t)[0];a.async=1;a.src=u;m.parentNode.insertBefore(a,m)})(window,document,'script','https://mautic.betedo.com/mtc.js','mt');mt('send', 'pageview');</script>"
     },
     "lastDeployedAt": "2022-10-19T15:59:36.363Z",
     "is_custom_auth": true,
@@ -334,7 +343,7 @@
                     "canExtend": false,
                     "children": [
                         {
-                            "isVisible": "{{main.user.auth_module.user.info.user.role!=='demo'}}",
+                            "isVisible": true,
                             "backgroundColor": "",
                             "widgetName": "Container2",
                             "containerStyle": "card",
@@ -387,14 +396,17 @@
                                             "dynamicBindingPathList": [
                                                 {
                                                     "key": "text"
+                                                },
+                                                {
+                                                    "key": "classStyle"
                                                 }
                                             ],
                                             "dynamicTriggerPathList": [],
-                                            "classStyle": "",
+                                            "classStyle": "{{main.user.auth_module.user.info.user.role!=='demo' ? '': 'demoEmail'}}",
                                             "dynamicPropertyPathList": []
                                         },
                                         {
-                                            "isVisible": true,
+                                            "isVisible": "{{main.user.auth_module.user.info.user.role!=='demo'}}",
                                             "iconName": "log-out",
                                             "borderRadius": "CIRCLE",
                                             "boxShadow": "NONE",
@@ -419,7 +431,11 @@
                                             "topRow": 0,
                                             "bottomRow": 4,
                                             "parentId": "mzdbtrk72f",
-                                            "dynamicBindingPathList": [],
+                                            "dynamicBindingPathList": [
+                                                {
+                                                    "key": "isVisible"
+                                                }
+                                            ],
                                             "dynamicTriggerPathList": [
                                                 {
                                                     "key": "onClick"
@@ -427,7 +443,11 @@
                                             ],
                                             "classStyle": "logout_btn",
                                             "onClick": "{{navigateTo('Login', {})}}",
-                                            "dynamicPropertyPathList": []
+                                            "dynamicPropertyPathList": [
+                                                {
+                                                    "key": "isVisible"
+                                                }
+                                            ]
                                         },
                                         {
                                             "isVisible": true,
@@ -479,7 +499,7 @@
                                 }
                             ],
                             "version": 1,
-                            "classStyle": "header__container",
+                            "classStyle": "header__container ",
                             "type": "CONTAINER_WIDGET",
                             "hideCard": false,
                             "displayName": "Container",
@@ -497,23 +517,15 @@
                             "bottomRow": 7,
                             "parentId": "b8feb4cpvv",
                             "shouldScrollContents": false,
-                            "dynamicBindingPathList": [
-                                {
-                                    "key": "isVisible"
-                                }
-                            ],
+                            "dynamicBindingPathList": [],
                             "dynamicTriggerPathList": [],
-                            "dynamicPropertyPathList": [
-                                {
-                                    "key": "isVisible"
-                                }
-                            ]
+                            "dynamicPropertyPathList": []
                         },
                         {
                             "isVisible": "{{main.user.auth_module.user.info.user.role==='demo'}}",
                             "animateLoading": true,
                             "text": "Clone it! ",
-                            "buttonColor": "#3b82ff",
+                            "buttonColor": "#2E3D49",
                             "buttonVariant": "SECONDARY",
                             "placement": "CENTER",
                             "widgetName": "Button3434",
@@ -535,7 +547,7 @@
                             "leftColumn": 18,
                             "rightColumn": 37,
                             "topRow": 0,
-                            "bottomRow": 5,
+                            "bottomRow": 4,
                             "parentId": "b8feb4cpvv",
                             "borderRadius": "ROUNDED",
                             "dynamicBindingPathList": [
@@ -559,7 +571,7 @@
                                     "key": "isVisible"
                                 }
                             ],
-                            "boxShadow": "VARIANT2"
+                            "boxShadow": "NONE"
                         },
                         {
                             "isVisible": true,
@@ -601,7 +613,7 @@
                                                     "isVisible": true,
                                                     "isDisabled": false,
                                                     "index": 0,
-                                                    "onClick": "{{storeValue(\"lg\",\"En\");Api1.run(() => navigateTo(main.URL.fullPath, {}), () => {})}}",
+                                                    "onClick": "{{storeValue(\"lg\",\"En\");change_lang.run(() => navigateTo(main.URL.fullPath, {}), () => {})}}",
                                                     "iconAlign": "right"
                                                 },
                                                 "menuItem2": {
@@ -611,7 +623,7 @@
                                                     "isVisible": true,
                                                     "isDisabled": false,
                                                     "index": 1,
-                                                    "onClick": "{{storeValue(\"lg\",\"Pt\");Api1.run(() => navigateTo(main.URL.fullPath, {}), () => {})}}",
+                                                    "onClick": "{{storeValue(\"lg\",\"Pt\");change_lang.run(() => navigateTo(main.URL.fullPath, {}), () => {})}}",
                                                     "iconAlign": "right"
                                                 },
                                                 "menuItem3": {
@@ -621,7 +633,7 @@
                                                     "isVisible": true,
                                                     "isDisabled": false,
                                                     "index": 2,
-                                                    "onClick": "{{storeValue(\"lg\",\"Es\");Api1.run(() => navigateTo(main.URL.fullPath, {}), () => {})}}",
+                                                    "onClick": "{{storeValue(\"lg\",\"Es\");change_lang.run(() => navigateTo(main.URL.fullPath, {}), () => {})}}",
                                                     "iconAlign": "right"
                                                 },
                                                 "menuItem8jfdpsi8yy": {
@@ -631,7 +643,7 @@
                                                     "widgetId": "1unn8j99hi",
                                                     "isDisabled": false,
                                                     "isVisible": true,
-                                                    "onClick": "{{storeValue(\"lg\", \"Uk\");Api1.run(() => navigateTo(main.URL.fullPath, {}), () => {})}}",
+                                                    "onClick": "{{storeValue(\"lg\", \"Uk\");change_lang.run(() => navigateTo(main.URL.fullPath, {}), () => {})}}",
                                                     "iconAlign": "right",
                                                     "backgroundColor": ""
                                                 },
@@ -642,7 +654,7 @@
                                                     "widgetId": "dgcgxzj3uv",
                                                     "isDisabled": false,
                                                     "isVisible": true,
-                                                    "onClick": "{{storeValue(\"lg\",\"Fr\");Api1.run(() => navigateTo(main.URL.fullPath, {}), () => {})}}"
+                                                    "onClick": "{{storeValue(\"lg\",\"Fr\");change_lang.run(() => navigateTo(main.URL.fullPath, {}), () => {})}}"
                                                 },
                                                 "menuItemk6e5s0743x": {
                                                     "id": "menuItemk6e5s0743x",
@@ -651,7 +663,7 @@
                                                     "widgetId": "tu3l14k7i6",
                                                     "isDisabled": false,
                                                     "isVisible": true,
-                                                    "onClick": "{{storeValue(\"lg\",\"Hi\");Api1.run(() => navigateTo(main.URL.fullPath, {}), () => {})}}"
+                                                    "onClick": "{{storeValue(\"lg\",\"Hi\");change_lang.run(() => navigateTo(main.URL.fullPath, {}), () => {})}}"
                                                 },
                                                 "menuItem8wthuj00x8": {
                                                     "id": "menuItem8wthuj00x8",
@@ -660,7 +672,7 @@
                                                     "widgetId": "edateazj5c",
                                                     "isDisabled": false,
                                                     "isVisible": true,
-                                                    "onClick": "{{storeValue(\"lg\",\"De\");Api1.run(() => navigateTo(main.URL.fullPath, {}), () => {})}}"
+                                                    "onClick": "{{storeValue(\"lg\",\"De\");change_lang.run(() => navigateTo(main.URL.fullPath, {}), () => {})}}"
                                                 }
                                             },
                                             "widgetName": "btn_translate_copy",
@@ -723,13 +735,13 @@
                                                     "key": "menuItems.menuItem8jfdpsi8yy.onClick"
                                                 },
                                                 {
-                                                    "key": "menuItems.menuItemtck05lz9nq.onClick"
-                                                },
-                                                {
                                                     "key": "menuItems.menuItemk6e5s0743x.onClick"
                                                 },
                                                 {
                                                     "key": "menuItems.menuItem8wthuj00x8.onClick"
+                                                },
+                                                {
+                                                    "key": "menuItems.menuItemtck05lz9nq.onClick"
                                                 }
                                             ],
                                             "classStyle": "btn_translate",
@@ -794,7 +806,7 @@
                             "parentColumnSpace": 12.7685546875,
                             "parentRowSpace": 10,
                             "leftColumn": 0,
-                            "rightColumn": 18,
+                            "rightColumn": 17,
                             "topRow": 0,
                             "bottomRow": 7,
                             "parentId": "b8feb4cpvv",
