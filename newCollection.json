@@ -937,5 +937,102 @@
         "applicationId": "jetsondashboard",
         "pluginType": "JS",
         "_id": "668af9c6c02b9bf080800c54"
+    },
+    {
+        "id": "668e5fd8c02b9bf080800c60",
+        "name": "JSObject1",
+        "pageId": "Home Copy",
+        "body": "export default {\n\tmyVar1: [],\n\tmyVar2: {},\n\tmyFun1: () => {\n\t},\n\tmyFun2: async () => {\nif(main.URL.queryParams.fromOnboarding=='true'){\n\tshowModal('Modal_demobotSuccess')\n}\t}\n}",
+        "variables": [
+            {
+                "name": "myVar1",
+                "value": []
+            },
+            {
+                "name": "myVar2",
+                "value": {}
+            }
+        ],
+        "actions": [
+            {
+                "name": "myFun1",
+                "pageId": "Home Copy",
+                "executeOnLoad": false,
+                "actionConfiguration": {
+                    "body": "() => {\n\t}",
+                    "isAsync": false,
+                    "timeoutInMillisecond": 10000,
+                    "jsArguments": [],
+                    "paginationType": "NONE",
+                    "encodeParamsToggle": true
+                },
+                "clientSideExecution": true,
+                "_id": "668e5fd8c02b9bf080800c61",
+                "id": "668e5fd8c02b9bf080800c61",
+                "collectionId": "668e5fd8c02b9bf080800c60",
+                "confirmBeforeExecute": false,
+                "applicationId": "jetsondashboard",
+                "datasource": {
+                    "isValid": true,
+                    "messages": [],
+                    "name": "UNUSED_DATASOURCE",
+                    "new": true,
+                    "pluginId": "",
+                    "userPermissions": []
+                },
+                "dynamicBindingPathList": [
+                    {
+                        "key": "body"
+                    }
+                ],
+                "fullyQualifiedName": "JSObject1.myFun1",
+                "isValid": true,
+                "jsonPathKeys": [
+                    "() => {\n\t\t//write code here\n\t}"
+                ],
+                "pluginType": "JS"
+            },
+            {
+                "name": "myFun2",
+                "pageId": "Home Copy",
+                "executeOnLoad": true,
+                "actionConfiguration": {
+                    "body": "async () => {\nif(main.URL.queryParams.fromOnboarding=='true'){\n\tshowModal('Modal_demobotSuccess')\n}\t}",
+                    "isAsync": true,
+                    "timeoutInMillisecond": 10000,
+                    "jsArguments": [],
+                    "paginationType": "NONE",
+                    "encodeParamsToggle": true
+                },
+                "clientSideExecution": true,
+                "_id": "668e5fd8c02b9bf080800c62",
+                "id": "668e5fd8c02b9bf080800c62",
+                "collectionId": "668e5fd8c02b9bf080800c60",
+                "confirmBeforeExecute": false,
+                "applicationId": "jetsondashboard",
+                "datasource": {
+                    "isValid": true,
+                    "messages": [],
+                    "name": "UNUSED_DATASOURCE",
+                    "new": true,
+                    "pluginId": "",
+                    "userPermissions": []
+                },
+                "dynamicBindingPathList": [
+                    {
+                        "key": "body"
+                    }
+                ],
+                "fullyQualifiedName": "JSObject1.myFun2",
+                "isValid": true,
+                "jsonPathKeys": [
+                    "async () => {\n\t\t//use async-await or promises\n\t}"
+                ],
+                "pluginType": "JS"
+            }
+        ],
+        "applicationId": "jetsondashboard",
+        "pluginType": "JS",
+        "_id": "668e5fd8c02b9bf080800c60"
     }
 ]

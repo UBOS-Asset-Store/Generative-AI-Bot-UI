@@ -6,7 +6,7 @@
     "isPublic": true,
     "isShowPlatformTag": false,
     "createdAt": "2023-03-02T13:50:57.853Z",
-    "updatedAt": "2024-07-10T09:31:56.758Z",
+    "updatedAt": "2024-07-10T14:55:24.930Z",
     "deleted": false,
     "pages": [
         {
@@ -91,6 +91,10 @@
         },
         {
             "_id": "Home",
+            "isDefault": false
+        },
+        {
+            "_id": "Home Copy",
             "isDefault": false
         }
     ],
