@@ -18070,7 +18070,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-07-06T14:44:26.388Z",
-        "updatedAt": "2024-07-09T17:15:13.375Z",
+        "updatedAt": "2024-07-10T09:04:30.668Z",
         "deleted": false,
         "policies": [
             {
@@ -18526,7 +18526,7 @@
             "datasource": {
                 "name": "DEFAULT_REST_DATASOURCE",
                 "datasourceConfiguration": {
-                    "url": "{{main.env.nodeUrl}}/saveCredentialsOpenAI"
+                    "url": "{{main.env.nodeUrl}}/saveOpenAICredentials"
                 },
                 "invalids": [],
                 "isValid": true,
@@ -18555,25 +18555,108 @@
                         "value": true
                     }
                 ],
-                "body": "{\n\temail:{{JSON.stringify(main.user.auth_module.user.info.user.email)}},\n openai_api:  \n}"
+                "body": "{\n\t\"email\":{{JSON.stringify(main.user.auth_module.user.info.user.email)}},\n  \"openai_api\":{{JSON.stringify(openAI.text)}}\n}"
             },
             "dynamicBindingPathList": [
                 {
                     "key": "body"
+                },
+                {
+                    "key": "datasourceUrl"
                 }
             ],
             "isValid": true,
             "invalids": [],
             "jsonPathKeys": [
                 "main.env.nodeUrl",
-                "JSON.stringify()",
-                "JSON.stringify(main.user.auth_module.user.info.user.email)"
+                "JSON.stringify(main.user.auth_module.user.info.user.email)",
+                "JSON.stringify(openAI.text)"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-07-09T13:16:45.324Z",
-        "updatedAt": "2024-07-09T13:17:45.742Z",
+        "updatedAt": "2024-07-10T09:23:21.279Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "668e4eb3c02b9bf080800c57",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "checkOpenAI",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/checkOpenAI"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "Home",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "GET",
+                "headers": [],
+                "queryParameters": [
+                    {
+                        "key": "email",
+                        "value": "{{JSON.stringify(main.user.auth_module.user.info.user.email)}}"
+                    }
+                ],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ],
+                "path": ""
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "datasourceUrl"
+                },
+                {
+                    "key": "queryParameters[0].value"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "JSON.stringify(main.user.auth_module.user.info.user.email)"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-07-10T09:04:51.563Z",
+        "updatedAt": "2024-07-10T09:23:44.357Z",
         "deleted": false,
         "policies": [
             {

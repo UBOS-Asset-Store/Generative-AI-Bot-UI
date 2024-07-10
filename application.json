@@ -6,7 +6,7 @@
     "isPublic": true,
     "isShowPlatformTag": false,
     "createdAt": "2023-03-02T13:50:57.853Z",
-    "updatedAt": "2024-07-08T14:47:22.723Z",
+    "updatedAt": "2024-07-10T09:31:56.758Z",
     "deleted": false,
     "pages": [
         {
@@ -562,13 +562,13 @@
                             ],
                             "iconName": "double-chevron-up",
                             "iconAlign": "left",
-                            "onClick": "{{postIframeMessageToParent({\n  type: 'SET_LAYOUT_ITEM',\n  payload: {\n    id: '{\"id\":\"TemplateManager\",\"type\":\"TemplateManager\"}',\n    component:\"TemplateManager\",\n    title: 'AI Bot',\n    props: {\n  templateId: \"65397499fe34080011cedbb5\"\n    }\n  }\n})}}\n",
+                            "onClick": "{{navigateTo('https://platform.ubos.tech/?templateId=65397499fe34080011cedbb5', {},'NEW_WINDOW')}}",
                             "dynamicPropertyPathList": [
                                 {
-                                    "key": "onClick"
+                                    "key": "isVisible"
                                 },
                                 {
-                                    "key": "isVisible"
+                                    "key": "onClick"
                                 }
                             ],
                             "boxShadow": "NONE"
@@ -827,7 +827,7 @@
                     "leftColumn": 0,
                     "rightColumn": 557.625,
                     "topRow": 0,
-                    "bottomRow": 390,
+                    "bottomRow": 420,
                     "parentId": "ss4bddp965"
                 }
             ],
