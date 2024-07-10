@@ -19255,7 +19255,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-07-10T11:24:37.475Z",
-        "updatedAt": "2024-07-10T12:32:30.209Z",
+        "updatedAt": "2024-07-10T16:30:44.311Z",
         "deleted": false,
         "policies": [
             {
@@ -19335,7 +19335,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-07-10T13:50:13.072Z",
-        "updatedAt": "2024-07-10T13:50:13.072Z",
+        "updatedAt": "2024-07-10T20:29:21.775Z",
         "deleted": false,
         "policies": [
             {
@@ -19799,7 +19799,13 @@
             "name": "getUserConversation",
             "datasource": {
                 "name": "DEFAULT_REST_DATASOURCE",
-                "pluginId": "API"
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/getUserConversation"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
             },
             "executeOnLoad": false,
             "pageId": "Demo Copy",
@@ -19807,27 +19813,13 @@
                 "timeoutInMillisecond": 10000,
                 "encodeParamsToggle": true,
                 "httpMethod": "GET",
-                "headers": [
-                    {
-                        "key": "",
-                        "value": ""
-                    },
-                    {
-                        "key": "",
-                        "value": ""
-                    }
-                ],
+                "headers": [],
                 "queryParameters": [
                     {
-                        "key": "",
-                        "value": ""
-                    },
-                    {
-                        "key": "",
-                        "value": ""
+                        "key": "email",
+                        "value": "demo@demo.demo"
                     }
                 ],
-                "body": "",
                 "bodyFormData": [],
                 "formData": {
                     "apiContentType": "none"
@@ -19836,17 +19828,24 @@
                     {
                         "value": true
                     }
-                ]
+                ],
+                "path": ""
             },
-            "dynamicBindingPathList": [],
+            "dynamicBindingPathList": [
+                {
+                    "key": "datasourceUrl"
+                }
+            ],
             "isValid": true,
             "invalids": [],
-            "jsonPathKeys": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl"
+            ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-07-10T13:51:21.375Z",
-        "updatedAt": "2024-07-10T13:51:21.375Z",
+        "updatedAt": "2024-07-10T20:28:09.014Z",
         "deleted": false,
         "policies": [
             {
@@ -19865,5 +19864,81 @@
                 "users": []
             }
         ]
+    },
+    {
+        "name": "myFun1",
+        "pageId": "Demo Copy",
+        "executeOnLoad": true,
+        "actionConfiguration": {
+            "body": "async () => {\n\t\tgetUserConversation.run(()=> storeValue('conservationID', getUserConversation.data[0].value))\n\t}",
+            "isAsync": true,
+            "timeoutInMillisecond": 10000,
+            "jsArguments": [],
+            "paginationType": "NONE",
+            "encodeParamsToggle": true
+        },
+        "clientSideExecution": true,
+        "_id": "668ee77ec02b9bf080800c6e",
+        "id": "668ee77ec02b9bf080800c6e",
+        "collectionId": "668ee77ec02b9bf080800c6d",
+        "confirmBeforeExecute": false,
+        "applicationId": "jetsondashboard",
+        "datasource": {
+            "isValid": true,
+            "messages": [],
+            "name": "UNUSED_DATASOURCE",
+            "new": true,
+            "pluginId": "",
+            "userPermissions": []
+        },
+        "dynamicBindingPathList": [
+            {
+                "key": "body"
+            }
+        ],
+        "fullyQualifiedName": "JSObject1.myFun1",
+        "isValid": true,
+        "jsonPathKeys": [
+            "() => {\n\t\t//write code here\n\t}"
+        ],
+        "pluginType": "JS"
+    },
+    {
+        "name": "myFun2",
+        "pageId": "Demo Copy",
+        "executeOnLoad": false,
+        "actionConfiguration": {
+            "body": "async () => {\n\t\t//use async-await or promises\n\t}",
+            "isAsync": true,
+            "timeoutInMillisecond": 10000,
+            "jsArguments": [],
+            "paginationType": "NONE",
+            "encodeParamsToggle": true
+        },
+        "clientSideExecution": true,
+        "_id": "668ee77ec02b9bf080800c6f",
+        "id": "668ee77ec02b9bf080800c6f",
+        "collectionId": "668ee77ec02b9bf080800c6d",
+        "confirmBeforeExecute": false,
+        "applicationId": "jetsondashboard",
+        "datasource": {
+            "isValid": true,
+            "messages": [],
+            "name": "UNUSED_DATASOURCE",
+            "new": true,
+            "pluginId": "",
+            "userPermissions": []
+        },
+        "dynamicBindingPathList": [
+            {
+                "key": "body"
+            }
+        ],
+        "fullyQualifiedName": "JSObject1.myFun2",
+        "isValid": true,
+        "jsonPathKeys": [
+            "async () => {\n\t\t//use async-await or promises\n\t}"
+        ],
+        "pluginType": "JS"
     }
 ]
