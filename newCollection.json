@@ -844,7 +844,7 @@
     {
         "id": "668af9c6c02b9bf080800c54",
         "name": "JSObject1",
-        "pageId": "Home",
+        "pageId": "Home1",
         "body": "export default {\n\tmyVar1: [],\n\tmyVar2: {},\n\tmyFun1: () => {\n\t},\n\tmyFun2: async () => {\nif(main.URL.queryParams.fromOnboarding=='true'){\n\tshowModal('Modal_demobotSuccess')\n}\t}\n}",
         "variables": [
             {
@@ -941,7 +941,7 @@
     {
         "id": "668e5fd8c02b9bf080800c60",
         "name": "JSObject1",
-        "pageId": "Home Copy",
+        "pageId": "Home",
         "body": "export default {\n\tmyVar1: [],\n\tmyVar2: {},\n\tmyFun1: () => {\n\t},\n\tmyFun2: async () => {\nif(main.URL.queryParams.fromOnboarding=='true'){\n\tshowModal('Modal_demobotSuccess')\n}\t}\n}",
         "variables": [
             {
