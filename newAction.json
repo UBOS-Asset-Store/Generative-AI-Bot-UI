@@ -19255,7 +19255,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-07-10T11:24:37.475Z",
-        "updatedAt": "2024-07-10T16:30:44.311Z",
+        "updatedAt": "2024-07-11T10:00:05.888Z",
         "deleted": false,
         "policies": [
             {
@@ -19329,13 +19329,14 @@
             "invalids": [],
             "jsonPathKeys": [
                 "main.env.nodeUrl",
+                "main.user.auth_module.user.info.user.email",
                 "main.user.auth_module.user.info.user._id"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-07-10T13:50:13.072Z",
-        "updatedAt": "2024-07-10T20:29:21.775Z",
+        "updatedAt": "2024-07-11T10:22:44.382Z",
         "deleted": false,
         "policies": [
             {
@@ -19543,7 +19544,7 @@
                     },
                     {
                         "key": "dbname",
-                        "value": "{{Select2.selectedOptionLabel}}"
+                        "value": "{{SelectDB.selectedOptionLabel}}"
                     }
                 ],
                 "body": "",
@@ -19637,7 +19638,7 @@
                     },
                     {
                         "key": "name",
-                        "value": "{{Select2.selectedOptionLabel}}"
+                        "value": "{{SelectDB.selectedOptionLabel}}"
                     }
                 ],
                 "bodyFormData": [],
@@ -19667,14 +19668,13 @@
             "jsonPathKeys": [
                 "main.env.nodeUrl",
                 "main.user.auth_module.user.info.user._id",
-                "Select",
-                "Select2.selectedOptionLabel"
+                "SelectDB.selectedOptionLabel"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-07-10T13:50:13.072Z",
-        "updatedAt": "2024-07-10T13:50:13.072Z",
+        "updatedAt": "2024-07-11T10:16:53.859Z",
         "deleted": false,
         "policies": [
             {
@@ -19729,7 +19729,7 @@
                         "key": "email"
                     },
                     {
-                        "value": "{{Select2.selectedOptionLabel}}",
+                        "value": "{{SelectDB.selectedOptionLabel}}",
                         "key": "dbname"
                     }
                 ],
@@ -19763,13 +19763,13 @@
                 "main.env.nodeUrl",
                 "Chat_botdemo.lastMessage",
                 "main.user.auth_module.user.info.user.email",
-                "Select2.selectedOptionLabel"
+                "SelectDB.selectedOptionLabel"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-07-10T13:50:13.072Z",
-        "updatedAt": "2024-07-10T13:50:13.072Z",
+        "updatedAt": "2024-07-11T10:16:57.765Z",
         "deleted": false,
         "policies": [
             {
@@ -19817,7 +19817,7 @@
                 "queryParameters": [
                     {
                         "key": "email",
-                        "value": "demo@demo.demo"
+                        "value": "{{main.user.auth_module.user.info.user.email}}"
                     }
                 ],
                 "bodyFormData": [],
@@ -19834,18 +19834,22 @@
             "dynamicBindingPathList": [
                 {
                     "key": "datasourceUrl"
+                },
+                {
+                    "key": "queryParameters[0].value"
                 }
             ],
             "isValid": true,
             "invalids": [],
             "jsonPathKeys": [
-                "main.env.nodeUrl"
+                "main.env.nodeUrl",
+                "main.user.auth_module.user.info.user.email"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-07-10T13:51:21.375Z",
-        "updatedAt": "2024-07-10T20:28:09.014Z",
+        "updatedAt": "2024-07-11T10:22:36.690Z",
         "deleted": false,
         "policies": [
             {
