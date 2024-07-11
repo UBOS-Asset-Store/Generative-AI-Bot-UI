@@ -6395,7 +6395,7 @@
             "datasource": {
                 "name": "DEFAULT_REST_DATASOURCE",
                 "datasourceConfiguration": {
-                    "url": "{{main.env.nodeUrl}}/saveCredentialsPinecone"
+                    "url": "{{main.env.nodeUrl}}/savePineconeCredentials"
                 },
                 "invalids": [],
                 "isValid": true,
@@ -6424,7 +6424,7 @@
                         "value": true
                     }
                 ],
-                "body": "{\n\t\"pinecone_api\": {{JSON.stringify(pineconeapi.text)}},\n\t\"pinecone_env\": {{JSON.stringify(env.text)}},\n\t\"pinecone_index\": {{JSON.stringify(indexx.text)}},\n\t\"pinecone_url\": {{JSON.stringify(Input_pineconeUrl.text)}}\n\n}\n"
+                "body": "{\n\t\"pinecone_api\": {{JSON.stringify(pineconeapi.text)}},\n\t\"pinecone_env\": {{JSON.stringify(env.text)}},\n\t\"pinecone_index\": {{JSON.stringify(indexx.text)}},\n\t\"pinecone_url\": {{JSON.stringify(Input_pineconeUrl.text)}},\n\t\"email\": {{JSON.stringify(main.user.auth_module.user.info.user.email)}}\n}\n"
             },
             "dynamicBindingPathList": [
                 {
@@ -6441,13 +6441,14 @@
                 "JSON.stringify(pineconeapi.text)",
                 "JSON.stringify(env.text)",
                 "JSON.stringify(indexx.text)",
-                "JSON.stringify(Input_pineconeUrl.text)"
+                "JSON.stringify(Input_pineconeUrl.text)",
+                "JSON.stringify(main.user.auth_module.user.info.user.email)"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-06-23T15:04:52.846Z",
-        "updatedAt": "2024-02-28T08:37:27.810Z",
+        "updatedAt": "2024-07-11T20:04:06.049Z",
         "deleted": false,
         "policies": [
             {
@@ -7884,7 +7885,7 @@
                         "value": true
                     }
                 ],
-                "body": "{\n\t\"openai_api\":{{JSON.stringify(openai.text)}},\n\t\"openai_api_model\":{{JSON.stringify(modelopenai.selectedOptionLabel)}},\n\t\"role\": \"{{main.user.auth_module.user.info.user.role}}\",\n\t\"email\": \"{{main.user.auth_module.user.info.user.email}}\"\n}"
+                "body": "{\n\t\"openai_api\":{{JSON.stringify(openai.text)}},\n\t\"role\": \"{{main.user.auth_module.user.info.user.role}}\",\n\t\"email\": \"{{main.user.auth_module.user.info.user.email}}\"\n}"
             },
             "dynamicBindingPathList": [
                 {
@@ -7899,7 +7900,6 @@
             "jsonPathKeys": [
                 "main.env.nodeUrl",
                 "JSON.stringify(openai.text)",
-                "JSON.stringify(modelopenai.selectedOptionLabel)",
                 "main.user.auth_module.user.info.user.role",
                 "main.user.auth_module.user.info.user.email"
             ],
@@ -7907,7 +7907,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-10-20T08:48:38.778Z",
-        "updatedAt": "2024-07-10T13:42:04.600Z",
+        "updatedAt": "2024-07-11T20:10:12.910Z",
         "deleted": false,
         "policies": [
             {
@@ -8945,7 +8945,7 @@
             "datasource": {
                 "name": "DEFAULT_REST_DATASOURCE",
                 "datasourceConfiguration": {
-                    "url": "{{main.env.nodeUrl}}/getenvs"
+                    "url": "{{main.env.nodeUrl}}/getCredentials"
                 },
                 "invalids": [],
                 "isValid": true,
@@ -8959,7 +8959,12 @@
                 "encodeParamsToggle": true,
                 "httpMethod": "GET",
                 "headers": [],
-                "queryParameters": [],
+                "queryParameters": [
+                    {
+                        "key": "email",
+                        "value": "{{main.user.auth_module.user.info.user.email}}"
+                    }
+                ],
                 "bodyFormData": [],
                 "formData": {
                     "apiContentType": "none"
@@ -8973,18 +8978,22 @@
             "dynamicBindingPathList": [
                 {
                     "key": "datasourceUrl"
+                },
+                {
+                    "key": "queryParameters[0].value"
                 }
             ],
             "isValid": true,
             "invalids": [],
             "jsonPathKeys": [
-                "main.env.nodeUrl"
+                "main.env.nodeUrl",
+                "main.user.auth_module.user.info.user.email"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-10-26T14:11:57.177Z",
-        "updatedAt": "2024-05-15T13:33:52.623Z",
+        "updatedAt": "2024-07-11T20:14:23.697Z",
         "deleted": false,
         "policies": [
             {
@@ -13165,14 +13174,13 @@
             "invalids": [],
             "jsonPathKeys": [
                 "main.env.nodeUrl",
-                "main.store.",
                 "main.store.lg"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-05-27T19:22:03.524Z",
-        "updatedAt": "2024-05-27T19:22:27.970Z",
+        "updatedAt": "2024-07-11T18:52:25.320Z",
         "deleted": false,
         "policies": [
             {
@@ -18192,7 +18200,7 @@
                     },
                     {
                         "key": "dbname",
-                        "value": "{{Select2.selectedOptionLabel}}"
+                        "value": "{{SelectDB.selectedOptionLabel}}"
                     }
                 ],
                 "body": "",
@@ -18286,7 +18294,7 @@
                     },
                     {
                         "key": "name",
-                        "value": "{{Select2.selectedOptionLabel}}"
+                        "value": "{{SelectDB.selectedOptionLabel}}"
                     }
                 ],
                 "bodyFormData": [],
@@ -18316,14 +18324,13 @@
             "jsonPathKeys": [
                 "main.env.nodeUrl",
                 "main.user.auth_module.user.info.user._id",
-                "Select",
-                "Select2.selectedOptionLabel"
+                "SelectDB.selectedOptionLabel"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-07-07T18:23:15.933Z",
-        "updatedAt": "2024-07-07T18:36:15.073Z",
+        "updatedAt": "2024-07-11T15:16:43.542Z",
         "deleted": false,
         "policies": [
             {
@@ -18378,7 +18385,7 @@
                         "key": "email"
                     },
                     {
-                        "value": "{{Select2.selectedOptionLabel}}",
+                        "value": "{{SelectDB.selectedOptionLabel}}",
                         "key": "dbname"
                     }
                 ],
@@ -19674,7 +19681,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-07-10T13:50:13.072Z",
-        "updatedAt": "2024-07-11T10:16:53.859Z",
+        "updatedAt": "2024-07-11T15:16:23.623Z",
         "deleted": false,
         "policies": [
             {
@@ -19849,7 +19856,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-07-10T13:51:21.375Z",
-        "updatedAt": "2024-07-11T10:22:36.690Z",
+        "updatedAt": "2024-07-11T15:17:45.270Z",
         "deleted": false,
         "policies": [
             {
@@ -19874,7 +19881,7 @@
         "pageId": "Demo Copy",
         "executeOnLoad": true,
         "actionConfiguration": {
-            "body": "async () => {\n\t\tgetUserConversation.run(()=> storeValue('conservationID', getUserConversation.data[0].value))\n\t}",
+            "body": "async () => {\n        getUserConversation.run(()=>(storeValue('conservationID', getUserConversation.data[0]?.value),storeValue('conservationsLength', getUserConversation.data?.length)) )\n    }",
             "isAsync": true,
             "timeoutInMillisecond": 10000,
             "jsArguments": [],
@@ -19912,7 +19919,7 @@
         "pageId": "Demo Copy",
         "executeOnLoad": false,
         "actionConfiguration": {
-            "body": "async () => {\n\t\t//use async-await or promises\n\t}",
+            "body": "async () => {\n        setInterval(async() => {\n          await getUserConversation.run()\n\t\t\t\t\t\t\tconsole.log(getUserConversation.data.length)\n\t\t\t\t\t\t\tconsole.log(main.store.conservationsLength)\n                if (getUserConversation.data.length > main.store.conservationsLength) {\n                    storeValue('conservationsLength', getUserConversation.data.length)\n\t\t\t\t\t\t\t\t\tstoreValue('conservationID', getUserConversation.data[getUserConversation.data.length-1]?.value)\n                    clearInterval('conversationCheck')\n                }\n        }, 5000,'conversationCheck');\n    }",
             "isAsync": true,
             "timeoutInMillisecond": 10000,
             "jsArguments": [],
@@ -19942,6 +19949,1267 @@
         "isValid": true,
         "jsonPathKeys": [
             "async () => {\n\t\t//use async-await or promises\n\t}"
+        ],
+        "pluginType": "JS"
+    },
+    {
+        "_id": "668ff65f325cb7caa405fef3",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "getUserConversation",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/getUserConversation"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "Demo",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "GET",
+                "headers": [
+                    {
+                        "key": "email",
+                        "value": "{{main.user.auth_module.user.info.user.email}}"
+                    }
+                ],
+                "queryParameters": [
+                    {
+                        "key": "email",
+                        "value": "{{main.user.auth_module.user.info.user.email}}"
+                    }
+                ],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ]
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "datasourceUrl"
+                },
+                {
+                    "key": "headers[0].value"
+                },
+                {
+                    "key": "queryParameters[0].value"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "main.user.auth_module.user.info.user.email"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-07-11T15:12:31.729Z",
+        "updatedAt": "2024-07-11T15:18:03.653Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "name": "myFun1",
+        "pageId": "Demo",
+        "executeOnLoad": true,
+        "actionConfiguration": {
+            "body": "() => {\n\t\t        getUserConversation.run(()=>(storeValue('conservationID', getUserConversation.data[0]?.value),storeValue('conservationsLength', getUserConversation.data?.length)) )\n\t}",
+            "isAsync": true,
+            "timeoutInMillisecond": 10000,
+            "jsArguments": [],
+            "paginationType": "NONE",
+            "encodeParamsToggle": true
+        },
+        "clientSideExecution": true,
+        "_id": "668ff683325cb7caa405fef5",
+        "id": "668ff683325cb7caa405fef5",
+        "collectionId": "668ff683325cb7caa405fef4",
+        "confirmBeforeExecute": false,
+        "applicationId": "jetsondashboard",
+        "datasource": {
+            "isValid": true,
+            "messages": [],
+            "name": "UNUSED_DATASOURCE",
+            "new": true,
+            "pluginId": "",
+            "userPermissions": []
+        },
+        "dynamicBindingPathList": [
+            {
+                "key": "body"
+            }
+        ],
+        "fullyQualifiedName": "JSObject1.myFun1",
+        "isValid": true,
+        "jsonPathKeys": [
+            "() => {\n\t\t//write code here\n\t}"
+        ],
+        "pluginType": "JS"
+    },
+    {
+        "name": "myFun2",
+        "pageId": "Demo",
+        "executeOnLoad": false,
+        "actionConfiguration": {
+            "body": "async () => {\n\t\t setInterval(async() => {\n          await getUserConversation.run()\n\t\t\t\t\t\t\tconsole.log(getUserConversation.data.length)\n\t\t\t\t\t\t\tconsole.log(main.store.conservationsLength)\n                if (getUserConversation.data.length > main.store.conservationsLength) {\n                    storeValue('conservationsLength', getUserConversation.data.length)\n\t\t\t\t\t\t\t\t\tstoreValue('conservationID', getUserConversation.data[getUserConversation.data.length-1]?.value)\n                    clearInterval('conversationCheck')\n                }\n        }, 5000,'conversationCheck');\n    }",
+            "isAsync": true,
+            "timeoutInMillisecond": 10000,
+            "jsArguments": [],
+            "paginationType": "NONE",
+            "encodeParamsToggle": true
+        },
+        "clientSideExecution": true,
+        "_id": "668ff683325cb7caa405fef6",
+        "id": "668ff683325cb7caa405fef6",
+        "collectionId": "668ff683325cb7caa405fef4",
+        "confirmBeforeExecute": false,
+        "applicationId": "jetsondashboard",
+        "datasource": {
+            "isValid": true,
+            "messages": [],
+            "name": "UNUSED_DATASOURCE",
+            "new": true,
+            "pluginId": "",
+            "userPermissions": []
+        },
+        "dynamicBindingPathList": [
+            {
+                "key": "body"
+            }
+        ],
+        "fullyQualifiedName": "JSObject1.myFun2",
+        "isValid": true,
+        "jsonPathKeys": [
+            "async () => {\n\t\t//use async-await or promises\n\t}"
+        ],
+        "pluginType": "JS"
+    },
+    {
+        "_id": "66902aee325cb7caa405fef9",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "saveCredentialsPinecone",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/saveCredentialsPinecone"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "AI Setup Copy",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "POST",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ],
+                "body": "{\n\t\"pinecone_api\": {{JSON.stringify(pineconeapi.text)}},\n\t\"pinecone_env\": {{JSON.stringify(env.text)}},\n\t\"pinecone_index\": {{JSON.stringify(indexx.text)}},\n\t\"pinecone_url\": {{JSON.stringify(Input_pineconeUrl.text)}}\n\n}\n"
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "body"
+                },
+                {
+                    "key": "datasourceUrl"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "JSON.stringify(pineconeapi.text)",
+                "JSON.stringify(env.text)",
+                "JSON.stringify(indexx.text)",
+                "JSON.stringify(Input_pineconeUrl.text)"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-07-11T18:56:46.281Z",
+        "updatedAt": "2024-07-11T18:56:46.281Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "66902aee325cb7caa405fefa",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "saveCredentialsOpenAi",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/saveOpenAICredentials"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "AI Setup Copy",
+            "actionConfiguration": {
+                "timeoutInMillisecond": "20000",
+                "encodeParamsToggle": true,
+                "httpMethod": "POST",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ],
+                "body": "{\n\t\"openai_api\":{{JSON.stringify(openai.text)}},\n\t\"role\": \"{{main.user.auth_module.user.info.user.role}}\",\n\t\"email\": \"{{main.user.auth_module.user.info.user.email}}\"\n}"
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "body"
+                },
+                {
+                    "key": "datasourceUrl"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "JSON.stringify(openai.text)",
+                "JSON.stringify(modelopenai.selectedOptionLabel)",
+                "main.user.auth_module.user.info.user.role",
+                "main.user.auth_module.user.info.user.email"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-07-11T18:56:46.281Z",
+        "updatedAt": "2024-07-11T18:56:46.281Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "66902aee325cb7caa405fefb",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "saveCredentialsMessages",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/saveCredentialsMsg"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "AI Setup Copy",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "POST",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "body": "{\"welcome\":{{JSON.stringify(welcome.text)}},\n\"unable\":{{JSON.stringify(unable.text)}}\n}",
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ]
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "datasourceUrl"
+                },
+                {
+                    "key": "body"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "JSON.stringify(welcome.text)",
+                "JSON.stringify(unable.text)"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-07-11T18:56:46.281Z",
+        "updatedAt": "2024-07-11T18:56:46.281Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "66902aee325cb7caa405fefc",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "saveCredentialsPrompts",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/saveCredentialsPrompts"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "AI Setup Copy",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "POST",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "body": "{\n\t\"answer_length\":{{JSON.stringify(answer_length.selectedOptionLabel)}},\n\t\"answer_as\":{{JSON.stringify(answer_as.selectedOptionLabel)}},\n\t\"tone\":{{JSON.stringify(tone.selectedOptionLabel)}},\n\t\"language\":{{JSON.stringify(language.selectedOptionLabel)}},\n\t\"prompt_custom\":{{JSON.stringify(prompt_custom.text)}},\n\t\"knowledge_base\":{{JSON.stringify(knowledge_base.selectedOptionLabel)}},\n\t\"id_base\":{{JSON.stringify(knowledge_base.selectedOptionValue)}}\n}",
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "application/json"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ]
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "body"
+                },
+                {
+                    "key": "datasourceUrl"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "JSON.stringify(answer_length.selectedOptionLabel)",
+                "JSON.stringify(answer_as.selectedOptionLabel)",
+                "JSON.stringify(tone.selectedOptionLabel)",
+                "JSON.stringify(language.selectedOptionLabel)",
+                "JSON.stringify(prompt_custom.text)",
+                "JSON.stringify(knowledge_base.selectedOptionLabel)",
+                "JSON.stringify(knowledge_base.selectedOptionValue)"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-07-11T18:56:46.281Z",
+        "updatedAt": "2024-07-11T18:56:46.281Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "66902aee325cb7caa405fefd",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "getenv",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/getCredentials"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": true,
+            "pageId": "AI Setup Copy",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "GET",
+                "headers": [],
+                "queryParameters": [
+                    {
+                        "key": "email",
+                        "value": "wqwe@qwe.qwe"
+                    }
+                ],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ]
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "datasourceUrl"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "main.user.auth_module.user.info.user.email"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-07-11T18:56:46.281Z",
+        "updatedAt": "2024-07-11T18:56:46.281Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "66902aee325cb7caa405fefe",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "getAllBase",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/getBaseKnowlege"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "AI Setup Copy",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "GET",
+                "headers": [],
+                "queryParameters": [
+                    {
+                        "value": "{{main.user.auth_module.user.info.user._id}}",
+                        "key": "ownerID"
+                    }
+                ],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ]
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "datasourceUrl"
+                },
+                {
+                    "key": "queryParameters[0].value"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "main.user.auth_module.user.info.user._id"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-07-11T18:56:46.281Z",
+        "updatedAt": "2024-07-11T18:56:46.281Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "66902aee325cb7caa405feff",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "getDemoCredentials",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/getDemoCredentials"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "AI Setup Copy",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "GET",
+                "headers": [],
+                "queryParameters": [
+                    {
+                        "key": "email",
+                        "value": "{{appsmith.user.auth_module.user.info.user.email}}"
+                    }
+                ],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ],
+                "path": ""
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "queryParameters[0].value"
+                },
+                {
+                    "key": "datasourceUrl"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "appsmith.user.auth_module.user.info.user.email"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-07-11T18:56:46.281Z",
+        "updatedAt": "2024-07-11T18:56:46.281Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "66902aee325cb7caa405ff00",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "getenvsbots",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/getenvsbots"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": true,
+            "pageId": "AI Setup Copy",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "GET",
+                "headers": [],
+                "queryParameters": [],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ]
+            },
+            "dynamicBindingPathList": [],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-07-11T18:56:46.281Z",
+        "updatedAt": "2024-07-11T18:56:46.281Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "66902aee325cb7caa405ff01",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "saveCustomPrompts",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/saveCustomPrompts"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "AI Setup Copy",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "POST",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "body": "{\n\t\"answer_length\":{{JSON.stringify(answer_length.selectedOptionLabel)}},\n\t\"answer_as\":{{JSON.stringify(answer_as.selectedOptionLabel)}},\n\t\"tone\":{{JSON.stringify(tone.selectedOptionLabel)}},\n\t\"language\":{{JSON.stringify(language.selectedOptionLabel)}},\n\t\"prompt_custom\":{{JSON.stringify(prompt_custom.text)}},\n\t\"knowledge_base\":{{JSON.stringify(knowledge_base.selectedOptionLabel)}},\n\t\"id_base\":{{JSON.stringify(knowledge_base.selectedOptionValue)}},\n\t\"isPromptDefault\": false\n}",
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ]
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "body"
+                },
+                {
+                    "key": "datasourceUrl"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "JSON.stringify(answer_length.selectedOptionLabel)",
+                "JSON.stringify(answer_as.selectedOptionLabel)",
+                "JSON.stringify(tone.selectedOptionLabel)",
+                "JSON.stringify(language.selectedOptionLabel)",
+                "JSON.stringify(prompt_custom.text)",
+                "JSON.stringify(knowledge_base.selectedOptionLabel)",
+                "JSON.stringify(knowledge_base.selectedOptionValue)"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-07-11T18:56:46.281Z",
+        "updatedAt": "2024-07-11T18:56:46.281Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "66902aee325cb7caa405ff02",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "getCustomPrompts",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/getCustomPrompts"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": true,
+            "pageId": "AI Setup Copy",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "GET",
+                "headers": [],
+                "queryParameters": [],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ]
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "datasourceUrl"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-07-11T18:56:46.281Z",
+        "updatedAt": "2024-07-11T18:56:46.281Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "66902aee325cb7caa405ff03",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "getMenu",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/getMenu"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": true,
+            "pageId": "AI Setup Copy",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "GET",
+                "headers": [],
+                "queryParameters": [
+                    {
+                        "key": "lang",
+                        "value": "{{main.store.lg}}"
+                    }
+                ],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ]
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "queryParameters[0].value"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "main.store.lg"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-07-11T18:56:46.281Z",
+        "updatedAt": "2024-07-11T18:56:46.281Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "66902aee325cb7caa405ff04",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "change_lang",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/check_token2"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "AI Setup Copy",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "POST",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "body": "{\n\"lang\":{{JSON.stringify(main.store.lg)}}\n}",
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ]
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "body"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "JSON.stringify(main.store.lg)"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-07-11T18:56:46.281Z",
+        "updatedAt": "2024-07-11T18:56:46.281Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "66902aee325cb7caa405ff05",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "askSupport",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/askSupport"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "AI Setup Copy",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "POST",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ],
+                "body": "{\n\t\"email\":{{JSON.stringify(support_user_email_input.text)}},\n\t\"question\":{{JSON.stringify(support_user_question_input.text)}}\n}"
+            },
+            "dynamicBindingPathList": [],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "JSON.stringify(support_user_email_input.text)",
+                "JSON.stringify(support_user_question_input.text)"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-07-11T18:56:46.281Z",
+        "updatedAt": "2024-07-11T18:56:46.281Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "name": "myFun1",
+        "pageId": "AI Setup Copy",
+        "executeOnLoad": false,
+        "actionConfiguration": {
+            "body": "() => {\n\t\t//write code here\n\t}",
+            "isAsync": false,
+            "timeoutInMillisecond": 10000,
+            "jsArguments": [],
+            "paginationType": "NONE",
+            "encodeParamsToggle": true
+        },
+        "clientSideExecution": true,
+        "_id": "66902aee325cb7caa405ff07",
+        "id": "66902aee325cb7caa405ff07",
+        "collectionId": "66902aee325cb7caa405ff06",
+        "confirmBeforeExecute": false,
+        "applicationId": "jetsondashboard",
+        "datasource": {
+            "isValid": true,
+            "messages": [],
+            "name": "UNUSED_DATASOURCE",
+            "new": true,
+            "pluginId": "",
+            "userPermissions": []
+        },
+        "dynamicBindingPathList": [
+            {
+                "key": "body"
+            }
+        ],
+        "fullyQualifiedName": "JSObject1.myFun1",
+        "isValid": true,
+        "jsonPathKeys": [
+            "() => {\n\t\t//write code here\n\t}"
+        ],
+        "pluginType": "JS"
+    },
+    {
+        "name": "myFun4",
+        "collectionId": "66902aee325cb7caa405ff06",
+        "executeOnLoad": false,
+        "pageId": "AI Setup Copy",
+        "actionConfiguration": {
+            "body": "(i,cl)=>{\n\tstoreValue(i,cl,false)\n}",
+            "isAsync": true,
+            "timeoutInMillisecond": 10000,
+            "jsArguments": [
+                {
+                    "name": "i"
+                },
+                {
+                    "name": "cl"
+                }
+            ],
+            "paginationType": "NONE",
+            "encodeParamsToggle": true
+        },
+        "_id": "66902aee325cb7caa405ff08",
+        "id": "66902aee325cb7caa405ff08",
+        "applicationId": "jetsondashboard",
+        "datasource": {
+            "isValid": true,
+            "messages": [],
+            "name": "UNUSED_DATASOURCE",
+            "new": true,
+            "pluginId": "",
+            "userPermissions": []
+        },
+        "dynamicBindingPathList": [
+            {
+                "key": "body"
+            }
+        ],
+        "fullyQualifiedName": "JSObject1.myFun4",
+        "isValid": true,
+        "jsonPathKeys": [
+            "(i,cl)=>{\n\tstoreValue(i,cl)\n}"
         ],
         "pluginType": "JS"
     }

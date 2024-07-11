@@ -1039,7 +1039,7 @@
         "id": "668ee77ec02b9bf080800c6d",
         "name": "JSObject1",
         "pageId": "Demo Copy",
-        "body": "export default {\n\tmyVar1: [],\n\tmyVar2: {},\n\tmyFun1: async () => {\n\t\tgetUserConversation.run(()=> storeValue('conservationID', getUserConversation.data[0].value))\n\t},\n\tmyFun2: async () => {\n\t\t//use async-await or promises\n\t}\n}",
+        "body": "export default {\n    myVar1: [],\n    myVar2: {},\n    myFun1: async () => {\n        getUserConversation.run(()=>(storeValue('conservationID', getUserConversation.data[0]?.value),storeValue('conservationsLength', getUserConversation.data?.length)) )\n    },\n    myFun2: async () => {\n        setInterval(async() => {\n          await getUserConversation.run()\n\t\t\t\t\t\t\tconsole.log(getUserConversation.data.length)\n\t\t\t\t\t\t\tconsole.log(main.store.conservationsLength)\n                if (getUserConversation.data.length > main.store.conservationsLength) {\n                    storeValue('conservationsLength', getUserConversation.data.length)\n\t\t\t\t\t\t\t\t\tstoreValue('conservationID', getUserConversation.data[getUserConversation.data.length-1]?.value)\n                    clearInterval('conversationCheck')\n                }\n        }, 5000,'conversationCheck');\n    }\n}\n",
         "variables": [
             {
                 "name": "myVar1",
@@ -1056,7 +1056,7 @@
                 "pageId": "Demo Copy",
                 "executeOnLoad": true,
                 "actionConfiguration": {
-                    "body": "async () => {\n\t\tgetUserConversation.run(()=> storeValue('conservationID', getUserConversation.data[0].value))\n\t}",
+                    "body": "async () => {\n        getUserConversation.run(()=>(storeValue('conservationID', getUserConversation.data[0]?.value),storeValue('conservationsLength', getUserConversation.data?.length)) )\n    }",
                     "isAsync": true,
                     "timeoutInMillisecond": 10000,
                     "jsArguments": [],
@@ -1094,7 +1094,7 @@
                 "pageId": "Demo Copy",
                 "executeOnLoad": false,
                 "actionConfiguration": {
-                    "body": "async () => {\n\t\t//use async-await or promises\n\t}",
+                    "body": "async () => {\n        setInterval(async() => {\n          await getUserConversation.run()\n\t\t\t\t\t\t\tconsole.log(getUserConversation.data.length)\n\t\t\t\t\t\t\tconsole.log(main.store.conservationsLength)\n                if (getUserConversation.data.length > main.store.conservationsLength) {\n                    storeValue('conservationsLength', getUserConversation.data.length)\n\t\t\t\t\t\t\t\t\tstoreValue('conservationID', getUserConversation.data[getUserConversation.data.length-1]?.value)\n                    clearInterval('conversationCheck')\n                }\n        }, 5000,'conversationCheck');\n    }",
                     "isAsync": true,
                     "timeoutInMillisecond": 10000,
                     "jsArguments": [],
@@ -1130,6 +1130,213 @@
         ],
         "applicationId": "jetsondashboard",
         "pluginType": "JS",
-        "_id": "668ee77ec02b9bf080800c6d"
+        "_id": "668ee77ec02b9bf080800c6d",
+        "pluginId": "JS",
+        "actionIds": [],
+        "archivedActionIds": [],
+        "archivedActions": []
+    },
+    {
+        "id": "668ff683325cb7caa405fef4",
+        "name": "JSObject1",
+        "pageId": "Demo",
+        "body": "export default {\n\tmyVar1: [],\n\tmyVar2: {},\n\tmyFun1: () => {\n\t\t        getUserConversation.run(()=>(storeValue('conservationID', getUserConversation.data[0]?.value),storeValue('conservationsLength', getUserConversation.data?.length)) )\n\t},\n\tmyFun2: async () => {\n\t\t setInterval(async() => {\n          await getUserConversation.run()\n\t\t\t\t\t\t\tconsole.log(getUserConversation.data.length)\n\t\t\t\t\t\t\tconsole.log(main.store.conservationsLength)\n                if (getUserConversation.data.length > main.store.conservationsLength) {\n                    storeValue('conservationsLength', getUserConversation.data.length)\n\t\t\t\t\t\t\t\t\tstoreValue('conservationID', getUserConversation.data[getUserConversation.data.length-1]?.value)\n                    clearInterval('conversationCheck')\n                }\n        }, 5000,'conversationCheck');\n    }\n\t}\n",
+        "variables": [
+            {
+                "name": "myVar1",
+                "value": []
+            },
+            {
+                "name": "myVar2",
+                "value": {}
+            }
+        ],
+        "actions": [
+            {
+                "name": "myFun1",
+                "pageId": "Demo",
+                "executeOnLoad": true,
+                "actionConfiguration": {
+                    "body": "() => {\n\t\t        getUserConversation.run(()=>(storeValue('conservationID', getUserConversation.data[0]?.value),storeValue('conservationsLength', getUserConversation.data?.length)) )\n\t}",
+                    "isAsync": true,
+                    "timeoutInMillisecond": 10000,
+                    "jsArguments": [],
+                    "paginationType": "NONE",
+                    "encodeParamsToggle": true
+                },
+                "clientSideExecution": true,
+                "_id": "668ff683325cb7caa405fef5",
+                "id": "668ff683325cb7caa405fef5",
+                "collectionId": "668ff683325cb7caa405fef4",
+                "confirmBeforeExecute": false,
+                "applicationId": "jetsondashboard",
+                "datasource": {
+                    "isValid": true,
+                    "messages": [],
+                    "name": "UNUSED_DATASOURCE",
+                    "new": true,
+                    "pluginId": "",
+                    "userPermissions": []
+                },
+                "dynamicBindingPathList": [
+                    {
+                        "key": "body"
+                    }
+                ],
+                "fullyQualifiedName": "JSObject1.myFun1",
+                "isValid": true,
+                "jsonPathKeys": [
+                    "() => {\n\t\t//write code here\n\t}"
+                ],
+                "pluginType": "JS"
+            },
+            {
+                "name": "myFun2",
+                "pageId": "Demo",
+                "executeOnLoad": false,
+                "actionConfiguration": {
+                    "body": "async () => {\n\t\t setInterval(async() => {\n          await getUserConversation.run()\n\t\t\t\t\t\t\tconsole.log(getUserConversation.data.length)\n\t\t\t\t\t\t\tconsole.log(main.store.conservationsLength)\n                if (getUserConversation.data.length > main.store.conservationsLength) {\n                    storeValue('conservationsLength', getUserConversation.data.length)\n\t\t\t\t\t\t\t\t\tstoreValue('conservationID', getUserConversation.data[getUserConversation.data.length-1]?.value)\n                    clearInterval('conversationCheck')\n                }\n        }, 5000,'conversationCheck');\n    }",
+                    "isAsync": true,
+                    "timeoutInMillisecond": 10000,
+                    "jsArguments": [],
+                    "paginationType": "NONE",
+                    "encodeParamsToggle": true
+                },
+                "clientSideExecution": true,
+                "_id": "668ff683325cb7caa405fef6",
+                "id": "668ff683325cb7caa405fef6",
+                "collectionId": "668ff683325cb7caa405fef4",
+                "confirmBeforeExecute": false,
+                "applicationId": "jetsondashboard",
+                "datasource": {
+                    "isValid": true,
+                    "messages": [],
+                    "name": "UNUSED_DATASOURCE",
+                    "new": true,
+                    "pluginId": "",
+                    "userPermissions": []
+                },
+                "dynamicBindingPathList": [
+                    {
+                        "key": "body"
+                    }
+                ],
+                "fullyQualifiedName": "JSObject1.myFun2",
+                "isValid": true,
+                "jsonPathKeys": [
+                    "async () => {\n\t\t//use async-await or promises\n\t}"
+                ],
+                "pluginType": "JS"
+            }
+        ],
+        "applicationId": "jetsondashboard",
+        "pluginType": "JS",
+        "_id": "668ff683325cb7caa405fef4"
+    },
+    {
+        "id": "66902aee325cb7caa405ff06",
+        "name": "JSObject1",
+        "pageId": "AI Setup Copy",
+        "body": "export default {\n\tmyVar1: [],\n\tmyVar2: {},\n\tmyFun1: () => {\n\t\t//write code here\n\t},\nmyFun4:(i,cl)=>{\n\tstoreValue(i,cl,false)\n}\n}",
+        "variables": [
+            {
+                "name": "myVar1",
+                "value": []
+            },
+            {
+                "name": "myVar2",
+                "value": {}
+            }
+        ],
+        "actions": [
+            {
+                "name": "myFun1",
+                "pageId": "AI Setup Copy",
+                "executeOnLoad": false,
+                "actionConfiguration": {
+                    "body": "() => {\n\t\t//write code here\n\t}",
+                    "isAsync": false,
+                    "timeoutInMillisecond": 10000,
+                    "jsArguments": [],
+                    "paginationType": "NONE",
+                    "encodeParamsToggle": true
+                },
+                "clientSideExecution": true,
+                "_id": "66902aee325cb7caa405ff07",
+                "id": "66902aee325cb7caa405ff07",
+                "collectionId": "66902aee325cb7caa405ff06",
+                "confirmBeforeExecute": false,
+                "applicationId": "jetsondashboard",
+                "datasource": {
+                    "isValid": true,
+                    "messages": [],
+                    "name": "UNUSED_DATASOURCE",
+                    "new": true,
+                    "pluginId": "",
+                    "userPermissions": []
+                },
+                "dynamicBindingPathList": [
+                    {
+                        "key": "body"
+                    }
+                ],
+                "fullyQualifiedName": "JSObject1.myFun1",
+                "isValid": true,
+                "jsonPathKeys": [
+                    "() => {\n\t\t//write code here\n\t}"
+                ],
+                "pluginType": "JS"
+            },
+            {
+                "name": "myFun4",
+                "collectionId": "66902aee325cb7caa405ff06",
+                "executeOnLoad": false,
+                "pageId": "AI Setup Copy",
+                "actionConfiguration": {
+                    "body": "(i,cl)=>{\n\tstoreValue(i,cl,false)\n}",
+                    "isAsync": true,
+                    "timeoutInMillisecond": 10000,
+                    "jsArguments": [
+                        {
+                            "name": "i"
+                        },
+                        {
+                            "name": "cl"
+                        }
+                    ],
+                    "paginationType": "NONE",
+                    "encodeParamsToggle": true
+                },
+                "_id": "66902aee325cb7caa405ff08",
+                "id": "66902aee325cb7caa405ff08",
+                "applicationId": "jetsondashboard",
+                "datasource": {
+                    "isValid": true,
+                    "messages": [],
+                    "name": "UNUSED_DATASOURCE",
+                    "new": true,
+                    "pluginId": "",
+                    "userPermissions": []
+                },
+                "dynamicBindingPathList": [
+                    {
+                        "key": "body"
+                    }
+                ],
+                "fullyQualifiedName": "JSObject1.myFun4",
+                "isValid": true,
+                "jsonPathKeys": [
+                    "(i,cl)=>{\n\tstoreValue(i,cl)\n}"
+                ],
+                "pluginType": "JS"
+            }
+        ],
+        "applicationId": "jetsondashboard",
+        "pluginType": "JS",
+        "_id": "66902aee325cb7caa405ff06",
+        "pluginId": "JS",
+        "actionIds": [],
+        "archivedActionIds": [],
+        "archivedActions": []
     }
 ]
