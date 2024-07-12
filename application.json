@@ -30,7 +30,7 @@
             "isDefault": false
         },
         {
-            "_id": "Training",
+            "_id": "Training1",
             "isDefault": false
         },
         {
@@ -106,7 +106,7 @@
             "isDefault": false
         },
         {
-            "_id": "Training Copy",
+            "_id": "Training",
             "isDefault": false
         }
     ],

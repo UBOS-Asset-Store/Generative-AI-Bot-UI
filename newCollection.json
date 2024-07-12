@@ -72,7 +72,7 @@
     {
         "id": "64a1c91cedd3b9b22ecf75de",
         "name": "JSObject2",
-        "pageId": "Training",
+        "pageId": "Training1",
         "body": "export default {\n\tmyVar1: [],\n\tmyVar2: {},\n\tmyFun2: async (id) => {\n await storeValue('idToDeleteOb', id)\n await deleteObject.run()\n\tgetKnowlegeFiles.run()\n\t},\n\tmyFun3: async() => {\n\t\tgetAllBases.run(()=>getKnowlegeFiles.run())\n\t}\n}",
         "variables": [
             {
@@ -1342,7 +1342,7 @@
     {
         "id": "6690f658e315d812f13c2043",
         "name": "JSObject2",
-        "pageId": "Training Copy",
+        "pageId": "Training",
         "body": "export default {\n\tmyVar1: [],\n\tmyVar2: {},\n\tmyFun2: async (id) => {\n await storeValue('idToDeleteOb', id)\n await deleteObject.run()\n\tgetKnowlegeFiles.run()\n\t},\n\tmyFun3: async() => {\n\t\tgetAllBases.run(()=>getKnowlegeFiles.run())\n\t},\n\tmyFun4: (i,cl) => {\n\t\tstoreValue(i, cl, false)\n\t}\n}",
         "variables": [
             {

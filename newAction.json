@@ -6497,7 +6497,7 @@
                 "messages": []
             },
             "executeOnLoad": false,
-            "pageId": "Training",
+            "pageId": "Training1",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
                 "encodeParamsToggle": true,
@@ -6582,7 +6582,7 @@
                 "messages": []
             },
             "executeOnLoad": false,
-            "pageId": "Training",
+            "pageId": "Training1",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
                 "encodeParamsToggle": true,
@@ -6665,7 +6665,7 @@
                 "messages": []
             },
             "executeOnLoad": false,
-            "pageId": "Training",
+            "pageId": "Training1",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
                 "encodeParamsToggle": true,
@@ -7048,7 +7048,7 @@
                 "messages": []
             },
             "executeOnLoad": false,
-            "pageId": "Training",
+            "pageId": "Training1",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
                 "encodeParamsToggle": true,
@@ -7135,7 +7135,7 @@
         "name": "myFun2",
         "collectionId": "64a1c91cedd3b9b22ecf75de",
         "executeOnLoad": false,
-        "pageId": "Training",
+        "pageId": "Training1",
         "actionConfiguration": {
             "body": "async (id) => {\n await storeValue('idToDeleteOb', id)\n await deleteObject.run()\n\tgetKnowlegeFiles.run()\n\t}",
             "isAsync": true,
@@ -7406,7 +7406,7 @@
                 "messages": []
             },
             "executeOnLoad": false,
-            "pageId": "Training",
+            "pageId": "Training1",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
                 "encodeParamsToggle": true,
@@ -7577,7 +7577,7 @@
                 "messages": []
             },
             "executeOnLoad": false,
-            "pageId": "Training",
+            "pageId": "Training1",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
                 "encodeParamsToggle": true,
@@ -7671,7 +7671,7 @@
                 "messages": []
             },
             "executeOnLoad": false,
-            "pageId": "Training",
+            "pageId": "Training1",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
                 "encodeParamsToggle": true,
@@ -8734,7 +8734,7 @@
                 "messages": []
             },
             "executeOnLoad": true,
-            "pageId": "Training",
+            "pageId": "Training1",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
                 "encodeParamsToggle": true,
@@ -9044,7 +9044,7 @@
                 "messages": []
             },
             "executeOnLoad": false,
-            "pageId": "Training",
+            "pageId": "Training1",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
                 "encodeParamsToggle": true,
@@ -9133,7 +9133,7 @@
                 "messages": []
             },
             "executeOnLoad": false,
-            "pageId": "Training",
+            "pageId": "Training1",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
                 "encodeParamsToggle": true,
@@ -9210,7 +9210,7 @@
                 "messages": []
             },
             "executeOnLoad": false,
-            "pageId": "Training",
+            "pageId": "Training1",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
                 "encodeParamsToggle": true,
@@ -9859,7 +9859,7 @@
                 "messages": []
             },
             "executeOnLoad": false,
-            "pageId": "Training",
+            "pageId": "Training1",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
                 "encodeParamsToggle": true,
@@ -9944,7 +9944,7 @@
                 "messages": []
             },
             "executeOnLoad": false,
-            "pageId": "Training",
+            "pageId": "Training1",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
                 "encodeParamsToggle": true,
@@ -11824,7 +11824,7 @@
                 "messages": []
             },
             "executeOnLoad": false,
-            "pageId": "Training",
+            "pageId": "Training1",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
                 "encodeParamsToggle": true,
@@ -11906,7 +11906,7 @@
                 "messages": []
             },
             "executeOnLoad": false,
-            "pageId": "Training",
+            "pageId": "Training1",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
                 "encodeParamsToggle": true,
@@ -12777,7 +12777,7 @@
                 "messages": []
             },
             "executeOnLoad": true,
-            "pageId": "Training",
+            "pageId": "Training1",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
                 "encodeParamsToggle": true,
@@ -13319,7 +13319,7 @@
                 "messages": []
             },
             "executeOnLoad": false,
-            "pageId": "Training",
+            "pageId": "Training1",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
                 "encodeParamsToggle": true,
@@ -15024,7 +15024,7 @@
                 "messages": []
             },
             "executeOnLoad": false,
-            "pageId": "Training",
+            "pageId": "Training1",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
                 "encodeParamsToggle": true,
@@ -17019,7 +17019,7 @@
         "name": "myFun3",
         "collectionId": "64a1c91cedd3b9b22ecf75de",
         "executeOnLoad": true,
-        "pageId": "Training",
+        "pageId": "Training1",
         "actionConfiguration": {
             "body": "async() => {\n\t\tgetAllBases.run(()=>getKnowlegeFiles.run())\n\t}",
             "isAsync": true,
@@ -20297,7 +20297,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-07-11T18:56:46.281Z",
-        "updatedAt": "2024-07-11T18:56:46.281Z",
+        "updatedAt": "2024-07-12T20:05:03.099Z",
         "deleted": false,
         "policies": [
             {
@@ -20367,7 +20367,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-07-11T18:56:46.281Z",
-        "updatedAt": "2024-07-12T13:16:44.444Z",
+        "updatedAt": "2024-07-12T20:04:57.405Z",
         "deleted": false,
         "policies": [
             {
@@ -20714,7 +20714,7 @@
                 "messages": []
             },
             "executeOnLoad": false,
-            "pageId": "Training Copy",
+            "pageId": "Training",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
                 "encodeParamsToggle": true,
@@ -20735,7 +20735,7 @@
                         "value": true
                     }
                 ],
-                "body": "{\n\t\"link\":{{JSON.stringify(link.text)}},\n\t\"name\": {{JSON.stringify(link.text)}},\n\t\"id\": {{JSON.stringify( Select1.selectedOptionValue)}},\n\t\"type\": \"Link\",\n\t\"typeBase\":{{JSON.stringify(Select1.selectedOptionLabel.split(' ')[1])}},\n\t\"nameBase\":{{JSON.stringify(Select1.selectedOptionLabel.split(' ')[0])}},\n\t\"email\": \"{{appsmith.user.auth_module.user.info.user.email}}\"\n}",
+                "body": "{\n\t\"ownerId\": \"{{main.user.auth_module.user.info.user._id}}\",\n\t\"link\":{{JSON.stringify(link.text)}},\n\t\"name\": {{JSON.stringify(link.text)}},\n\t\"id\": {{JSON.stringify( Select1.selectedOptionValue)}},\n\t\"type\": \"Link\",\n\t\"typeBase\":{{JSON.stringify(Select1.selectedOptionLabel.split(' ')[1])}},\n\t\"nameBase\":{{JSON.stringify(Select1.selectedOptionLabel.split(' ')[0])}},\n\t\"email\": \"{{appsmith.user.auth_module.user.info.user.email}}\"\n}",
                 "path": ""
             },
             "dynamicBindingPathList": [
@@ -20754,13 +20754,14 @@
                 "JSON.stringify( Select1.selectedOptionValue)",
                 "JSON.stringify(Select1.selectedOptionLabel.split(' ')[1])",
                 "JSON.stringify(Select1.selectedOptionLabel.split(' ')[0])",
-                "appsmith.user.auth_module.user.info.user.email"
+                "appsmith.user.auth_module.user.info.user.email",
+                "main.user.auth_module.user.info.user._id"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-07-12T09:24:40.806Z",
-        "updatedAt": "2024-07-12T09:24:40.806Z",
+        "updatedAt": "2024-07-12T20:44:23.265Z",
         "deleted": false,
         "policies": [
             {
@@ -20799,7 +20800,7 @@
                 "messages": []
             },
             "executeOnLoad": false,
-            "pageId": "Training Copy",
+            "pageId": "Training",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
                 "encodeParamsToggle": true,
@@ -20882,7 +20883,7 @@
                 "messages": []
             },
             "executeOnLoad": false,
-            "pageId": "Training Copy",
+            "pageId": "Training",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
                 "encodeParamsToggle": true,
@@ -20965,7 +20966,7 @@
                 "messages": []
             },
             "executeOnLoad": false,
-            "pageId": "Training Copy",
+            "pageId": "Training",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
                 "encodeParamsToggle": true,
@@ -21067,7 +21068,7 @@
                 "messages": []
             },
             "executeOnLoad": false,
-            "pageId": "Training Copy",
+            "pageId": "Training",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
                 "encodeParamsToggle": true,
@@ -21079,7 +21080,7 @@
                     }
                 ],
                 "queryParameters": [],
-                "body": "{\n\t\"link\": {{JSON.stringify(\"manual\")}},\n\t\"name\": {{JSON.stringify(\"manual\")}},\n\t\"id\": {{JSON.stringify(Select1.selectedOptionValue)}},\n\t\"type\": \"Manual\",\n\t\"result\": {{JSON.stringify(manualanswer.text)}},\n\t\"question\": {{JSON.stringify(manualques.text)}},\n\t\"typeBase\":{{JSON.stringify(Select1.selectedOptionLabel.split(' ')[1])}},\n\t\"nameBase\":{{JSON.stringify(Select1.selectedOptionLabel.split(' ')[0])}},\n\t\"email\": \"{{appsmith.user.auth_module.user.info.user.email}}\"\n}",
+                "body": "{\n\t\"ownerId\": \"{{main.user.auth_module.user.info.user._id}}\",\n\t\"link\": {{JSON.stringify(\"manual\")}},\n\t\"name\": {{JSON.stringify(\"manual\")}},\n\t\"id\": {{JSON.stringify(Select1.selectedOptionValue)}},\n\t\"type\": \"Manual\",\n\t\"result\": {{JSON.stringify(manualanswer.text)}},\n\t\"question\": {{JSON.stringify(manualques.text)}},\n\t\"typeBase\":{{JSON.stringify(Select1.selectedOptionLabel.split(' ')[1])}},\n\t\"nameBase\":{{JSON.stringify(Select1.selectedOptionLabel.split(' ')[0])}},\n\t\"email\": \"{{appsmith.user.auth_module.user.info.user.email}}\"\n}",
                 "bodyFormData": [],
                 "formData": {
                     "apiContentType": "none"
@@ -21102,6 +21103,7 @@
             "invalids": [],
             "jsonPathKeys": [
                 "main.env.nodeUrl",
+                "main.user.auth_module.user.info.user._id",
                 "JSON.stringify(\"manual\")",
                 "JSON.stringify(Select1.selectedOptionValue)",
                 "JSON.stringify(manualanswer.text)",
@@ -21109,13 +21111,13 @@
                 "JSON.stringify(Select1.selectedOptionLabel.split(' ')[1])",
                 "JSON.stringify(Select1.selectedOptionLabel.split(' ')[0])",
                 "appsmith.user.auth_module.user.info.user.email",
-                "main.env.nodeUrl,JSON.stringify(,2023-09-04T13:29:20.709Z,2024-02-29T15:26:09.817Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,JSON.stringify(),2023-09-04T13:29:20.709Z,2024-02-29T15:26:10.751Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2023-09-04T13:29:20.709Z,2024-02-29T15:26:11.802Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,JSON.stringify(Select1.selectedOptionLabel.split(' ')[0]),2023-09-04T13:29:20.709Z,2024-02-29T15:26:14.811Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl"
+                "main.env.nodeUrl,2024-07-12T09:24:40.806Z,2024-07-12T20:44:04.657Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2024-07-12T09:24:40.806Z,2024-07-12T20:44:05.871Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2024-07-12T09:24:40.806Z,2024-07-12T20:44:07.707Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2024-07-12T09:24:40.806Z,2024-07-12T20:44:15.509Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-07-12T09:24:40.806Z",
-        "updatedAt": "2024-07-12T09:24:40.806Z",
+        "updatedAt": "2024-07-12T20:45:05.153Z",
         "deleted": false,
         "policies": [
             {
@@ -21153,8 +21155,8 @@
                 "pluginId": "API",
                 "messages": []
             },
-            "executeOnLoad": false,
-            "pageId": "Training Copy",
+            "executeOnLoad": true,
+            "pageId": "Training",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
                 "encodeParamsToggle": true,
@@ -21248,7 +21250,7 @@
                 "messages": []
             },
             "executeOnLoad": false,
-            "pageId": "Training Copy",
+            "pageId": "Training",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
                 "encodeParamsToggle": true,
@@ -21315,11 +21317,11 @@
         "pluginType": "API",
         "pluginId": "API",
         "Action": {
-            "name": "check_pinecone",
+            "name": "checkOpenAI",
             "datasource": {
                 "name": "DEFAULT_REST_DATASOURCE",
                 "datasourceConfiguration": {
-                    "url": "{{main.env.nodeUrl}}/getAnalytics"
+                    "url": "{{main.env.nodeUrl}}/checkOpenAI"
                 },
                 "invalids": [],
                 "isValid": true,
@@ -21327,13 +21329,18 @@
                 "messages": []
             },
             "executeOnLoad": true,
-            "pageId": "Training Copy",
+            "pageId": "Training",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
                 "encodeParamsToggle": true,
                 "httpMethod": "GET",
                 "headers": [],
-                "queryParameters": [],
+                "queryParameters": [
+                    {
+                        "key": "ownerId",
+                        "value": "{{main.user.auth_module.user.info.user._id}}"
+                    }
+                ],
                 "bodyFormData": [],
                 "formData": {
                     "apiContentType": "none"
@@ -21347,18 +21354,23 @@
             "dynamicBindingPathList": [
                 {
                     "key": "datasourceUrl"
+                },
+                {
+                    "key": "queryParameters[0].value"
                 }
             ],
             "isValid": true,
             "invalids": [],
             "jsonPathKeys": [
-                "main.env.nodeUrl"
+                "main.env.nodeUrl",
+                "main.user.auth_module.user.info.user.email",
+                "main.user.auth_module.user.info.user._id"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-07-12T09:24:40.807Z",
-        "updatedAt": "2024-07-12T09:24:40.807Z",
+        "updatedAt": "2024-07-12T20:36:39.329Z",
         "deleted": false,
         "policies": [
             {
@@ -21397,7 +21409,7 @@
                 "messages": []
             },
             "executeOnLoad": false,
-            "pageId": "Training Copy",
+            "pageId": "Training",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
                 "encodeParamsToggle": true,
@@ -21441,13 +21453,13 @@
                 "JSON.stringify(answer_as_onboarding.selectedOptionValue)",
                 "JSON.stringify(tone_onboarding.selectedOptionValue)",
                 "JSON.stringify(language_onboarding.selectedOptionValue)",
-                "main.env.nodeUrl,2023-10-31T11:26:33.701Z,2024-07-05T14:36:45.849Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl"
+                "main.env.nodeUrl,2024-07-12T09:24:40.807Z,2024-07-12T09:24:40.807Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-07-12T09:24:40.807Z",
-        "updatedAt": "2024-07-12T09:24:40.807Z",
+        "updatedAt": "2024-07-12T20:44:41.127Z",
         "deleted": false,
         "policies": [
             {
@@ -21486,7 +21498,7 @@
                 "messages": []
             },
             "executeOnLoad": false,
-            "pageId": "Training Copy",
+            "pageId": "Training",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
                 "encodeParamsToggle": true,
@@ -21524,7 +21536,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-07-12T09:24:40.807Z",
-        "updatedAt": "2024-07-12T09:24:40.807Z",
+        "updatedAt": "2024-07-12T19:58:44.964Z",
         "deleted": false,
         "policies": [
             {
@@ -21563,7 +21575,7 @@
                 "messages": []
             },
             "executeOnLoad": false,
-            "pageId": "Training Copy",
+            "pageId": "Training",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
                 "encodeParamsToggle": true,
@@ -21575,7 +21587,7 @@
                     }
                 ],
                 "queryParameters": [],
-                "body": "{\n\t\"link\": {{JSON.stringify(\"text\")}},\n\t\"name\": {{JSON.stringify(\"myText\")}},\n\t\"id\": {{JSON.stringify(Select1.selectedOptionValue)}},\n\t\"type\": \"Text\",\n\t\"typeBase\":{{JSON.stringify(Select1.selectedOptionLabel.split(' ')[1])}},\n\t\"text\":{{JSON.stringify(RichTextEditor1.text)}},\n\t\"nameBase\":{{JSON.stringify(Select1.selectedOptionLabel.split(' ')[0])}},\n\t\"email\": \"{{appsmith.user.auth_module.user.info.user.email}}\"\n}",
+                "body": "{\n\t\"ownerId\": \"{{main.user.auth_module.user.info.user._id}}\",\n\t\"link\": {{JSON.stringify(\"text\")}},\n\t\"name\": {{JSON.stringify(\"myText\")}},\n\t\"id\": {{JSON.stringify(Select1.selectedOptionValue)}},\n\t\"type\": \"Text\",\n\t\"typeBase\":{{JSON.stringify(Select1.selectedOptionLabel.split(' ')[1])}},\n\t\"text\":{{JSON.stringify(RichTextEditor1.text)}},\n\t\"nameBase\":{{JSON.stringify(Select1.selectedOptionLabel.split(' ')[0])}},\n\t\"email\": \"{{appsmith.user.auth_module.user.info.user.email}}\"\n}",
                 "bodyFormData": [],
                 "formData": {
                     "apiContentType": "application/json"
@@ -21604,13 +21616,14 @@
                 "JSON.stringify(Select1.selectedOptionLabel.split(' ')[1])",
                 "JSON.stringify(RichTextEditor1.text)",
                 "JSON.stringify(Select1.selectedOptionLabel.split(' ')[0])",
-                "appsmith.user.auth_module.user.info.user.email"
+                "appsmith.user.auth_module.user.info.user.email",
+                "main.user.auth_module.user.info.user._id"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-07-12T09:24:40.807Z",
-        "updatedAt": "2024-07-12T09:24:40.807Z",
+        "updatedAt": "2024-07-12T20:44:21.404Z",
         "deleted": false,
         "policies": [
             {
@@ -21649,7 +21662,7 @@
                 "messages": []
             },
             "executeOnLoad": false,
-            "pageId": "Training Copy",
+            "pageId": "Training",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
                 "encodeParamsToggle": true,
@@ -21695,7 +21708,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-07-12T09:24:40.807Z",
-        "updatedAt": "2024-07-12T09:24:40.807Z",
+        "updatedAt": "2024-07-12T20:04:08.781Z",
         "deleted": false,
         "policies": [
             {
@@ -21733,8 +21746,8 @@
                 "pluginId": "API",
                 "messages": []
             },
-            "executeOnLoad": false,
-            "pageId": "Training Copy",
+            "executeOnLoad": true,
+            "pageId": "Training",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
                 "encodeParamsToggle": true,
@@ -21811,7 +21824,7 @@
             "datasource": {
                 "name": "DEFAULT_REST_DATASOURCE",
                 "datasourceConfiguration": {
-                    "url": "{{main.env.nodeUrl}}/getBaseKnowlege?ownerID={{main.user.auth_module.user.info.user._id}}"
+                    "url": "{{main.env.nodeUrl}}/getBaseKnowlege"
                 },
                 "invalids": [],
                 "isValid": true,
@@ -21819,7 +21832,7 @@
                 "messages": []
             },
             "executeOnLoad": false,
-            "pageId": "Training Copy",
+            "pageId": "Training",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
                 "encodeParamsToggle": true,
@@ -21830,7 +21843,12 @@
                         "value": "application/json"
                     }
                 ],
-                "queryParameters": [],
+                "queryParameters": [
+                    {
+                        "value": "{{main.user.auth_module.user.info.user._id}}",
+                        "key": "ownerID"
+                    }
+                ],
                 "bodyFormData": [],
                 "formData": {
                     "apiContentType": "application/json"
@@ -21846,6 +21864,12 @@
             "dynamicBindingPathList": [
                 {
                     "key": "datasourceUrl"
+                },
+                {
+                    "key": "path"
+                },
+                {
+                    "key": "queryParameters[0].value"
                 }
             ],
             "isValid": true,
@@ -21858,7 +21882,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-07-12T09:24:40.807Z",
-        "updatedAt": "2024-07-12T13:30:28.859Z",
+        "updatedAt": "2024-07-12T20:28:08.812Z",
         "deleted": false,
         "policies": [
             {
@@ -21897,7 +21921,7 @@
                 "messages": []
             },
             "executeOnLoad": false,
-            "pageId": "Training Copy",
+            "pageId": "Training",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
                 "encodeParamsToggle": true,
@@ -21996,7 +22020,7 @@
                 "messages": []
             },
             "executeOnLoad": true,
-            "pageId": "Training Copy",
+            "pageId": "Training",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
                 "encodeParamsToggle": true,
@@ -22072,7 +22096,7 @@
                 "messages": []
             },
             "executeOnLoad": false,
-            "pageId": "Training Copy",
+            "pageId": "Training",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
                 "encodeParamsToggle": true,
@@ -22152,7 +22176,7 @@
                 "messages": []
             },
             "executeOnLoad": false,
-            "pageId": "Training Copy",
+            "pageId": "Training",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
                 "encodeParamsToggle": true,
@@ -22211,7 +22235,7 @@
         "name": "myFun3",
         "collectionId": "6690f658e315d812f13c2043",
         "executeOnLoad": true,
-        "pageId": "Training Copy",
+        "pageId": "Training",
         "actionConfiguration": {
             "body": "async() => {\n\t\tgetAllBases.run(()=>getKnowlegeFiles.run())\n\t}",
             "isAsync": true,
@@ -22247,7 +22271,7 @@
         "name": "myFun2",
         "collectionId": "6690f658e315d812f13c2043",
         "executeOnLoad": false,
-        "pageId": "Training Copy",
+        "pageId": "Training",
         "actionConfiguration": {
             "body": "async (id) => {\n await storeValue('idToDeleteOb', id)\n await deleteObject.run()\n\tgetKnowlegeFiles.run()\n\t}",
             "isAsync": true,
@@ -22287,7 +22311,7 @@
         "name": "myFun4",
         "collectionId": "6690f658e315d812f13c2043",
         "executeOnLoad": false,
-        "pageId": "Training Copy",
+        "pageId": "Training",
         "actionConfiguration": {
             "body": "(i,cl) => {\n\t\tstoreValue(i, cl, false)\n\t}",
             "isAsync": true,
@@ -22318,5 +22342,170 @@
             "(i,cl) => {\n\t\tstoreValue(i, cl, false)\n\t}"
         ],
         "pluginType": "JS"
+    },
+    {
+        "_id": "66918cbbe315d812f13c2049",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "updateBaseBehaviour",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/updateBaseBehaviour"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "Training",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "PUT",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "body": "{\n  \"baseId\":{{JSON.stringify(Select1.selectedOptionValue)}},\n\t\"prompt\": {{JSON.stringify(prompt_custom.text)}},\n  \"model\": {{JSON.stringify(model_selectCopy.selectedOptionValue)}},\n  \"answer_length_onboarding\": {{JSON.stringify(answer_length.selectedOptionValue)}},\n  \"answer_as\": {{JSON.stringify(answer_as.selectedOptionValue)}},\n  \"tone\": {{JSON.stringify(tone.selectedOptionValue)}},\n  \"language\": {{JSON.stringify(language.selectedOptionValue)}}\n}",
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ]
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "datasourceUrl"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "JSON.stringify(Select1.selectedOptionValue)",
+                "JSON.stringify(prompt_custom.text)",
+                "JSON.stringify(model_selectCopy.selectedOptionValue)",
+                "JSON.stringify(answer_length.selectedOptionValue)",
+                "JSON.stringify(answer_as.selectedOptionValue)",
+                "JSON.stringify(tone.selectedOptionValue)",
+                "JSON.stringify(language.selectedOptionValue)"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-07-12T20:06:19.482Z",
+        "updatedAt": "2024-07-12T20:45:04.496Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "66918e65e315d812f13c204a",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "updateBaseScenario",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/updateBaseScenario"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "Training",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "PUT",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ],
+                "body": "{\n  \"baseId\":{{JSON.stringify(Select1.selectedOptionValue)}},\n\t\"welcomeMessage\":{{JSON.stringify(welcome.text)}},\n\t\"errorMessage\":{{JSON.stringify(unable.text)}}\n}"
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "datasourceUrl"
+                },
+                {
+                    "key": "body"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "JSON.stringify(Select1.selectedOptionValue)",
+                "JSON.stringify(welcome.text)",
+                "JSON.stringify(unable.text)"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-07-12T20:13:25.939Z",
+        "updatedAt": "2024-07-12T20:16:24.644Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
     }
 ]
