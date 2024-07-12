@@ -1338,5 +1338,118 @@
         "actionIds": [],
         "archivedActionIds": [],
         "archivedActions": []
+    },
+    {
+        "id": "6690f658e315d812f13c2043",
+        "name": "JSObject2",
+        "pageId": "Training Copy",
+        "body": "export default {\n\tmyVar1: [],\n\tmyVar2: {},\n\tmyFun2: async (id) => {\n await storeValue('idToDeleteOb', id)\n await deleteObject.run()\n\tgetKnowlegeFiles.run()\n\t},\n\tmyFun3: async() => {\n\t\tgetAllBases.run(()=>getKnowlegeFiles.run())\n\t},\n\tmyFun4: (i,cl) => {\n\t\tstoreValue(i, cl, false)\n\t}\n}",
+        "variables": [
+            {
+                "name": "myVar1",
+                "value": []
+            },
+            {
+                "name": "myVar2",
+                "value": {}
+            }
+        ],
+        "actions": [
+            {
+                "name": "myFun3",
+                "collectionId": "6690f658e315d812f13c2043",
+                "executeOnLoad": true,
+                "pageId": "Training Copy",
+                "actionConfiguration": {
+                    "body": "async() => {\n\t\tgetAllBases.run(()=>getKnowlegeFiles.run())\n\t}",
+                    "isAsync": true,
+                    "timeoutInMillisecond": 10000,
+                    "jsArguments": [],
+                    "paginationType": "NONE",
+                    "encodeParamsToggle": true
+                },
+                "_id": "6690f658e315d812f13c2044",
+                "id": "6690f658e315d812f13c2044",
+                "applicationId": "jetsondashboard",
+                "datasource": {
+                    "isValid": true,
+                    "messages": [],
+                    "name": "UNUSED_DATASOURCE",
+                    "new": true,
+                    "pluginId": "",
+                    "userPermissions": []
+                },
+                "dynamicBindingPathList": [
+                    {
+                        "key": "body"
+                    }
+                ],
+                "fullyQualifiedName": "JSObject2.myFun3",
+                "isValid": true,
+                "jsonPathKeys": [
+                    "async() => {\n\t\t\n\t}"
+                ],
+                "pluginType": "JS"
+            },
+            {
+                "name": "myFun2",
+                "collectionId": "6690f658e315d812f13c2043",
+                "executeOnLoad": false,
+                "pageId": "Training Copy",
+                "actionConfiguration": {
+                    "body": "async (id) => {\n await storeValue('idToDeleteOb', id)\n await deleteObject.run()\n\tgetKnowlegeFiles.run()\n\t}",
+                    "isAsync": true,
+                    "timeoutInMillisecond": 10000,
+                    "jsArguments": [
+                        {
+                            "name": "id"
+                        }
+                    ],
+                    "paginationType": "NONE",
+                    "encodeParamsToggle": true
+                },
+                "_id": "6690f658e315d812f13c2045",
+                "id": "6690f658e315d812f13c2045",
+                "applicationId": "jetsondashboard",
+                "datasource": {
+                    "isValid": true,
+                    "messages": [],
+                    "name": "UNUSED_DATASOURCE",
+                    "new": true,
+                    "pluginId": "",
+                    "userPermissions": []
+                },
+                "dynamicBindingPathList": [
+                    {
+                        "key": "body"
+                    }
+                ],
+                "fullyQualifiedName": "JSObject2.myFun2",
+                "isValid": true,
+                "jsonPathKeys": [
+                    "async (id) => {\n await storeValue('idToDeleteOb', id)\n await deleteObject.run()\n\t\tgetPDF.run()\n\t\tgetLink.run()\n\t\tgetFiles.run()\n\t\tgetFAQ.run()\t\n\t}"
+                ],
+                "pluginType": "JS"
+            },
+            {
+                "name": "myFun4",
+                "collectionId": "6690f658e315d812f13c2043",
+                "executeOnLoad": false,
+                "pageId": "Training Copy",
+                "actionConfiguration": {
+                    "body": "(i,cl) => {\n\t\tstoreValue(i, cl, false)\n\t}",
+                    "isAsync": true,
+                    "timeoutInMillisecond": 0,
+                    "jsArguments": []
+                }
+            }
+        ],
+        "applicationId": "jetsondashboard",
+        "pluginType": "JS",
+        "_id": "6690f658e315d812f13c2043",
+        "pluginId": "JS",
+        "actionIds": [],
+        "archivedActionIds": [],
+        "archivedActions": []
     }
 ]

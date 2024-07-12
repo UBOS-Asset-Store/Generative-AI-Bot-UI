@@ -6238,7 +6238,7 @@
             "datasource": {
                 "name": "DEFAULT_REST_DATASOURCE",
                 "datasourceConfiguration": {
-                    "url": "{{main.env.nodeUrl}}/getUsersTelegram"
+                    "url": "{{main.env.nodeUrl}}/getUsersChat"
                 },
                 "invalids": [],
                 "isValid": true,
@@ -6257,7 +6257,12 @@
                         "value": "application/json"
                     }
                 ],
-                "queryParameters": [],
+                "queryParameters": [
+                    {
+                        "key": "ownerId",
+                        "value": "{{main.user.auth_module.user.info.user._id}}"
+                    }
+                ],
                 "bodyFormData": [],
                 "formData": {
                     "apiContentType": "application/json"
@@ -6272,18 +6277,22 @@
             "dynamicBindingPathList": [
                 {
                     "key": "datasourceUrl"
+                },
+                {
+                    "key": "queryParameters[0].value"
                 }
             ],
             "isValid": true,
             "invalids": [],
             "jsonPathKeys": [
-                "main.env.nodeUrl"
+                "main.env.nodeUrl",
+                "main.user.auth_module.user.info.user._id"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-05-31T11:37:27.119Z",
-        "updatedAt": "2024-06-12T08:43:58.609Z",
+        "updatedAt": "2024-07-12T15:19:49.348Z",
         "deleted": false,
         "policies": [
             {
@@ -6424,7 +6433,7 @@
                         "value": true
                     }
                 ],
-                "body": "{\n\t\"pinecone_api\": {{JSON.stringify(pineconeapi.text)}},\n\t\"pinecone_env\": {{JSON.stringify(env.text)}},\n\t\"pinecone_index\": {{JSON.stringify(indexx.text)}},\n\t\"pinecone_url\": {{JSON.stringify(Input_pineconeUrl.text)}},\n\t\"email\": {{JSON.stringify(main.user.auth_module.user.info.user.email)}}\n}\n"
+                "body": "{\n\t\"ownerId\":{{JSON.stringify(main.user.auth_module.user.info.user._id)}},\n\t\"pinecone_api\": {{JSON.stringify(pineconeapi.text)}},\n\t\"pinecone_env\": {{JSON.stringify(env.text)}},\n\t\"pinecone_index\": {{JSON.stringify(indexx.text)}},\n\t\"pinecone_url\": {{JSON.stringify(Input_pineconeUrl.text)}},\n\t\"email\": {{JSON.stringify(main.user.auth_module.user.info.user.email)}}\n}\n"
             },
             "dynamicBindingPathList": [
                 {
@@ -6438,6 +6447,7 @@
             "invalids": [],
             "jsonPathKeys": [
                 "main.env.nodeUrl",
+                "JSON.stringify(main.user.auth_module.user.info.user._id)",
                 "JSON.stringify(pineconeapi.text)",
                 "JSON.stringify(env.text)",
                 "JSON.stringify(indexx.text)",
@@ -6448,7 +6458,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-06-23T15:04:52.846Z",
-        "updatedAt": "2024-07-11T20:04:06.049Z",
+        "updatedAt": "2024-07-12T10:34:33.395Z",
         "deleted": false,
         "policies": [
             {
@@ -7885,7 +7895,7 @@
                         "value": true
                     }
                 ],
-                "body": "{\n\t\"openai_api\":{{JSON.stringify(openai.text)}},\n\t\"role\": \"{{main.user.auth_module.user.info.user.role}}\",\n\t\"email\": \"{{main.user.auth_module.user.info.user.email}}\"\n}"
+                "body": "{\n\t\"ownerId\":{{JSON.stringify(main.user.auth_module.user.info.user._id)}},\n\t\"openai_api\":{{JSON.stringify(openai.text)}},\n\t\"role\": \"{{main.user.auth_module.user.info.user.role}}\",\n\t\"email\": \"{{main.user.auth_module.user.info.user.email}}\"\n}"
             },
             "dynamicBindingPathList": [
                 {
@@ -7901,13 +7911,14 @@
                 "main.env.nodeUrl",
                 "JSON.stringify(openai.text)",
                 "main.user.auth_module.user.info.user.role",
-                "main.user.auth_module.user.info.user.email"
+                "main.user.auth_module.user.info.user.email",
+                "JSON.stringify(main.user.auth_module.user.info.user._id)"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-10-20T08:48:38.778Z",
-        "updatedAt": "2024-07-11T20:10:12.910Z",
+        "updatedAt": "2024-07-12T10:25:02.569Z",
         "deleted": false,
         "policies": [
             {
@@ -7958,7 +7969,7 @@
                     }
                 ],
                 "queryParameters": [],
-                "body": "{\n\t\"email\": {{JSON.stringify(main.user.auth_module.user.info.user.email)}},\n\t\"bot_name\":{{JSON.stringify(telegram_name.text)}},\n  \"bot_token\":{{JSON.stringify(telegram_token.text)}},\n\t\"knowledge_baseName\":{{JSON.stringify(knowledge_base_telegram.selectedOptionLabel.split(' ')[0])}},\n\t\"knowledge_baseType\":{{JSON.stringify(knowledge_base_telegram.selectedOptionLabel.split(' ')[1])}},\n\t\"id_base\":{{JSON.stringify(knowledge_base_telegram.selectedOptionValue)}}\n}",
+                "body": "{\n\t\"ownerId\":{{JSON.stringify(main.user.auth_module.user.info.user._id)}},\n\t\"userId\":{{JSON.stringify(main.user.auth_module.user.info.user._id)}},\n\t\"email\": {{JSON.stringify(main.user.auth_module.user.info.user.email)}},\n\t\"bot_name\":{{JSON.stringify(telegram_name.text)}},\n  \"bot_token\":{{JSON.stringify(telegram_token.text)}},\n\t\"knowledge_baseName\":{{JSON.stringify(knowledge_base_telegram.selectedOptionLabel.split(' ')[0])}},\n\t\"knowledge_baseType\":{{JSON.stringify(knowledge_base_telegram.selectedOptionLabel.split(' ')[1])}},\n\t\"id_base\":{{JSON.stringify(knowledge_base_telegram.selectedOptionValue)}}\n}",
                 "bodyFormData": [],
                 "formData": {
                     "apiContentType": "none"
@@ -7981,19 +7992,20 @@
             "invalids": [],
             "jsonPathKeys": [
                 "main.env.nodeUrl",
+                "JSON.stringify(main.user.auth_module.user.info.user._id)",
+                "JSON.stringify(main.user.auth_module.user.info.user.email)",
                 "JSON.stringify(telegram_name.text)",
                 "JSON.stringify(telegram_token.text)",
                 "JSON.stringify(knowledge_base_telegram.selectedOptionLabel.split(' ')[0])",
                 "JSON.stringify(knowledge_base_telegram.selectedOptionLabel.split(' ')[1])",
                 "JSON.stringify(knowledge_base_telegram.selectedOptionValue)",
-                "main.env.nodeUrl,2023-10-23T14:48:40.098Z,2024-07-11T20:42:25.387Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl",
-                "JSON.stringify(main.user.auth_module.user.info.user.email)"
+                "main.env.nodeUrl,JSON.stringify(main.user.auth_module.user.info.user._id),2023-10-23T14:48:40.098Z,2024-07-12T10:15:56.804Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-10-23T14:48:40.098Z",
-        "updatedAt": "2024-07-11T20:53:08.999Z",
+        "updatedAt": "2024-07-12T10:24:32.134Z",
         "deleted": false,
         "policies": [
             {
@@ -8053,7 +8065,7 @@
                         "value": true
                     }
                 ],
-                "body": "{\n\t\"email\": {{JSON.stringify(main.user.auth_module.user.info.user.email)}},\n\t\"whatsApp_phoneId\":{{JSON.stringify(whatsApp_id.text)}},\n\t\"whatsApp_token\":{{JSON.stringify(whatsApp_token.text)}},\n\t\"knowledge_base\":{{JSON.stringify(knowledge_base_whatsApp.selectedOptionLabel)}},\n\t\"id_base\":{{JSON.stringify(knowledge_base_whatsApp.selectedOptionValue)}}\n}"
+                "body": "{\n\t\"ownerId\":{{JSON.stringify(main.user.auth_module.user.info.user._id)}},\n\t\"email\": {{JSON.stringify(main.user.auth_module.user.info.user.email)}},\n\t\"whatsApp_phoneId\":{{JSON.stringify(whatsApp_id.text)}},\n\t\"whatsApp_token\":{{JSON.stringify(whatsApp_token.text)}},\n\t\"knowledge_base\":{{JSON.stringify(knowledge_base_whatsApp.selectedOptionLabel)}},\n\t\"id_base\":{{JSON.stringify(knowledge_base_whatsApp.selectedOptionValue)}}\n}"
             },
             "dynamicBindingPathList": [
                 {
@@ -8067,19 +8079,19 @@
             "invalids": [],
             "jsonPathKeys": [
                 "main.env.nodeUrl",
-                "JSON.stringify({{main.user.auth_module.user.info.user.email)",
+                "JSON.stringify(main.user.auth_module.user.info.user._id)",
+                "JSON.stringify(main.user.auth_module.user.info.user.email)",
                 "JSON.stringify(whatsApp_id.text)",
                 "JSON.stringify(whatsApp_token.text)",
                 "JSON.stringify(knowledge_base_whatsApp.selectedOptionLabel)",
                 "JSON.stringify(knowledge_base_whatsApp.selectedOptionValue)",
-                "main.user.auth_module.user.info.user.email,JSON.stringify(whatsApp_id.text),JSON.stringify(whatsApp_token.text),JSON.stringify(knowledge_base_whatsApp.selectedOptionLabel),JSON.stringify(knowledge_base_whatsApp.selectedOptionValue),main.user.auth_module.user.info.user.email,JSON.stringify(whatsApp_id.text),JSON.stringify(whatsApp_token.text),JSON.stringify(knowledge_base_whatsApp.selectedOptionLabel),JSON.stringify(knowledge_base_whatsApp.selectedOptionValue),main.user.auth_module.user.info.user.email,2023-10-23T15:01:51.668Z,2024-07-11T20:52:54.005Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2023-10-23T15:01:51.668Z,2024-07-11T20:52:57.001Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,JSON.stringify({{main.user.auth_module.user.info.user.email),2023-10-23T15:01:51.668Z,2024-07-11T20:53:01.489Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl",
-                "JSON.stringify(main.user.auth_module.user.info.user.email)"
+                "main.user.auth_module.user.info.user.email),2023-10-23T15:01:51.668Z,2024-07-11T20:53:01.489Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,JSON.stringify(main.user.auth_module.user.info.user.email),2023-10-23T15:01:51.668Z,2024-07-11T20:53:03.373Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,JSON.stringify(main.user.auth_module.user.info.user._id),2023-10-23T15:01:51.668Z,2024-07-12T10:24:18.349Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2023-10-23T15:01:51.668Z,2024-07-12T10:24:22.071Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2023-10-23T15:01:51.668Z,2024-07-12T10:24:23.028Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-10-23T15:01:51.668Z",
-        "updatedAt": "2024-07-11T20:53:03.373Z",
+        "updatedAt": "2024-07-12T10:24:28.238Z",
         "deleted": false,
         "policies": [
             {
@@ -8139,7 +8151,7 @@
                         "value": true
                     }
                 ],
-                "body": "{\n\t\"email\": {{JSON.stringify(main.user.auth_module.user.info.user.email)}},\n\t\"meta_token\":{{JSON.stringify(insta_token.text)}},\n \t\"response_pageId\":{{JSON.stringify(insta_id.text)}},\n\t\"knowledge_baseName\":{{JSON.stringify(knowledge_base_instagram.selectedOptionLabel.split(' ')[0])}},\n\t\"knowledge_baseType\":{{JSON.stringify(knowledge_base_instagram.selectedOptionLabel.split(' ')[1])}},\n\t\"id_base\":{{JSON.stringify(knowledge_base_instagram.selectedOptionValue)}}\n}"
+                "body": "{\n\t\"ownerId\":{{JSON.stringify(main.user.auth_module.user.info.user._id)}},\n\t\"email\": {{JSON.stringify(main.user.auth_module.user.info.user.email)}},\n\t\"meta_token\":{{JSON.stringify(insta_token.text)}},\n \t\"response_pageId\":{{JSON.stringify(insta_id.text)}},\n\t\"knowledge_baseName\":{{JSON.stringify(knowledge_base_instagram.selectedOptionLabel.split(' ')[0])}},\n\t\"knowledge_baseType\":{{JSON.stringify(knowledge_base_instagram.selectedOptionLabel.split(' ')[1])}},\n\t\"id_base\":{{JSON.stringify(knowledge_base_instagram.selectedOptionValue)}}\n}"
             },
             "dynamicBindingPathList": [
                 {
@@ -8153,19 +8165,20 @@
             "invalids": [],
             "jsonPathKeys": [
                 "main.env.nodeUrl",
+                "JSON.stringify(main.user.auth_module.user.info.user.email)",
                 "JSON.stringify(insta_token.text)",
                 "JSON.stringify(insta_id.text)",
                 "JSON.stringify(knowledge_base_instagram.selectedOptionLabel.split(' ')[0])",
                 "JSON.stringify(knowledge_base_instagram.selectedOptionLabel.split(' ')[1])",
                 "JSON.stringify(knowledge_base_instagram.selectedOptionValue)",
-                "main.env.nodeUrl,2023-10-23T15:27:02.129Z,2024-01-16T12:26:51.666Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl",
-                "JSON.stringify(main.user.auth_module.user.info.user.email)"
+                "main.env.nodeUrl,2023-10-23T15:27:02.129Z,2024-07-12T06:20:45.409Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl",
+                "JSON.stringify(main.user.auth_module.user.info.user._id)"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-10-23T15:27:02.129Z",
-        "updatedAt": "2024-07-11T20:53:13.673Z",
+        "updatedAt": "2024-07-12T10:24:37.260Z",
         "deleted": false,
         "policies": [
             {
@@ -8216,7 +8229,7 @@
                     }
                 ],
                 "queryParameters": [],
-                "body": "{\n\t\"email\": {{JSON.stringify(main.user.auth_module.user.info.user.email)}},\n\t\"meta_token\":{{JSON.stringify(ms_token.text)}},\n\t\"response_pageId\":{{JSON.stringify(ms_id.text)}},\n\t\"knowledge_baseName\":{{JSON.stringify(knowledge_base_messenger.selectedOptionLabel.split(' ')[0])}},\n\t\"knowledge_baseType\":{{JSON.stringify(knowledge_base_messenger.selectedOptionLabel.split(' ')[1])}},\n\t\"id_base\":{{JSON.stringify(knowledge_base_messenger.selectedOptionValue)}}\n}",
+                "body": "{\n\t\"ownerId\":{{JSON.stringify(main.user.auth_module.user.info.user._id)}},\n\t\"email\": {{JSON.stringify(main.user.auth_module.user.info.user.email)}},\n\t\"meta_token\":{{JSON.stringify(ms_token.text)}},\n\t\"response_pageId\":{{JSON.stringify(ms_id.text)}},\n\t\"knowledge_baseName\":{{JSON.stringify(knowledge_base_messenger.selectedOptionLabel.split(' ')[0])}},\n\t\"knowledge_baseType\":{{JSON.stringify(knowledge_base_messenger.selectedOptionLabel.split(' ')[1])}},\n\t\"id_base\":{{JSON.stringify(knowledge_base_messenger.selectedOptionValue)}}\n}",
                 "bodyFormData": [],
                 "formData": {
                     "apiContentType": "none"
@@ -8239,18 +8252,19 @@
             "invalids": [],
             "jsonPathKeys": [
                 "main.env.nodeUrl",
+                "JSON.stringify(main.user.auth_module.user.info.user.email)",
                 "JSON.stringify(ms_token.text)",
                 "JSON.stringify(ms_id.text)",
                 "JSON.stringify(knowledge_base_messenger.selectedOptionLabel.split(' ')[0])",
                 "JSON.stringify(knowledge_base_messenger.selectedOptionLabel.split(' ')[1])",
                 "JSON.stringify(knowledge_base_messenger.selectedOptionValue)",
-                "JSON.stringify(main.user.auth_module.user.info.user.email)"
+                "JSON.stringify(main.user.auth_module.user.info.user._id)"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-10-23T19:04:10.116Z",
-        "updatedAt": "2024-07-11T20:53:11.188Z",
+        "updatedAt": "2024-07-12T10:24:35.330Z",
         "deleted": false,
         "policies": [
             {
@@ -8798,8 +8812,8 @@
                 "headers": [],
                 "queryParameters": [
                     {
-                        "key": "email",
-                        "value": "{{main.user.auth_module.user.info.user.email}}"
+                        "key": "ownerId",
+                        "value": "{{main.user.auth_module.user.info.user._id}}"
                     }
                 ],
                 "bodyFormData": [],
@@ -8824,13 +8838,14 @@
             "invalids": [],
             "jsonPathKeys": [
                 "main.env.nodeUrl",
-                "main.user.auth_module.user.info.user.email"
+                "main.user.auth_module.user.info.user._id)",
+                "main.user.auth_module.user.info.user._id"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-10-26T14:11:57.177Z",
-        "updatedAt": "2024-07-11T20:14:23.697Z",
+        "updatedAt": "2024-07-12T10:48:52.254Z",
         "deleted": false,
         "policies": [
             {
@@ -8877,8 +8892,8 @@
                 "headers": [],
                 "queryParameters": [
                     {
-                        "key": "email",
-                        "value": "wqwe@qwe.qwe"
+                        "key": "ownerId",
+                        "value": "{{main.user.auth_module.user.info.user._id}}"
                     }
                 ],
                 "bodyFormData": [],
@@ -8895,18 +8910,22 @@
             "dynamicBindingPathList": [
                 {
                     "key": "datasourceUrl"
+                },
+                {
+                    "key": "queryParameters[0].value"
                 }
             ],
             "isValid": true,
             "invalids": [],
             "jsonPathKeys": [
-                "main.env.nodeUrl"
+                "main.env.nodeUrl",
+                "main.user.auth_module.user.info.user._id"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-10-26T14:56:32.188Z",
-        "updatedAt": "2024-07-11T20:53:22.657Z",
+        "updatedAt": "2024-07-12T10:57:03.539Z",
         "deleted": false,
         "policies": [
             {
@@ -11511,7 +11530,7 @@
                 ],
                 "queryParameters": [
                     {
-                        "value": "wqwe@qwe.qwe",
+                        "value": "{{main.user.auth_module.user.info.user._id}}",
                         "key": "ownerID"
                     }
                 ],
@@ -11525,7 +11544,11 @@
                     }
                 ]
             },
-            "dynamicBindingPathList": [],
+            "dynamicBindingPathList": [
+                {
+                    "key": "queryParameters[0].value"
+                }
+            ],
             "isValid": true,
             "invalids": [],
             "jsonPathKeys": [
@@ -11536,7 +11559,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-01-15T09:09:56.036Z",
-        "updatedAt": "2024-07-11T20:52:19.910Z",
+        "updatedAt": "2024-07-12T10:35:38.834Z",
         "deleted": false,
         "policies": [
             {
@@ -11607,7 +11630,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-01-15T09:42:35.415Z",
-        "updatedAt": "2024-07-11T20:53:26.115Z",
+        "updatedAt": "2024-07-12T10:49:12.605Z",
         "deleted": false,
         "policies": [
             {
@@ -11658,7 +11681,7 @@
                     }
                 ],
                 "queryParameters": [],
-                "body": "{\n\t\"email\": {{JSON.stringify(main.user.auth_module.user.info.user.email)}},\n\t\"knowledge_baseName\":{{JSON.stringify(knowledge_base_customChat.selectedOptionLabel.split(' ')[0])}},\n\t\"knowledge_baseType\":{{JSON.stringify(knowledge_base_customChat.selectedOptionLabel.split(' ')[1])}},\n\t\"id_base\":{{JSON.stringify(knowledge_base_customChat.selectedOptionValue)}}\n}",
+                "body": "{\n\t\"ownerId\":{{JSON.stringify(main.user.auth_module.user.info.user._id)}},\n\t\"email\": {{JSON.stringify(main.user.auth_module.user.info.user.email)}},\n\t\"knowledge_baseName\":{{JSON.stringify(knowledge_base_customChat.selectedOptionLabel.split(' ')[0])}},\n\t\"knowledge_baseType\":{{JSON.stringify(knowledge_base_customChat.selectedOptionLabel.split(' ')[1])}},\n\t\"id_base\":{{JSON.stringify(knowledge_base_customChat.selectedOptionValue)}}\n}",
                 "bodyFormData": [],
                 "formData": {
                     "apiContentType": "none"
@@ -11681,16 +11704,17 @@
             "invalids": [],
             "jsonPathKeys": [
                 "main.env.nodeUrl",
+                "JSON.stringify(main.user.auth_module.user.info.user.email)",
                 "JSON.stringify(knowledge_base_customChat.selectedOptionLabel.split(' ')[0])",
                 "JSON.stringify(knowledge_base_customChat.selectedOptionLabel.split(' ')[1])",
                 "JSON.stringify(knowledge_base_customChat.selectedOptionValue)",
-                "JSON.stringify(main.user.auth_module.user.info.user.email)"
+                "JSON.stringify(main.user.auth_module.user.info.user._id)"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-01-15T10:05:27.294Z",
-        "updatedAt": "2024-07-11T20:53:17.000Z",
+        "updatedAt": "2024-07-12T10:24:39.279Z",
         "deleted": false,
         "policies": [
             {
@@ -11761,7 +11785,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-02-08T20:11:09.130Z",
-        "updatedAt": "2024-07-06T10:58:59.413Z",
+        "updatedAt": "2024-07-12T06:06:57.976Z",
         "deleted": false,
         "policies": [
             {
@@ -20343,7 +20367,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-07-11T18:56:46.281Z",
-        "updatedAt": "2024-07-11T18:56:46.281Z",
+        "updatedAt": "2024-07-12T13:16:44.444Z",
         "deleted": false,
         "policies": [
             {
@@ -20668,6 +20692,1630 @@
         "isValid": true,
         "jsonPathKeys": [
             "(i,cl)=>{\n\tstoreValue(i,cl)\n}"
+        ],
+        "pluginType": "JS"
+    },
+    {
+        "_id": "6690f658e315d812f13c2031",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "saveLink",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/updateObjectsBase"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "Training Copy",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "POST",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ],
+                "body": "{\n\t\"link\":{{JSON.stringify(link.text)}},\n\t\"name\": {{JSON.stringify(link.text)}},\n\t\"id\": {{JSON.stringify( Select1.selectedOptionValue)}},\n\t\"type\": \"Link\",\n\t\"typeBase\":{{JSON.stringify(Select1.selectedOptionLabel.split(' ')[1])}},\n\t\"nameBase\":{{JSON.stringify(Select1.selectedOptionLabel.split(' ')[0])}},\n\t\"email\": \"{{appsmith.user.auth_module.user.info.user.email}}\"\n}",
+                "path": ""
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "body"
+                },
+                {
+                    "key": "datasourceUrl"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "JSON.stringify(link.text)",
+                "JSON.stringify( Select1.selectedOptionValue)",
+                "JSON.stringify(Select1.selectedOptionLabel.split(' ')[1])",
+                "JSON.stringify(Select1.selectedOptionLabel.split(' ')[0])",
+                "appsmith.user.auth_module.user.info.user.email"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-07-12T09:24:40.806Z",
+        "updatedAt": "2024-07-12T09:24:40.806Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "6690f658e315d812f13c2032",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "divide_link",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/divideFile"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "Training Copy",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "POST",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "body": "{\n\"link\": {{JSON.stringify(Table1.selectedRow.url)}},\n\"type\": \"{{RadioGroup1.selectedOptionValue}}\",\n\"anrichment\": {{anrichment_link.isChecked}},\n\"id\": \"{{Table1.selectedRow._id}}\",\n\"file_type\": \"Link\"\n}",
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ]
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "datasourceUrl"
+                },
+                {
+                    "key": "body"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "JSON.stringify(Table1.selectedRow.url)",
+                "RadioGroup1.selectedOptionValue",
+                "anrichment_link.isChecked",
+                "Table1.selectedRow._id"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-07-12T09:24:40.806Z",
+        "updatedAt": "2024-07-12T09:24:40.806Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "6690f658e315d812f13c2033",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "divideFile",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/divideFile"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "Training Copy",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "POST",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ],
+                "body": "{\n\"link\": {{JSON.stringify(Table2.selectedRow.file)}},\n\"type\": \"{{RadioGroup2.selectedOptionValue}}\",\n\"anrichment\": {{anrichment_file.isChecked}},\n\"id\": \"{{Table2.selectedRow._id}}\",\n\"file_type\": \"File\"\n}"
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "datasourceUrl"
+                },
+                {
+                    "key": "body"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "JSON.stringify(Table2.selectedRow.file)",
+                "RadioGroup2.selectedOptionValue",
+                "anrichment_file.isChecked",
+                "Table2.selectedRow._id"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-07-12T09:24:40.806Z",
+        "updatedAt": "2024-07-12T09:24:40.806Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "6690f658e315d812f13c2034",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "deleteObject",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/deleteBaseObject"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "Training Copy",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "DELETE",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "text/plain"
+                    }
+                ],
+                "queryParameters": [
+                    {
+                        "key": "id",
+                        "value": "{{main.store.idToDeleteOb}}"
+                    },
+                    {
+                        "key": "type",
+                        "value": "{{Select1.selectedOptionLabel.split(' ')[1]}}"
+                    },
+                    {
+                        "value": "{{Select1.selectedOptionLabel.split(' ')[0]}}",
+                        "key": "name"
+                    }
+                ],
+                "body": "",
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ],
+                "path": ""
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "datasourceUrl"
+                },
+                {
+                    "key": "queryParameters[0].value"
+                },
+                {
+                    "key": "queryParameters[1].value"
+                },
+                {
+                    "key": "queryParameters[2].value"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "main.store.idToDeleteOb",
+                "Select1.selectedOptionLabel.split(' ')[1]",
+                "Select1.selectedOptionLabel.split(' ')[0]"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-07-12T09:24:40.806Z",
+        "updatedAt": "2024-07-12T09:24:40.806Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "6690f658e315d812f13c2035",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "saveVector",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/updateObjectsBase"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "Training Copy",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "POST",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "body": "{\n\t\"link\": {{JSON.stringify(\"manual\")}},\n\t\"name\": {{JSON.stringify(\"manual\")}},\n\t\"id\": {{JSON.stringify(Select1.selectedOptionValue)}},\n\t\"type\": \"Manual\",\n\t\"result\": {{JSON.stringify(manualanswer.text)}},\n\t\"question\": {{JSON.stringify(manualques.text)}},\n\t\"typeBase\":{{JSON.stringify(Select1.selectedOptionLabel.split(' ')[1])}},\n\t\"nameBase\":{{JSON.stringify(Select1.selectedOptionLabel.split(' ')[0])}},\n\t\"email\": \"{{appsmith.user.auth_module.user.info.user.email}}\"\n}",
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ]
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "body"
+                },
+                {
+                    "key": "datasourceUrl"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "JSON.stringify(\"manual\")",
+                "JSON.stringify(Select1.selectedOptionValue)",
+                "JSON.stringify(manualanswer.text)",
+                "JSON.stringify(manualques.text)",
+                "JSON.stringify(Select1.selectedOptionLabel.split(' ')[1])",
+                "JSON.stringify(Select1.selectedOptionLabel.split(' ')[0])",
+                "appsmith.user.auth_module.user.info.user.email",
+                "main.env.nodeUrl,JSON.stringify(,2023-09-04T13:29:20.709Z,2024-02-29T15:26:09.817Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,JSON.stringify(),2023-09-04T13:29:20.709Z,2024-02-29T15:26:10.751Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2023-09-04T13:29:20.709Z,2024-02-29T15:26:11.802Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,JSON.stringify(Select1.selectedOptionLabel.split(' ')[0]),2023-09-04T13:29:20.709Z,2024-02-29T15:26:14.811Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-07-12T09:24:40.806Z",
+        "updatedAt": "2024-07-12T09:24:40.806Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "6690f658e315d812f13c2036",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "getIDbase",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/getBaseKnowlege"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "Training Copy",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "GET",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [
+                    {
+                        "key": "role",
+                        "value": "{{main.user.auth_module.user.info.user.role}}"
+                    },
+                    {
+                        "key": "email",
+                        "value": "{{main.user.auth_module.user.info.user.email}}"
+                    }
+                ],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "application/json"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ],
+                "path": ""
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "datasourceUrl"
+                },
+                {
+                    "key": "queryParameters[0].value"
+                },
+                {
+                    "key": "queryParameters[1].value"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "main.user.auth_module.user.info.user.role",
+                "main.user.auth_module.user.info.user.email",
+                "main.env.nodeUrl,main.user.auth_module.user.info.user.email,2023-10-11T19:42:54.215Z,2024-05-15T13:45:38.953Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-07-12T09:24:40.806Z",
+        "updatedAt": "2024-07-12T09:24:40.806Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "6690f658e315d812f13c2037",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "getKnowlegeFiles",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/getKnowlegeObjects"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "Training Copy",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "GET",
+                "headers": [],
+                "queryParameters": [
+                    {
+                        "key": "id",
+                        "value": "{{Select1.selectedOptionValue}}"
+                    }
+                ],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "application/json"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ]
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "datasourceUrl"
+                },
+                {
+                    "key": "queryParameters[0].value"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "Select1.selectedOptionValue"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-07-12T09:24:40.806Z",
+        "updatedAt": "2024-07-12T09:24:40.806Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "6690f658e315d812f13c2038",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "check_pinecone",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/getAnalytics"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": true,
+            "pageId": "Training Copy",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "GET",
+                "headers": [],
+                "queryParameters": [],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ]
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "datasourceUrl"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-07-12T09:24:40.807Z",
+        "updatedAt": "2024-07-12T09:24:40.807Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "6690f658e315d812f13c2039",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "createNewBase",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/createNewBase"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "Training Copy",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "POST",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ],
+                "body": "{\n    \"type\":{{JSON.stringify(type_knowledgebase.selectedOptionLabel)}},\n    \"name\": {{JSON.stringify(name_knowledgebase.text)}},\n\t\t\"ownerID\": \"{{main.user.auth_module.user.info.user._id}}\",\n\t\"prompt\": {{JSON.stringify(prompt_custom_onboarding.text)}},\n  \"model\": {{JSON.stringify(model_select.selectedOptionValue)}},\n  \"answer_length_onboarding\": {{JSON.stringify(answer_length_onboarding.selectedOptionValue)}},\n  \"answer_as\": {{JSON.stringify(answer_as_onboarding.selectedOptionValue)}},\n  \"tone\": {{JSON.stringify(tone_onboarding.selectedOptionValue)}},\n  \"language\": {{JSON.stringify(language_onboarding.selectedOptionValue)}}\n}"
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "datasourceUrl"
+                },
+                {
+                    "key": "body"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "JSON.stringify(type_knowledgebase.selectedOptionLabel)",
+                "JSON.stringify(name_knowledgebase.text)",
+                "main.user.auth_module.user.info.user._id",
+                "JSON.stringify(prompt_custom_onboarding.text)",
+                "JSON.stringify(model_select.selectedOptionValue)",
+                "JSON.stringify(answer_length_onboarding.selectedOptionValue)",
+                "JSON.stringify(answer_as_onboarding.selectedOptionValue)",
+                "JSON.stringify(tone_onboarding.selectedOptionValue)",
+                "JSON.stringify(language_onboarding.selectedOptionValue)",
+                "main.env.nodeUrl,2023-10-31T11:26:33.701Z,2024-07-05T14:36:45.849Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-07-12T09:24:40.807Z",
+        "updatedAt": "2024-07-12T09:24:40.807Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "6690f658e315d812f13c203a",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "changeMainbase",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/changeMainbase"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "Training Copy",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "POST",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ],
+                "body": "{\n\t\"_id\":{{JSON.stringify(Select1.selectedOptionValue)}}\n}"
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "body"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "JSON.stringify(Select1.selectedOptionValue)"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-07-12T09:24:40.807Z",
+        "updatedAt": "2024-07-12T09:24:40.807Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "6690f658e315d812f13c203b",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "savetext",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/updateObjectsBase"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "Training Copy",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "POST",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "body": "{\n\t\"link\": {{JSON.stringify(\"text\")}},\n\t\"name\": {{JSON.stringify(\"myText\")}},\n\t\"id\": {{JSON.stringify(Select1.selectedOptionValue)}},\n\t\"type\": \"Text\",\n\t\"typeBase\":{{JSON.stringify(Select1.selectedOptionLabel.split(' ')[1])}},\n\t\"text\":{{JSON.stringify(RichTextEditor1.text)}},\n\t\"nameBase\":{{JSON.stringify(Select1.selectedOptionLabel.split(' ')[0])}},\n\t\"email\": \"{{appsmith.user.auth_module.user.info.user.email}}\"\n}",
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "application/json"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ]
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "datasourceUrl"
+                },
+                {
+                    "key": "body"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "JSON.stringify(\"text\")",
+                "JSON.stringify(\"myText\")",
+                "JSON.stringify(Select1.selectedOptionValue)",
+                "JSON.stringify(Select1.selectedOptionLabel.split(' ')[1])",
+                "JSON.stringify(RichTextEditor1.text)",
+                "JSON.stringify(Select1.selectedOptionLabel.split(' ')[0])",
+                "appsmith.user.auth_module.user.info.user.email"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-07-12T09:24:40.807Z",
+        "updatedAt": "2024-07-12T09:24:40.807Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "6690f658e315d812f13c203c",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "getUserCredentials",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/getUserOpenAiKey"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "Training Copy",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "GET",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [
+                    {
+                        "key": "email",
+                        "value": "{{main.user.auth_module.user.info.user.email}}"
+                    }
+                ],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "application/json"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ],
+                "path": ""
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "datasourceUrl"
+                },
+                {
+                    "key": "queryParameters[0].value"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "main.user.auth_module.user.info.user.email"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-07-12T09:24:40.807Z",
+        "updatedAt": "2024-07-12T09:24:40.807Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "6690f658e315d812f13c203d",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "getChromaName",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/getChromaName"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "Training Copy",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "GET",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [
+                    {
+                        "key": "ownerID",
+                        "value": "{{main.user.auth_module.user.info.user._id}}"
+                    }
+                ],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "application/json"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ],
+                "path": ""
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "datasourceUrl"
+                },
+                {
+                    "key": "queryParameters[0].value"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "main.user.auth_module.user.info.user._id"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-07-12T09:24:40.807Z",
+        "updatedAt": "2024-07-12T09:24:40.807Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "6690f658e315d812f13c203e",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "getAllBases",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/getBaseKnowlege?ownerID={{main.user.auth_module.user.info.user._id}}"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "Training Copy",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "GET",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "application/json"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ],
+                "body": "",
+                "path": ""
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "datasourceUrl"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "main.user.auth_module.user.info.user._id"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-07-12T09:24:40.807Z",
+        "updatedAt": "2024-07-12T13:30:28.859Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "6690f658e315d812f13c203f",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "deleteVector",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/deleteVector"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "Training Copy",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "DELETE",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [
+                    {
+                        "value": "{{Table5.selectedRow.id}}",
+                        "key": "id"
+                    },
+                    {
+                        "key": "typeBase",
+                        "value": "{{Select1.selectedOptionLabel.split(' ')[1]}}"
+                    },
+                    {
+                        "key": "nameBase",
+                        "value": "{{Select1.selectedOptionLabel.split(' ')[0]}}"
+                    }
+                ],
+                "body": "",
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "application/json"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ],
+                "path": ""
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "queryParameters[0].value"
+                },
+                {
+                    "key": "queryParameters[1].value"
+                },
+                {
+                    "key": "queryParameters[2].value"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "Table5.selectedRow.id",
+                "Select1.selectedOptionLabel.split(' ')[1]",
+                "Select1.selectedOptionLabel.split(' ')[0]"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-07-12T09:24:40.807Z",
+        "updatedAt": "2024-07-12T09:24:40.807Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "6690f658e315d812f13c2040",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "getMenu",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/getMenu"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": true,
+            "pageId": "Training Copy",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "GET",
+                "headers": [],
+                "queryParameters": [
+                    {
+                        "key": "lang",
+                        "value": "{{main.store.lg}}"
+                    }
+                ],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ]
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "queryParameters[0].value"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "main.store.lg"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-07-12T09:24:40.807Z",
+        "updatedAt": "2024-07-12T09:24:40.807Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "6690f658e315d812f13c2041",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "change_lang",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/check_token2"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "Training Copy",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "POST",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ],
+                "body": "{\n\"lang\":{{JSON.stringify(main.store.lg)}}\n}"
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "body"
+                },
+                {
+                    "key": "datasourceUrl"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "JSON.stringify(main.store.lg)"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-07-12T09:24:40.807Z",
+        "updatedAt": "2024-07-12T09:24:40.807Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "6690f658e315d812f13c2042",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "askSupport",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/askSupport"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "Training Copy",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "POST",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ],
+                "body": "{\n\t\"email\":{{JSON.stringify(support_user_email_input.text)}},\n\t\"question\":{{JSON.stringify(support_user_question_input.text)}}\n}"
+            },
+            "dynamicBindingPathList": [],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "JSON.stringify(support_user_email_input.text)",
+                "JSON.stringify(support_user_question_input.text)"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-07-12T09:24:40.807Z",
+        "updatedAt": "2024-07-12T09:24:40.807Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "name": "myFun3",
+        "collectionId": "6690f658e315d812f13c2043",
+        "executeOnLoad": true,
+        "pageId": "Training Copy",
+        "actionConfiguration": {
+            "body": "async() => {\n\t\tgetAllBases.run(()=>getKnowlegeFiles.run())\n\t}",
+            "isAsync": true,
+            "timeoutInMillisecond": 10000,
+            "jsArguments": [],
+            "paginationType": "NONE",
+            "encodeParamsToggle": true
+        },
+        "_id": "6690f658e315d812f13c2044",
+        "id": "6690f658e315d812f13c2044",
+        "applicationId": "jetsondashboard",
+        "datasource": {
+            "isValid": true,
+            "messages": [],
+            "name": "UNUSED_DATASOURCE",
+            "new": true,
+            "pluginId": "",
+            "userPermissions": []
+        },
+        "dynamicBindingPathList": [
+            {
+                "key": "body"
+            }
+        ],
+        "fullyQualifiedName": "JSObject2.myFun3",
+        "isValid": true,
+        "jsonPathKeys": [
+            "async() => {\n\t\t\n\t}"
+        ],
+        "pluginType": "JS"
+    },
+    {
+        "name": "myFun2",
+        "collectionId": "6690f658e315d812f13c2043",
+        "executeOnLoad": false,
+        "pageId": "Training Copy",
+        "actionConfiguration": {
+            "body": "async (id) => {\n await storeValue('idToDeleteOb', id)\n await deleteObject.run()\n\tgetKnowlegeFiles.run()\n\t}",
+            "isAsync": true,
+            "timeoutInMillisecond": 10000,
+            "jsArguments": [
+                {
+                    "name": "id"
+                }
+            ],
+            "paginationType": "NONE",
+            "encodeParamsToggle": true
+        },
+        "_id": "6690f658e315d812f13c2045",
+        "id": "6690f658e315d812f13c2045",
+        "applicationId": "jetsondashboard",
+        "datasource": {
+            "isValid": true,
+            "messages": [],
+            "name": "UNUSED_DATASOURCE",
+            "new": true,
+            "pluginId": "",
+            "userPermissions": []
+        },
+        "dynamicBindingPathList": [
+            {
+                "key": "body"
+            }
+        ],
+        "fullyQualifiedName": "JSObject2.myFun2",
+        "isValid": true,
+        "jsonPathKeys": [
+            "async (id) => {\n await storeValue('idToDeleteOb', id)\n await deleteObject.run()\n\t\tgetPDF.run()\n\t\tgetLink.run()\n\t\tgetFiles.run()\n\t\tgetFAQ.run()\t\n\t}"
+        ],
+        "pluginType": "JS"
+    },
+    {
+        "name": "myFun4",
+        "collectionId": "6690f658e315d812f13c2043",
+        "executeOnLoad": false,
+        "pageId": "Training Copy",
+        "actionConfiguration": {
+            "body": "(i,cl) => {\n\t\tstoreValue(i, cl, false)\n\t}",
+            "isAsync": true,
+            "timeoutInMillisecond": 10000,
+            "jsArguments": [],
+            "paginationType": "NONE",
+            "encodeParamsToggle": true
+        },
+        "_id": "669107d9e315d812f13c2048",
+        "id": "669107d9e315d812f13c2048",
+        "applicationId": "jetsondashboard",
+        "datasource": {
+            "isValid": true,
+            "messages": [],
+            "name": "UNUSED_DATASOURCE",
+            "new": true,
+            "pluginId": "",
+            "userPermissions": []
+        },
+        "dynamicBindingPathList": [
+            {
+                "key": "body"
+            }
+        ],
+        "fullyQualifiedName": "JSObject2.myFun4",
+        "isValid": true,
+        "jsonPathKeys": [
+            "(i,cl) => {\n\t\tstoreValue(i, cl, false)\n\t}"
         ],
         "pluginType": "JS"
     }

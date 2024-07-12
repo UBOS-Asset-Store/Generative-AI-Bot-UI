@@ -104,6 +104,10 @@
         {
             "_id": "AI Setup Copy",
             "isDefault": false
+        },
+        {
+            "_id": "Training Copy",
+            "isDefault": false
         }
     ],
     "policies": [
@@ -482,7 +486,7 @@
                                             "isLoading": false,
                                             "parentColumnSpace": 4.6362762451171875,
                                             "parentRowSpace": 10,
-                                            "leftColumn": 55,
+                                            "leftColumn": 56,
                                             "rightColumn": 64,
                                             "topRow": 0,
                                             "bottomRow": 4,
@@ -818,7 +822,7 @@
                             "parentColumnSpace": 12.7685546875,
                             "parentRowSpace": 10,
                             "leftColumn": 0,
-                            "rightColumn": 17,
+                            "rightColumn": 13,
                             "topRow": 0,
                             "bottomRow": 7,
                             "parentId": "b8feb4cpvv",
@@ -839,7 +843,7 @@
                     "leftColumn": 0,
                     "rightColumn": 557.625,
                     "topRow": 0,
-                    "bottomRow": 420,
+                    "bottomRow": 390,
                     "parentId": "ss4bddp965"
                 }
             ],
