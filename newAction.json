@@ -18596,8 +18596,8 @@
                 "headers": [],
                 "queryParameters": [
                     {
-                        "key": "email",
-                        "value": "{{JSON.stringify(main.user.auth_module.user.info.user.email)}}"
+                        "key": "ownerId",
+                        "value": "{{main.user.auth_module.user.info.user._id}}"
                     }
                 ],
                 "bodyFormData": [],
@@ -18623,13 +18623,13 @@
             "invalids": [],
             "jsonPathKeys": [
                 "main.env.nodeUrl",
-                "JSON.stringify(main.user.auth_module.user.info.user.email)"
+                "main.user.auth_module.user.info.user._id"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-07-10T10:18:00.747Z",
-        "updatedAt": "2024-07-10T10:18:00.747Z",
+        "updatedAt": "2024-07-15T13:40:53.778Z",
         "deleted": false,
         "policies": [
             {
