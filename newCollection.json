@@ -1343,7 +1343,7 @@
         "id": "6690f658e315d812f13c2043",
         "name": "JSObject2",
         "pageId": "Training",
-        "body": "export default {\n\tmyVar1: [],\n\tmyVar2: {},\n\tmyFun2: async (id) => {\n await storeValue('idToDeleteOb', id)\n await deleteObject.run()\n\tgetKnowlegeFiles.run()\n\t},\n\tmyFun3: async() => {\n\t\tgetAllBases.run(()=>getKnowlegeFiles.run())\n\t},\n\tmyFun4: (i,cl) => {\n\t\tstoreValue(i, cl, false)\n\t}\n}",
+        "body": "export default {\n\tmyVar1: [],\n\tmyVar2: {},\n\tmyFun2: async (id) => {\n await storeValue('idToDeleteOb', id)\n await deleteObject.run()\n\tgetKnowlegeFiles.run()\n\t},\n\tmyFun3: async() => {\n\t\tgetAllBases.run(()=>getKnowlegeFiles.run())\n\t},\n\tmyFun4: (i,cl) => {\n\t\tstoreValue(i, cl, false)\n\t},\n\tmyFun5: () => {\n\t\tstoreValue('fileName','MyCompanyInformation' )\n\t}\n}",
         "variables": [
             {
                 "name": "myVar1",
@@ -1356,10 +1356,46 @@
         ],
         "actions": [
             {
+                "name": "myFun5",
+                "collectionId": "6690f658e315d812f13c2043",
+                "executeOnLoad": true,
+                "pageId": "Training",
+                "actionConfiguration": {
+                    "body": "() => {\n\t\tstoreValue('fileName','MyCompanyInformation' )\n\t}",
+                    "isAsync": true,
+                    "timeoutInMillisecond": 10000,
+                    "jsArguments": [],
+                    "paginationType": "NONE",
+                    "encodeParamsToggle": true
+                },
+                "_id": "66950cb2f6b32c5cea69e2ea",
+                "id": "66950cb2f6b32c5cea69e2ea",
+                "applicationId": "jetsondashboard",
+                "datasource": {
+                    "isValid": true,
+                    "messages": [],
+                    "name": "UNUSED_DATASOURCE",
+                    "new": true,
+                    "pluginId": "",
+                    "userPermissions": []
+                },
+                "dynamicBindingPathList": [
+                    {
+                        "key": "body"
+                    }
+                ],
+                "fullyQualifiedName": "JSObject2.myFun5",
+                "isValid": true,
+                "jsonPathKeys": [
+                    "(i,cl) => {\n\t\tstoreValue(i, cl, false)\n\t}"
+                ],
+                "pluginType": "JS"
+            },
+            {
                 "name": "myFun3",
                 "collectionId": "6690f658e315d812f13c2043",
                 "executeOnLoad": true,
-                "pageId": "Training Copy",
+                "pageId": "Training",
                 "actionConfiguration": {
                     "body": "async() => {\n\t\tgetAllBases.run(()=>getKnowlegeFiles.run())\n\t}",
                     "isAsync": true,
@@ -1395,7 +1431,7 @@
                 "name": "myFun2",
                 "collectionId": "6690f658e315d812f13c2043",
                 "executeOnLoad": false,
-                "pageId": "Training Copy",
+                "pageId": "Training",
                 "actionConfiguration": {
                     "body": "async (id) => {\n await storeValue('idToDeleteOb', id)\n await deleteObject.run()\n\tgetKnowlegeFiles.run()\n\t}",
                     "isAsync": true,
@@ -1435,13 +1471,37 @@
                 "name": "myFun4",
                 "collectionId": "6690f658e315d812f13c2043",
                 "executeOnLoad": false,
-                "pageId": "Training Copy",
+                "pageId": "Training",
                 "actionConfiguration": {
                     "body": "(i,cl) => {\n\t\tstoreValue(i, cl, false)\n\t}",
                     "isAsync": true,
-                    "timeoutInMillisecond": 0,
-                    "jsArguments": []
-                }
+                    "timeoutInMillisecond": 10000,
+                    "jsArguments": [],
+                    "paginationType": "NONE",
+                    "encodeParamsToggle": true
+                },
+                "_id": "669107d9e315d812f13c2048",
+                "id": "669107d9e315d812f13c2048",
+                "applicationId": "jetsondashboard",
+                "datasource": {
+                    "isValid": true,
+                    "messages": [],
+                    "name": "UNUSED_DATASOURCE",
+                    "new": true,
+                    "pluginId": "",
+                    "userPermissions": []
+                },
+                "dynamicBindingPathList": [
+                    {
+                        "key": "body"
+                    }
+                ],
+                "fullyQualifiedName": "JSObject2.myFun4",
+                "isValid": true,
+                "jsonPathKeys": [
+                    "(i,cl) => {\n\t\tstoreValue(i, cl, false)\n\t}"
+                ],
+                "pluginType": "JS"
             }
         ],
         "applicationId": "jetsondashboard",
