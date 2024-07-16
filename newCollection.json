@@ -643,7 +643,7 @@
         "id": "66800e564f058601f8b673ca",
         "name": "JSObject1",
         "pageId": "Create Chatbot",
-        "body": "export default {\n\tmyVar1: [],\n\tmyVar2: {},\n\tmyFun1: () => {\n\t\t//write code here\n\t},\n\tmyFun2: async () => {\n\n\t}\n}",
+        "body": "export default {\n\tmyVar1: [],\n\tmyVar2: {},\n\tmyFun1: () => {\n\t\t//write code here\n\t},\n\tmyFun2: async () => {\nstoreValue('onboarding',\"Bot\")\n\t}\n}",
         "variables": [
             {
                 "name": "myVar1",
@@ -657,7 +657,7 @@
         "actions": [
             {
                 "name": "myFun1",
-                "pageId": "Onboarding",
+                "pageId": "Create Chatbot",
                 "executeOnLoad": false,
                 "actionConfiguration": {
                     "body": "() => {\n\t\t//write code here\n\t}",
@@ -695,10 +695,10 @@
             },
             {
                 "name": "myFun2",
-                "pageId": "Onboarding",
-                "executeOnLoad": false,
+                "pageId": "Create Chatbot",
+                "executeOnLoad": true,
                 "actionConfiguration": {
-                    "body": "async () => {\n\n\t}",
+                    "body": "async () => {\nstoreValue('onboarding',\"Bot\")\n\t}",
                     "isAsync": true,
                     "timeoutInMillisecond": 10000,
                     "jsArguments": [],

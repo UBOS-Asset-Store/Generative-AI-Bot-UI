@@ -7368,7 +7368,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-08-08T19:50:47.061Z",
-        "updatedAt": "2024-06-21T15:51:26.978Z",
+        "updatedAt": "2024-07-16T06:07:34.825Z",
         "deleted": false,
         "policies": [
             {
@@ -14479,7 +14479,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-06-21T11:48:28.203Z",
-        "updatedAt": "2024-07-02T09:25:49.359Z",
+        "updatedAt": "2024-07-16T06:07:45.399Z",
         "deleted": false,
         "policies": [
             {
@@ -16044,9 +16044,9 @@
     {
         "name": "myFun2",
         "pageId": "Create Chatbot",
-        "executeOnLoad": false,
+        "executeOnLoad": true,
         "actionConfiguration": {
-            "body": "async () => {\n\n\t}",
+            "body": "async () => {\nstoreValue('onboarding',\"Bot\")\n\t}",
             "isAsync": true,
             "timeoutInMillisecond": 10000,
             "jsArguments": [],
