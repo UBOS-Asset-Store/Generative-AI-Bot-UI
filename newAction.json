@@ -21145,18 +21145,17 @@
                 "JSON.stringify(\"manual\")",
                 "JSON.stringify(Select1.selectedOptionValue)",
                 "JSON.stringify(manualanswer.text)",
-                "JSON.stringify(manualques1.text)",
+                "JSON.stringify(manualques.text)",
                 "JSON.stringify(typeDB.text)",
                 "JSON.stringify(Select1.selectedOptionLabel)",
                 "appsmith.user.auth_module.user.info.user.email",
-                "main.env.nodeUrl,2024-07-12T09:24:40.806Z,2024-07-12T20:45:05.153Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,JSON.stringify(typeDB.text),JSON.stringify(Select1.selectedOptionLabel),2024-07-12T09:24:40.806Z,2024-07-12T21:10:50.737Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2024-07-12T09:24:40.806Z,2024-07-12T21:36:00.070Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2024-07-12T09:24:40.806Z,2024-07-12T21:48:06.564Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl",
-                "JSON.stringify(manualques.text)"
+                "main.env.nodeUrl,2024-07-12T09:24:40.806Z,2024-07-12T21:36:00.070Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2024-07-12T09:24:40.806Z,2024-07-12T21:48:06.564Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,JSON.stringify(manualques.text),2024-07-12T09:24:40.806Z,2024-07-15T12:49:32.990Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2024-07-12T09:24:40.806Z,2024-07-16T06:17:37.479Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-07-12T09:24:40.806Z",
-        "updatedAt": "2024-07-15T12:49:32.990Z",
+        "updatedAt": "2024-07-16T06:35:11.457Z",
         "deleted": false,
         "policies": [
             {
