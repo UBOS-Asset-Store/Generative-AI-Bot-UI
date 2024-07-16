@@ -6,7 +6,7 @@
     "isPublic": true,
     "isShowPlatformTag": false,
     "createdAt": "2023-03-02T13:50:57.853Z",
-    "updatedAt": "2024-07-16T16:59:13.037Z",
+    "updatedAt": "2024-07-16T22:39:18.070Z",
     "deleted": false,
     "pages": [
         {
@@ -199,12 +199,12 @@
                             "isVisible": true,
                             "files": [],
                             "label": "Accordion",
-                            "onClick": "{{navigateTo(sidebarAccordion.categoryItem, {\n\tpageName: sidebarAccordion.categoryItem\n})}}",
+                            "onClick": "{{navigateTo(main.user.auth_module.user.page_id, {\n\tpageName: main.user.auth_module.user.page_id\n})}}",
                             "category": "",
                             "categoryItem": "",
                             "categorySubItem": "",
                             "onClickSub": "{{navigateTo(sidebarAccordion.categorySubItem, {})}}",
-                            "onClickMain": "{{navigateTo(sidebarAccordion.category, {\n\tpageName: sidebarAccordion.category\n})}}",
+                            "onClickMain": "{{navigateTo(main.user.auth_module.user.page_id, {\n\tpageName: main.user.auth_module.user.page_id\n})}}",
                             "widgetName": "sidebarAccordion",
                             "shouldScrollContents": false,
                             "directionRtl": false,

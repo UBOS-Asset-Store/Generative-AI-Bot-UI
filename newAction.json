@@ -21304,7 +21304,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-07-12T09:24:40.806Z",
-        "updatedAt": "2024-07-15T11:33:48.397Z",
+        "updatedAt": "2024-07-16T19:33:06.877Z",
         "deleted": false,
         "policies": [
             {
@@ -21550,7 +21550,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-07-12T09:24:40.807Z",
-        "updatedAt": "2024-07-12T19:58:44.964Z",
+        "updatedAt": "2024-07-16T18:27:14.693Z",
         "deleted": false,
         "policies": [
             {
@@ -22224,7 +22224,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-07-12T09:24:40.807Z",
-        "updatedAt": "2024-07-12T09:24:40.807Z",
+        "updatedAt": "2024-07-16T19:32:46.207Z",
         "deleted": false,
         "policies": [
             {
@@ -22250,7 +22250,7 @@
         "executeOnLoad": true,
         "pageId": "Training",
         "actionConfiguration": {
-            "body": "async() => {\n\t\tgetAllBases.run(()=>getKnowlegeFiles.run())\n\t}",
+            "body": "async() => {\n\t\tgetAllBases.run(()=>getKnowlegeFiles.run())\n\t\t\t\t\t storeValue(\"loader\",undefined,false)\n\t}",
             "isAsync": true,
             "timeoutInMillisecond": 10000,
             "jsArguments": [],
@@ -22647,7 +22647,7 @@
             "datasource": {
                 "name": "DEFAULT_REST_DATASOURCE",
                 "datasourceConfiguration": {
-                    "url": "https://platform.eks.ubraine.com"
+                    "url": "{{main.env.nodeUrl}}/subscribeToBot"
                 },
                 "invalids": [],
                 "isValid": true,
@@ -22677,7 +22677,7 @@
                     }
                 ],
                 "body": "{\n\t\"email\":\"{{main.user.auth_module.user.info.user.email}}\"\n}",
-                "path": "/api/getuserId"
+                "path": ""
             },
             "dynamicBindingPathList": [
                 {
@@ -22687,13 +22687,14 @@
             "isValid": true,
             "invalids": [],
             "jsonPathKeys": [
+                "main.env.nodeUrl",
                 "main.user.auth_module.user.info.user.email"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-07-16T13:16:23.360Z",
-        "updatedAt": "2024-07-16T18:25:56.856Z",
+        "updatedAt": "2024-07-16T19:42:24.507Z",
         "deleted": false,
         "policies": [
             {
@@ -22719,7 +22720,7 @@
         "executeOnLoad": false,
         "pageId": "Training",
         "actionConfiguration": {
-            "body": "async () => {\n  \n\t if ( FileSender2.response && FileSender2.response?.success ) {\n\t\t   setInterval(async() => {\n          await getKnowlegeFiles.run()\n              console.log(getKnowlegeFiles.data)\n              console.log(FileSender2.response)\n                if ( getKnowlegeFiles.data && getKnowlegeFiles.data.find((e=> e.id === FileSender2.response.id) ) ) {\n               storeValue(\"loader\",\"true\",true)\n                    clearInterval('conversationCheck')\n                }\n        }, 5000,'conversationCheck');\n\t }\n   showAlert(\"error\",\"error\")\n    }",
+            "body": "async () => {\n  \n\t if ( FileSender2.response && FileSender2.response?.success ) {\n\t\t storeValue(\"loader\",\"start\", false)\n\t\t   setInterval(async() => {\n          await getKnowlegeFilesCheck.run()\n              console.log(getKnowlegeFilesCheck.data)\n              console.log(FileSender2.response)\n                if ( getKnowlegeFilesCheck.data && getKnowlegeFilesCheck.data.find((e=> e.id === FileSender2.response.id ) ) ){\n\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\tgetKnowlegeFilesCheck.data[0].status ===\"Learned\" ?(   storeValue(\"loader\",\"stop\",false) ,clearInterval('conversationCheck')): storeValue(\"loader\",\"start\", false)\n\t\t\t\n                    \n                }\n        }, 5000,'conversationCheck');\n\t\t\t storeValue(\"loader\",undefined,false)\n\t }\n\t storeValue(\"loader\",undefined,false)\n   showAlert(\"error\",\"error\")\n    }",
             "isAsync": true,
             "timeoutInMillisecond": 10000,
             "jsArguments": [],
@@ -22760,7 +22761,7 @@
             "datasource": {
                 "name": "DEFAULT_REST_DATASOURCE",
                 "datasourceConfiguration": {
-                    "url": "https://platform.eks.ubraine.com"
+                    "url": "{{main.env.nodeUrl}}/subscribeToBot"
                 },
                 "invalids": [],
                 "isValid": true,
@@ -22789,24 +22790,108 @@
                         "value": true
                     }
                 ],
-                "path": "/api/getuserId",
+                "path": "",
                 "body": "{\n\t\"email\":\"{{main.user.auth_module.user.info.user.email}}\",\n\t\"forkTemplate\":true\n}"
             },
             "dynamicBindingPathList": [
                 {
                     "key": "body"
+                },
+                {
+                    "key": "datasourceUrl"
                 }
             ],
             "isValid": true,
             "invalids": [],
             "jsonPathKeys": [
+                "main.env.nodeUrl",
                 "main.user.auth_module.user.info.user.email"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-07-16T17:23:19.799Z",
-        "updatedAt": "2024-07-16T17:24:49.297Z",
+        "updatedAt": "2024-07-16T19:42:23.479Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "6696cac3a258c7c7f2608161",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "getKnowlegeFilesCheck",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/getKnowlegeFilesCheck"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "Training",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "GET",
+                "headers": [],
+                "queryParameters": [
+                    {
+                        "value": "{{FileSender2.response._id}}",
+                        "key": "_id"
+                    }
+                ],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ],
+                "path": ""
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "datasourceUrl"
+                },
+                {
+                    "key": "queryParameters[0].value"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "FileSender2.response._id"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-07-16T19:32:19.977Z",
+        "updatedAt": "2024-07-16T20:43:49.763Z",
         "deleted": false,
         "policies": [
             {
