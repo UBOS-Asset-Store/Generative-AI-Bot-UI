@@ -20941,7 +20941,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-07-12T09:24:40.806Z",
-        "updatedAt": "2024-07-12T09:24:40.806Z",
+        "updatedAt": "2024-07-16T08:42:57.590Z",
         "deleted": false,
         "policies": [
             {
@@ -21895,7 +21895,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-07-12T09:24:40.807Z",
-        "updatedAt": "2024-07-15T11:33:11.767Z",
+        "updatedAt": "2024-07-16T08:42:55.039Z",
         "deleted": false,
         "policies": [
             {
@@ -22556,5 +22556,84 @@
             "(i,cl) => {\n\t\tstoreValue(i, cl, false)\n\t}"
         ],
         "pluginType": "JS"
+    },
+    {
+        "_id": "66963299f6b32c5cea69e2eb",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "getAllBases",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/getBaseKnowlege"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": true,
+            "pageId": "Home",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "GET",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [
+                    {
+                        "value": "{{main.user.auth_module.user.info.user._id}}",
+                        "key": "ownerID"
+                    }
+                ],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "application/json"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ],
+                "body": "",
+                "path": ""
+            },
+            "dynamicBindingPathList": [],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "main.user.auth_module.user.info.user._id"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-07-16T08:43:05.280Z",
+        "updatedAt": "2024-07-16T08:43:06.699Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
     }
 ]
