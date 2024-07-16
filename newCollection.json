@@ -1343,7 +1343,7 @@
         "id": "6690f658e315d812f13c2043",
         "name": "JSObject2",
         "pageId": "Training",
-        "body": "export default {\n\tmyVar1: [],\n\tmyVar2: {},\n\tmyFun2: async (id) => {\n await storeValue('idToDeleteOb', id)\n await deleteObject.run()\n\tgetKnowlegeFiles.run()\n\t},\n\tmyFun3: async() => {\n\t\tgetAllBases.run(()=>getKnowlegeFiles.run())\n\t},\n\tmyFun4: (i,cl) => {\n\t\tstoreValue(i, cl, false)\n\t},\n\tmyFun5: () => {\n\t\tstoreValue('fileName','MyCompanyInformation' )\n\t}\n}",
+        "body": "export default {\n\tmyVar1: [],\n\tmyVar2: {},\n\tmyFun2: async (id) => {\n await storeValue('idToDeleteOb', id)\n await deleteObject.run()\n\tgetKnowlegeFiles.run()\n\t},\n\tmyFun3: async() => {\n\t\tgetAllBases.run(()=>getKnowlegeFiles.run())\n\t},\n\tmyFun4: (i,cl) => {\n\t\tstoreValue(i, cl, false)\n\t},\n\tmyFun5: () => {\n\t\tstoreValue('fileName','MyCompanyInformation' )\n\t},\nmyFun6: async () => {\n  \n\t if ( FileSender2.response && FileSender2.response?.success ) {\n\t\t   setInterval(async() => {\n          await getKnowlegeFiles.run()\n              console.log(getKnowlegeFiles.data)\n              console.log(FileSender2.response)\n                if ( getKnowlegeFiles.data && getKnowlegeFiles.data.find((e=> e.id === FileSender2.response.id) ) ) {\n               storeValue(\"loader\",\"true\",true)\n                    clearInterval('conversationCheck')\n                }\n        }, 5000,'conversationCheck');\n\t }\n   showAlert(\"error\",\"error\")\n    }\n}",
         "variables": [
             {
                 "name": "myVar1",
@@ -1355,42 +1355,6 @@
             }
         ],
         "actions": [
-            {
-                "name": "myFun5",
-                "collectionId": "6690f658e315d812f13c2043",
-                "executeOnLoad": true,
-                "pageId": "Training",
-                "actionConfiguration": {
-                    "body": "() => {\n\t\tstoreValue('fileName','MyCompanyInformation' )\n\t}",
-                    "isAsync": true,
-                    "timeoutInMillisecond": 10000,
-                    "jsArguments": [],
-                    "paginationType": "NONE",
-                    "encodeParamsToggle": true
-                },
-                "_id": "66950cb2f6b32c5cea69e2ea",
-                "id": "66950cb2f6b32c5cea69e2ea",
-                "applicationId": "jetsondashboard",
-                "datasource": {
-                    "isValid": true,
-                    "messages": [],
-                    "name": "UNUSED_DATASOURCE",
-                    "new": true,
-                    "pluginId": "",
-                    "userPermissions": []
-                },
-                "dynamicBindingPathList": [
-                    {
-                        "key": "body"
-                    }
-                ],
-                "fullyQualifiedName": "JSObject2.myFun5",
-                "isValid": true,
-                "jsonPathKeys": [
-                    "(i,cl) => {\n\t\tstoreValue(i, cl, false)\n\t}"
-                ],
-                "pluginType": "JS"
-            },
             {
                 "name": "myFun3",
                 "collectionId": "6690f658e315d812f13c2043",
@@ -1500,6 +1464,78 @@
                 "isValid": true,
                 "jsonPathKeys": [
                     "(i,cl) => {\n\t\tstoreValue(i, cl, false)\n\t}"
+                ],
+                "pluginType": "JS"
+            },
+            {
+                "name": "myFun5",
+                "collectionId": "6690f658e315d812f13c2043",
+                "executeOnLoad": true,
+                "pageId": "Training",
+                "actionConfiguration": {
+                    "body": "() => {\n\t\tstoreValue('fileName','MyCompanyInformation' )\n\t}",
+                    "isAsync": true,
+                    "timeoutInMillisecond": 10000,
+                    "jsArguments": [],
+                    "paginationType": "NONE",
+                    "encodeParamsToggle": true
+                },
+                "_id": "66950cb2f6b32c5cea69e2ea",
+                "id": "66950cb2f6b32c5cea69e2ea",
+                "applicationId": "jetsondashboard",
+                "datasource": {
+                    "isValid": true,
+                    "messages": [],
+                    "name": "UNUSED_DATASOURCE",
+                    "new": true,
+                    "pluginId": "",
+                    "userPermissions": []
+                },
+                "dynamicBindingPathList": [
+                    {
+                        "key": "body"
+                    }
+                ],
+                "fullyQualifiedName": "JSObject2.myFun5",
+                "isValid": true,
+                "jsonPathKeys": [
+                    "(i,cl) => {\n\t\tstoreValue(i, cl, false)\n\t}"
+                ],
+                "pluginType": "JS"
+            },
+            {
+                "name": "myFun6",
+                "collectionId": "6690f658e315d812f13c2043",
+                "executeOnLoad": false,
+                "pageId": "Training",
+                "actionConfiguration": {
+                    "body": "async () => {\n  \n\t if ( FileSender2.response && FileSender2.response?.success ) {\n\t\t   setInterval(async() => {\n          await getKnowlegeFiles.run()\n              console.log(getKnowlegeFiles.data)\n              console.log(FileSender2.response)\n                if ( getKnowlegeFiles.data && getKnowlegeFiles.data.find((e=> e.id === FileSender2.response.id) ) ) {\n               storeValue(\"loader\",\"true\",true)\n                    clearInterval('conversationCheck')\n                }\n        }, 5000,'conversationCheck');\n\t }\n   showAlert(\"error\",\"error\")\n    }",
+                    "isAsync": true,
+                    "timeoutInMillisecond": 10000,
+                    "jsArguments": [],
+                    "paginationType": "NONE",
+                    "encodeParamsToggle": true
+                },
+                "_id": "6696762da258c7c7f260815f",
+                "id": "6696762da258c7c7f260815f",
+                "applicationId": "jetsondashboard",
+                "datasource": {
+                    "isValid": true,
+                    "messages": [],
+                    "name": "UNUSED_DATASOURCE",
+                    "new": true,
+                    "pluginId": "",
+                    "userPermissions": []
+                },
+                "dynamicBindingPathList": [
+                    {
+                        "key": "body"
+                    }
+                ],
+                "fullyQualifiedName": "JSObject2.myFun6",
+                "isValid": true,
+                "jsonPathKeys": [
+                    "async () => {\n     setInterval(async() => {\n          await getUserConversation.run()\n              console.log(getUserConversation.data.length)\n              console.log(main.store.conservationsLength)\n                if (getUserConversation.data.length > main.store.conservationsLength) {\n                    storeValue('conservationsLength', getUserConversation.data.length)\n                  storeValue('conservationID', getUserConversation.data[getUserConversation.data.length-1]?.value)\n                    clearInterval('conversationCheck')\n                }\n        }, 5000,'conversationCheck');\n    }"
                 ],
                 "pluginType": "JS"
             }
