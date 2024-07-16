@@ -6752,30 +6752,14 @@
             "actionConfiguration": {
                 "timeoutInMillisecond": "130000",
                 "encodeParamsToggle": true,
-                "httpMethod": "GET",
-                "headers": [],
-                "queryParameters": [
+                "httpMethod": "POST",
+                "headers": [
                     {
-                        "key": "id",
-                        "value": "{{main.URL.queryParams.id}}"
-                    },
-                    {
-                        "key": "typeBase",
-                        "value": "{{main.URL.queryParams.typeBase}}"
-                    },
-                    {
-                        "key": "typeName",
-                        "value": "{{main.URL.queryParams.typeName}}"
-                    },
-                    {
-                        "key": "source",
-                        "value": "{{main.URL.queryParams.source}}"
-                    },
-                    {
-                        "key": "page",
-                        "value": "{{Table1.pageNo}}"
+                        "key": "content-type",
+                        "value": "application/json"
                     }
                 ],
+                "queryParameters": [],
                 "bodyFormData": [],
                 "formData": {
                     "apiContentType": "none"
@@ -6785,26 +6769,15 @@
                         "value": true
                     }
                 ],
-                "path": ""
+                "path": "",
+                "body": "{\n\t\"id\":\"{{main.URL.queryParams.id}}\",\n  \"typeBase\":\"{{main.URL.queryParams.typeBase}}\",\n\t\"typeName\":\"{{main.URL.queryParams.typeName}}\",\n\t\"source\": \"{{main.URL.queryParams.source}}\",\n\t\"page\": \"{{Table1.pageNo}}\",\n\t\"ownerId\":\"{{main.user.auth_module.user.info.user._id}}\"\n}"
             },
             "dynamicBindingPathList": [
                 {
                     "key": "datasourceUrl"
                 },
                 {
-                    "key": "queryParameters[0].value"
-                },
-                {
-                    "key": "queryParameters[1].value"
-                },
-                {
-                    "key": "queryParameters[2].value"
-                },
-                {
-                    "key": "queryParameters[3].value"
-                },
-                {
-                    "key": "queryParameters[4].value"
+                    "key": "body"
                 }
             ],
             "isValid": true,
@@ -6815,13 +6788,16 @@
                 "main.URL.queryParams.typeBase",
                 "main.URL.queryParams.typeName",
                 "main.URL.queryParams.source",
-                "Table1.pageNo"
+                "Table1.pageNo",
+                "main.user.auth_module.user.info.user.email",
+                "main.env.nodeUrl,2023-06-29T11:11:20.546Z,2024-07-16T08:18:06.503Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2023-06-29T11:11:20.546Z,2024-07-16T08:18:07.580Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2023-06-29T11:11:20.546Z,2024-07-16T08:18:08.746Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2023-06-29T11:11:20.546Z,2024-07-16T08:18:09.704Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2023-06-29T11:11:20.546Z,2024-07-16T08:18:12.777Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2023-06-29T11:11:20.546Z,2024-07-16T08:18:14.139Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,main.user.auth_module.user.info.user.email,2023-06-29T11:11:20.546Z,2024-07-16T08:18:17.480Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2023-06-29T11:11:20.546Z,2024-07-16T08:18:24.648Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2023-06-29T11:11:20.546Z,2024-07-16T08:20:26.081Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl",
+                "main.user.auth_module.user.info.user._id"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-06-29T11:11:20.546Z",
-        "updatedAt": "2024-06-18T16:07:12.550Z",
+        "updatedAt": "2024-07-16T08:20:29.602Z",
         "deleted": false,
         "policies": [
             {
@@ -7539,7 +7515,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-09-05T11:30:48.543Z",
-        "updatedAt": "2024-06-19T08:22:03.761Z",
+        "updatedAt": "2024-07-16T08:12:39.543Z",
         "deleted": false,
         "policies": [
             {
@@ -18402,7 +18378,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-07-10T10:18:00.747Z",
-        "updatedAt": "2024-07-10T13:53:54.450Z",
+        "updatedAt": "2024-07-16T08:42:01.384Z",
         "deleted": false,
         "policies": [
             {
@@ -18468,7 +18444,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-07-10T10:18:00.747Z",
-        "updatedAt": "2024-07-10T11:19:06.514Z",
+        "updatedAt": "2024-07-16T08:41:56.705Z",
         "deleted": false,
         "policies": [
             {
@@ -21491,13 +21467,13 @@
                 "JSON.stringify(answer_as_onboarding.selectedOptionValue)",
                 "JSON.stringify(tone_onboarding.selectedOptionValue)",
                 "JSON.stringify(language_onboarding.selectedOptionValue)",
-                "main.env.nodeUrl,2024-07-12T09:24:40.807Z,2024-07-12T21:09:26.628Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl"
+                "main.env.nodeUrl,2024-07-12T09:24:40.807Z,2024-07-15T12:48:30.594Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-07-12T09:24:40.807Z",
-        "updatedAt": "2024-07-15T12:48:30.594Z",
+        "updatedAt": "2024-07-16T07:57:45.767Z",
         "deleted": false,
         "policies": [
             {
