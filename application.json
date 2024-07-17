@@ -112,10 +112,6 @@
         {
             "_id": "Subscription",
             "isDefault": false
-        },
-        {
-            "_id": "Page1",
-            "isDefault": false
         }
     ],
     "policies": [
@@ -199,12 +195,12 @@
                             "isVisible": true,
                             "files": [],
                             "label": "Accordion",
-                            "onClick": "{{navigateTo(main.user.auth_module.user.page_id, {\n\tpageName: main.user.auth_module.user.page_id\n})}}",
+                            "onClick": "{{main.user.auth_module.user.trialEnded ?navigateTo('Subscription', {\n\tpageName: 'Subscription'\n}) : navigateTo(sidebarAccordion.selectedValue, {\n\tpageName: sidebarAccordion.selectedValue\n})}}",
                             "category": "",
                             "categoryItem": "",
                             "categorySubItem": "",
                             "onClickSub": "{{navigateTo(sidebarAccordion.categorySubItem, {})}}",
-                            "onClickMain": "{{navigateTo(main.user.auth_module.user.page_id, {\n\tpageName: main.user.auth_module.user.page_id\n})}}",
+                            "onClickMain": "{{main.user.auth_module.user.trialEnded ?navigateTo('Subscription', {\n\tpageName: 'Subscription'\n}) : navigateTo(sidebarAccordion.selectedValue, {\n\tpageName: sidebarAccordion.selectedValue\n})}}",
                             "widgetName": "sidebarAccordion",
                             "shouldScrollContents": false,
                             "directionRtl": false,
@@ -570,7 +566,7 @@
                                             "isLoading": false,
                                             "parentColumnSpace": 10.34716796875,
                                             "parentRowSpace": 10,
-                                            "leftColumn": 3,
+                                            "leftColumn": 1,
                                             "rightColumn": 27,
                                             "topRow": 0,
                                             "bottomRow": 4,
@@ -586,7 +582,7 @@
                                                     "key": "onClick"
                                                 }
                                             ],
-                                            "iconName": "double-chevron-up",
+                                            "iconName": "download",
                                             "iconAlign": "left",
                                             "onClick": "{{navigateTo('https://platform.ubos.tech/?templateId=65397499fe34080011cedbb5', {},'NEW_WINDOW')}}",
                                             "dynamicPropertyPathList": [
@@ -626,7 +622,7 @@
                             "isLoading": false,
                             "parentColumnSpace": 21.328125,
                             "parentRowSpace": 10,
-                            "leftColumn": 23,
+                            "leftColumn": 32,
                             "rightColumn": 60,
                             "topRow": 0,
                             "bottomRow": 7,
@@ -879,6 +875,49 @@
                                 }
                             ],
                             "dynamicTriggerPathList": []
+                        },
+                        {
+                            "isVisible": "{{main.user.auth_module.user.daysLeft ? true : false}}",
+                            "text": "{{main.user.auth_module.user.translation.subscription.freeTrial}} {{main.user.auth_module.user.daysLeft}} {{main.user.auth_module.user.translation.subscription.days}}. {{main.user.auth_module.user.translation.subscription.please}} <a href=\"https://aibotui-6856-656f07128ab32b12000001b8.ubos.tech/Subscription?branch=main\">{{main.user.auth_module.user.translation.subscription.upgrade}}</a>.",
+                            "fontSize": "HEADING3",
+                            "fontStyle": "",
+                            "textAlign": "LEFT",
+                            "textColor": "#ff6d2b",
+                            "truncateButtonColor": "#FFC13D",
+                            "widgetName": "Text19",
+                            "shouldTruncate": false,
+                            "overflow": "NONE",
+                            "version": 1,
+                            "animateLoading": true,
+                            "type": "TEXT_WIDGET",
+                            "hideCard": false,
+                            "displayName": "Text",
+                            "key": "zr75fd29wb",
+                            "iconSVG": "/static/media/icon.97c59b52.svg",
+                            "widgetId": "8aditaqvr6",
+                            "renderMode": "CANVAS",
+                            "isLoading": false,
+                            "parentColumnSpace": 13.234375,
+                            "parentRowSpace": 10,
+                            "leftColumn": 11,
+                            "rightColumn": 32,
+                            "topRow": 0,
+                            "bottomRow": 7,
+                            "parentId": "b8feb4cpvv",
+                            "dynamicBindingPathList": [
+                                {
+                                    "key": "text"
+                                },
+                                {
+                                    "key": "isVisible"
+                                }
+                            ],
+                            "dynamicTriggerPathList": [],
+                            "dynamicPropertyPathList": [
+                                {
+                                    "key": "isVisible"
+                                }
+                            ]
                         }
                     ],
                     "minHeight": 400,

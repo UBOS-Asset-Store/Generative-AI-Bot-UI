@@ -22694,7 +22694,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-07-16T13:16:23.360Z",
-        "updatedAt": "2024-07-16T19:42:24.507Z",
+        "updatedAt": "2024-07-17T06:53:29.120Z",
         "deleted": false,
         "policies": [
             {
@@ -22811,7 +22811,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-07-16T17:23:19.799Z",
-        "updatedAt": "2024-07-16T19:42:23.479Z",
+        "updatedAt": "2024-07-17T10:58:26.914Z",
         "deleted": false,
         "policies": [
             {
@@ -22892,6 +22892,164 @@
         },
         "createdAt": "2024-07-16T19:32:19.977Z",
         "updatedAt": "2024-07-16T20:43:49.763Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "669769eea258c7c7f2608162",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "contactUS",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/contactUS"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "Subscription",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "POST",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "body": "{\n\t\"firstName\": {{JSON.stringify(First_name_.text)}},\n\t\"lastName\": {{JSON.stringify(Last_name_.text)}},\n\t\"companyName\": {{JSON.stringify(Company_name_.text)}},\n\t\"businessEmail\": {{JSON.stringify(Business_email_.text)}},\n\t\"email\": {{JSON.stringify(main.user.auth_module.user.info.user.email)}}\n}",
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ]
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "datasourceUrl"
+                },
+                {
+                    "key": "body"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "JSON.stringify(First_name_.text)",
+                "JSON.stringify(Last_name_.text)",
+                "JSON.stringify(Company_name_.text)",
+                "JSON.stringify(Business_email_.text)",
+                "JSON.stringify(main.user.auth_module.user.info.user.email)",
+                "main.user.auth_module.user.info.user.email),main.user.auth_module.user.info.user.email,main.user.auth_module.user.info.user.email,2024-07-17T06:51:26.156Z,2024-07-17T06:53:34.854Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,JSON.stringify({{main.user.auth_module.user.info.user.email),2024-07-17T06:51:26.156Z,2024-07-17T06:53:39.343Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,JSON.stringify(main.user.auth_module.user.info.user.email),2024-07-17T06:51:26.156Z,2024-07-17T06:53:40.451Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-07-17T06:51:26.156Z",
+        "updatedAt": "2024-07-17T07:10:25.765Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "6697a504a258c7c7f2608163",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "change_lang",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/check_token2"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "Subscription",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "POST",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ],
+                "body": "{\n\"lang\":{{JSON.stringify(main.store.lg)}}\n}"
+            },
+            "dynamicBindingPathList": [],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "JSON.stringify(main.store.lg)"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-07-17T11:03:32.221Z",
+        "updatedAt": "2024-07-17T11:03:33.572Z",
         "deleted": false,
         "policies": [
             {
