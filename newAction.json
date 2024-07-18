@@ -10293,7 +10293,7 @@
                     }
                 ],
                 "queryParameters": [],
-                "body": "{\n\t\"vID\": {{JSON.stringify(Table_of_vectors.selectedRow.vID)}},\n\t\"answer\": {{JSON.stringify(Table_of_vectors.selectedRow.answer)}}\n}",
+                "body": "{\n\t\"vID\": {{JSON.stringify(Table_of_vectors.selectedRow.vID)}},\n\t\"answer\": {{JSON.stringify(Table_of_vectors.selectedRow.answer)}},\n\t\"ownerId\":\"{{main.user.auth_module.user.info.user._id}}\"\n}",
                 "bodyFormData": [],
                 "formData": {
                     "apiContentType": "none"
@@ -10319,13 +10319,14 @@
                 "main.env.nodeUrl",
                 "JSON.stringify(Table_of_vectors.selectedRow.vID)",
                 "JSON.stringify(Table_of_vectors.selectedRow.answer)",
-                "main.env.nodeUrl,2023-12-27T10:51:50.440Z,2024-01-04T21:34:02.046Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2023-12-27T10:51:50.440Z,2024-01-04T21:34:04.034Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl"
+                "main.user.auth_module.user.info.user._id",
+                "main.env.nodeUrl,JSON.stringify(Table_of_vectors.selectedRo\"ownerId\":{{main.user.auth_module.user.info.user._id,2023-12-27T10:51:50.440Z,2024-07-17T16:27:22.433Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,JSON.stringify(Table_of_vectors.selectedRow.answer),main.user.auth_module.user.info.user._id,2023-12-27T10:51:50.440Z,2024-07-17T16:27:23.523Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2023-12-27T10:51:50.440Z,2024-07-17T16:27:56.740Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-12-27T10:51:50.440Z",
-        "updatedAt": "2024-01-04T21:34:06.057Z",
+        "updatedAt": "2024-07-17T16:28:02.151Z",
         "deleted": false,
         "policies": [
             {
@@ -10471,6 +10472,10 @@
                     {
                         "key": "systemName",
                         "value": "{{DB_select.selectedOptionValue}}"
+                    },
+                    {
+                        "value": "{{main.user.auth_module.user.info.user._id}}",
+                        "key": "ownerId"
                     }
                 ],
                 "bodyFormData": [],
@@ -10498,6 +10503,9 @@
                 },
                 {
                     "key": "queryParameters[3].value"
+                },
+                {
+                    "key": "queryParameters[4].value"
                 }
             ],
             "isValid": true,
@@ -10507,14 +10515,14 @@
                 "DB_select.selectedOptionLabel",
                 "Question_to_DB.text",
                 "Number_of_answers.selectedOptionLabel",
-                "DB_select.selectedOption",
-                "DB_select.selectedOptionValue"
+                "DB_select.selectedOptionValue",
+                "main.user.auth_module.user.info.user._id"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-12-27T10:54:31.310Z",
-        "updatedAt": "2024-07-05T10:14:11.972Z",
+        "updatedAt": "2024-07-17T16:27:11.444Z",
         "deleted": false,
         "policies": [
             {
@@ -10565,7 +10573,7 @@
                     }
                 ],
                 "queryParameters": [],
-                "body": "{\n\t\"actionType\": \"updateEnrichedVector\",\n\t\"dataBase\": {{JSON.stringify(DB_select.selectedOptionLabel)}},\n\t\"vID\": {{JSON.stringify(Table_of_vectors.selectedRow.vID)}},\n\t\"question\": {{Enrich_JSONForm.formData}},\n\t\"answer\": {{JSON.stringify(Table_of_vectors.selectedRow.answer)}},\n\t\"enrichedQuestions\": {{JSON.stringify(Enrich_JSONForm.formData.data)}}\n}\n",
+                "body": "{\n\t\"actionType\": \"updateEnrichedVector\",\n\t\"dataBase\": {{JSON.stringify(DB_select.selectedOptionLabel)}},\n\t\"vID\": {{JSON.stringify(Table_of_vectors.selectedRow.vID)}},\n\t\"question\": {{Enrich_JSONForm.formData}},\n\t\"answer\": {{JSON.stringify(Table_of_vectors.selectedRow.answer)}},\n\t\"enrichedQuestions\": {{JSON.stringify(Enrich_JSONForm.formData.data)}},\n\t\"ownerId\":\"{{main.user.auth_module.user.info.user._id}}\"\n}\n",
                 "bodyFormData": [],
                 "formData": {
                     "apiContentType": "application/json"
@@ -10592,14 +10600,14 @@
                 "JSON.stringify(Table_of_vectors.selectedRow.vID)",
                 "Enrich_JSONForm.formData",
                 "JSON.stringify(Table_of_vectors.selectedRow.answer)",
-                "JSON.stringify(Enrich_JSONForm.formData.data.)",
-                "JSON.stringify(Enrich_JSONForm.formData.data)"
+                "JSON.stringify(Enrich_JSONForm.formData.data)",
+                "main.user.auth_module.user.info.user._id"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-12-27T10:58:16.047Z",
-        "updatedAt": "2024-01-10T16:14:09.376Z",
+        "updatedAt": "2024-07-17T16:27:46.272Z",
         "deleted": false,
         "policies": [
             {
@@ -10650,7 +10658,7 @@
                     }
                 ],
                 "queryParameters": [],
-                "body": "{\n\t\"actionType\": \"updateVector\",\n\t\"dataBase\": {{JSON.stringify(DB_select.selectedOptionLabel)}},\n\t\"vID\": {{JSON.stringify(Table_of_vectors.selectedRow.vID)}},\n\t\"question\": {{JSON.stringify(Update_question.text)}},\n\t\"answer\": {{JSON.stringify(Update_answer.text)}}\n}\n",
+                "body": "{\n\t\"actionType\": \"updateVector\",\n\t\"dataBase\": {{JSON.stringify(DB_select.selectedOptionLabel)}},\n\t\"vID\": {{JSON.stringify(Table_of_vectors.selectedRow.vID)}},\n\t\"question\": {{JSON.stringify(Update_question.text)}},\n\t\"answer\": {{JSON.stringify(Update_answer.text)}},\n\t\"ownerId\":\"{{main.user.auth_module.user.info.user._id}}\"\n}\n",
                 "bodyFormData": [],
                 "formData": {
                     "apiContentType": "none"
@@ -10676,13 +10684,14 @@
                 "JSON.stringify(DB_select.selectedOptionLabel)",
                 "JSON.stringify(Table_of_vectors.selectedRow.vID)",
                 "JSON.stringify(Update_question.text)",
-                "JSON.stringify(Update_answer.text)"
+                "JSON.stringify(Update_answer.text)",
+                "main.user.auth_module.user.info.user._id"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-12-27T10:58:58.784Z",
-        "updatedAt": "2024-01-05T14:00:34.688Z",
+        "updatedAt": "2024-07-17T16:27:38.545Z",
         "deleted": false,
         "policies": [
             {
@@ -11217,7 +11226,7 @@
                     }
                 ],
                 "queryParameters": [],
-                "body": "{\n\t\"selectedDB_Label\": {{JSON.stringify(DB_select.selectedOptionLabel)}},\n\t\"selectedDB_Value\": {{JSON.stringify(DB_select.selectedOptionValue)}}\n}",
+                "body": "{\n\t\"selectedDB_Label\": {{JSON.stringify(DB_select.selectedOptionLabel)}},\n\t\"selectedDB_Value\": {{JSON.stringify(DB_select.selectedOptionValue)}},\n\t\"ownerId\":\"{{main.user.auth_module.user.info.user._id}}\"\n}",
                 "bodyFormData": [],
                 "formData": {
                     "apiContentType": "none"
@@ -11241,13 +11250,14 @@
             "jsonPathKeys": [
                 "main.env.nodeUrl",
                 "JSON.stringify(DB_select.selectedOptionLabel)",
-                "JSON.stringify(DB_select.selectedOptionValue)"
+                "JSON.stringify(DB_select.selectedOptionValue)",
+                "main.user.auth_module.user.info.user._id"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-01-02T09:55:59.571Z",
-        "updatedAt": "2024-07-05T10:08:54.927Z",
+        "updatedAt": "2024-07-17T16:27:48.908Z",
         "deleted": false,
         "policies": [
             {
@@ -11323,7 +11333,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-01-02T10:22:06.478Z",
-        "updatedAt": "2024-01-02T14:30:24.442Z",
+        "updatedAt": "2024-07-17T16:27:55.943Z",
         "deleted": false,
         "policies": [
             {
@@ -22811,7 +22821,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-07-16T17:23:19.799Z",
-        "updatedAt": "2024-07-17T10:58:26.914Z",
+        "updatedAt": "2024-07-17T11:34:44.622Z",
         "deleted": false,
         "policies": [
             {
@@ -22970,13 +22980,13 @@
                 "JSON.stringify(Company_name_.text)",
                 "JSON.stringify(Business_email_.text)",
                 "JSON.stringify(main.user.auth_module.user.info.user.email)",
-                "main.user.auth_module.user.info.user.email),main.user.auth_module.user.info.user.email,main.user.auth_module.user.info.user.email,2024-07-17T06:51:26.156Z,2024-07-17T06:53:34.854Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,JSON.stringify({{main.user.auth_module.user.info.user.email),2024-07-17T06:51:26.156Z,2024-07-17T06:53:39.343Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,JSON.stringify(main.user.auth_module.user.info.user.email),2024-07-17T06:51:26.156Z,2024-07-17T06:53:40.451Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl"
+                "main.env.nodeUrl,JSON.stringify({{main.user.auth_module.user.info.user.email),2024-07-17T06:51:26.156Z,2024-07-17T06:53:39.343Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,JSON.stringify(main.user.auth_module.user.info.user.email),2024-07-17T06:51:26.156Z,2024-07-17T06:53:40.451Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2024-07-17T06:51:26.156Z,2024-07-17T07:10:25.765Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-07-17T06:51:26.156Z",
-        "updatedAt": "2024-07-17T07:10:25.765Z",
+        "updatedAt": "2024-07-17T14:38:24.629Z",
         "deleted": false,
         "policies": [
             {
