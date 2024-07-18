@@ -112,6 +112,10 @@
         {
             "_id": "Subscription",
             "isDefault": false
+        },
+        {
+            "_id": "Profile",
+            "isDefault": false
         }
     ],
     "policies": [
@@ -195,12 +199,12 @@
                             "isVisible": true,
                             "files": [],
                             "label": "Accordion",
-                            "onClick": "{{main.user.auth_module.user.trialEnded ?navigateTo('Subscription', {\n\tpageName: 'Subscription'\n}) : navigateTo(sidebarAccordion.selectedValue, {\n\tpageName: sidebarAccordion.selectedValue\n})}}",
+                            "onClick": "{{main.user.auth_module.user.trialEnded ?navigateTo('Subscription', {}) : navigateTo(sidebarAccordion.selectedValue, {})}}",
                             "category": "",
                             "categoryItem": "",
                             "categorySubItem": "",
                             "onClickSub": "{{navigateTo(sidebarAccordion.categorySubItem, {})}}",
-                            "onClickMain": "{{main.user.auth_module.user.trialEnded ?navigateTo('Subscription', {\n\tpageName: 'Subscription'\n}) : navigateTo(sidebarAccordion.selectedValue, {\n\tpageName: sidebarAccordion.selectedValue\n})}}",
+                            "onClickMain": "{{main.user.auth_module.user.trialEnded ?navigateTo('Subscription', {}) : navigateTo(sidebarAccordion.selectedValue, {})}}",
                             "widgetName": "sidebarAccordion",
                             "shouldScrollContents": false,
                             "directionRtl": false,
@@ -878,7 +882,7 @@
                         },
                         {
                             "isVisible": "{{main.user.auth_module.user.daysLeft ? true : false}}",
-                            "text": "{{main.user.auth_module.user.translation.subscription.freeTrial}} {{main.user.auth_module.user.daysLeft}} {{main.user.auth_module.user.translation.subscription.days}}. {{main.user.auth_module.user.translation.subscription.please}} <a href=\"https://chatbot.ubos.tech/Subscription?branch=main\">{{main.user.auth_module.user.translation.subscription.upgrade}}</a>.",
+                            "text": "{{main.user.auth_module.user.translation.subscription.freeTrial}} {{main.user.auth_module.user.daysLeft}} {{main.user.auth_module.user.translation.subscription.days}}. {{main.user.auth_module.user.translation.subscription.please}} <a href=\"https://chatbot.ubos.tech/Subscription\">{{main.user.auth_module.user.translation.subscription.upgrade}}</a>.",
                             "fontSize": "HEADING3",
                             "fontStyle": "",
                             "textAlign": "LEFT",
