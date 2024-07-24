@@ -6280,6 +6280,9 @@
                 },
                 {
                     "key": "queryParameters[0].value"
+                },
+                {
+                    "key": "path"
                 }
             ],
             "isValid": true,
@@ -6292,7 +6295,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-05-31T11:37:27.119Z",
-        "updatedAt": "2024-07-12T15:19:49.348Z",
+        "updatedAt": "2024-07-23T16:17:09.153Z",
         "deleted": false,
         "policies": [
             {
@@ -6857,7 +6860,7 @@
                         "value": true
                     }
                 ],
-                "body": "{\n\"question\": {{JSON.stringify(Input1.text)}},\n\"result\":{{JSON.stringify(Input2.text)}},\n\"url\": {{JSON.stringify(Table1.selectedRow.source)}},\n\"_id \": \"{{main.URL.queryParams.id}}\",\n\"id\":\"{{Table1.selectedRow._id}}\",\n\"typeBase\":{{JSON.stringify(main.URL.queryParams.typeBase)}},\n\"nameBase\":{{JSON.stringify(main.URL.queryParams.typeName)}}\n}"
+                "body": "{\n\"question\": {{JSON.stringify(Input1.text)}},\n\"result\":{{JSON.stringify(Input2.text)}},\n\"url\": {{JSON.stringify(Table1.selectedRow.source)}},\n\"_id \": \"{{main.URL.queryParams.id}}\",\n\"id\":\"{{Table1.selectedRow._id}}\",\n\"typeBase\":{{JSON.stringify(main.URL.queryParams.typeBase)}},\n\"nameBase\":{{JSON.stringify(main.URL.queryParams.typeName)}},\n\"ownerId\":\"{{main.user.auth_module.user.info.user._id}}\"\n}"
             },
             "dynamicBindingPathList": [
                 {
@@ -6873,18 +6876,18 @@
                 "main.env.nodeUrl",
                 "JSON.stringify(Input1.text)",
                 "JSON.stringify(Input2.text)",
-                "JSON.stringify(Table1.selectedRow.sourse)",
+                "JSON.stringify(Table1.selectedRow.source)",
                 "main.URL.queryParams.id",
                 "Table1.selectedRow._id",
                 "JSON.stringify(main.URL.queryParams.typeBase)",
                 "JSON.stringify(main.URL.queryParams.typeName)",
-                "JSON.stringify(Table1.selectedRow.source)"
+                "main.user.auth_module.user.info.user._id"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-06-29T11:38:38.762Z",
-        "updatedAt": "2024-07-15T10:27:38.814Z",
+        "updatedAt": "2024-07-24T10:02:45.729Z",
         "deleted": false,
         "policies": [
             {
@@ -6946,6 +6949,10 @@
                     {
                         "key": "nameBase",
                         "value": "{{main.URL.queryParams.typeName}}"
+                    },
+                    {
+                        "key": "ownerId",
+                        "value": "{{main.user.auth_module.user.info.user._id}}"
                     }
                 ],
                 "body": "",
@@ -6972,6 +6979,9 @@
                 },
                 {
                     "key": "queryParameters[2].value"
+                },
+                {
+                    "key": "queryParameters[3].value"
                 }
             ],
             "isValid": true,
@@ -6980,13 +6990,14 @@
                 "main.env.nodeUrl",
                 "Table1.selectedRow._id",
                 "main.URL.queryParams.typeBase",
-                "main.URL.queryParams.typeName"
+                "main.URL.queryParams.typeName",
+                "main.user.auth_module.user.info.user._id"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-06-29T11:49:37.661Z",
-        "updatedAt": "2024-06-13T07:54:47.915Z",
+        "updatedAt": "2024-07-24T10:02:12.887Z",
         "deleted": false,
         "policies": [
             {
@@ -7515,7 +7526,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-09-05T11:30:48.543Z",
-        "updatedAt": "2024-07-16T08:12:39.543Z",
+        "updatedAt": "2024-07-24T10:02:26.454Z",
         "deleted": false,
         "policies": [
             {
@@ -22431,7 +22442,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-07-12T20:06:19.482Z",
-        "updatedAt": "2024-07-12T20:45:04.496Z",
+        "updatedAt": "2024-07-24T07:42:25.863Z",
         "deleted": false,
         "policies": [
             {
@@ -22513,7 +22524,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-07-12T20:13:25.939Z",
-        "updatedAt": "2024-07-12T20:16:24.644Z",
+        "updatedAt": "2024-07-24T07:42:26.563Z",
         "deleted": false,
         "policies": [
             {
