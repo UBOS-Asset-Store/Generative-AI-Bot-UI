@@ -2215,7 +2215,7 @@
         "pluginType": "API",
         "pluginId": "API",
         "createdAt": "2022-08-29T15:13:14.157Z",
-        "updatedAt": "2024-06-24T09:39:35.167Z",
+        "updatedAt": "2024-07-25T10:05:31.115Z",
         "deleted": false,
         "policies": [
             {
@@ -7285,7 +7285,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-08-08T19:16:59.846Z",
-        "updatedAt": "2024-06-19T13:52:07.052Z",
+        "updatedAt": "2024-07-25T15:40:22.525Z",
         "deleted": false,
         "policies": [
             {
@@ -7355,7 +7355,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-08-08T19:50:47.061Z",
-        "updatedAt": "2024-07-16T06:07:34.825Z",
+        "updatedAt": "2024-07-25T16:36:10.054Z",
         "deleted": false,
         "policies": [
             {
@@ -10039,7 +10039,7 @@
         "pageId": "Login",
         "executeOnLoad": true,
         "actionConfiguration": {
-            "body": "async () => {\nif(main.URL.pathname.endsWith(\"/edit\")){\n\t\n}else{\nawait demoUser.run()\n  .then((data) => {\n  storeValue(\"lg\",main.URL.queryParams.lg ?main.URL.queryParams.lg:\"En\");\n\tgetMenu.run()\n  if(data.email){\n\t\tnavigateTo(data.page,{})\n\t}\n  })\n  .catch((error) => {\n    console.error('Inside catch block');\n\t  navigateTo('https://platform.ubos.tech/',{})\n    console.error(error);\n  });\n\t\t}\n\t}",
+            "body": "async () => {\nif(main.URL.pathname.endsWith(\"/edit\")){\n\t\n}else{\nawait demoUser.run()\n  .then((data) => {\n  storeValue(\"lg\",main.URL.queryParams.lg ?main.URL.queryParams.lg:\"En\");\n\tgetMenu.run()\n  if(data.email){\n\t\tnavigateTo(data.page,{})\n\t}else if(data==='no token'){\n\t\t\n\t}\n\telse{\n\tnavigateTo('https://platform.ubos.tech/',{})\t\n\t}\n  })\n  .catch((error) => {\n    console.error('Inside catch block');\n    console.error(error);\n  });\n\t\t}\n\t}",
             "isAsync": true,
             "timeoutInMillisecond": 10000,
             "jsArguments": [],
@@ -14478,7 +14478,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-06-21T11:48:28.203Z",
-        "updatedAt": "2024-07-16T06:07:45.399Z",
+        "updatedAt": "2024-07-25T10:05:33.644Z",
         "deleted": false,
         "policies": [
             {
@@ -17001,7 +17001,7 @@
                         "value": true
                     }
                 ],
-                "body": "{\n  \"name\": {{JSON.stringify(Input_name_bot.text)}},\n  \"ownerID\": {{JSON.stringify(main.user.auth_module.user.info.user._id)}},\n  \"prompt\": {{JSON.stringify(prompt_custom_onboarding.text)}},\n  \"model\": {{JSON.stringify('gpt-4o')}},\n  \"answer_length_onboarding\": {{JSON.stringify(answer_length_onboarding.selectedOptionValue)}},\n  \"answer_as\": {{JSON.stringify(answer_as_onboarding.selectedOptionValue)}},\n  \"tone\": {{JSON.stringify(tone_onboarding.selectedOptionValue)}},\n  \"language\": {{JSON.stringify(language_onboarding.selectedOptionValue)}},\n  \"content\": {{JSON.stringify(RichTextEditor1.text)}},\n  \"link\": {{JSON.stringify(Input_www.text)}}\n}"
+                "body": "{\n  \"name\": {{JSON.stringify(Input_name_bot.text)}},\n\t\"email\": {{JSON.stringify(main.user.auth_module.user.info.user.email)}},\n  \"ownerID\": {{JSON.stringify(main.user.auth_module.user.info.user._id)}},\n  \"prompt\": {{JSON.stringify(prompt_custom_onboarding.text)}},\n  \"model\": {{JSON.stringify(model_select.selectedOptionValue)}},\n  \"answer_length_onboarding\": {{JSON.stringify(answer_length_onboarding.selectedOptionValue)}},\n  \"answer_as\": {{JSON.stringify(answer_as_onboarding.selectedOptionValue)}},\n  \"tone\": {{JSON.stringify(tone_onboarding.selectedOptionValue)}},\n  \"language\": {{JSON.stringify(language_onboarding.selectedOptionValue)}},\n  \"content\": {{JSON.stringify(RichTextEditor1.text)}},\n  \"link\": {{JSON.stringify(Input_www.text)}}\n}"
             },
             "dynamicBindingPathList": [
                 {
@@ -17016,22 +17016,24 @@
             "jsonPathKeys": [
                 "main.env.nodeUrl",
                 "JSON.stringify(Input_name_bot.text)",
+                "JSON.stringify(main.user.auth_module.user.info.user.email)",
                 "JSON.stringify(main.user.auth_module.user.info.user._id)",
                 "JSON.stringify(prompt_custom_onboarding.text)",
-                "JSON.stringify('gpt-4o')",
+                "JSON.stringify(model_select.)",
                 "JSON.stringify(answer_length_onboarding.selectedOptionValue)",
                 "JSON.stringify(answer_as_onboarding.selectedOptionValue)",
                 "JSON.stringify(tone_onboarding.selectedOptionValue)",
                 "JSON.stringify(language_onboarding.selectedOptionValue)",
                 "JSON.stringify(RichTextEditor1.text)",
                 "JSON.stringify(Input_www.text)",
-                "main.user.auth_module.user.info.user._i),2024-07-03T15:57:05.374Z,2024-07-04T19:29:52.165Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,JSON.stringify{main.user.auth_module.user.info.user._i),2024-07-03T15:57:05.374Z,2024-07-04T19:29:54.599Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,JSON.stringifymain.user.auth_module.user.info.user._i),2024-07-03T15:57:05.374Z,2024-07-04T19:29:58.014Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,JSON.stringify(main.user.auth_module.user.info.user._i),2024-07-03T15:57:05.374Z,2024-07-04T19:29:58.908Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,JSON.stringify(main.user.auth_module.user.info.user._id),2024-07-03T15:57:05.374Z,2024-07-04T19:30:03.470Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2024-07-03T15:57:05.374Z,2024-07-04T19:44:57.574Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2024-07-03T15:57:05.374Z,2024-07-05T09:37:41.799Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2024-07-03T15:57:05.374Z,2024-07-05T09:37:45.325Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2024-07-03T15:57:05.374Z,2024-07-05T14:02:24.808Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2024-07-03T15:57:05.374Z,2024-07-09T12:24:32.028Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2024-07-03T15:57:05.374Z,2024-07-09T12:24:44.322Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2024-07-03T15:57:05.374Z,2024-07-09T12:39:27.538Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl"
+                "main.env.nodeUrl,2024-07-03T15:57:05.374Z,2024-07-09T12:24:44.322Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2024-07-03T15:57:05.374Z,2024-07-09T12:39:27.538Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2024-07-03T15:57:05.374Z,2024-07-09T12:58:07.476Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2024-07-03T15:57:05.374Z,2024-07-25T08:27:51.797Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2024-07-03T15:57:05.374Z,2024-07-25T08:27:59.525Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2024-07-03T15:57:05.374Z,2024-07-25T08:28:00.553Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2024-07-03T15:57:05.374Z,2024-07-25T08:28:02.211Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2024-07-03T15:57:05.374Z,2024-07-25T08:28:04.046Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,JSON.stringify(main.user.auth_module.user.info.user.email),2024-07-03T15:57:05.374Z,2024-07-25T08:28:06.822Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2024-07-03T15:57:05.374Z,2024-07-25T12:40:20.032Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,JSON.stringify(mo),2024-07-03T15:57:05.374Z,2024-07-25T12:40:27.026Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,JSON.stringify(model_select.),2024-07-03T15:57:05.374Z,2024-07-25T12:40:28.673Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl",
+                "JSON.stringify(model_select.selectedOptionValue)"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-07-03T15:57:05.374Z",
-        "updatedAt": "2024-07-09T12:58:07.476Z",
+        "updatedAt": "2024-07-25T12:40:30.373Z",
         "deleted": false,
         "policies": [
             {
@@ -18401,7 +18403,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-07-10T10:18:00.747Z",
-        "updatedAt": "2024-07-16T08:42:01.384Z",
+        "updatedAt": "2024-07-25T09:16:54.730Z",
         "deleted": false,
         "policies": [
             {
@@ -18467,7 +18469,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-07-10T10:18:00.747Z",
-        "updatedAt": "2024-07-16T08:41:56.705Z",
+        "updatedAt": "2024-07-25T07:53:25.249Z",
         "deleted": false,
         "policies": [
             {
@@ -18548,7 +18550,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-07-10T10:18:00.747Z",
-        "updatedAt": "2024-07-10T11:24:52.255Z",
+        "updatedAt": "2024-07-25T10:23:42.435Z",
         "deleted": false,
         "policies": [
             {
@@ -18628,7 +18630,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-07-10T10:18:00.747Z",
-        "updatedAt": "2024-07-15T13:40:53.778Z",
+        "updatedAt": "2024-07-25T10:24:07.800Z",
         "deleted": false,
         "policies": [
             {
@@ -18780,7 +18782,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-07-10T11:24:37.475Z",
-        "updatedAt": "2024-07-11T10:00:05.888Z",
+        "updatedAt": "2024-07-25T16:36:30.090Z",
         "deleted": false,
         "policies": [
             {
@@ -20771,7 +20773,7 @@
                         "value": true
                     }
                 ],
-                "body": "{\n\t\"ownerId\": \"{{main.user.auth_module.user.info.user._id}}\",\n\t\"link\":{{JSON.stringify(link.text)}},\n\t\"name\": {{JSON.stringify(link.text)}},\n\t\"id\": {{JSON.stringify( Select1.selectedOptionValue)}},\n\t\"type\": \"Link\",\n\t\"typeBase\":{{JSON.stringify(typeDB.text)}},\n\t\"nameBase\":{{JSON.stringify(Select1.selectedOptionLabel)}},\n\t\"email\": \"{{appsmith.user.auth_module.user.info.user.email}}\"\n}",
+                "body": "{\n\t\"ownerId\": \"{{main.user.auth_module.user.info.user._id}}\",\n\t\"link\":{{JSON.stringify(link.text)}},\n\t\"name\": {{JSON.stringify(link.text)}},\n\t\"id\": {{JSON.stringify( Select1.selectedOptionValue)}},\n\t\"type\": \"Link\",\n\t\"typeBase\":{{JSON.stringify(typeDB.text)}},\n\t\"nameBase\":{{JSON.stringify(Select1.selectedOptionLabel)}},\n\t\"email\": \"{{appsmith.user.auth_module.user.info.user.email}}\",\n\t\"systemName\":{{JSON.stringify(getAllBases.data[0].systemName)}}\n}",
                 "path": ""
             },
             "dynamicBindingPathList": [
@@ -20789,16 +20791,16 @@
                 "main.user.auth_module.user.info.user._id",
                 "JSON.stringify(link.text)",
                 "JSON.stringify( Select1.selectedOptionValue)",
-                "JSON.stringify(typeDB.text",
+                "JSON.stringify(typeDB.text)",
                 "JSON.stringify(Select1.selectedOptionLabel)",
                 "appsmith.user.auth_module.user.info.user.email",
-                "JSON.stringify(typeDB.text)"
+                "JSON.stringify(getAllBases.data[0].systemName)"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-07-12T09:24:40.806Z",
-        "updatedAt": "2024-07-12T21:10:19.482Z",
+        "updatedAt": "2024-07-25T18:18:57.099Z",
         "deleted": false,
         "policies": [
             {
@@ -21021,10 +21023,10 @@
                     },
                     {
                         "key": "type",
-                        "value": "{{Select1.selectedOptionLabel.split(' ')[1]}}"
+                        "value": "{{typeDB.text}}"
                     },
                     {
-                        "value": "{{Select1.selectedOptionLabel.split(' ')[0]}}",
+                        "value": "{{systemName.text}}",
                         "key": "name"
                     }
                 ],
@@ -21059,14 +21061,15 @@
             "jsonPathKeys": [
                 "main.env.nodeUrl",
                 "main.store.idToDeleteOb",
-                "Select1.selectedOptionLabel.split(' ')[1]",
-                "Select1.selectedOptionLabel.split(' ')[0]"
+                "typeDB.text",
+                "s",
+                "systemName.text"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-07-12T09:24:40.806Z",
-        "updatedAt": "2024-07-12T09:24:40.806Z",
+        "updatedAt": "2024-07-25T18:21:25.298Z",
         "deleted": false,
         "policies": [
             {
@@ -21117,7 +21120,7 @@
                     }
                 ],
                 "queryParameters": [],
-                "body": "{\n\t\"ownerId\": \"{{main.user.auth_module.user.info.user._id}}\",\n\t\"link\": {{JSON.stringify(\"manual\")}},\n\t\"name\": {{JSON.stringify(\"manual\")}},\n\t\"id\": {{JSON.stringify(Select1.selectedOptionValue)}},\n\t\"type\": \"Manual\",\n\t\"result\": {{JSON.stringify(manualanswer.text)}},\n\t\"question\": {{JSON.stringify(manualques.text)}},\n\t\t\"typeBase\":{{JSON.stringify(typeDB.text)}},\n\t\"nameBase\":{{JSON.stringify(Select1.selectedOptionLabel)}},\n\t\"email\": \"{{appsmith.user.auth_module.user.info.user.email}}\"\n}",
+                "body": "{\n\t\"ownerId\": \"{{main.user.auth_module.user.info.user._id}}\",\n\t\"link\": {{JSON.stringify(\"manual\")}},\n\t\"name\": {{JSON.stringify(\"manual\")}},\n\t\"id\": {{JSON.stringify(Select1.selectedOptionValue)}},\n\t\"type\": \"Manual\",\n\t\"result\": {{JSON.stringify(manualanswer.text)}},\n\t\"question\": {{JSON.stringify(manualques.text)}},\n\t\"typeBase\":{{JSON.stringify(typeDB.text)}},\n\t\"nameBase\":{{JSON.stringify(Select1.selectedOptionLabel)}},\n\t\"email\": \"{{appsmith.user.auth_module.user.info.user.email}}\",\n\t\"systemName\":{{JSON.stringify(getAllBases.data[0].systemName)}}\n}",
                 "bodyFormData": [],
                 "formData": {
                     "apiContentType": "none"
@@ -21148,13 +21151,14 @@
                 "JSON.stringify(typeDB.text)",
                 "JSON.stringify(Select1.selectedOptionLabel)",
                 "appsmith.user.auth_module.user.info.user.email",
-                "main.env.nodeUrl,2024-07-12T09:24:40.806Z,2024-07-12T21:36:00.070Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2024-07-12T09:24:40.806Z,2024-07-12T21:48:06.564Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,JSON.stringify(manualques.text),2024-07-12T09:24:40.806Z,2024-07-15T12:49:32.990Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2024-07-12T09:24:40.806Z,2024-07-16T06:17:37.479Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl"
+                "JSON.stringify(getAllBases.data[0].systemName)",
+                "main.env.nodeUrl,JSON.,2024-07-12T09:24:40.806Z,2024-07-25T18:18:40.533Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,JSON.stringify(),2024-07-12T09:24:40.806Z,2024-07-25T18:18:41.719Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,JSON.stringify(getAllBases.data[0].systemName),2024-07-12T09:24:40.806Z,2024-07-25T18:18:42.856Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2024-07-12T09:24:40.806Z,2024-07-25T18:18:46.954Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-07-12T09:24:40.806Z",
-        "updatedAt": "2024-07-16T06:35:11.457Z",
+        "updatedAt": "2024-07-25T18:18:51.789Z",
         "deleted": false,
         "policies": [
             {
@@ -21624,7 +21628,7 @@
                     }
                 ],
                 "queryParameters": [],
-                "body": "{\n\t\"ownerId\": \"{{main.user.auth_module.user.info.user._id}}\",\n\t\"link\": \"{{Input1.text}}\",\n\t\"name\": \"{{Input1.text}}\",\n\t\"id\": {{JSON.stringify(Select1.selectedOptionValue)}},\n\t\"type\": \"Text\",\n\t\"typeBase\":{{JSON.stringify(typeDB.text)}},\n\t\"nameBase\":{{JSON.stringify(Select1.selectedOptionLabel)}},\n\t\"text\":{{JSON.stringify(RichTextEditor1.text)}},\n\t\"nameBase\":{{JSON.stringify(Select1.selectedOptionLabel)}},\n\t\"email\": \"{{appsmith.user.auth_module.user.info.user.email}}\",\n\t\"fileName\":\"{{Input1.text}}\"\n}",
+                "body": "{\n\t\"ownerId\": \"{{main.user.auth_module.user.info.user._id}}\",\n\t\"link\": \"{{Input1.text}}\",\n\t\"name\": \"{{Input1.text}}\",\n\t\"id\": {{JSON.stringify(Select1.selectedOptionValue)}},\n\t\"type\": \"Text\",\n\t\"typeBase\":{{JSON.stringify(typeDB.text)}},\n\t\"nameBase\":{{JSON.stringify(Select1.selectedOptionLabel)}},\n\t\"text\":{{JSON.stringify(RichTextEditor1.text)}},\n\t\"nameBase\":{{JSON.stringify(Select1.selectedOptionLabel)}},\n\t\"email\": \"{{appsmith.user.auth_module.user.info.user.email}}\",\n\t\"fileName\":\"{{Input1.text}}\",\n\t\"systemName\":{{JSON.stringify(getAllBases.data[0].systemName)}}\n}",
                 "bodyFormData": [],
                 "formData": {
                     "apiContentType": "application/json"
@@ -21653,13 +21657,14 @@
                 "JSON.stringify(typeDB.text)",
                 "JSON.stringify(Select1.selectedOptionLabel)",
                 "JSON.stringify(RichTextEditor1.text)",
-                "appsmith.user.auth_module.user.info.user.email"
+                "appsmith.user.auth_module.user.info.user.email",
+                "JSON.stringify(getAllBases.data[0].systemName)"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-07-12T09:24:40.807Z",
-        "updatedAt": "2024-07-15T12:52:16.536Z",
+        "updatedAt": "2024-07-25T18:18:54.268Z",
         "deleted": false,
         "policies": [
             {
@@ -22410,7 +22415,7 @@
                     }
                 ],
                 "queryParameters": [],
-                "body": "{\n  \"baseId\":{{JSON.stringify(Select1.selectedOptionValue)}},\n\t\"prompt\": {{JSON.stringify(prompt_custom.text)}},\n  \"model\": {{JSON.stringify(model_selectCopy.selectedOptionValue)}},\n  \"answer_length_onboarding\": {{JSON.stringify(answer_length.selectedOptionValue)}},\n  \"answer_as\": {{JSON.stringify(answer_as.selectedOptionValue)}},\n  \"tone\": {{JSON.stringify(tone.selectedOptionValue)}},\n  \"language\": {{JSON.stringify(language.selectedOptionValue)}}\n}",
+                "body": "{\n  \"baseId\":{{JSON.stringify(Select1.selectedOptionValue)}},\n\t\"prompt\": {{JSON.stringify(prompt_custom.text)}},\n  \"model\": {{JSON.stringify(model_selectCopy.selectedOptionValue)}},\n  \"answer_length_onboarding\": {{JSON.stringify(answer_length.selectedOptionValue)}},\n  \"answer_as\": {{JSON.stringify(answer_as.selectedOptionValue)}},\n  \"tone\": {{JSON.stringify(tone.selectedOptionValue)}},\n  \"language\": {{JSON.stringify(language.selectedOptionValue)}},\n\t\"systemName\":{{JSON.stringify(getAllBases.data[0].systemName)}}\n}",
                 "bodyFormData": [],
                 "formData": {
                     "apiContentType": "none"
@@ -22424,6 +22429,9 @@
             "dynamicBindingPathList": [
                 {
                     "key": "datasourceUrl"
+                },
+                {
+                    "key": "body"
                 }
             ],
             "isValid": true,
@@ -22436,13 +22444,14 @@
                 "JSON.stringify(answer_length.selectedOptionValue)",
                 "JSON.stringify(answer_as.selectedOptionValue)",
                 "JSON.stringify(tone.selectedOptionValue)",
-                "JSON.stringify(language.selectedOptionValue)"
+                "JSON.stringify(language.selectedOptionValue)",
+                "JSON.stringify(getAllBases.data[0].systemName)"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-07-12T20:06:19.482Z",
-        "updatedAt": "2024-07-24T07:42:25.863Z",
+        "updatedAt": "2024-07-25T18:19:20.008Z",
         "deleted": false,
         "policies": [
             {
@@ -22502,7 +22511,7 @@
                         "value": true
                     }
                 ],
-                "body": "{\n  \"baseId\":{{JSON.stringify(Select1.selectedOptionValue)}},\n\t\"welcomeMessage\":{{JSON.stringify(welcome.text)}},\n\t\"errorMessage\":{{JSON.stringify(unable.text)}}\n}"
+                "body": "{\n  \"baseId\":{{JSON.stringify(Select1.selectedOptionValue)}},\n\t\"welcomeMessage\":{{JSON.stringify(welcome.text)}},\n\t\"errorMessage\":{{JSON.stringify(unable.text)}},\n\t\"systemName\":{{JSON.stringify(getAllBases.data[0].systemName)}}\n}"
             },
             "dynamicBindingPathList": [
                 {
@@ -22518,13 +22527,14 @@
                 "main.env.nodeUrl",
                 "JSON.stringify(Select1.selectedOptionValue)",
                 "JSON.stringify(welcome.text)",
-                "JSON.stringify(unable.text)"
+                "JSON.stringify(unable.text)",
+                "JSON.stringify(getAllBases.data[0].systemName)"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-07-12T20:13:25.939Z",
-        "updatedAt": "2024-07-24T07:42:26.563Z",
+        "updatedAt": "2024-07-25T18:19:23.721Z",
         "deleted": false,
         "policies": [
             {
@@ -22628,7 +22638,11 @@
                 "body": "",
                 "path": ""
             },
-            "dynamicBindingPathList": [],
+            "dynamicBindingPathList": [
+                {
+                    "key": "queryParameters[0].value"
+                }
+            ],
             "isValid": true,
             "invalids": [],
             "jsonPathKeys": [
@@ -22639,7 +22653,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-07-16T08:43:05.280Z",
-        "updatedAt": "2024-07-16T08:43:06.699Z",
+        "updatedAt": "2024-07-25T10:24:06.697Z",
         "deleted": false,
         "policies": [
             {
@@ -23650,6 +23664,85 @@
         },
         "createdAt": "2024-07-19T08:20:22.241Z",
         "updatedAt": "2024-07-19T08:21:26.149Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "66a2042fa258c7c7f260816e",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "getFirstDB",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/getFirstDB"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "Home",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "GET",
+                "headers": [],
+                "queryParameters": [
+                    {
+                        "key": "ownerId",
+                        "value": "{{main.user.auth_module.user.info.user._id}}"
+                    }
+                ],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ]
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "datasourceUrl"
+                },
+                {
+                    "key": "queryParameters[0].value"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "main.user.auth_module.user.info.user._id"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-07-25T07:52:15.855Z",
+        "updatedAt": "2024-07-25T10:24:04.144Z",
         "deleted": false,
         "policies": [
             {
