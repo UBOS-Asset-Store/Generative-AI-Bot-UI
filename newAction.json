@@ -18415,7 +18415,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-07-10T10:18:00.747Z",
-        "updatedAt": "2024-07-25T09:16:54.730Z",
+        "updatedAt": "2024-08-09T14:34:48.530Z",
         "deleted": false,
         "policies": [
             {
@@ -18481,7 +18481,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-07-10T10:18:00.747Z",
-        "updatedAt": "2024-07-25T07:53:25.249Z",
+        "updatedAt": "2024-08-09T14:34:49.691Z",
         "deleted": false,
         "policies": [
             {
@@ -18794,7 +18794,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-07-10T11:24:37.475Z",
-        "updatedAt": "2024-07-25T16:36:30.090Z",
+        "updatedAt": "2024-08-09T14:30:29.229Z",
         "deleted": false,
         "policies": [
             {
@@ -21164,13 +21164,13 @@
                 "JSON.stringify(Select1.selectedOptionLabel)",
                 "appsmith.user.auth_module.user.info.user.email",
                 "JSON.stringify(getAllBases.data[0].systemName)",
-                "main.env.nodeUrl,JSON.,2024-07-12T09:24:40.806Z,2024-07-25T18:18:40.533Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,JSON.stringify(),2024-07-12T09:24:40.806Z,2024-07-25T18:18:41.719Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,JSON.stringify(getAllBases.data[0].systemName),2024-07-12T09:24:40.806Z,2024-07-25T18:18:42.856Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2024-07-12T09:24:40.806Z,2024-07-25T18:18:46.954Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl"
+                "main.env.nodeUrl,JSON.stringify(),2024-07-12T09:24:40.806Z,2024-07-25T18:18:41.719Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,JSON.stringify(getAllBases.data[0].systemName),2024-07-12T09:24:40.806Z,2024-07-25T18:18:42.856Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2024-07-12T09:24:40.806Z,2024-07-25T18:18:46.954Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2024-07-12T09:24:40.806Z,2024-07-25T18:18:51.789Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-07-12T09:24:40.806Z",
-        "updatedAt": "2024-07-25T18:18:51.789Z",
+        "updatedAt": "2024-08-09T14:13:13.033Z",
         "deleted": false,
         "policies": [
             {
@@ -22665,7 +22665,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-07-16T08:43:05.280Z",
-        "updatedAt": "2024-07-25T10:24:06.697Z",
+        "updatedAt": "2024-08-09T14:35:03.367Z",
         "deleted": false,
         "policies": [
             {
@@ -23754,7 +23754,87 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-07-25T07:52:15.855Z",
-        "updatedAt": "2024-07-25T10:24:04.144Z",
+        "updatedAt": "2024-08-09T14:35:41.117Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "66b628e96b48ce21b43b4643",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "getBotAnalytic",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/getBotAnalytic"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": true,
+            "pageId": "Home",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "GET",
+                "headers": [],
+                "queryParameters": [
+                    {
+                        "value": "{{main.user.auth_module.user.info.user._id}}",
+                        "key": "ownerId"
+                    }
+                ],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ],
+                "path": ""
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "datasourceUrl"
+                },
+                {
+                    "key": "queryParameters[0].value"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "main.user.auth_module.user.info.user._id"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-08-09T14:34:17.516Z",
+        "updatedAt": "2024-08-09T14:36:18.387Z",
         "deleted": false,
         "policies": [
             {
