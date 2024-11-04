@@ -6887,7 +6887,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-06-29T11:38:38.762Z",
-        "updatedAt": "2024-07-24T10:02:45.729Z",
+        "updatedAt": "2024-10-21T14:19:30.802Z",
         "deleted": false,
         "policies": [
             {
@@ -14550,12 +14550,10 @@
                         "value": true
                     }
                 ],
-                "body": "{\n\t\"email\": {{JSON.stringify(EmailInputModal.text)}},\n\t\"lang\": {{JSON.stringify(main.store.lg)}}\n}"
+                "body": "{\n\t\"email\": {{JSON.stringify(EmailInputModal.text)}},\n\t\"lang\": {{JSON.stringify(main.store.lg)}}\n}",
+                "path": ""
             },
             "dynamicBindingPathList": [
-                {
-                    "key": "datasourceUrl"
-                },
                 {
                     "key": "body"
                 }
@@ -14563,17 +14561,15 @@
             "isValid": true,
             "invalids": [],
             "jsonPathKeys": [
-                "main.env.nodeUrl",
                 "JSON.stringify(EmailInputModal.text)",
-                "JSON.stringify(){{main.store.lg)",
-                "main.store.lg,main.store.lg,main.store.lg,2024-06-24T09:21:24.339Z,2024-06-24T09:52:27.247Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2024-06-24T09:21:24.339Z,2024-06-24T09:52:28.843Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,JSON.stringify(){{main.store.lg),2024-06-24T09:21:24.339Z,2024-06-24T09:52:30.827Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl",
-                "JSON.stringify(main.store.lg)"
+                "JSON.stringify(main.store.lg)",
+                "main.env.nodeUrl,JSON.stringify(){{main.store.lg),2024-06-24T09:21:24.339Z,2024-06-24T09:52:30.827Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,JSON.stringify(main.store.lg),2024-06-24T09:21:24.339Z,2024-06-24T09:52:34.423Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2024-06-24T09:21:24.339Z,2024-10-31T11:41:53.981Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,https://aibotv3-nr-9687-658ad621387fb711000001e1.ubos.tech,API,Login,POST,content-type,application/json,none,{\n\t\"email\": {{JSON.stringify(EmailInputModal.text),2024-06-24T09:21:24.339Z,2024-10-31T11:42:13.874Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-06-24T09:21:24.339Z",
-        "updatedAt": "2024-06-24T09:52:34.423Z",
+        "updatedAt": "2024-10-31T11:42:16.721Z",
         "deleted": false,
         "policies": [
             {
@@ -18271,7 +18267,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-07-10T10:18:00.747Z",
-        "updatedAt": "2024-07-10T10:18:00.747Z",
+        "updatedAt": "2024-10-29T17:49:57.426Z",
         "deleted": false,
         "policies": [
             {
@@ -18349,7 +18345,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-07-10T10:18:00.747Z",
-        "updatedAt": "2024-07-10T11:24:49.346Z",
+        "updatedAt": "2024-10-29T17:49:59.638Z",
         "deleted": false,
         "policies": [
             {
@@ -18642,7 +18638,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-07-10T10:18:00.747Z",
-        "updatedAt": "2024-07-25T10:24:07.800Z",
+        "updatedAt": "2024-10-29T17:49:52.607Z",
         "deleted": false,
         "policies": [
             {
@@ -23019,13 +23015,13 @@
                 "JSON.stringify(Company_name_.text)",
                 "JSON.stringify(Business_email_.text)",
                 "JSON.stringify(main.user.auth_module.user.info.user.email)",
-                "main.env.nodeUrl,JSON.stringify({{main.user.auth_module.user.info.user.email),2024-07-17T06:51:26.156Z,2024-07-17T06:53:39.343Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,JSON.stringify(main.user.auth_module.user.info.user.email),2024-07-17T06:51:26.156Z,2024-07-17T06:53:40.451Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2024-07-17T06:51:26.156Z,2024-07-17T07:10:25.765Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl"
+                "main.env.nodeUrl,2024-07-17T06:51:26.156Z,2024-07-17T07:10:25.765Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2024-07-17T06:51:26.156Z,2024-07-17T14:38:24.629Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2024-07-17T06:51:26.156Z,2024-10-29T16:55:01.953Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2024-07-17T06:51:26.156Z,2024-10-29T16:57:32.305Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-07-17T06:51:26.156Z",
-        "updatedAt": "2024-07-17T14:38:24.629Z",
+        "updatedAt": "2024-10-29T17:21:07.975Z",
         "deleted": false,
         "policies": [
             {
@@ -23834,7 +23830,89 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-08-09T14:34:17.516Z",
-        "updatedAt": "2024-08-09T14:36:18.387Z",
+        "updatedAt": "2024-10-31T10:00:44.855Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "67212033427a902147a995ff",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "contactUs",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/supportRequest"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "Home",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "POST",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ],
+                "body": "{\n\t\"email\": {{JSON.stringify(supportEmail.text)}},\n\t\"name\": {{JSON.stringify(supportName.text)}},\n\t\"message\": {{JSON.stringify(MessageSuppport.text)}}\n}"
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "body"
+                },
+                {
+                    "key": "datasourceUrl"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "JSON.stringify(supportEmail.text)",
+                "JSON.stringify(supportName.text)",
+                "JSON.stringify(MessageSuppport.text)"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-10-29T17:49:39.859Z",
+        "updatedAt": "2024-10-29T18:07:49.467Z",
         "deleted": false,
         "policies": [
             {
