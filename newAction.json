@@ -7285,7 +7285,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-08-08T19:16:59.846Z",
-        "updatedAt": "2024-07-25T15:40:22.525Z",
+        "updatedAt": "2024-11-06T09:39:46.556Z",
         "deleted": false,
         "policies": [
             {
@@ -18293,6 +18293,9 @@
             "dynamicBindingPathList": [
                 {
                     "key": "body"
+                },
+                {
+                    "key": "datasourceUrl"
                 }
             ],
             "isValid": true,
@@ -18305,7 +18308,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-07-10T10:18:00.747Z",
-        "updatedAt": "2024-10-29T17:49:57.426Z",
+        "updatedAt": "2024-11-06T09:42:37.706Z",
         "deleted": false,
         "policies": [
             {
@@ -18370,6 +18373,9 @@
             "dynamicBindingPathList": [
                 {
                     "key": "body"
+                },
+                {
+                    "key": "datasourceUrl"
                 }
             ],
             "isValid": true,
@@ -18384,7 +18390,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-07-10T10:18:00.747Z",
-        "updatedAt": "2024-11-05T17:52:56.667Z",
+        "updatedAt": "2024-11-06T09:46:05.166Z",
         "deleted": false,
         "policies": [
             {
@@ -22705,7 +22711,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-07-16T08:43:05.280Z",
-        "updatedAt": "2024-08-09T14:35:03.367Z",
+        "updatedAt": "2024-11-06T09:42:27.078Z",
         "deleted": false,
         "policies": [
             {
@@ -23562,7 +23568,7 @@
             "datasource": {
                 "name": "DEFAULT_REST_DATASOURCE",
                 "datasourceConfiguration": {
-                    "url": "{{main.env.nodeUrl}}/getProfile"
+                    "url": "{{main.env.nodeUrl}}/getProfile?_id={{main.user.auth_module.user.info.user._id}}"
                 },
                 "invalids": [],
                 "isValid": true,
@@ -23576,12 +23582,7 @@
                 "encodeParamsToggle": true,
                 "httpMethod": "GET",
                 "headers": [],
-                "queryParameters": [
-                    {
-                        "key": "_id",
-                        "value": "{{main.user.auth_module.user.info.user._id}}"
-                    }
-                ],
+                "queryParameters": [],
                 "bodyFormData": [],
                 "formData": {
                     "apiContentType": "none"
@@ -23590,11 +23591,15 @@
                     {
                         "value": true
                     }
-                ]
+                ],
+                "path": ""
             },
             "dynamicBindingPathList": [
                 {
                     "key": "queryParameters[0].value"
+                },
+                {
+                    "key": "datasourceUrl"
                 }
             ],
             "isValid": true,
@@ -23607,7 +23612,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-07-18T13:53:31.214Z",
-        "updatedAt": "2024-07-18T14:07:20.095Z",
+        "updatedAt": "2024-11-06T09:38:11.569Z",
         "deleted": false,
         "policies": [
             {
