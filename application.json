@@ -11,7 +11,7 @@
     "pages": [
         {
             "_id": "Login",
-            "isDefault": true
+            "isDefault": false
         },
         {
             "_id": "Modules",
@@ -95,7 +95,7 @@
         },
         {
             "_id": "Home",
-            "isDefault": false
+            "isDefault": true
         },
         {
             "_id": "Demo Copy",
