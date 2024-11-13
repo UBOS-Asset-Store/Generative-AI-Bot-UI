@@ -8240,19 +8240,19 @@
             "invalids": [],
             "jsonPathKeys": [
                 "main.env.nodeUrl",
+                "JSON.stringify(main.user.auth_module.user.info.user._id)",
                 "JSON.stringify(main.user.auth_module.user.info.user.email)",
                 "JSON.stringify(ms_token.text)",
                 "JSON.stringify(ms_id.text)",
                 "JSON.stringify(knowledge_base_messenger.selectedOptionLabel.split(' ')[0])",
                 "JSON.stringify(knowledge_base_messenger.selectedOptionLabel.split(' ')[1])",
-                "JSON.stringify(knowledge_base_messenger.selectedOptionValue)",
-                "JSON.stringify(main.user.auth_module.user.info.user._id)"
+                "JSON.stringify(knowledge_base_messenger.selectedOptionValue)"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-10-23T19:04:10.116Z",
-        "updatedAt": "2024-07-12T10:24:35.330Z",
+        "updatedAt": "2024-11-12T12:41:00.578Z",
         "deleted": false,
         "policies": [
             {
@@ -8949,7 +8949,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-10-26T14:56:32.188Z",
-        "updatedAt": "2024-07-12T10:57:03.539Z",
+        "updatedAt": "2024-11-12T14:19:48.578Z",
         "deleted": false,
         "policies": [
             {
@@ -11678,7 +11678,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-01-15T09:42:35.415Z",
-        "updatedAt": "2024-07-12T10:49:12.605Z",
+        "updatedAt": "2024-11-12T14:19:39.477Z",
         "deleted": false,
         "policies": [
             {
@@ -11762,7 +11762,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-01-15T10:05:27.294Z",
-        "updatedAt": "2024-07-30T09:52:39.904Z",
+        "updatedAt": "2024-11-12T12:42:15.749Z",
         "deleted": false,
         "policies": [
             {
@@ -24898,6 +24898,94 @@
         },
         "createdAt": "2024-11-08T12:23:44.073Z",
         "updatedAt": "2024-11-08T12:27:58.956Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "673339afca338cf39076ae2b",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "chatwoot",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/createChatwootFlow"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "Bot Setup",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "POST",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "body": "{\n\t\"name\": \"{{website_name.text}}\",\n\t\"url\": \"{{website_url.text}}\",\n\t\"base\": \"{{knowledge_base_chawoot.selectedOptionValue}}\",\n\t\"ownerId\":{{JSON.stringify(main.user.auth_module.user.info.user._id)}},\n\t\"email\": {{JSON.stringify(main.user.auth_module.user.info.user.email)}},\n\t\"knowledge_baseName\":{{JSON.stringify(knowledge_base_chawoot.selectedOptionLabel)}},\n\t\"knowledge_baseType\":{{JSON.stringify(chatwoot_type.text)}},\n\t\"id_base\":{{JSON.stringify(knowledge_base_chawoot.selectedOptionValue)}}\n}",
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ]
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "datasourceUrl"
+                },
+                {
+                    "key": "body"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "website_name.text",
+                "website_url.text",
+                "knowledge_base_chawoot.selectedOptionValue",
+                "JSON.stringify(main.user.auth_module.user.info.user._id)",
+                "JSON.stringify(main.user.auth_module.user.info.user.email)",
+                "JSON.stringify(knowledge_base_chawoot.selectedOptionLabel)",
+                "JSON.stringify(chatwoot_type.)",
+                "JSON.stringify(knowledge_base_chawoot.selectedOptionValue)",
+                "JSON.stringify(chatwoot_type.text)"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-11-12T11:19:11.841Z",
+        "updatedAt": "2024-11-12T12:43:25.915Z",
         "deleted": false,
         "policies": [
             {
