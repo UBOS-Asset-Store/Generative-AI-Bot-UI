@@ -25004,5 +25004,93 @@
                 "users": []
             }
         ]
+    },
+    {
+        "_id": "6735da16ca338cf39076ae2c",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "saveCredentialsChatwoot",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/saveCredentialsChatwoot"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "Bot Setup",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "POST",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ],
+                "body": "{\n\t\"chatwoot_url\":{{JSON.stringify(chatwoot_url.text)}},\n\t\"chatwoot_token\": {{JSON.stringify(chatwoot_token.text)}},\n\t\"account_id\":{{JSON.stringify(chatwoot_account.text)}},\n\t\"base\": \"{{knowledge_base_chawoot2.selectedOptionValue}}\",\n\t\"ownerId\":{{JSON.stringify(main.user.auth_module.user.info.user._id)}},\n\t\"email\": {{JSON.stringify(main.user.auth_module.user.info.user.email)}},\n\t\"knowledge_baseName\":{{JSON.stringify(knowledge_base_chawoot2.selectedOptionLabel)}},\n\t\"knowledge_baseType\":{{JSON.stringify(chatwoot_typeCopy.text)}},\n\t\"id_base\":{{JSON.stringify(knowledge_base_chawoot2.selectedOptionValue)}}\n}"
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "datasourceUrl"
+                },
+                {
+                    "key": "body"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "JSON.stringify(chatwoot_url.text)",
+                "JSON.stringify(chatwoot_token.text)",
+                "JSON.stringify(chatwoot_account.text)",
+                "knowledge_base_chawoot2.selectedOptionValue",
+                "JSON.stringify(main.user.auth_module.user.info.user._id)",
+                "JSON.stringify(main.user.auth_module.user.info.user.email)",
+                "JSON.stringify(knowledge_base_chawoot2.selectedOptionLabel)",
+                "JSON.stringify(chatwoot_typeCopy.text)",
+                "JSON.stringify(knowledge_base_chawoot2.selectedOptionValue)"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-11-14T11:08:06.372Z",
+        "updatedAt": "2024-11-14T11:27:49.446Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
     }
 ]
