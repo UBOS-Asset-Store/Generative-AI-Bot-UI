@@ -542,7 +542,7 @@
         "id": "6579b875a69a47e15535fc49",
         "name": "JSObject1",
         "pageId": "Login",
-        "body": "export default {\n\tmyVar1: [],\n\tmyVar2: {},\n\tmyFun1:async () => {\nif(main.URL.pathname.endsWith(\"/edit\")){\n\t\n}else{\nawait demoUser.run()\n  .then((data) => {\n  storeValue(\"lg\",main.URL.queryParams.lg ?main.URL.queryParams.lg:\"En\");\n\tgetMenu.run()\n  if(data.email){\n\t\tnavigateTo(data.page,{})\n\t}else if(data==='no token'){\n\t\t\n\t}\n\telse{\n\tnavigateTo('https://platform.ubos.tech/',{})\t\n\t}\n  })\n  .catch((error) => {\n    console.error('Inside catch block');\n    console.error(error);\n  });\n\t\t}\n\t},\n\tmyFun2: async () => {\n\t}\n}",
+        "body": "export default {\n    myVar1: [],\n    myVar2: {},\n    myFun1: async () => {\n        if (main.URL.pathname.endsWith(\"/edit\")) {\n\n        } else {\n            await demoUser.run()\n                .then((data) => {\n                    storeValue(\"lg\", main.URL.queryParams.lg ? main.URL.queryParams.lg : \"En\");\n                    getMenu.run()\n                    if (data.email) {\n                        navigateTo(data.page, {})\n                    } else if (data === 'no token') {\n                    }\n                    else {\n                        navigateTo('https://platform.ubos.tech/', {})\n                    }\n                })\n                .catch((error) => {\n                    console.error('Inside catch block');\n                    console.error(error);\n                });\n        }\n    },\n    myFun2: async () => {\n    }\n}",
         "variables": [
             {
                 "name": "myVar1",
@@ -559,7 +559,7 @@
                 "pageId": "Login",
                 "executeOnLoad": true,
                 "actionConfiguration": {
-                    "body": "async () => {\nif(main.URL.pathname.endsWith(\"/edit\")){\n\t\n}else{\nawait demoUser.run()\n  .then((data) => {\n  storeValue(\"lg\",main.URL.queryParams.lg ?main.URL.queryParams.lg:\"En\");\n\tgetMenu.run()\n  if(data.email){\n\t\tnavigateTo(data.page,{})\n\t}else if(data==='no token'){\n\t\t\n\t}\n\telse{\n\tnavigateTo('https://platform.ubos.tech/',{})\t\n\t}\n  })\n  .catch((error) => {\n    console.error('Inside catch block');\n    console.error(error);\n  });\n\t\t}\n\t}",
+                    "body": "async () => {\n        if (main.URL.pathname.endsWith(\"/edit\")) {\n\n        } else {\n            await demoUser.run()\n                .then((data) => {\n                    storeValue(\"lg\", main.URL.queryParams.lg ? main.URL.queryParams.lg : \"En\");\n                    getMenu.run()\n                    if (data.email) {\n                        navigateTo(data.page, {})\n                    } else if (data === 'no token') {\n                    }\n                    else {\n                        navigateTo('https://platform.ubos.tech/', {})\n                    }\n                })\n                .catch((error) => {\n                    console.error('Inside catch block');\n                    console.error(error);\n                });\n        }\n    }",
                     "isAsync": true,
                     "timeoutInMillisecond": 10000,
                     "jsArguments": [],
@@ -597,7 +597,7 @@
                 "pageId": "Login",
                 "executeOnLoad": false,
                 "actionConfiguration": {
-                    "body": "async () => {\n\t}",
+                    "body": "async () => {\n    }",
                     "isAsync": true,
                     "timeoutInMillisecond": 10000,
                     "jsArguments": [],
