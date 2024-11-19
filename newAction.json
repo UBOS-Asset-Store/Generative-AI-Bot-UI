@@ -6279,10 +6279,10 @@
                     "key": "datasourceUrl"
                 },
                 {
-                    "key": "queryParameters[0].value"
+                    "key": "path"
                 },
                 {
-                    "key": "path"
+                    "key": "queryParameters[0].value"
                 }
             ],
             "isValid": true,
@@ -6295,7 +6295,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-05-31T11:37:27.119Z",
-        "updatedAt": "2024-11-14T18:30:59.119Z",
+        "updatedAt": "2024-11-19T11:20:21.101Z",
         "deleted": false,
         "policies": [
             {
@@ -25074,6 +25074,93 @@
         },
         "createdAt": "2024-11-14T11:08:06.372Z",
         "updatedAt": "2024-11-14T11:27:49.446Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "673c6d05996ddc6e181d7a7a",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "getSSOLink",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/getSSOLink"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "User Chats",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "GET",
+                "headers": [],
+                "queryParameters": [
+                    {
+                        "key": "account_id",
+                        "value": "{{Table5.selectedRow.account_id}}"
+                    },
+                    {
+                        "key": "conversationId",
+                        "value": "{{Table5.selectedRow.conversationId}}"
+                    }
+                ],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ]
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "datasourceUrl"
+                },
+                {
+                    "key": "queryParameters[0].value"
+                },
+                {
+                    "key": "queryParameters[1].value"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "Table5.selectedRow.account_id",
+                "Table5.selectedRow.conversationId"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-11-19T10:48:37.847Z",
+        "updatedAt": "2024-11-19T11:12:38.956Z",
         "deleted": false,
         "policies": [
             {
