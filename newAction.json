@@ -2215,7 +2215,7 @@
         "pluginType": "API",
         "pluginId": "API",
         "createdAt": "2022-08-29T15:13:14.157Z",
-        "updatedAt": "2024-11-08T13:56:09.129Z",
+        "updatedAt": "2024-11-19T13:57:10.556Z",
         "deleted": false,
         "policies": [
             {
@@ -7355,7 +7355,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-08-08T19:50:47.061Z",
-        "updatedAt": "2024-07-25T16:36:10.054Z",
+        "updatedAt": "2024-11-19T13:26:36.143Z",
         "deleted": false,
         "policies": [
             {
@@ -9431,7 +9431,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-12-05T14:13:45.691Z",
-        "updatedAt": "2024-11-08T13:51:15.311Z",
+        "updatedAt": "2024-11-19T13:25:24.127Z",
         "deleted": false,
         "policies": [
             {
@@ -10039,7 +10039,7 @@
         "pageId": "Login",
         "executeOnLoad": true,
         "actionConfiguration": {
-            "body": "async () => {\n        if (main.URL.pathname.endsWith(\"/edit\")) {\n\n        } else {\n            await demoUser.run()\n                .then((data) => {\n                    storeValue(\"lg\", main.URL.queryParams.lg ? main.URL.queryParams.lg : \"En\");\n                    getMenu.run()\n                    if (data.email) {\n                        navigateTo(data.page, {})\n                    } else if (data === 'no token') {\n                    }\n                    else {\n                        navigateTo('https://platform.ubos.tech/', {})\n                    }\n                })\n                .catch((error) => {\n                    console.error('Inside catch block');\n                    console.error(error);\n                });\n        }\n    }",
+            "body": "async () => {\n        if (main.URL.pathname.endsWith(\"/edit\")) {\n\n        } else {\n            await demoUser.run()\n                .then((data) => {\n                    storeValue(\"lg\", main.URL.queryParams.lg ? main.URL.queryParams.lg : \"En\");\n                    getMenu.run()\n                    if (data.email) {\n                        navigateTo(data.page, {})\n                    } else if (data === 'no token') {\n                    }\n                    else {\n\t\t\t\t\t\t\t\t\t\t\tconsole.log('sfd')\n                        navigateTo('https://platform.ubos.tech/', {})\n                    }\n                })\n                .catch((error) => {\n                    console.error('Inside catch block');\n                    console.error(error);\n                });\n        }\n    }",
             "isAsync": true,
             "timeoutInMillisecond": 10000,
             "jsArguments": [],
@@ -10077,7 +10077,7 @@
         "pageId": "Login",
         "executeOnLoad": false,
         "actionConfiguration": {
-            "body": "async () => {\n    }",
+            "body": "async () => {\n\t\tawait\tcheckUserEmail.run().then((data)=>{\n\t\t\t\tconsole.log(data)\n\t\t\tif(data.data==='login'){\n\t\t\t\tstoreValue('loginTab','login')\n\t\t\t}\n\t\t\t\telse if(data.data==='setup')\n\t\t\t\t\tstoreValue('loginTab','setup')\n\t\t\t})\n    }",
             "isAsync": true,
             "timeoutInMillisecond": 10000,
             "jsArguments": [],
@@ -25161,6 +25161,204 @@
         },
         "createdAt": "2024-11-19T10:48:37.847Z",
         "updatedAt": "2024-11-19T11:12:38.956Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "673c9617996ddc6e181d7a7b",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "checkUserEmail",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/checkUserEmail"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "Login",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "GET",
+                "headers": [],
+                "queryParameters": [
+                    {
+                        "key": "email",
+                        "value": "{{email_fieldCopy.text}}"
+                    }
+                ],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ]
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "datasourceUrl"
+                },
+                {
+                    "key": "queryParameters[0].value"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "email_fiel.text",
+                "email_fieldCopy.text"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-11-19T13:43:51.924Z",
+        "updatedAt": "2024-11-19T14:04:06.554Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "name": "myFun3",
+        "collectionId": "6579b875a69a47e15535fc49",
+        "executeOnLoad": true,
+        "pageId": "Login",
+        "actionConfiguration": {
+            "body": "async () => {\n\t\t main.URL.queryParams.access_token ? storeValue('loginTab','demo') :  getData.data?.length < 1 ? storeValue('loginTab','setting') : storeValue('loginTab','checkEmail') \n\t}",
+            "isAsync": true,
+            "timeoutInMillisecond": 10000,
+            "jsArguments": [],
+            "paginationType": "NONE",
+            "encodeParamsToggle": true
+        },
+        "_id": "673c9b9f996ddc6e181d7a7d",
+        "id": "673c9b9f996ddc6e181d7a7d",
+        "applicationId": "jetsondashboard",
+        "datasource": {
+            "isValid": true,
+            "messages": [],
+            "name": "UNUSED_DATASOURCE",
+            "new": true,
+            "pluginId": "",
+            "userPermissions": []
+        },
+        "dynamicBindingPathList": [
+            {
+                "key": "body"
+            }
+        ],
+        "fullyQualifiedName": "JSObject1.myFun3",
+        "isValid": true,
+        "jsonPathKeys": [
+            "async () => {\n\t\tmain.URL.queryParams.access_token ? 'demo' :  getData.data.length < 1 ? 'setting': 'login'\n\t}"
+        ],
+        "pluginType": "JS"
+    },
+    {
+        "_id": "673d9e1c996ddc6e181d7a7e",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "saveUserPassword",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/saveUserPassword"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "Login",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "POST",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ],
+                "body": "{\n\t\"email\": {{JSON.stringify(email_field_password.text)}},\n\t\"password\": {{JSON.stringify(password_setup.text)}}\n}"
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "datasourceUrl"
+                },
+                {
+                    "key": "body"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "JSON.stringify(email_field_password.text)",
+                "JSON.stringify(password_setup)",
+                "JSON.stringify(password_setup.text)"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-11-20T08:30:20.952Z",
+        "updatedAt": "2024-11-20T09:30:39.562Z",
         "deleted": false,
         "policies": [
             {

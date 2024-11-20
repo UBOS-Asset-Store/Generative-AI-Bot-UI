@@ -542,7 +542,7 @@
         "id": "6579b875a69a47e15535fc49",
         "name": "JSObject1",
         "pageId": "Login",
-        "body": "export default {\n    myVar1: [],\n    myVar2: {},\n    myFun1: async () => {\n        if (main.URL.pathname.endsWith(\"/edit\")) {\n\n        } else {\n            await demoUser.run()\n                .then((data) => {\n                    storeValue(\"lg\", main.URL.queryParams.lg ? main.URL.queryParams.lg : \"En\");\n                    getMenu.run()\n                    if (data.email) {\n                        navigateTo(data.page, {})\n                    } else if (data === 'no token') {\n                    }\n                    else {\n                        navigateTo('https://platform.ubos.tech/', {})\n                    }\n                })\n                .catch((error) => {\n                    console.error('Inside catch block');\n                    console.error(error);\n                });\n        }\n    },\n    myFun2: async () => {\n    }\n}",
+        "body": "export default {\n    myVar1: [],\n    myVar2: {},\n    myFun1: async () => {\n        if (main.URL.pathname.endsWith(\"/edit\")) {\n\n        } else {\n            await demoUser.run()\n                .then((data) => {\n                    storeValue(\"lg\", main.URL.queryParams.lg ? main.URL.queryParams.lg : \"En\");\n                    getMenu.run()\n                    if (data.email) {\n                        navigateTo(data.page, {})\n                    } else if (data === 'no token') {\n                    }\n                    else {\n\t\t\t\t\t\t\t\t\t\t\tconsole.log('sfd')\n                        navigateTo('https://platform.ubos.tech/', {})\n                    }\n                })\n                .catch((error) => {\n                    console.error('Inside catch block');\n                    console.error(error);\n                });\n        }\n    },\n    myFun2: async () => {\n\t\tawait\tcheckUserEmail.run().then((data)=>{\n\t\t\t\tconsole.log(data)\n\t\t\tif(data.data==='login'){\n\t\t\t\tstoreValue('loginTab','login')\n\t\t\t}\n\t\t\t\telse if(data.data==='setup')\n\t\t\t\t\tstoreValue('loginTab','setup')\n\t\t\t})\n    },\n\tmyFun3: async () => {\n\t\t main.URL.queryParams.access_token ? storeValue('loginTab','demo') :  getData.data?.length < 1 ? storeValue('loginTab','setting') : storeValue('loginTab','checkEmail') \n\t},\n}",
         "variables": [
             {
                 "name": "myVar1",
@@ -559,7 +559,7 @@
                 "pageId": "Login",
                 "executeOnLoad": true,
                 "actionConfiguration": {
-                    "body": "async () => {\n        if (main.URL.pathname.endsWith(\"/edit\")) {\n\n        } else {\n            await demoUser.run()\n                .then((data) => {\n                    storeValue(\"lg\", main.URL.queryParams.lg ? main.URL.queryParams.lg : \"En\");\n                    getMenu.run()\n                    if (data.email) {\n                        navigateTo(data.page, {})\n                    } else if (data === 'no token') {\n                    }\n                    else {\n                        navigateTo('https://platform.ubos.tech/', {})\n                    }\n                })\n                .catch((error) => {\n                    console.error('Inside catch block');\n                    console.error(error);\n                });\n        }\n    }",
+                    "body": "async () => {\n        if (main.URL.pathname.endsWith(\"/edit\")) {\n\n        } else {\n            await demoUser.run()\n                .then((data) => {\n                    storeValue(\"lg\", main.URL.queryParams.lg ? main.URL.queryParams.lg : \"En\");\n                    getMenu.run()\n                    if (data.email) {\n                        navigateTo(data.page, {})\n                    } else if (data === 'no token') {\n                    }\n                    else {\n\t\t\t\t\t\t\t\t\t\t\tconsole.log('sfd')\n                        navigateTo('https://platform.ubos.tech/', {})\n                    }\n                })\n                .catch((error) => {\n                    console.error('Inside catch block');\n                    console.error(error);\n                });\n        }\n    }",
                     "isAsync": true,
                     "timeoutInMillisecond": 10000,
                     "jsArguments": [],
@@ -597,7 +597,7 @@
                 "pageId": "Login",
                 "executeOnLoad": false,
                 "actionConfiguration": {
-                    "body": "async () => {\n    }",
+                    "body": "async () => {\n\t\tawait\tcheckUserEmail.run().then((data)=>{\n\t\t\t\tconsole.log(data)\n\t\t\tif(data.data==='login'){\n\t\t\t\tstoreValue('loginTab','login')\n\t\t\t}\n\t\t\t\telse if(data.data==='setup')\n\t\t\t\t\tstoreValue('loginTab','setup')\n\t\t\t})\n    }",
                     "isAsync": true,
                     "timeoutInMillisecond": 10000,
                     "jsArguments": [],
@@ -627,6 +627,42 @@
                 "isValid": true,
                 "jsonPathKeys": [
                     "async () => {\n\t\t//use async-await or promises\n\t}"
+                ],
+                "pluginType": "JS"
+            },
+            {
+                "name": "myFun3",
+                "collectionId": "6579b875a69a47e15535fc49",
+                "executeOnLoad": true,
+                "pageId": "Login",
+                "actionConfiguration": {
+                    "body": "async () => {\n\t\t main.URL.queryParams.access_token ? storeValue('loginTab','demo') :  getData.data?.length < 1 ? storeValue('loginTab','setting') : storeValue('loginTab','checkEmail') \n\t}",
+                    "isAsync": true,
+                    "timeoutInMillisecond": 10000,
+                    "jsArguments": [],
+                    "paginationType": "NONE",
+                    "encodeParamsToggle": true
+                },
+                "_id": "673c9b9f996ddc6e181d7a7d",
+                "id": "673c9b9f996ddc6e181d7a7d",
+                "applicationId": "jetsondashboard",
+                "datasource": {
+                    "isValid": true,
+                    "messages": [],
+                    "name": "UNUSED_DATASOURCE",
+                    "new": true,
+                    "pluginId": "",
+                    "userPermissions": []
+                },
+                "dynamicBindingPathList": [
+                    {
+                        "key": "body"
+                    }
+                ],
+                "fullyQualifiedName": "JSObject1.myFun3",
+                "isValid": true,
+                "jsonPathKeys": [
+                    "async () => {\n\t\tmain.URL.queryParams.access_token ? 'demo' :  getData.data.length < 1 ? 'setting': 'login'\n\t}"
                 ],
                 "pluginType": "JS"
             }
