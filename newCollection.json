@@ -1378,7 +1378,7 @@
     {
         "id": "6690f658e315d812f13c2043",
         "name": "JSObject2",
-        "pageId": "Training",
+        "pageId": "Training2",
         "body": "export default {\n\tmyVar1: [],\n\tmyVar2: {},\n\tmyFun2: async (id) => {\n await storeValue('idToDeleteOb', id)\n await deleteObject.run()\n\tgetKnowlegeFiles.run()\n\t},\n\tdbCreate: async () => {\n\tawait\tcreateNewBase.run(()=>getAllBases.run(()=> getKnowlegeFiles.run()) )\n    closeModal(\"Modal9\");\n    getIDbase.run();\n\t},\n\tmyFun3: async() => {\n\t\tgetAllBases.run(()=>getKnowlegeFiles.run())\n\t\t\t\t\t storeValue(\"loader\",undefined,false)\n\t},\n\tmyFun4: (i,cl) => {\n\t\tstoreValue(i, cl, false)\n\t},\n\tmyFun5: () => {\n\t\tstoreValue('fileName','MyCompanyInformation' )\n\t},\nmyFun6: async () => {\n  \n\t if ( FileSender2.response && FileSender2.response?.success ) {\n\t\t storeValue(\"loader\",\"start\", false)\n\t\t   setInterval(async() => {\n          await getKnowlegeFilesCheck.run()\n              console.log(getKnowlegeFilesCheck.data)\n              console.log(FileSender2.response)\n                if ( getKnowlegeFilesCheck.data && getKnowlegeFilesCheck.data.find((e=> e.id === FileSender2.response.id ) ) ){\n\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\tgetKnowlegeFilesCheck.data[0].status ===\"Learned\" ?(   storeValue(\"loader\",\"stop\",false) ,clearInterval('conversationCheck')): storeValue(\"loader\",\"start\", false)\n\t\t\t\n                    \n                }\n        }, 5000,'conversationCheck');\n\t\t\t storeValue(\"loader\",undefined,false)\n\t }\n\t storeValue(\"loader\",undefined,false)\n   showAlert(\"error\",\"error\")\n    }\n}",
         "variables": [
             {
@@ -1716,5 +1716,250 @@
         "applicationId": "jetsondashboard",
         "pluginType": "JS",
         "_id": "66990633a258c7c7f2608168"
+    },
+    {
+        "id": "673db8c7996ddc6e181d7a98",
+        "name": "JSObject2",
+        "pageId": "Training",
+        "body": "export default {\n\tmyVar1: [],\n\tmyVar2: {},\n\tmyFun2: async (id) => {\n await storeValue('idToDeleteOb', id)\n await deleteObject.run()\n\tgetKnowlegeFiles.run()\n\t},\n\tdbCreate: async () => {\n\tawait\tcreateNewBase.run(()=>getAllBases.run(()=> getKnowlegeFiles.run()) )\n    closeModal(\"Modal9\");\n    getIDbase.run();\n\t},\n\tmyFun3: async() => {\n\t\tgetAllBases.run(()=>getKnowlegeFiles.run())\n\t\t\t\t\t storeValue(\"loader\",undefined,false)\n\t},\n\tmyFun4: (i,cl) => {\n\t\tstoreValue(i, cl, false)\n\t},\n\tmyFun5: () => {\n\t\tstoreValue('fileName','MyCompanyInformation' )\n\t},\nmyFun6: async () => {\n  \n\t if ( FileSender2.response && FileSender2.response?.success ) {\n\t\t storeValue(\"loader\",\"start\", false)\n\t\t   setInterval(async() => {\n          await getKnowlegeFilesCheck.run()\n              console.log(getKnowlegeFilesCheck.data)\n              console.log(FileSender2.response)\n                if ( getKnowlegeFilesCheck.data && getKnowlegeFilesCheck.data.find((e=> e.id === FileSender2.response.id ) ) ){\n\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\tgetKnowlegeFilesCheck.data[0].status ===\"Learned\" ?(   storeValue(\"loader\",\"stop\",false) ,clearInterval('conversationCheck')): storeValue(\"loader\",\"start\", false)\n\t\t\t\n                    \n                }\n        }, 5000,'conversationCheck');\n\t\t\t storeValue(\"loader\",undefined,false)\n\t }\n\t storeValue(\"loader\",undefined,false)\n   showAlert(\"error\",\"error\")\n    }\n}",
+        "variables": [
+            {
+                "name": "myVar1",
+                "value": []
+            },
+            {
+                "name": "myVar2",
+                "value": {}
+            }
+        ],
+        "actions": [
+            {
+                "name": "dbCreate",
+                "collectionId": "673db8c7996ddc6e181d7a98",
+                "executeOnLoad": false,
+                "pageId": "Training Copy",
+                "actionConfiguration": {
+                    "body": "async () => {\n\tawait\tcreateNewBase.run(()=>getAllBases.run(()=> getKnowlegeFiles.run()) )\n    closeModal(\"Modal9\");\n    getIDbase.run();\n\t}",
+                    "isAsync": true,
+                    "timeoutInMillisecond": 10000,
+                    "jsArguments": [],
+                    "paginationType": "NONE",
+                    "encodeParamsToggle": true
+                },
+                "_id": "673db8c7996ddc6e181d7a99",
+                "id": "673db8c7996ddc6e181d7a99",
+                "applicationId": "jetsondashboard",
+                "datasource": {
+                    "isValid": true,
+                    "messages": [],
+                    "name": "UNUSED_DATASOURCE",
+                    "new": true,
+                    "pluginId": "",
+                    "userPermissions": []
+                },
+                "dynamicBindingPathList": [
+                    {
+                        "key": "body"
+                    }
+                ],
+                "fullyQualifiedName": "JSObject2.dbCreate",
+                "isValid": true,
+                "jsonPathKeys": [
+                    "async () => {\n\t\t\n\t}"
+                ],
+                "pluginType": "JS"
+            },
+            {
+                "name": "myFun3",
+                "collectionId": "673db8c7996ddc6e181d7a98",
+                "executeOnLoad": true,
+                "pageId": "Training Copy",
+                "actionConfiguration": {
+                    "body": "async() => {\n\t\tgetAllBases.run(()=>getKnowlegeFiles.run())\n\t\t\t\t\t storeValue(\"loader\",undefined,false)\n\t}",
+                    "isAsync": true,
+                    "timeoutInMillisecond": 10000,
+                    "jsArguments": [],
+                    "paginationType": "NONE",
+                    "encodeParamsToggle": true
+                },
+                "_id": "673db8c7996ddc6e181d7a9a",
+                "id": "673db8c7996ddc6e181d7a9a",
+                "applicationId": "jetsondashboard",
+                "datasource": {
+                    "isValid": true,
+                    "messages": [],
+                    "name": "UNUSED_DATASOURCE",
+                    "new": true,
+                    "pluginId": "",
+                    "userPermissions": []
+                },
+                "dynamicBindingPathList": [
+                    {
+                        "key": "body"
+                    }
+                ],
+                "fullyQualifiedName": "JSObject2.myFun3",
+                "isValid": true,
+                "jsonPathKeys": [
+                    "async() => {\n\t\t\n\t}"
+                ],
+                "pluginType": "JS"
+            },
+            {
+                "name": "myFun2",
+                "collectionId": "673db8c7996ddc6e181d7a98",
+                "executeOnLoad": false,
+                "pageId": "Training Copy",
+                "actionConfiguration": {
+                    "body": "async (id) => {\n await storeValue('idToDeleteOb', id)\n await deleteObject.run()\n\tgetKnowlegeFiles.run()\n\t}",
+                    "isAsync": true,
+                    "timeoutInMillisecond": 10000,
+                    "jsArguments": [
+                        {
+                            "name": "id"
+                        }
+                    ],
+                    "paginationType": "NONE",
+                    "encodeParamsToggle": true
+                },
+                "_id": "673db8c7996ddc6e181d7a9b",
+                "id": "673db8c7996ddc6e181d7a9b",
+                "applicationId": "jetsondashboard",
+                "datasource": {
+                    "isValid": true,
+                    "messages": [],
+                    "name": "UNUSED_DATASOURCE",
+                    "new": true,
+                    "pluginId": "",
+                    "userPermissions": []
+                },
+                "dynamicBindingPathList": [
+                    {
+                        "key": "body"
+                    }
+                ],
+                "fullyQualifiedName": "JSObject2.myFun2",
+                "isValid": true,
+                "jsonPathKeys": [
+                    "async (id) => {\n await storeValue('idToDeleteOb', id)\n await deleteObject.run()\n\t\tgetPDF.run()\n\t\tgetLink.run()\n\t\tgetFiles.run()\n\t\tgetFAQ.run()\t\n\t}"
+                ],
+                "pluginType": "JS"
+            },
+            {
+                "name": "myFun4",
+                "collectionId": "673db8c7996ddc6e181d7a98",
+                "executeOnLoad": false,
+                "pageId": "Training Copy",
+                "actionConfiguration": {
+                    "body": "(i,cl) => {\n\t\tstoreValue(i, cl, false)\n\t}",
+                    "isAsync": true,
+                    "timeoutInMillisecond": 10000,
+                    "jsArguments": [],
+                    "paginationType": "NONE",
+                    "encodeParamsToggle": true
+                },
+                "_id": "673db8c7996ddc6e181d7a9c",
+                "id": "673db8c7996ddc6e181d7a9c",
+                "applicationId": "jetsondashboard",
+                "datasource": {
+                    "isValid": true,
+                    "messages": [],
+                    "name": "UNUSED_DATASOURCE",
+                    "new": true,
+                    "pluginId": "",
+                    "userPermissions": []
+                },
+                "dynamicBindingPathList": [
+                    {
+                        "key": "body"
+                    }
+                ],
+                "fullyQualifiedName": "JSObject2.myFun4",
+                "isValid": true,
+                "jsonPathKeys": [
+                    "(i,cl) => {\n\t\tstoreValue(i, cl, false)\n\t}"
+                ],
+                "pluginType": "JS"
+            },
+            {
+                "name": "myFun5",
+                "collectionId": "673db8c7996ddc6e181d7a98",
+                "executeOnLoad": true,
+                "pageId": "Training Copy",
+                "actionConfiguration": {
+                    "body": "() => {\n\t\tstoreValue('fileName','MyCompanyInformation' )\n\t}",
+                    "isAsync": true,
+                    "timeoutInMillisecond": 10000,
+                    "jsArguments": [],
+                    "paginationType": "NONE",
+                    "encodeParamsToggle": true
+                },
+                "_id": "673db8c7996ddc6e181d7a9d",
+                "id": "673db8c7996ddc6e181d7a9d",
+                "applicationId": "jetsondashboard",
+                "datasource": {
+                    "isValid": true,
+                    "messages": [],
+                    "name": "UNUSED_DATASOURCE",
+                    "new": true,
+                    "pluginId": "",
+                    "userPermissions": []
+                },
+                "dynamicBindingPathList": [
+                    {
+                        "key": "body"
+                    }
+                ],
+                "fullyQualifiedName": "JSObject2.myFun5",
+                "isValid": true,
+                "jsonPathKeys": [
+                    "(i,cl) => {\n\t\tstoreValue(i, cl, false)\n\t}"
+                ],
+                "pluginType": "JS"
+            },
+            {
+                "name": "myFun6",
+                "collectionId": "673db8c7996ddc6e181d7a98",
+                "executeOnLoad": false,
+                "pageId": "Training Copy",
+                "actionConfiguration": {
+                    "body": "async () => {\n  \n\t if ( FileSender2.response && FileSender2.response?.success ) {\n\t\t storeValue(\"loader\",\"start\", false)\n\t\t   setInterval(async() => {\n          await getKnowlegeFilesCheck.run()\n              console.log(getKnowlegeFilesCheck.data)\n              console.log(FileSender2.response)\n                if ( getKnowlegeFilesCheck.data && getKnowlegeFilesCheck.data.find((e=> e.id === FileSender2.response.id ) ) ){\n\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\tgetKnowlegeFilesCheck.data[0].status ===\"Learned\" ?(   storeValue(\"loader\",\"stop\",false) ,clearInterval('conversationCheck')): storeValue(\"loader\",\"start\", false)\n\t\t\t\n                    \n                }\n        }, 5000,'conversationCheck');\n\t\t\t storeValue(\"loader\",undefined,false)\n\t }\n\t storeValue(\"loader\",undefined,false)\n   showAlert(\"error\",\"error\")\n    }",
+                    "isAsync": true,
+                    "timeoutInMillisecond": 10000,
+                    "jsArguments": [],
+                    "paginationType": "NONE",
+                    "encodeParamsToggle": true
+                },
+                "_id": "673db8c7996ddc6e181d7a9e",
+                "id": "673db8c7996ddc6e181d7a9e",
+                "applicationId": "jetsondashboard",
+                "datasource": {
+                    "isValid": true,
+                    "messages": [],
+                    "name": "UNUSED_DATASOURCE",
+                    "new": true,
+                    "pluginId": "",
+                    "userPermissions": []
+                },
+                "dynamicBindingPathList": [
+                    {
+                        "key": "body"
+                    }
+                ],
+                "fullyQualifiedName": "JSObject2.myFun6",
+                "isValid": true,
+                "jsonPathKeys": [
+                    "async () => {\n     setInterval(async() => {\n          await getUserConversation.run()\n              console.log(getUserConversation.data.length)\n              console.log(main.store.conservationsLength)\n                if (getUserConversation.data.length > main.store.conservationsLength) {\n                    storeValue('conservationsLength', getUserConversation.data.length)\n                  storeValue('conservationID', getUserConversation.data[getUserConversation.data.length-1]?.value)\n                    clearInterval('conversationCheck')\n                }\n        }, 5000,'conversationCheck');\n    }"
+                ],
+                "pluginType": "JS"
+            }
+        ],
+        "applicationId": "jetsondashboard",
+        "pluginType": "JS",
+        "_id": "673db8c7996ddc6e181d7a98",
+        "pluginId": "JS",
+        "actionIds": [],
+        "archivedActionIds": [],
+        "archivedActions": []
     }
 ]

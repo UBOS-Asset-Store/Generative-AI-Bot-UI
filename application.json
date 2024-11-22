@@ -106,7 +106,7 @@
             "isDefault": false
         },
         {
-            "_id": "Training",
+            "_id": "Training2",
             "isDefault": false
         },
         {
@@ -115,6 +115,10 @@
         },
         {
             "_id": "Profile",
+            "isDefault": false
+        },
+        {
+            "_id": "Training",
             "isDefault": false
         }
     ],
