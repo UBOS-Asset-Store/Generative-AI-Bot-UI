@@ -25965,10 +25965,10 @@
                     "key": "datasourceUrl"
                 },
                 {
-                    "key": "queryParameters[0].value"
+                    "key": "path"
                 },
                 {
-                    "key": "path"
+                    "key": "queryParameters[0].value"
                 }
             ],
             "isValid": true,
@@ -25981,7 +25981,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-11-20T10:24:07.141Z",
-        "updatedAt": "2024-11-27T16:22:56.278Z",
+        "updatedAt": "2024-11-27T17:05:41.131Z",
         "deleted": false,
         "policies": [
             {
@@ -26303,9 +26303,9 @@
                 "main.env.nodeUrl",
                 "main.user.auth_module.user.info.user._id",
                 "Input1.text",
-                "JSON.stringify(Select1.selectedOptionValue)",
+                "JSON.stringify(dbSelect.selectedOptionValue)",
                 "JSON.stringify(typeDB.text)",
-                "JSON.stringify(Select1.selectedOptionLabel)",
+                "JSON.stringify(dbSelect.selectedOptionLabel)",
                 "JSON.stringify(RichTextEditor1.text)",
                 "appsmith.user.auth_module.user.info.user.email",
                 "JSON.stringify(getAllBases.data[0].systemName)"
@@ -26314,7 +26314,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-11-20T10:24:07.143Z",
-        "updatedAt": "2024-11-20T10:24:07.143Z",
+        "updatedAt": "2024-11-27T17:17:31.356Z",
         "deleted": false,
         "policies": [
             {
@@ -27626,7 +27626,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-11-22T10:01:07.831Z",
-        "updatedAt": "2024-11-27T15:10:28.492Z",
+        "updatedAt": "2024-11-27T17:30:59.073Z",
         "deleted": false,
         "policies": [
             {
@@ -27753,7 +27753,7 @@
                     }
                 ],
                 "queryParameters": [],
-                "body": "{\n\t\"text\": {{JSON.stringify(main.store.qa)}},\n\t\"type\": \"QA\",\n\t\"db\":\"{{dbSelect.selectedOptionValue}}\"\n}",
+                "body": "{\n\t\"text\": {{JSON.stringify(main.store.qa)}},\n\t\"type\": \"QA\",\n\t\"db\":\"{{dbSelect.selectedOptionValue}}\",\n\t\"name\": \"{{qa_name.text}}\"\n}",
                 "bodyFormData": [],
                 "formData": {
                     "apiContentType": "none"
@@ -27778,13 +27778,15 @@
                 "main.env.nodeUrl",
                 "JSON.stringify(main.store.qa)",
                 "dbSelect.selectedOptionValue",
-                "main.env.nodeUrl,2024-11-27T11:41:22.518Z,2024-11-27T13:30:48.103Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl"
+                "qa_name.",
+                "main.env.nodeUrl,qa_name.,2024-11-27T11:41:22.518Z,2024-11-27T17:31:23.862Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl",
+                "qa_name.text"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-11-27T11:41:22.518Z",
-        "updatedAt": "2024-11-27T13:30:49.455Z",
+        "updatedAt": "2024-11-27T17:31:24.755Z",
         "deleted": false,
         "policies": [
             {
