@@ -7253,7 +7253,7 @@
                 "pluginId": "API",
                 "messages": []
             },
-            "executeOnLoad": true,
+            "executeOnLoad": false,
             "pageId": "Login",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
@@ -7285,7 +7285,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-08-08T19:16:59.846Z",
-        "updatedAt": "2024-11-06T11:45:38.504Z",
+        "updatedAt": "2024-11-27T10:20:56.590Z",
         "deleted": false,
         "policies": [
             {
@@ -25266,7 +25266,7 @@
         "executeOnLoad": true,
         "pageId": "Login",
         "actionConfiguration": {
-            "body": "async () => {\n\t\t main.URL.queryParams.access_token ? storeValue('loginTab','demo') :  getData.data?.length < 1 ? storeValue('loginTab','setting') : storeValue('loginTab','checkEmail') \n\t}",
+            "body": "async () => {\n\t\tawait getData.run().then((data)=>{\n\t\t\tmain.URL.queryParams.access_token ? storeValue('loginTab','demo') :  data?.length < 1 ? storeValue('loginTab','setting') : storeValue('loginTab','checkEmail') \n\t\t})\n\t\t \n\t}",
             "isAsync": true,
             "timeoutInMillisecond": 10000,
             "jsArguments": [],
@@ -25418,7 +25418,7 @@
                         "value": true
                     }
                 ],
-                "body": "{\n\t\"ownerId\": \"{{main.user.auth_module.user.info.user._id}}\",\n\t\"link\":{{JSON.stringify(link.text)}},\n\t\"name\": {{JSON.stringify(link.text)}},\n\t\"id\": {{JSON.stringify( Select1.selectedOptionValue)}},\n\t\"type\": \"Link\",\n\t\"typeBase\":{{JSON.stringify(typeDB.text)}},\n\t\"nameBase\":{{JSON.stringify(Select1.selectedOptionLabel)}},\n\t\"email\": \"{{appsmith.user.auth_module.user.info.user.email}}\",\n\t\"systemName\":{{JSON.stringify(getAllBases.data[0].systemName)}}\n}",
+                "body": "{\n\t\"ownerId\": \"{{main.user.auth_module.user.info.user._id}}\",\n\t\"link\":{{JSON.stringify(link.text)}},\n\t\"name\": {{JSON.stringify(link.text)}},\n\t\"id\": {{JSON.stringify( dbSelect.selectedOptionValue)}},\n\t\"type\": \"Link\",\n\t\"typeBase\":{{JSON.stringify(typeDB.text)}},\n\t\"nameBase\":{{JSON.stringify(dbSelect.selectedOptionLabel)}},\n\t\"email\": \"{{appsmith.user.auth_module.user.info.user.email}}\",\n\t\"systemName\":{{JSON.stringify(getAllBases.data[0].systemName)}}\n}",
                 "path": ""
             },
             "dynamicBindingPathList": [
@@ -25439,13 +25439,14 @@
                 "JSON.stringify(typeDB.text)",
                 "JSON.stringify(Select1.selectedOptionLabel)",
                 "appsmith.user.auth_module.user.info.user.email",
-                "JSON.stringify(getAllBases.data[0].systemName)"
+                "JSON.stringify(getAllBases.data[0].systemName)",
+                "main.user.auth_module.user.info.user.id"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-11-20T10:24:07.139Z",
-        "updatedAt": "2024-11-20T10:24:07.139Z",
+        "updatedAt": "2024-11-27T12:54:07.384Z",
         "deleted": false,
         "policies": [
             {
@@ -25765,7 +25766,7 @@
                     }
                 ],
                 "queryParameters": [],
-                "body": "{\n\t\"ownerId\": \"{{main.user.auth_module.user.info.user._id}}\",\n\t\"link\": {{JSON.stringify(\"manual\")}},\n\t\"name\": {{JSON.stringify(\"manual\")}},\n\t\"id\": {{JSON.stringify(Select1.selectedOptionValue)}},\n\t\"type\": \"Manual\",\n\t\"result\": {{JSON.stringify(manualanswer.text)}},\n\t\"question\": {{JSON.stringify(manualques.text)}},\n\t\"typeBase\":{{JSON.stringify(typeDB.text)}},\n\t\"nameBase\":{{JSON.stringify(Select1.selectedOptionLabel)}},\n\t\"email\": \"{{appsmith.user.auth_module.user.info.user.email}}\",\n\t\"systemName\":{{JSON.stringify(getAllBases.data[0].systemName)}}\n}",
+                "body": "{\n\t\"ownerId\": \"{{main.user.auth_module.user.info.user._id}}\",\n\t\"link\": {{JSON.stringify(\"manual\")}},\n\t\"name\": {{JSON.stringify(\"manual\")}},\n\t\"id\": {{JSON.stringify(dbSelect.selectedOptionValue)}},\n\t\"type\": \"Manual\",\n\t\"result\": {{JSON.stringify(manualanswer.text)}},\n\t\"question\": {{JSON.stringify(manualques.text)}},\n\t\"typeBase\":{{JSON.stringify(typeDB.text)}},\n\t\"nameBase\":{{JSON.stringify(dbSelect.selectedOptionLabel)}},\n\t\"email\": \"{{appsmith.user.auth_module.user.info.user.email}}\",\n\t\"systemName\":{{JSON.stringify(getAllBases.data[0].systemName)}}\n}",
                 "bodyFormData": [],
                 "formData": {
                     "apiContentType": "none"
@@ -25928,7 +25929,7 @@
             "datasource": {
                 "name": "DEFAULT_REST_DATASOURCE",
                 "datasourceConfiguration": {
-                    "url": "{{main.env.nodeUrl}}/getKnowlegeObjects"
+                    "url": "{{main.env.nodeUrl}}/getKnowlegeBaseObjects"
                 },
                 "invalids": [],
                 "isValid": true,
@@ -25945,7 +25946,7 @@
                 "queryParameters": [
                     {
                         "key": "id",
-                        "value": "{{Select1.selectedOptionValue}}"
+                        "value": "{{dbSelect.selectedOptionValue}}"
                     }
                 ],
                 "bodyFormData": [],
@@ -25956,7 +25957,8 @@
                     {
                         "value": true
                     }
-                ]
+                ],
+                "path": ""
             },
             "dynamicBindingPathList": [
                 {
@@ -25964,19 +25966,22 @@
                 },
                 {
                     "key": "queryParameters[0].value"
+                },
+                {
+                    "key": "path"
                 }
             ],
             "isValid": true,
             "invalids": [],
             "jsonPathKeys": [
                 "main.env.nodeUrl",
-                "Select1.selectedOptionValue"
+                "dbSelect.selectedOptionValue"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-11-20T10:24:07.141Z",
-        "updatedAt": "2024-11-20T10:24:07.141Z",
+        "updatedAt": "2024-11-27T16:22:56.278Z",
         "deleted": false,
         "policies": [
             {
@@ -26205,7 +26210,7 @@
                         "value": true
                     }
                 ],
-                "body": "{\n\t\"_id\":{{JSON.stringify(Select1.selectedOptionValue)}}\n}"
+                "body": "{\n\t\"_id\":{{JSON.stringify(dbSelect.selectedOptionValue)}}\n}"
             },
             "dynamicBindingPathList": [
                 {
@@ -26273,7 +26278,7 @@
                     }
                 ],
                 "queryParameters": [],
-                "body": "{\n\t\"ownerId\": \"{{main.user.auth_module.user.info.user._id}}\",\n\t\"link\": \"{{Input1.text}}\",\n\t\"name\": \"{{Input1.text}}\",\n\t\"id\": {{JSON.stringify(Select1.selectedOptionValue)}},\n\t\"type\": \"Text\",\n\t\"typeBase\":{{JSON.stringify(typeDB.text)}},\n\t\"nameBase\":{{JSON.stringify(Select1.selectedOptionLabel)}},\n\t\"text\":{{JSON.stringify(RichTextEditor1.text)}},\n\t\"nameBase\":{{JSON.stringify(Select1.selectedOptionLabel)}},\n\t\"email\": \"{{appsmith.user.auth_module.user.info.user.email}}\",\n\t\"fileName\":\"{{Input1.text}}\",\n\t\"systemName\":{{JSON.stringify(getAllBases.data[0].systemName)}}\n}",
+                "body": "{\n\t\"ownerId\": \"{{main.user.auth_module.user.info.user._id}}\",\n\t\"link\": \"{{Input1.text}}\",\n\t\"name\": \"{{Input1.text}}\",\n\t\"id\": {{JSON.stringify(dbSelect.selectedOptionValue)}},\n\t\"type\": \"Text\",\n\t\"typeBase\":{{JSON.stringify(typeDB.text)}},\n\t\"nameBase\":{{JSON.stringify(dbSelect.selectedOptionLabel)}},\n\t\"text\":{{JSON.stringify(RichTextEditor1.text)}},\n\t\"nameBase\":{{JSON.stringify(dbSelect.selectedOptionLabel)}},\n\t\"email\": \"{{appsmith.user.auth_module.user.info.user.email}}\",\n\t\"fileName\":\"{{Input1.text}}\",\n\t\"systemName\":{{JSON.stringify(getAllBases.data[0].systemName)}}\n}",
                 "bodyFormData": [],
                 "formData": {
                     "apiContentType": "application/json"
@@ -26347,7 +26352,7 @@
                 "pluginId": "API",
                 "messages": []
             },
-            "executeOnLoad": false,
+            "executeOnLoad": true,
             "pageId": "Training",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
@@ -26568,7 +26573,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-11-20T10:24:07.143Z",
-        "updatedAt": "2024-11-20T10:24:07.143Z",
+        "updatedAt": "2024-11-27T15:33:23.507Z",
         "deleted": false,
         "policies": [
             {
@@ -26625,11 +26630,11 @@
                     },
                     {
                         "key": "typeBase",
-                        "value": "{{Select1.selectedOptionLabel.split(' ')[1]}}"
+                        "value": "{{dbSelect.selectedOptionLabel.split(' ')[1]}}"
                     },
                     {
                         "key": "nameBase",
-                        "value": "{{Select1.selectedOptionLabel.split(' ')[0]}}"
+                        "value": "{{dbSelect.selectedOptionLabel.split(' ')[0]}}"
                     }
                 ],
                 "body": "",
@@ -26956,7 +26961,7 @@
                     }
                 ],
                 "queryParameters": [],
-                "body": "{\n  \"baseId\":{{JSON.stringify(Select1.selectedOptionValue)}},\n\t\"prompt\": {{JSON.stringify(prompt_custom.text)}},\n  \"model\": {{JSON.stringify(model_selectCopy.selectedOptionValue)}},\n  \"answer_length_onboarding\": {{JSON.stringify(answer_length.selectedOptionValue)}},\n  \"answer_as\": {{JSON.stringify(answer_as.selectedOptionValue)}},\n  \"tone\": {{JSON.stringify(tone.selectedOptionValue)}},\n  \"language\": {{JSON.stringify(language.selectedOptionValue)}},\n\t\"systemName\":{{JSON.stringify(getAllBases.data[0].systemName)}}\n}",
+                "body": "{\n  \"baseId\":{{JSON.stringify(dbSelect.selectedOptionValue)}},\n\t\"prompt\": {{JSON.stringify(prompt_custom.text)}},\n  \"model\": {{JSON.stringify(model_selectCopy.selectedOptionValue)}},\n  \"answer_length_onboarding\": {{JSON.stringify(answer_length.selectedOptionValue)}},\n  \"answer_as\": {{JSON.stringify(answer_as.selectedOptionValue)}},\n  \"tone\": {{JSON.stringify(tone.selectedOptionValue)}},\n  \"language\": {{JSON.stringify(language.selectedOptionValue)}},\n\t\"systemName\":{{JSON.stringify(getAllBases.data[0].systemName)}}\n}",
                 "bodyFormData": [],
                 "formData": {
                     "apiContentType": "none"
@@ -27052,7 +27057,7 @@
                         "value": true
                     }
                 ],
-                "body": "{\n  \"baseId\":{{JSON.stringify(Select1.selectedOptionValue)}},\n\t\"welcomeMessage\":{{JSON.stringify(welcome.text)}},\n\t\"errorMessage\":{{JSON.stringify(unable.text)}},\n\t\"systemName\":{{JSON.stringify(getAllBases.data[0].systemName)}}\n}"
+                "body": "{\n  \"baseId\":{{JSON.stringify(dbSelect.selectedOptionValue)}},\n\t\"welcomeMessage\":{{JSON.stringify(welcome.text)}},\n\t\"errorMessage\":{{JSON.stringify(unable.text)}},\n\t\"systemName\":{{JSON.stringify(getAllBases.data[0].systemName)}}\n}"
             },
             "dynamicBindingPathList": [
                 {
@@ -27427,13 +27432,7 @@
                 ],
                 "queryParameters": [],
                 "body": "",
-                "bodyFormData": [
-                    {
-                        "type": "ARRAY",
-                        "key": "file",
-                        "value": "{{FilePicker1.files}}"
-                    }
-                ],
+                "bodyFormData": [],
                 "formData": {
                     "apiContentType": "multipart/form-data"
                 },
@@ -27446,22 +27445,18 @@
             "dynamicBindingPathList": [
                 {
                     "key": "datasourceUrl"
-                },
-                {
-                    "key": "bodyFormData[0].value"
                 }
             ],
             "isValid": true,
             "invalids": [],
             "jsonPathKeys": [
-                "main.env.nodeUrl",
-                "FilePicker1.files"
+                "main.env.nodeUrl"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-11-20T19:09:30.847Z",
-        "updatedAt": "2024-11-20T19:17:27.799Z",
+        "updatedAt": "2024-11-27T12:53:17.583Z",
         "deleted": false,
         "policies": [
             {
@@ -27512,7 +27507,7 @@
                     }
                 ],
                 "queryParameters": [],
-                "body": "{\n\t\"url\": {{JSON.stringify(website__url.text)}},\n\t\"splitRule\":{{JSON.stringify(split_rule_link.selectedOptionValue)}},\n\t\"separator\":{{JSON.stringify(separator_select_link.selectedOptionValue)}},\n\t\"token\":{{JSON.stringify(Max_Tokens__Link.text)}}\n}",
+                "body": "{\n\t\"url\": {{JSON.stringify(website__url.text)}},\n\t\"splitRule\":{{JSON.stringify(split_rule_link.selectedOptionValue)}},\n\t\"separator\":{{JSON.stringify(separator_select_link.selectedOptionValue)}},\n\t\"token\":{{JSON.stringify(Max_Tokens__Link.text)}},\n\t\"db\":\"{{dbSelect.selectedOptionValue}}\"\n}",
                 "bodyFormData": [],
                 "formData": {
                     "apiContentType": "none"
@@ -27537,15 +27532,16 @@
                 "main.env.nodeUrl",
                 "JSON.stringify(website__url.text)",
                 "JSON.stringify(split_rule_link.selectedOptionValue)",
-                "JSON.stringify(separator_select_link.)",
+                "JSON.stringify(separator_select_link.selectedOptionValue)",
                 "JSON.stringify(Max_Tokens__Link.text)",
-                "JSON.stringify(separator_select_link.selectedOptionValue)"
+                "main.user.auth_module.user.info.user._id",
+                "dbSelect.selectedOptionValue"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-11-22T09:08:41.184Z",
-        "updatedAt": "2024-11-22T09:42:19.005Z",
+        "updatedAt": "2024-11-27T13:30:55.489Z",
         "deleted": false,
         "policies": [
             {
@@ -27572,11 +27568,11 @@
         "pluginType": "API",
         "pluginId": "API",
         "Action": {
-            "name": "splitFile",
+            "name": "saveManualText",
             "datasource": {
                 "name": "DEFAULT_REST_DATASOURCE",
                 "datasourceConfiguration": {
-                    "url": "{{main.env.nodeUrl}}/splitFile"
+                    "url": "{{main.env.nodeUrl}}/saveManualText"
                 },
                 "invalids": [],
                 "isValid": true,
@@ -27596,7 +27592,7 @@
                     }
                 ],
                 "queryParameters": [],
-                "body": "{\n    \"splitRule\": {{JSON.stringify(split_rule_text.selectedOptionValue)}},\n    \"separator\": {{JSON.stringify(separator_select_text.selectedOptionValue)}},\n    \"token\": {{JSON.stringify(Max_Tokens_text.text)}},\n    \"text\": {{JSON.stringify(manual_text.text)}},\n    \"source\": {{JSON.stringify(manual__file__name.text)}}\n}",
+                "body": "{\n    \"splitRule\": {{JSON.stringify(split_rule_text.selectedOptionValue)}},\n    \"separator\": {{JSON.stringify(separator_select_text.selectedOptionValue)}},\n    \"token\": {{JSON.stringify(Max_Tokens_text.text)}},\n    \"text\": {{JSON.stringify(manual_text.text)}},\n    \"source\": {{JSON.stringify(manual__file__name.text)}},\n\t  \"db\":\"{{dbSelect.selectedOptionValue}}\"\n}",
                 "bodyFormData": [],
                 "formData": {
                     "apiContentType": "none"
@@ -27609,10 +27605,10 @@
             },
             "dynamicBindingPathList": [
                 {
-                    "key": "datasourceUrl"
+                    "key": "body"
                 },
                 {
-                    "key": "body"
+                    "key": "datasourceUrl"
                 }
             ],
             "isValid": true,
@@ -27623,13 +27619,14 @@
                 "JSON.stringify(separator_select_text.selectedOptionValue)",
                 "JSON.stringify(Max_Tokens_text.text)",
                 "JSON.stringify(manual_text.text)",
-                "JSON.stringify(manual__file__name.text)"
+                "JSON.stringify(manual__file__name.text)",
+                "dbSelect.selectedOptionValue"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-11-22T10:01:07.831Z",
-        "updatedAt": "2024-11-22T10:19:22.297Z",
+        "updatedAt": "2024-11-27T15:10:28.492Z",
         "deleted": false,
         "policies": [
             {
@@ -27654,8 +27651,8 @@
         "pageId": "Training",
         "executeOnLoad": false,
         "actionConfiguration": {
-            "body": "() => {\n\t\tlet QA_array=main.store.qa\n\t\tif(QA_array && QA_array.length>0){\n\t\t\t\n\t\t}es\n\t}",
-            "isAsync": false,
+            "body": "() => {\n\t\tlet QA_array=main.store.qa\n\t\tif(QA_array && QA_array.length>0){\n\t\t\tlet newObjectQA = {question: question.text ,answer: answer.text}\n\t\t\tQA_array.push(newObjectQA)\n\t\t\tstoreValue(\"qa\",QA_array)\n\t\t}else{\n\t\t\tlet newObjectQA = {question: question.text ,answer: answer.text}\n\t\t\tlet createArrayQA =[newObjectQA]\n\t\t\tstoreValue(\"qa\",createArrayQA)\n\t\t}\n\t}",
+            "isAsync": true,
             "timeoutInMillisecond": 10000,
             "jsArguments": [],
             "paginationType": "NONE",
@@ -27724,5 +27721,87 @@
             "async () => {\n\t\t//use async-await or promises\n\t}"
         ],
         "pluginType": "JS"
+    },
+    {
+        "_id": "674705626f8101b0cfc93873",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "saveQA",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/saveQA"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "Training",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "POST",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "body": "{\n\t\"text\": {{JSON.stringify(main.store.qa)}},\n\t\"type\": \"QA\",\n\t\"db\":\"{{dbSelect.selectedOptionValue}}\"\n}",
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ]
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "datasourceUrl"
+                },
+                {
+                    "key": "body"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "JSON.stringify(main.store.qa)",
+                "dbSelect.selectedOptionValue",
+                "main.env.nodeUrl,2024-11-27T11:41:22.518Z,2024-11-27T13:30:48.103Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-11-27T11:41:22.518Z",
+        "updatedAt": "2024-11-27T13:30:49.455Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
     }
 ]

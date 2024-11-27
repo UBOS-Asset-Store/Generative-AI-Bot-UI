@@ -542,7 +542,7 @@
         "id": "6579b875a69a47e15535fc49",
         "name": "JSObject1",
         "pageId": "Login",
-        "body": "export default {\n    myVar1: [],\n    myVar2: {},\n    myFun1: async () => {\n        if (main.URL.pathname.endsWith(\"/edit\")) {\n\n        } else {\n            await demoUser.run()\n                .then((data) => {\n                    storeValue(\"lg\", main.URL.queryParams.lg ? main.URL.queryParams.lg : \"En\");\n                    getMenu.run()\n                    if (data.email) {\n                        navigateTo(data.page, {})\n                    } else if (data === 'no token') {\n                    }\n                    else {\n\t\t\t\t\t\t\t\t\t\t\tconsole.log('sfd')\n                        navigateTo('https://platform.ubos.tech/', {})\n                    }\n                })\n                .catch((error) => {\n                    console.error('Inside catch block');\n                    console.error(error);\n                });\n        }\n    },\n    myFun2: async () => {\n\t\tawait\tcheckUserEmail.run().then((data)=>{\n\t\t\t\tconsole.log(data)\n\t\t\tif(data.data==='login'){\n\t\t\t\tstoreValue('loginTab','login')\n\t\t\t}\n\t\t\t\telse if(data.data==='setup')\n\t\t\t\t\tstoreValue('loginTab','setup')\n\t\t\t})\n    },\n\tmyFun3: async () => {\n\t\t main.URL.queryParams.access_token ? storeValue('loginTab','demo') :  getData.data?.length < 1 ? storeValue('loginTab','setting') : storeValue('loginTab','checkEmail') \n\t},\n}",
+        "body": "export default {\n    myVar1: [],\n    myVar2: {},\n    myFun1: async () => {\n        if (main.URL.pathname.endsWith(\"/edit\")) {\n\n        } else {\n            await demoUser.run()\n                .then((data) => {\n                    storeValue(\"lg\", main.URL.queryParams.lg ? main.URL.queryParams.lg : \"En\");\n                    getMenu.run()\n                    if (data.email) {\n                        navigateTo(data.page, {})\n                    } else if (data === 'no token') {\n                    }\n                    else {\n\t\t\t\t\t\t\t\t\t\t\tconsole.log('sfd')\n                        navigateTo('https://platform.ubos.tech/', {})\n                    }\n                })\n                .catch((error) => {\n                    console.error('Inside catch block');\n                    console.error(error);\n                });\n        }\n    },\n    myFun2: async () => {\n\t\tawait\tcheckUserEmail.run().then((data)=>{\n\t\t\t\tconsole.log(data)\n\t\t\tif(data.data==='login'){\n\t\t\t\tstoreValue('loginTab','login')\n\t\t\t}\n\t\t\t\telse if(data.data==='setup')\n\t\t\t\t\tstoreValue('loginTab','setup')\n\t\t\t})\n    },\n\tmyFun3: async () => {\n\t\tawait getData.run().then((data)=>{\n\t\t\tmain.URL.queryParams.access_token ? storeValue('loginTab','demo') :  data?.length < 1 ? storeValue('loginTab','setting') : storeValue('loginTab','checkEmail') \n\t\t})\n\t\t \n\t},\n}",
         "variables": [
             {
                 "name": "myVar1",
@@ -636,7 +636,7 @@
                 "executeOnLoad": true,
                 "pageId": "Login",
                 "actionConfiguration": {
-                    "body": "async () => {\n\t\t main.URL.queryParams.access_token ? storeValue('loginTab','demo') :  getData.data?.length < 1 ? storeValue('loginTab','setting') : storeValue('loginTab','checkEmail') \n\t}",
+                    "body": "async () => {\n\t\tawait getData.run().then((data)=>{\n\t\t\tmain.URL.queryParams.access_token ? storeValue('loginTab','demo') :  data?.length < 1 ? storeValue('loginTab','setting') : storeValue('loginTab','checkEmail') \n\t\t})\n\t\t \n\t}",
                     "isAsync": true,
                     "timeoutInMillisecond": 10000,
                     "jsArguments": [],
@@ -1965,7 +1965,7 @@
     {
         "name": "add_QA",
         "pageId": "Training",
-        "body": "export default {\n\tmyVar1: [],\n\tmyVar2: {},\n\tmyFun1: () => {\n\t\tlet QA_array=main.store.qa\n\t\tif(QA_array && QA_array.length>0){\n\t\t\t\n\t\t}else{\n\t\t\tstoreValue(\"qa\")\n\t\t}\n\t},\n\tmyFun2: async () => {\n\t\t//use async-await or promises\n\t}\n}",
+        "body": "export default {\n\tmyVar1: [],\n\tmyVar2: {},\n\tmyFun1: () => {\n\t\tlet QA_array=main.store.qa\n\t\tif(QA_array && QA_array.length>0){\n\t\t\tlet newObjectQA = {question: question.text ,answer: answer.text}\n\t\t\tQA_array.push(newObjectQA)\n\t\t\tstoreValue(\"qa\",QA_array)\n\t\t}else{\n\t\t\tlet newObjectQA = {question: question.text ,answer: answer.text}\n\t\t\tlet createArrayQA =[newObjectQA]\n\t\t\tstoreValue(\"qa\",createArrayQA)\n\t\t}\n\t},\n\tmyFun2: async () => {\n\t\t//use async-await or promises\n\t}\n}",
         "variables": [
             {
                 "name": "myVar1",
@@ -1982,8 +1982,8 @@
                 "pageId": "Training",
                 "executeOnLoad": false,
                 "actionConfiguration": {
-                    "body": "() => {\n\t\tlet QA_array=main.store.qa\n\t\tif(QA_array && QA_array.length>0){\n\t\t\t\n\t\t}es\n\t}",
-                    "isAsync": false,
+                    "body": "() => {\n\t\tlet QA_array=main.store.qa\n\t\tif(QA_array && QA_array.length>0){\n\t\t\tlet newObjectQA = {question: question.text ,answer: answer.text}\n\t\t\tQA_array.push(newObjectQA)\n\t\t\tstoreValue(\"qa\",QA_array)\n\t\t}else{\n\t\t\tlet newObjectQA = {question: question.text ,answer: answer.text}\n\t\t\tlet createArrayQA =[newObjectQA]\n\t\t\tstoreValue(\"qa\",createArrayQA)\n\t\t}\n\t}",
+                    "isAsync": true,
                     "timeoutInMillisecond": 10000,
                     "jsArguments": [],
                     "paginationType": "NONE",
