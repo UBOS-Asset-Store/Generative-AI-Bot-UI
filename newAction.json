@@ -27654,7 +27654,7 @@
         "pageId": "Training",
         "executeOnLoad": false,
         "actionConfiguration": {
-            "body": "() => {\n\t\tlet QA\n\t}",
+            "body": "() => {\n\t\tlet QA_array=main.store.qa\n\t\tif(QA_array && QA_array.length>0){\n\t\t\t\n\t\t}es\n\t}",
             "isAsync": false,
             "timeoutInMillisecond": 10000,
             "jsArguments": [],

@@ -1965,7 +1965,7 @@
     {
         "name": "add_QA",
         "pageId": "Training",
-        "body": "export default {\n\tmyVar1: [],\n\tmyVar2: {},\n\tmyFun1: () => {\n\t\tlet QA_array=main.store.qa\n\t\tif()\n\t},\n\tmyFun2: async () => {\n\t\t//use async-await or promises\n\t}\n}",
+        "body": "export default {\n\tmyVar1: [],\n\tmyVar2: {},\n\tmyFun1: () => {\n\t\tlet QA_array=main.store.qa\n\t\tif(QA_array && QA_array.length>0){\n\t\t\t\n\t\t}else{\n\t\t\tstoreValue(\"qa\")\n\t\t}\n\t},\n\tmyFun2: async () => {\n\t\t//use async-await or promises\n\t}\n}",
         "variables": [
             {
                 "name": "myVar1",
@@ -1982,7 +1982,7 @@
                 "pageId": "Training",
                 "executeOnLoad": false,
                 "actionConfiguration": {
-                    "body": "() => {\n\t\tlet QA\n\t}",
+                    "body": "() => {\n\t\tlet QA_array=main.store.qa\n\t\tif(QA_array && QA_array.length>0){\n\t\t\t\n\t\t}es\n\t}",
                     "isAsync": false,
                     "timeoutInMillisecond": 10000,
                     "jsArguments": [],
