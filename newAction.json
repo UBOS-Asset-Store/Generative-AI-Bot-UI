@@ -25705,16 +25705,15 @@
             "invalids": [],
             "jsonPathKeys": [
                 "main.env.nodeUrl",
-                "Table6.selectedRow.",
+                "Table6.selectedRow._id",
                 "typeDB.text",
-                "systemName.text",
-                "Table6.selectedRow._id"
+                "systemName.text"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-11-20T10:24:07.139Z",
-        "updatedAt": "2024-11-28T09:39:33.415Z",
+        "updatedAt": "2024-11-28T11:41:18.311Z",
         "deleted": false,
         "policies": [
             {
@@ -25980,7 +25979,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-11-20T10:24:07.141Z",
-        "updatedAt": "2024-11-28T09:40:25.339Z",
+        "updatedAt": "2024-11-28T10:27:41.363Z",
         "deleted": false,
         "policies": [
             {
@@ -26572,7 +26571,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-11-20T10:24:07.143Z",
-        "updatedAt": "2024-11-28T09:40:42.460Z",
+        "updatedAt": "2024-11-28T10:27:49.141Z",
         "deleted": false,
         "policies": [
             {
