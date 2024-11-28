@@ -6773,7 +6773,7 @@
                     }
                 ],
                 "path": "",
-                "body": "{\n\t\"id\":\"{{main.URL.queryParams.id}}\",\n  \"typeBase\":\"{{main.URL.queryParams.typeBase}}\",\n\t\"typeName\":\"{{main.URL.queryParams.typeName}}\",\n\t\"source\": \"{{main.URL.queryParams.source}}\",\n\t\"page\": \"{{Table1.pageNo}}\",\n\t\"ownerId\":\"{{main.user.auth_module.user.info.user._id}}\"\n}"
+                "body": "{\n\t\"id\":\"{{main.URL.queryParams.id}}\",\n  \"typeBase\":\"{{main.URL.queryParams.typeBase}}\",\n\t\"typeName\":\"{{main.URL.queryParams.typeName}}\",\n\t\"source\": \"{{main.URL.queryParams.source}}\",\n\t\"page\": \"{{Table1.pageNo}}\",\n\t\"ownerId\":\"6746f30af85690140000000f\"\n}"
             },
             "dynamicBindingPathList": [
                 {
@@ -6792,15 +6792,14 @@
                 "main.URL.queryParams.typeName",
                 "main.URL.queryParams.source",
                 "Table1.pageNo",
-                "main.user.auth_module.user.info.user.email",
-                "main.env.nodeUrl,2023-06-29T11:11:20.546Z,2024-07-16T08:18:06.503Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2023-06-29T11:11:20.546Z,2024-07-16T08:18:07.580Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2023-06-29T11:11:20.546Z,2024-07-16T08:18:08.746Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2023-06-29T11:11:20.546Z,2024-07-16T08:18:09.704Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2023-06-29T11:11:20.546Z,2024-07-16T08:18:12.777Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2023-06-29T11:11:20.546Z,2024-07-16T08:18:14.139Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,main.user.auth_module.user.info.user.email,2023-06-29T11:11:20.546Z,2024-07-16T08:18:17.480Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2023-06-29T11:11:20.546Z,2024-07-16T08:18:24.648Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2023-06-29T11:11:20.546Z,2024-07-16T08:20:26.081Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl",
-                "main.user.auth_module.user.info.user._id"
+                "main.user.auth_module.user.info.user._id",
+                "main.env.nodeUrl,2023-06-29T11:11:20.546Z,2024-07-16T08:18:08.746Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2023-06-29T11:11:20.546Z,2024-07-16T08:18:09.704Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2023-06-29T11:11:20.546Z,2024-07-16T08:18:12.777Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2023-06-29T11:11:20.546Z,2024-07-16T08:18:14.139Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,main.user.auth_module.user.info.user.email,2023-06-29T11:11:20.546Z,2024-07-16T08:18:17.480Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2023-06-29T11:11:20.546Z,2024-07-16T08:18:24.648Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2023-06-29T11:11:20.546Z,2024-07-16T08:20:26.081Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,main.user.auth_module.user.info.user._id,2023-06-29T11:11:20.546Z,2024-07-16T08:20:29.602Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2023-06-29T11:11:20.546Z,2024-11-28T09:26:31.122Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-06-29T11:11:20.546Z",
-        "updatedAt": "2024-07-16T08:20:29.602Z",
+        "updatedAt": "2024-11-28T09:26:40.637Z",
         "deleted": false,
         "policies": [
             {
@@ -6860,7 +6859,7 @@
                         "value": true
                     }
                 ],
-                "body": "{\n\"question\": {{JSON.stringify(Input1.text)}},\n\"result\":{{JSON.stringify(Input2.text)}},\n\"url\": {{JSON.stringify(Table1.selectedRow.source)}},\n\"_id \": \"{{main.URL.queryParams.id}}\",\n\"id\":\"{{Table1.selectedRow._id}}\",\n\"typeBase\":{{JSON.stringify(main.URL.queryParams.typeBase)}},\n\"nameBase\":{{JSON.stringify(main.URL.queryParams.typeName)}},\n\"ownerId\":\"{{main.user.auth_module.user.info.user._id}}\"\n}"
+                "body": "{\n\"result\":{{JSON.stringify(Input2.text)}},\n\"url\": {{JSON.stringify(Table1.selectedRow.source)}},\n\"_id \": \"{{main.URL.queryParams.id}}\",\n\"id\":\"{{Table1.selectedRow._id}}\",\n\"typeBase\":{{JSON.stringify(main.URL.queryParams.typeBase)}},\n\"nameBase\":{{JSON.stringify(main.URL.queryParams.typeName)}},\n\"ownerId\":\"{{main.user.auth_module.user.info.user._id}}\"\n}"
             },
             "dynamicBindingPathList": [
                 {
@@ -6887,7 +6886,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-06-29T11:38:38.762Z",
-        "updatedAt": "2024-10-21T14:19:30.802Z",
+        "updatedAt": "2024-11-28T09:33:32.283Z",
         "deleted": false,
         "policies": [
             {
@@ -25665,7 +25664,7 @@
                 "queryParameters": [
                     {
                         "key": "id",
-                        "value": "{{main.store.idToDeleteOb}}"
+                        "value": "{{Table6.selectedRow._id}}"
                     },
                     {
                         "key": "type",
@@ -25706,16 +25705,16 @@
             "invalids": [],
             "jsonPathKeys": [
                 "main.env.nodeUrl",
-                "main.store.idToDeleteOb",
+                "Table6.selectedRow.",
                 "typeDB.text",
-                "s",
-                "systemName.text"
+                "systemName.text",
+                "Table6.selectedRow._id"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-11-20T10:24:07.139Z",
-        "updatedAt": "2024-11-20T10:24:07.139Z",
+        "updatedAt": "2024-11-28T09:39:33.415Z",
         "deleted": false,
         "policies": [
             {
@@ -25892,13 +25891,13 @@
                 "main.env.nodeUrl",
                 "main.user.auth_module.user.info.user.role",
                 "main.user.auth_module.user.info.user.email",
-                "main.env.nodeUrl,main.user.auth_module.user.info.user.email,2023-10-11T19:42:54.215Z,2024-05-15T13:45:38.953Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl"
+                "main.env.nodeUrl,2024-11-20T10:24:07.139Z,2024-11-20T10:24:07.139Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-11-20T10:24:07.139Z",
-        "updatedAt": "2024-11-20T10:24:07.139Z",
+        "updatedAt": "2024-11-28T09:40:29.156Z",
         "deleted": false,
         "policies": [
             {
@@ -25981,7 +25980,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-11-20T10:24:07.141Z",
-        "updatedAt": "2024-11-27T17:05:41.131Z",
+        "updatedAt": "2024-11-28T09:40:25.339Z",
         "deleted": false,
         "policies": [
             {
@@ -26484,7 +26483,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-11-20T10:24:07.143Z",
-        "updatedAt": "2024-11-20T10:24:07.143Z",
+        "updatedAt": "2024-11-28T09:40:37.970Z",
         "deleted": false,
         "policies": [
             {
@@ -26573,7 +26572,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-11-20T10:24:07.143Z",
-        "updatedAt": "2024-11-27T15:33:23.507Z",
+        "updatedAt": "2024-11-28T09:40:42.460Z",
         "deleted": false,
         "policies": [
             {
@@ -26748,7 +26747,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-11-20T10:24:07.143Z",
-        "updatedAt": "2024-11-20T10:24:07.143Z",
+        "updatedAt": "2024-11-28T09:40:27.626Z",
         "deleted": false,
         "policies": [
             {
@@ -27160,7 +27159,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-11-20T10:24:07.143Z",
-        "updatedAt": "2024-11-20T10:24:07.143Z",
+        "updatedAt": "2024-11-28T09:40:22.629Z",
         "deleted": false,
         "policies": [
             {
@@ -27652,7 +27651,7 @@
         "executeOnLoad": false,
         "actionConfiguration": {
             "body": "() => {\n\t\tlet QA_array=main.store.qa\n\t\tif(QA_array && QA_array.length>0){\n\t\t\tlet newObjectQA = {question: question.text ,answer: answer.text}\n\t\t\tQA_array.push(newObjectQA)\n\t\t\tstoreValue(\"qa\",QA_array)\n\t\t}else{\n\t\t\tlet newObjectQA = {question: question.text ,answer: answer.text}\n\t\t\tlet createArrayQA =[newObjectQA]\n\t\t\tstoreValue(\"qa\",createArrayQA)\n\t\t}\n\t}",
-            "isAsync": true,
+            "isAsync": false,
             "timeoutInMillisecond": 10000,
             "jsArguments": [],
             "paginationType": "NONE",

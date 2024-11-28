@@ -1983,7 +1983,7 @@
                 "executeOnLoad": false,
                 "actionConfiguration": {
                     "body": "() => {\n\t\tlet QA_array=main.store.qa\n\t\tif(QA_array && QA_array.length>0){\n\t\t\tlet newObjectQA = {question: question.text ,answer: answer.text}\n\t\t\tQA_array.push(newObjectQA)\n\t\t\tstoreValue(\"qa\",QA_array)\n\t\t}else{\n\t\t\tlet newObjectQA = {question: question.text ,answer: answer.text}\n\t\t\tlet createArrayQA =[newObjectQA]\n\t\t\tstoreValue(\"qa\",createArrayQA)\n\t\t}\n\t}",
-                    "isAsync": true,
+                    "isAsync": false,
                     "timeoutInMillisecond": 10000,
                     "jsArguments": [],
                     "paginationType": "NONE",
