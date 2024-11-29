@@ -4984,7 +4984,7 @@
         "pluginType": "API",
         "pluginId": "API",
         "createdAt": "2022-08-29T14:27:18.685Z",
-        "updatedAt": "2022-12-08T10:48:31.270Z",
+        "updatedAt": "2024-11-28T14:00:14.481Z",
         "deleted": false,
         "policies": [
             {
@@ -25125,6 +25125,10 @@
                     {
                         "key": "conversationId",
                         "value": "{{Table5.selectedRow.conversationId}}"
+                    },
+                    {
+                        "key": "user_id",
+                        "value": "{{Table5.selectedRow.user_id}}"
                     }
                 ],
                 "bodyFormData": [],
@@ -25146,6 +25150,9 @@
                 },
                 {
                     "key": "queryParameters[1].value"
+                },
+                {
+                    "key": "queryParameters[2].value"
                 }
             ],
             "isValid": true,
@@ -25153,13 +25160,15 @@
             "jsonPathKeys": [
                 "main.env.nodeUrl",
                 "Table5.selectedRow.account_id",
-                "Table5.selectedRow.conversationId"
+                "Table5.selectedRow.conversationId",
+                "Table5.selectedRow.",
+                "Table5.selectedRow.user_id"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-11-19T10:48:37.847Z",
-        "updatedAt": "2024-11-19T11:12:38.956Z",
+        "updatedAt": "2024-11-28T17:20:08.113Z",
         "deleted": false,
         "policies": [
             {
@@ -26208,7 +26217,7 @@
                         "value": true
                     }
                 ],
-                "body": "{\n\t\"_id\":{{JSON.stringify(dbSelect.selectedOptionValue)}}\n}"
+                "body": "{\n\t\"_id\": \"{{dbSelect.selectedOptionValue}}\"\n}"
             },
             "dynamicBindingPathList": [
                 {
@@ -26219,13 +26228,13 @@
             "invalids": [],
             "jsonPathKeys": [
                 "main.env.nodeUrl",
-                "JSON.stringify(Select1.selectedOptionValue)"
+                "dbSelect.selectedOptionValue"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-11-20T10:24:07.142Z",
-        "updatedAt": "2024-11-20T10:24:07.142Z",
+        "updatedAt": "2024-11-28T14:48:20.550Z",
         "deleted": false,
         "policies": [
             {
@@ -27650,7 +27659,7 @@
         "executeOnLoad": false,
         "actionConfiguration": {
             "body": "() => {\n\t\tlet QA_array=main.store.qa\n\t\tif(QA_array && QA_array.length>0){\n\t\t\tlet newObjectQA = {question: question.text ,answer: answer.text}\n\t\t\tQA_array.push(newObjectQA)\n\t\t\tstoreValue(\"qa\",QA_array)\n\t\t}else{\n\t\t\tlet newObjectQA = {question: question.text ,answer: answer.text}\n\t\t\tlet createArrayQA =[newObjectQA]\n\t\t\tstoreValue(\"qa\",createArrayQA)\n\t\t}\n\t}",
-            "isAsync": false,
+            "isAsync": true,
             "timeoutInMillisecond": 10000,
             "jsArguments": [],
             "paginationType": "NONE",
