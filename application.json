@@ -6,7 +6,7 @@
     "isPublic": true,
     "isShowPlatformTag": false,
     "createdAt": "2023-03-02T13:50:57.853Z",
-    "updatedAt": "2024-11-28T17:02:48.043Z",
+    "updatedAt": "2024-11-29T21:29:19.023Z",
     "deleted": false,
     "pages": [
         {
@@ -148,7 +148,7 @@
         "favicon": "",
         "title": "AI Chatbot",
         "css": "${env.get(\"nodeUrl\")}/css",
-        "customScript": "<script>!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(\".\");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement(\"script\")).type=\"text/javascript\",p.async=!0,p.src=s.api_host+\"/static/array.js\",(r=t.getElementsByTagName(\"script\")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a=\"posthog\",u.people=u.people||[],u.toString=function(t){var e=\"posthog\";return\"posthog\"!==a&&(e+=\".\"+a),t||(e+=\" (stub)\"),e},u.people.toString=function(){return u.toString(1)+\".people (stub)\"},o=\"capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags\".split(\" \"),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);posthog.init('phc_brIJYYWZAW8qXyMm77g6vNKiK2uAUeqsPokceCbyola',{api_host:'https://app.posthog.com',persistence: 'localStorage+cookie',session_recording: {recordCrossOriginIframes: true}});</script><script>(function(w,d,t,u,n,a,m){w['MauticTrackingObject']=n;w[n]=w[n]||function(){(w[n].q=w[n].q||[]).push(arguments)},a=d.createElement(t),m=d.getElementsByTagName(t)[0];a.async=1;a.src=u;m.parentNode.insertBefore(a,m)})(window,document,'script','https://mautic.betedo.com/mtc.js','mt');mt('send', 'pageview');</script>  <script>     window.chatwootSettings = {       hideMessageBubble: false,       position: \"left\",       locale: \"en\",       type: \"standart\",     };     (function (d, t) {       var BASE_URL = \"https://chatwoot-2438-671620977218781100000035.ubosaibotprod.ubos.tech\";       var g = d.createElement(t), s = d.getElementsByTagName(t)[0];       g.src = BASE_URL + \"/packs/js/sdk.js\";       g.defer = true;       g.async = true;       s.parentNode.insertBefore(g, s);       g.onload = function () {         window.chatwootSDK.run({           websiteToken: 'WMT3HuhXRKhwpX1s8ok5HGiQ',           baseUrl: BASE_URL         })       }     })(document, \"script\");   </script>"
+        "customScript": "<script>     window.chatwootSettings = {       hideMessageBubble: false,       position: \"left\",       locale: \"en\",       type: \"standart\",     };     (function (d, t) {       var BASE_URL = \"https://chatwoot-2438-671620977218781100000035.ubosaibotprod.ubos.tech\";       var g = d.createElement(t), s = d.getElementsByTagName(t)[0];       g.src = BASE_URL + \"/packs/js/sdk.js\";       g.defer = true;       g.async = true;       s.parentNode.insertBefore(g, s);       g.onload = function () {         window.chatwootSDK.run({           websiteToken: 'WMT3HuhXRKhwpX1s8ok5HGiQ',           baseUrl: BASE_URL         })       }     })(document, \"script\");   </script>"
     },
     "lastDeployedAt": "2022-10-19T15:59:36.363Z",
     "is_custom_auth": true,
@@ -484,7 +484,7 @@
                                             "isLoading": false,
                                             "parentColumnSpace": 8.6875,
                                             "parentRowSpace": 10,
-                                            "leftColumn": 1,
+                                            "leftColumn": 4,
                                             "rightColumn": 64,
                                             "topRow": 0,
                                             "bottomRow": 4,
@@ -571,8 +571,8 @@
                             "isLoading": false,
                             "parentColumnSpace": 14.6875,
                             "parentRowSpace": 10,
-                            "leftColumn": 45,
-                            "rightColumn": 49,
+                            "leftColumn": 60,
+                            "rightColumn": 64,
                             "topRow": 0,
                             "bottomRow": 7,
                             "parentId": "b8feb4cpvv",
@@ -581,7 +581,7 @@
                         },
                         {
                             "isVisible": true,
-                            "text": "{{main.URL.fullPath.split('/').pop().split('?')[0].replace('%20', ' ') === 'Dashboard' ? main.user.auth_module.user.translation.dashboard.name : main.URL.fullPath.split('/').pop().split('?')[0].replace('%20', ' ') === 'Training' ? main.user.auth_module.user.translation.training.name : main.URL.fullPath.split('/').pop().split('?')[0].replace('%20', ' ') === 'User Chats' ? main.user.auth_module.user.translation.userChats.name : main.URL.fullPath.split('/').pop().split('?')[0].replace('%20', ' ') === 'Bot Setup' ? main.user.auth_module.user.translation.botSetup.name : main.URL.fullPath.split('/').pop().split('?')[0].replace('%20', ' ') === 'AI Setup' ? main.user.auth_module.user.translation.aiSetup.name : main.URL.fullPath.split('/').pop().split('?')[0].replace('%20', ' ') === 'DB Benchmark' ? main.user.auth_module.user.translation.dbBenchmark.name: main.URL.fullPath.split('/').pop().split('?')[0].replace('%20', ' ') === 'Model Testing' ? main.user.auth_module.user.translation.modelTesting.name : main.URL.fullPath.split('/').pop().split('?')[0].replace('%20', ' ') === 'Modules' ? main.user.auth_module.user.translation.modules.name : main.URL.fullPath.split('/').pop().split('?')[0].replace('%20', ' ') === 'AdminRoles' ? main.user.auth_module.user.translation.adminRoles.name : main.URL.fullPath.split('/').pop().split('?')[0].replace('%20', ' ') === 'User Management' ? main.user.auth_module.user.translation.userManagement.name : main.URL.fullPath.split('/').pop().split('?')[0].replace('%20', ' ') === 'Chat' ? main.user.auth_module.user.translation.chats.name : main.URL.fullPath.split('/').pop().split('?')[0].replace('%20', ' ') === 'App settings' ? main.user.auth_module.user.translation.appSettings.name : main.URL.fullPath.split('/').pop().split('?')[0].replace('%20', ' ') === 'Demo' ? main.user.auth_module.user.translation.demo.name : main.URL.fullPath.split('/').pop().split('?')[0].replace('%20', ' ') === 'Vectors' ? main.user.auth_module.user.translation.vectors.name : main.URL.fullPath.split('/').pop().split('?')[0].replace('%20', ' ') === 'Home' ? main.user.auth_module.user.translation.home.name : main.URL.fullPath.split('/').pop().split('?')[0].replace('%20', ' ') === 'Create Chatbot' ? main.user.auth_module.user.translation.menu.onboarding : main.URL.fullPath.split('/').pop().split('?')[0].replace('%20', ' ')}}",
+                            "text": "{{main.URL.fullPath.split('/').pop().split('?')[0].replace('%20', ' ') === 'Dashboard' ? main.user.auth_module.user.translation.dashboard.name : main.URL.fullPath.split('/').pop().split('?')[0].replace('%20', ' ') === 'Training' ? main.user.auth_module.user.translation.menu.training : main.URL.fullPath.split('/').pop().split('?')[0].replace('%20', ' ') === 'User Chats' ? main.user.auth_module.user.translation.userChats.name : main.URL.fullPath.split('/').pop().split('?')[0].replace('%20', ' ') === 'Bot Setup' ? main.user.auth_module.user.translation.menu.botsetup : main.URL.fullPath.split('/').pop().split('?')[0].replace('%20', ' ') === 'AI Setup' ? main.user.auth_module.user.translation.aiSetup.name : main.URL.fullPath.split('/').pop().split('?')[0].replace('%20', ' ') === 'DB Benchmark' ? main.user.auth_module.user.translation.dbBenchmark.name: main.URL.fullPath.split('/').pop().split('?')[0].replace('%20', ' ') === 'Model Testing' ? main.user.auth_module.user.translation.modelTesting.name : main.URL.fullPath.split('/').pop().split('?')[0].replace('%20', ' ') === 'Modules' ? main.user.auth_module.user.translation.modules.name : main.URL.fullPath.split('/').pop().split('?')[0].replace('%20', ' ') === 'AdminRoles' ? main.user.auth_module.user.translation.adminRoles.name : main.URL.fullPath.split('/').pop().split('?')[0].replace('%20', ' ') === 'User Management' ? main.user.auth_module.user.translation.userManagement.name : main.URL.fullPath.split('/').pop().split('?')[0].replace('%20', ' ') === 'Chat' ? main.user.auth_module.user.translation.chats.name : main.URL.fullPath.split('/').pop().split('?')[0].replace('%20', ' ') === 'App settings' ? main.user.auth_module.user.translation.appSettings.name : main.URL.fullPath.split('/').pop().split('?')[0].replace('%20', ' ') === 'Demo' ? main.user.auth_module.user.translation.demo.name : main.URL.fullPath.split('/').pop().split('?')[0].replace('%20', ' ') === 'Vectors' ? main.user.auth_module.user.translation.vectors.name : main.URL.fullPath.split('/').pop().split('?')[0].replace('%20', ' ') === 'Home' ? main.user.auth_module.user.translation.home.name : main.URL.fullPath.split('/').pop().split('?')[0].replace('%20', ' ') === 'Create Chatbot' ? main.user.auth_module.user.translation.menu.onboarding : main.URL.fullPath.split('/').pop().split('?')[0].replace('%20', ' ')}}",
                             "fontSize": "HEADING1",
                             "fontStyle": "BOLD",
                             "textAlign": "LEFT",
@@ -603,9 +603,9 @@
                             "parentColumnSpace": 12.7685546875,
                             "parentRowSpace": 10,
                             "leftColumn": 0,
-                            "rightColumn": 11,
-                            "topRow": 0,
-                            "bottomRow": 7,
+                            "rightColumn": 12,
+                            "topRow": 1,
+                            "bottomRow": 5,
                             "parentId": "b8feb4cpvv",
                             "dynamicBindingPathList": [
                                 {
@@ -619,7 +619,7 @@
                             "text": "{{main.user.auth_module.user.translation.subscription.freeTrial}} {{main.user.auth_module.user.daysLeft}} {{main.user.auth_module.user.translation.subscription.days}}. {{main.user.auth_module.user.translation.subscription.please}} <a href=\"https://chatbot.ubos.tech/Subscription\">{{main.user.auth_module.user.translation.subscription.upgrade}}</a>.",
                             "fontSize": "HEADING3",
                             "fontStyle": "",
-                            "textAlign": "LEFT",
+                            "textAlign": "CENTER",
                             "textColor": "#ff6d2b",
                             "truncateButtonColor": "#FFC13D",
                             "widgetName": "Text55",
@@ -637,10 +637,10 @@
                             "isLoading": false,
                             "parentColumnSpace": 13.234375,
                             "parentRowSpace": 10,
-                            "leftColumn": 11,
-                            "rightColumn": 32,
-                            "topRow": 0,
-                            "bottomRow": 7,
+                            "leftColumn": 12,
+                            "rightColumn": 44,
+                            "topRow": 1,
+                            "bottomRow": 5,
                             "parentId": "b8feb4cpvv",
                             "dynamicBindingPathList": [
                                 {
@@ -699,6 +699,28 @@
                                     "iconName": "git-repo",
                                     "iconAlign": "right",
                                     "onClick": "{{navigateTo('https://github.com/UBOS-tech/AI-Bot-Custom-GPT/tree/main', {},'NEW_WINDOW')}}"
+                                },
+                                "menuItemgqts2zn57p": {
+                                    "id": "menuItemgqts2zn57p",
+                                    "index": 3,
+                                    "label": "Explore the Platform",
+                                    "widgetId": "f4l86f8s9g",
+                                    "isDisabled": false,
+                                    "isVisible": true,
+                                    "onClick": "{{navigateTo('https://platform.ubos.tech/', {},'NEW_WINDOW')}}",
+                                    "iconName": "double-chevron-right",
+                                    "iconAlign": "right"
+                                },
+                                "menuItemujqfgdru1y": {
+                                    "id": "menuItemujqfgdru1y",
+                                    "index": 4,
+                                    "label": "Log Out",
+                                    "widgetId": "7tn6yokw8p",
+                                    "isDisabled": false,
+                                    "isVisible": true,
+                                    "iconName": "log-out",
+                                    "onClick": "{{navigateTo('Login', {})}}",
+                                    "iconAlign": "right"
                                 }
                             },
                             "widgetName": "MenuButton1",
@@ -713,8 +735,8 @@
                             "isLoading": false,
                             "parentColumnSpace": 13.234375,
                             "parentRowSpace": 10,
-                            "leftColumn": 49,
-                            "rightColumn": 62,
+                            "leftColumn": 44,
+                            "rightColumn": 60,
                             "topRow": 1,
                             "bottomRow": 5,
                             "parentId": "b8feb4cpvv",
@@ -732,97 +754,26 @@
                                 },
                                 {
                                     "key": "menuItems.menuItem2.onClick"
+                                },
+                                {
+                                    "key": "menuItems.menuItemujqfgdru1y.onClick"
+                                },
+                                {
+                                    "key": "menuItems.menuItemgqts2zn57p.onClick"
                                 }
                             ],
-                            "iconName": "info-sign",
+                            "iconName": "person",
                             "iconAlign": "right",
                             "borderRadius": "ROUNDED",
                             "dynamicPropertyPathList": [
                                 {
                                     "key": "menuItems.menuItem1.onClick"
-                                }
-                            ]
-                        },
-                        {
-                            "isVisible": true,
-                            "animateLoading": true,
-                            "text": "Explore the Platform",
-                            "buttonColor": "#2E3D49",
-                            "buttonVariant": "TERTIARY",
-                            "placement": "CENTER",
-                            "widgetName": "Button3434",
-                            "isDisabled": false,
-                            "isDefaultClickDisabled": true,
-                            "recaptchaType": "V3",
-                            "version": 1,
-                            "classStyle": "",
-                            "type": "BUTTON_WIDGET",
-                            "hideCard": false,
-                            "displayName": "Button",
-                            "key": "3j6xvx0jlb",
-                            "iconSVG": "/static/media/icon.cca02633.svg",
-                            "widgetId": "d9bk4sniq3",
-                            "renderMode": "CANVAS",
-                            "isLoading": false,
-                            "parentColumnSpace": 10.34716796875,
-                            "parentRowSpace": 10,
-                            "leftColumn": 33,
-                            "rightColumn": 45,
-                            "topRow": 1,
-                            "bottomRow": 5,
-                            "parentId": "b8feb4cpvv",
-                            "borderRadius": "ROUNDED",
-                            "dynamicBindingPathList": [],
-                            "dynamicTriggerPathList": [
+                                },
                                 {
-                                    "key": "onClick"
+                                    "key": "menuItems.menuItemgqts2zn57p.onClick"
                                 }
                             ],
-                            "iconName": "double-chevron-right",
-                            "iconAlign": "left",
-                            "onClick": "{{navigateTo('https://platform.ubos.tech/', {},'NEW_WINDOW')}}",
-                            "dynamicPropertyPathList": [
-                                {
-                                    "key": "onClick"
-                                }
-                            ],
-                            "boxShadow": "NONE"
-                        },
-                        {
-                            "isVisible": true,
-                            "iconName": "log-out",
-                            "borderRadius": "CIRCLE",
-                            "boxShadow": "NONE",
-                            "buttonColor": "#2E3D49",
-                            "buttonVariant": "TERTIARY",
-                            "isDisabled": false,
-                            "widgetName": "headerIconButton1",
-                            "version": 1,
-                            "animateLoading": true,
-                            "type": "ICON_BUTTON_WIDGET",
-                            "hideCard": false,
-                            "displayName": "Icon Button",
-                            "key": "e6pjegiytc",
-                            "iconSVG": "/static/media/icon.1a0c634a.svg",
-                            "widgetId": "gbddqq73zv",
-                            "renderMode": "CANVAS",
-                            "isLoading": false,
-                            "parentColumnSpace": 20.74365234375,
-                            "parentRowSpace": 10,
-                            "leftColumn": 62,
-                            "rightColumn": 64,
-                            "topRow": 1,
-                            "bottomRow": 5,
-                            "parentId": "b8feb4cpvv",
-                            "dynamicBindingPathList": [],
-                            "dynamicTriggerPathList": [
-                                {
-                                    "key": "onClick"
-                                }
-                            ],
-                            "classStyle": "",
-                            "onClick": "{{navigateTo('Login', {})}}",
-                            "dynamicPropertyPathList": []
+                            "classStyle": "headerMenuButton"
                         }
                     ],
                     "minHeight": 400,
