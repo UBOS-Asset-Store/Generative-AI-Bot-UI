@@ -25988,7 +25988,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-11-20T10:24:07.141Z",
-        "updatedAt": "2024-11-28T10:27:41.363Z",
+        "updatedAt": "2024-12-03T15:06:29.211Z",
         "deleted": false,
         "policies": [
             {
@@ -26580,7 +26580,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-11-20T10:24:07.143Z",
-        "updatedAt": "2024-11-28T10:27:49.141Z",
+        "updatedAt": "2024-12-03T15:05:25.460Z",
         "deleted": false,
         "policies": [
             {
@@ -26948,7 +26948,7 @@
             "datasource": {
                 "name": "DEFAULT_REST_DATASOURCE",
                 "datasourceConfiguration": {
-                    "url": "{{main.env.nodeUrl}}/updateBaseBehaviour"
+                    "url": "{{main.env.nodeUrl}}/updateBotBehaviour"
                 },
                 "invalids": [],
                 "isValid": true,
@@ -26968,7 +26968,7 @@
                     }
                 ],
                 "queryParameters": [],
-                "body": "{\n  \"baseId\":{{JSON.stringify(dbSelect.selectedOptionValue)}},\n\t\"prompt\": {{JSON.stringify(prompt_custom.text)}},\n  \"model\": {{JSON.stringify(model_selectCopy.selectedOptionValue)}},\n  \"answer_length_onboarding\": {{JSON.stringify(answer_length.selectedOptionValue)}},\n  \"answer_as\": {{JSON.stringify(answer_as.selectedOptionValue)}},\n  \"tone\": {{JSON.stringify(tone.selectedOptionValue)}},\n  \"language\": {{JSON.stringify(language.selectedOptionValue)}},\n\t\"systemName\":{{JSON.stringify(getAllBases.data[0].systemName)}}\n}",
+                "body": "{\n  \"baseId\":{{JSON.stringify(dbSelect.selectedOptionValue)}},\n\t\"prompt\": {{JSON.stringify(prompt_custom.text)}},\n  \"model\": {{JSON.stringify(model_selectCopy.selectedOptionValue)}},\n\t\"systemName\":{{JSON.stringify(getAllBases.data[0].systemName)}}\n}",
                 "bodyFormData": [],
                 "formData": {
                     "apiContentType": "none"
@@ -26981,30 +26981,26 @@
             },
             "dynamicBindingPathList": [
                 {
-                    "key": "datasourceUrl"
+                    "key": "body"
                 },
                 {
-                    "key": "body"
+                    "key": "datasourceUrl"
                 }
             ],
             "isValid": true,
             "invalids": [],
             "jsonPathKeys": [
                 "main.env.nodeUrl",
-                "JSON.stringify(Select1.selectedOptionValue)",
+                "JSON.stringify(dbSelect.selectedOptionValue)",
                 "JSON.stringify(prompt_custom.text)",
                 "JSON.stringify(model_selectCopy.selectedOptionValue)",
-                "JSON.stringify(answer_length.selectedOptionValue)",
-                "JSON.stringify(answer_as.selectedOptionValue)",
-                "JSON.stringify(tone.selectedOptionValue)",
-                "JSON.stringify(language.selectedOptionValue)",
                 "JSON.stringify(getAllBases.data[0].systemName)"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-11-20T10:24:07.143Z",
-        "updatedAt": "2024-11-20T10:24:07.143Z",
+        "updatedAt": "2024-12-03T15:28:06.707Z",
         "deleted": false,
         "policies": [
             {
@@ -27229,7 +27225,7 @@
         "executeOnLoad": true,
         "pageId": "Training",
         "actionConfiguration": {
-            "body": "async() => {\n\t\tgetAllBases.run(()=>getKnowlegeFiles.run())\n\t\t\t\t\t storeValue(\"loader\",undefined,false)\n\t}",
+            "body": "async() => {\n\t\tawait getAllBases.run().then(()=>{\n\t\t\tgetKnowlegeFiles.run()\n\t\t\tgetPromts.run()\n\t\t})\t \n\t}",
             "isAsync": true,
             "timeoutInMillisecond": 10000,
             "jsArguments": [],
@@ -27368,42 +27364,6 @@
         "isValid": true,
         "jsonPathKeys": [
             "(i,cl) => {\n\t\tstoreValue(i, cl, false)\n\t}"
-        ],
-        "pluginType": "JS"
-    },
-    {
-        "name": "myFun6",
-        "collectionId": "673db8c7996ddc6e181d7a98",
-        "executeOnLoad": false,
-        "pageId": "Training",
-        "actionConfiguration": {
-            "body": "async () => {\n  \n\t if ( FileSender2.response && FileSender2.response?.success ) {\n\t\t storeValue(\"loader\",\"start\", false)\n\t\t   setInterval(async() => {\n          await getKnowlegeFilesCheck.run()\n              console.log(getKnowlegeFilesCheck.data)\n              console.log(FileSender2.response)\n                if ( getKnowlegeFilesCheck.data && getKnowlegeFilesCheck.data.find((e=> e.id === FileSender2.response.id ) ) ){\n\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\tgetKnowlegeFilesCheck.data[0].status ===\"Learned\" ?(   storeValue(\"loader\",\"stop\",false) ,clearInterval('conversationCheck')): storeValue(\"loader\",\"start\", false)\n\t\t\t\n                    \n                }\n        }, 5000,'conversationCheck');\n\t\t\t storeValue(\"loader\",undefined,false)\n\t }\n\t storeValue(\"loader\",undefined,false)\n   showAlert(\"error\",\"error\")\n    }",
-            "isAsync": true,
-            "timeoutInMillisecond": 10000,
-            "jsArguments": [],
-            "paginationType": "NONE",
-            "encodeParamsToggle": true
-        },
-        "_id": "673db8c7996ddc6e181d7a9e",
-        "id": "673db8c7996ddc6e181d7a9e",
-        "applicationId": "jetsondashboard",
-        "datasource": {
-            "isValid": true,
-            "messages": [],
-            "name": "UNUSED_DATASOURCE",
-            "new": true,
-            "pluginId": "",
-            "userPermissions": []
-        },
-        "dynamicBindingPathList": [
-            {
-                "key": "body"
-            }
-        ],
-        "fullyQualifiedName": "JSObject2.myFun6",
-        "isValid": true,
-        "jsonPathKeys": [
-            "async () => {\n     setInterval(async() => {\n          await getUserConversation.run()\n              console.log(getUserConversation.data.length)\n              console.log(main.store.conservationsLength)\n                if (getUserConversation.data.length > main.store.conservationsLength) {\n                    storeValue('conservationsLength', getUserConversation.data.length)\n                  storeValue('conservationID', getUserConversation.data[getUserConversation.data.length-1]?.value)\n                    clearInterval('conversationCheck')\n                }\n        }, 5000,'conversationCheck');\n    }"
         ],
         "pluginType": "JS"
     },
@@ -28929,5 +28889,84 @@
             "(i,cl)=>{\n\tsroreValue(i,cl)\n}"
         ],
         "pluginType": "JS"
+    },
+    {
+        "_id": "674f14f16f8101b0cfc93875",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "getPromts",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/getPrompts"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "Training",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "GET",
+                "headers": [],
+                "queryParameters": [
+                    {
+                        "key": "id",
+                        "value": "{{dbSelect.selectedOptionValue}}"
+                    }
+                ],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ]
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "datasourceUrl"
+                },
+                {
+                    "key": "queryParameters[0].value"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "dbSelect.selectedOptionValue"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-12-03T14:25:53.009Z",
+        "updatedAt": "2024-12-03T15:06:34.491Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
     }
 ]
