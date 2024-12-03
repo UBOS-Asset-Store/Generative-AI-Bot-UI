@@ -22043,7 +22043,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-07-12T09:24:40.807Z",
-        "updatedAt": "2024-07-16T08:42:55.039Z",
+        "updatedAt": "2024-12-03T11:42:35.501Z",
         "deleted": false,
         "policies": [
             {
@@ -27812,5 +27812,1122 @@
                 "users": []
             }
         ]
+    },
+    {
+        "_id": "674ed7095d1c91a24d88a2a2",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "saveCredentialsTelegram",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/saveCredentialsTelegram"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "Bot Setup Copy",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "POST",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "body": "{\n\t\"ownerId\":{{JSON.stringify(main.user.auth_module.user.info.user._id)}},\n\t\"userId\":{{JSON.stringify(main.user.auth_module.user.info.user._id)}},\n\t\"email\": {{JSON.stringify(main.user.auth_module.user.info.user.email)}},\n\t\"bot_name\":{{JSON.stringify(telegram_name.text)}},\n  \"bot_token\":{{JSON.stringify(telegram_token.text)}},\n\t\"knowledge_baseName\":{{JSON.stringify(knowledge_base_telegram.selectedOptionLabel.split(' ')[0])}},\n\t\"knowledge_baseType\":{{JSON.stringify(knowledge_base_telegram.selectedOptionLabel.split(' ')[1])}},\n\t\"id_base\":{{JSON.stringify(knowledge_base_telegram.selectedOptionValue)}}\n}",
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ]
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "datasourceUrl"
+                },
+                {
+                    "key": "body"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "JSON.stringify(main.user.auth_module.user.info.user._id)",
+                "JSON.stringify(main.user.auth_module.user.info.user.email)",
+                "JSON.stringify(telegram_name.text)",
+                "JSON.stringify(telegram_token.text)",
+                "JSON.stringify(knowledge_base_telegram.selectedOptionLabel.split(' ')[0])",
+                "JSON.stringify(knowledge_base_telegram.selectedOptionLabel.split(' ')[1])",
+                "JSON.stringify(knowledge_base_telegram.selectedOptionValue)",
+                "main.env.nodeUrl,JSON.stringify(main.user.auth_module.user.info.user._id),2023-10-23T14:48:40.098Z,2024-07-12T10:15:56.804Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-12-03T10:01:45.114Z",
+        "updatedAt": "2024-12-03T10:01:45.114Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "674ed7095d1c91a24d88a2a3",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "saveCredentialsWhatsApp",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/saveCredentialsWhatsApp"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "Bot Setup Copy",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "POST",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ],
+                "body": "{\n\t\"ownerId\":{{JSON.stringify(main.user.auth_module.user.info.user._id)}},\n\t\"email\": {{JSON.stringify(main.user.auth_module.user.info.user.email)}},\n\t\"whatsApp_phoneId\":{{JSON.stringify(whatsApp_id.text)}},\n\t\"whatsApp_token\":{{JSON.stringify(whatsApp_token.text)}},\n\t\"knowledge_base\":{{JSON.stringify(knowledge_base_whatsApp.selectedOptionLabel)}},\n\t\"id_base\":{{JSON.stringify(knowledge_base_whatsApp.selectedOptionValue)}}\n}"
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "datasourceUrl"
+                },
+                {
+                    "key": "body"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "JSON.stringify(main.user.auth_module.user.info.user._id)",
+                "JSON.stringify(main.user.auth_module.user.info.user.email)",
+                "JSON.stringify(whatsApp_id.text)",
+                "JSON.stringify(whatsApp_token.text)",
+                "JSON.stringify(knowledge_base_whatsApp.selectedOptionLabel)",
+                "JSON.stringify(knowledge_base_whatsApp.selectedOptionValue)",
+                "main.user.auth_module.user.info.user.email),2023-10-23T15:01:51.668Z,2024-07-11T20:53:01.489Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,JSON.stringify(main.user.auth_module.user.info.user.email),2023-10-23T15:01:51.668Z,2024-07-11T20:53:03.373Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,JSON.stringify(main.user.auth_module.user.info.user._id),2023-10-23T15:01:51.668Z,2024-07-12T10:24:18.349Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2023-10-23T15:01:51.668Z,2024-07-12T10:24:22.071Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2023-10-23T15:01:51.668Z,2024-07-12T10:24:23.028Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-12-03T10:01:45.114Z",
+        "updatedAt": "2024-12-03T10:01:45.114Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "674ed7095d1c91a24d88a2a4",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "saveCredentialsInstagram",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/saveCredentialsInstagram"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "Bot Setup Copy",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "POST",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ],
+                "body": "{\n\t\"ownerId\":{{JSON.stringify(main.user.auth_module.user.info.user._id)}},\n\t\"email\": {{JSON.stringify(main.user.auth_module.user.info.user.email)}},\n\t\"meta_token\":{{JSON.stringify(insta_token.text)}},\n \t\"response_pageId\":{{JSON.stringify(insta_id.text)}},\n\t\"knowledge_baseName\":{{JSON.stringify(knowledge_base_instagram.selectedOptionLabel.split(' ')[0])}},\n\t\"knowledge_baseType\":{{JSON.stringify(knowledge_base_instagram.selectedOptionLabel.split(' ')[1])}},\n\t\"id_base\":{{JSON.stringify(knowledge_base_instagram.selectedOptionValue)}}\n}"
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "body"
+                },
+                {
+                    "key": "datasourceUrl"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "JSON.stringify(main.user.auth_module.user.info.user.email)",
+                "JSON.stringify(insta_token.text)",
+                "JSON.stringify(insta_id.text)",
+                "JSON.stringify(knowledge_base_instagram.selectedOptionLabel.split(' ')[0])",
+                "JSON.stringify(knowledge_base_instagram.selectedOptionLabel.split(' ')[1])",
+                "JSON.stringify(knowledge_base_instagram.selectedOptionValue)",
+                "main.env.nodeUrl,2023-10-23T15:27:02.129Z,2024-07-12T06:20:45.409Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl",
+                "JSON.stringify(main.user.auth_module.user.info.user._id)"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-12-03T10:01:45.114Z",
+        "updatedAt": "2024-12-03T10:01:45.114Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "674ed7095d1c91a24d88a2a5",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "saveCredentialsMetaMS",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/saveCredentialsMeta"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "Bot Setup Copy",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "POST",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "body": "{\n\t\"ownerId\":{{JSON.stringify(main.user.auth_module.user.info.user._id)}},\n\t\"email\": {{JSON.stringify(main.user.auth_module.user.info.user.email)}},\n\t\"meta_token\":{{JSON.stringify(ms_token.text)}},\n\t\"response_pageId\":{{JSON.stringify(ms_id.text)}},\n\t\"knowledge_baseName\":{{JSON.stringify(knowledge_base_messenger.selectedOptionLabel.split(' ')[0])}},\n\t\"knowledge_baseType\":{{JSON.stringify(knowledge_base_messenger.selectedOptionLabel.split(' ')[1])}},\n\t\"id_base\":{{JSON.stringify(knowledge_base_messenger.selectedOptionValue)}}\n}",
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ]
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "datasourceUrl"
+                },
+                {
+                    "key": "body"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "JSON.stringify(main.user.auth_module.user.info.user._id)",
+                "JSON.stringify(main.user.auth_module.user.info.user.email)",
+                "JSON.stringify(ms_token.text)",
+                "JSON.stringify(ms_id.text)",
+                "JSON.stringify(knowledge_base_messenger.selectedOptionLabel.split(' ')[0])",
+                "JSON.stringify(knowledge_base_messenger.selectedOptionLabel.split(' ')[1])",
+                "JSON.stringify(knowledge_base_messenger.selectedOptionValue)"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-12-03T10:01:45.114Z",
+        "updatedAt": "2024-12-03T10:01:45.114Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "674ed7095d1c91a24d88a2a6",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "getenvsbots",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/getCredentials"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "Bot Setup Copy",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "GET",
+                "headers": [],
+                "queryParameters": [
+                    {
+                        "key": "ownerId",
+                        "value": "{{main.user.auth_module.user.info.user._id}}"
+                    }
+                ],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ],
+                "path": ""
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "datasourceUrl"
+                },
+                {
+                    "key": "queryParameters[0].value"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "main.user.auth_module.user.info.user._id"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-12-03T10:01:45.114Z",
+        "updatedAt": "2024-12-03T10:01:45.114Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "674ed7095d1c91a24d88a2a7",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "getAllBase",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/getBaseKnowlege"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "Bot Setup Copy",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "GET",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [
+                    {
+                        "value": "{{main.user.auth_module.user.info.user._id}}",
+                        "key": "ownerID"
+                    }
+                ],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "application/json"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ]
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "queryParameters[0].value"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "main.user.auth_module.user.info.user._id"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-12-03T10:01:45.114Z",
+        "updatedAt": "2024-12-03T10:01:45.114Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "674ed7095d1c91a24d88a2a8",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "getenv",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/getenvs"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "Bot Setup Copy",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "GET",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "application/json"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ]
+            },
+            "dynamicBindingPathList": [],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-12-03T10:01:45.115Z",
+        "updatedAt": "2024-12-03T10:01:45.115Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "674ed7095d1c91a24d88a2a9",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "saveCredentialsCustomChat",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/saveCredentialsCustomChat"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "Bot Setup Copy",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "POST",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "body": "{\n\t\"ownerId\":{{JSON.stringify(main.user.auth_module.user.info.user._id)}},\n\t\"email\": {{JSON.stringify(main.user.auth_module.user.info.user.email)}},\n\t\"knowledge_baseName\":{{JSON.stringify(knowledge_base_customChat.selectedOptionLabel)}},\n\t\"knowledge_baseType\":{{JSON.stringify(customchattype.text)}},\n\t\"id_base\":{{JSON.stringify(knowledge_base_customChat.selectedOptionValue)}}\n}",
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ]
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "datasourceUrl"
+                },
+                {
+                    "key": "body"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "JSON.stringify(main.user.auth_module.user.info.user._id)",
+                "JSON.stringify(main.user.auth_module.user.info.user.email)",
+                "JSON.stringify(knowledge_base_customChat.selectedOptionLabel)",
+                "JSON.stringify(customchattype.text)",
+                "JSON.stringify(knowledge_base_customChat.selectedOptionValue)"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-12-03T10:01:45.115Z",
+        "updatedAt": "2024-12-03T10:01:45.115Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "674ed7095d1c91a24d88a2aa",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "getMenu",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/getMenu"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": true,
+            "pageId": "Bot Setup Copy",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "GET",
+                "headers": [],
+                "queryParameters": [
+                    {
+                        "key": "lang",
+                        "value": "{{main.store.lg}}"
+                    }
+                ],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ]
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "queryParameters[0].value"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "main.store.l",
+                "main.store.lg"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-12-03T10:01:45.115Z",
+        "updatedAt": "2024-12-03T10:01:45.115Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "674ed7095d1c91a24d88a2ab",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "change_lang",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/check_token2"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "Bot Setup Copy",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "POST",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "body": "{\n\"lang\":{{JSON.stringify(main.store.lg)}}\n}",
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ]
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "body"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "JSON.stringify(main.store.lg)"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-12-03T10:01:45.115Z",
+        "updatedAt": "2024-12-03T10:01:45.115Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "674ed7095d1c91a24d88a2ac",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "askSupport",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/supportRequest"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "Bot Setup Copy",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "POST",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ],
+                "body": "{\n\t\"email\":{{JSON.stringify(support_user_email_input.text)}},\n\t\"name\": {{JSON.stringify(supportName2.text)}},\n\t\"message\":{{JSON.stringify(support_user_question_input.text)}}\n}"
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "body"
+                },
+                {
+                    "key": "datasourceUrl"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "JSON.stringify(support_user_email_input.text)",
+                "JSON.stringify(supportName2.text)",
+                "JSON.stringify(support_user_question_input.text)"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-12-03T10:01:45.115Z",
+        "updatedAt": "2024-12-03T10:01:45.115Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "674ed7095d1c91a24d88a2ad",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "chatwoot",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/createChatwootFlow"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "Bot Setup Copy",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "POST",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "body": "{\n\t\"name\": \"{{website_name.text}}\",\n\t\"url\": \"{{website_url.text}}\",\n\t\"base\": \"{{knowledge_base_chawoot.selectedOptionValue}}\",\n\t\"ownerId\":{{JSON.stringify(main.user.auth_module.user.info.user._id)}},\n\t\"email\": {{JSON.stringify(main.user.auth_module.user.info.user.email)}},\n\t\"knowledge_baseName\":{{JSON.stringify(knowledge_base_chawoot.selectedOptionLabel)}},\n\t\"knowledge_baseType\":{{JSON.stringify(chatwoot_type.text)}},\n\t\"id_base\":{{JSON.stringify(knowledge_base_chawoot.selectedOptionValue)}}\n}",
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ]
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "datasourceUrl"
+                },
+                {
+                    "key": "body"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "website_name.text",
+                "website_url.text",
+                "knowledge_base_chawoot.selectedOptionValue",
+                "JSON.stringify(main.user.auth_module.user.info.user._id)",
+                "JSON.stringify(main.user.auth_module.user.info.user.email)",
+                "JSON.stringify(knowledge_base_chawoot.selectedOptionLabel)",
+                "JSON.stringify(chatwoot_type.)",
+                "JSON.stringify(knowledge_base_chawoot.selectedOptionValue)",
+                "JSON.stringify(chatwoot_type.text)"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-12-03T10:01:45.115Z",
+        "updatedAt": "2024-12-03T10:01:45.115Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "674ed7095d1c91a24d88a2ae",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "saveCredentialsChatwoot",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/saveCredentialsChatwoot"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "Bot Setup Copy",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "POST",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ],
+                "body": "{\n\t\"chatwoot_url\":{{JSON.stringify(chatwoot_url.text)}},\n\t\"chatwoot_token\": {{JSON.stringify(chatwoot_token.text)}},\n\t\"account_id\":{{JSON.stringify(chatwoot_account.text)}},\n\t\"base\": \"{{knowledge_base_chawoot2.selectedOptionValue}}\",\n\t\"ownerId\":{{JSON.stringify(main.user.auth_module.user.info.user._id)}},\n\t\"email\": {{JSON.stringify(main.user.auth_module.user.info.user.email)}},\n\t\"knowledge_baseName\":{{JSON.stringify(knowledge_base_chawoot2.selectedOptionLabel)}},\n\t\"knowledge_baseType\":{{JSON.stringify(chatwoot_typeCopy.text)}},\n\t\"id_base\":{{JSON.stringify(knowledge_base_chawoot2.selectedOptionValue)}}\n}"
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "datasourceUrl"
+                },
+                {
+                    "key": "body"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "JSON.stringify(chatwoot_url.text)",
+                "JSON.stringify(chatwoot_token.text)",
+                "JSON.stringify(chatwoot_account.text)",
+                "knowledge_base_chawoot2.selectedOptionValue",
+                "JSON.stringify(main.user.auth_module.user.info.user._id)",
+                "JSON.stringify(main.user.auth_module.user.info.user.email)",
+                "JSON.stringify(knowledge_base_chawoot2.selectedOptionLabel)",
+                "JSON.stringify(chatwoot_typeCopy.text)",
+                "JSON.stringify(knowledge_base_chawoot2.selectedOptionValue)"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-12-03T10:01:45.115Z",
+        "updatedAt": "2024-12-03T10:01:45.115Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "name": "myFun3",
+        "collectionId": "674ed7095d1c91a24d88a2af",
+        "executeOnLoad": false,
+        "pageId": "Bot Setup Copy",
+        "actionConfiguration": {
+            "body": "(i,cl)=>{\n\tstoreValue(i,cl,false)\n}",
+            "isAsync": true,
+            "timeoutInMillisecond": 10000,
+            "jsArguments": [
+                {
+                    "name": "i"
+                },
+                {
+                    "name": "cl"
+                }
+            ],
+            "paginationType": "NONE",
+            "encodeParamsToggle": true
+        },
+        "_id": "674ed7095d1c91a24d88a2b0",
+        "id": "674ed7095d1c91a24d88a2b0",
+        "applicationId": "jetsondashboard",
+        "datasource": {
+            "isValid": true,
+            "messages": [],
+            "name": "UNUSED_DATASOURCE",
+            "new": true,
+            "pluginId": "",
+            "userPermissions": []
+        },
+        "dynamicBindingPathList": [
+            {
+                "key": "body"
+            }
+        ],
+        "fullyQualifiedName": "JSObject1.myFun3",
+        "isValid": true,
+        "jsonPathKeys": [
+            "(i,cl)=>{\n\tsroreValue(i,cl)\n}"
+        ],
+        "pluginType": "JS"
     }
 ]

@@ -2062,5 +2062,73 @@
         "actionIds": [],
         "archivedActionIds": [],
         "archivedActions": []
+    },
+    {
+        "id": "674ed7095d1c91a24d88a2af",
+        "name": "JSObject1",
+        "pageId": "Bot Setup Copy",
+        "body": "export default {\n\tmyVar1: [],\n\tmyVar2: {},\n\n\n\nmyFun3:(i,cl)=>{\n\tstoreValue(i,cl,false)\n}\n}",
+        "variables": [
+            {
+                "name": "myVar1",
+                "value": []
+            },
+            {
+                "name": "myVar2",
+                "value": {}
+            }
+        ],
+        "actions": [
+            {
+                "name": "myFun3",
+                "collectionId": "674ed7095d1c91a24d88a2af",
+                "executeOnLoad": false,
+                "pageId": "Bot Setup Copy",
+                "actionConfiguration": {
+                    "body": "(i,cl)=>{\n\tstoreValue(i,cl,false)\n}",
+                    "isAsync": true,
+                    "timeoutInMillisecond": 10000,
+                    "jsArguments": [
+                        {
+                            "name": "i"
+                        },
+                        {
+                            "name": "cl"
+                        }
+                    ],
+                    "paginationType": "NONE",
+                    "encodeParamsToggle": true
+                },
+                "_id": "674ed7095d1c91a24d88a2b0",
+                "id": "674ed7095d1c91a24d88a2b0",
+                "applicationId": "jetsondashboard",
+                "datasource": {
+                    "isValid": true,
+                    "messages": [],
+                    "name": "UNUSED_DATASOURCE",
+                    "new": true,
+                    "pluginId": "",
+                    "userPermissions": []
+                },
+                "dynamicBindingPathList": [
+                    {
+                        "key": "body"
+                    }
+                ],
+                "fullyQualifiedName": "JSObject1.myFun3",
+                "isValid": true,
+                "jsonPathKeys": [
+                    "(i,cl)=>{\n\tsroreValue(i,cl)\n}"
+                ],
+                "pluginType": "JS"
+            }
+        ],
+        "applicationId": "jetsondashboard",
+        "pluginType": "JS",
+        "_id": "674ed7095d1c91a24d88a2af",
+        "pluginId": "JS",
+        "actionIds": [],
+        "archivedActionIds": [],
+        "archivedActions": []
     }
 ]

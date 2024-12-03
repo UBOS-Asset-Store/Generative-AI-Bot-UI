@@ -120,6 +120,10 @@
         {
             "_id": "Training",
             "isDefault": false
+        },
+        {
+            "_id": "Bot Setup Copy",
+            "isDefault": false
         }
     ],
     "policies": [
