@@ -26128,7 +26128,7 @@
                         "value": true
                     }
                 ],
-                "body": "{\n    \"type\":{{JSON.stringify(type_knowledgebase.selectedOptionLabel)}},\n    \"name\": {{JSON.stringify(name_knowledgebase.text)}},\n\t\t\"ownerID\": \"{{main.user.auth_module.user.info.user._id}}\",\n\t\"prompt\": {{JSON.stringify(prompt_custom_onboarding.text)}},\n  \"model\": {{JSON.stringify(model_select.selectedOptionValue)}},\n  \"answer_length_onboarding\": {{JSON.stringify(answer_length_onboarding.selectedOptionValue)}},\n  \"answer_as\": {{JSON.stringify(answer_as_onboarding.selectedOptionValue)}},\n  \"tone\": {{JSON.stringify(tone_onboarding.selectedOptionValue)}},\n  \"language\": {{JSON.stringify(language_onboarding.selectedOptionValue)}}\n}"
+                "body": "{\n    \"type\":{{JSON.stringify(type_knowledgebase.selectedOptionLabel)}},\n    \"name\": {{JSON.stringify(name_knowledgebase.text)}},\n\t\t\"ownerID\": \"{{main.user.auth_module.user.info.user._id}}\"\n}"
             },
             "dynamicBindingPathList": [
                 {
@@ -26145,19 +26145,13 @@
                 "JSON.stringify(type_knowledgebase.selectedOptionLabel)",
                 "JSON.stringify(name_knowledgebase.text)",
                 "main.user.auth_module.user.info.user._id",
-                "JSON.stringify(prompt_custom_onboarding.text)",
-                "JSON.stringify(model_select.selectedOptionValue)",
-                "JSON.stringify(answer_length_onboarding.selectedOptionValue)",
-                "JSON.stringify(answer_as_onboarding.selectedOptionValue)",
-                "JSON.stringify(tone_onboarding.selectedOptionValue)",
-                "JSON.stringify(language_onboarding.selectedOptionValue)",
-                "main.env.nodeUrl,2024-07-12T09:24:40.807Z,2024-07-16T07:57:45.767Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl"
+                "main.env.nodeUrl,2024-11-20T10:24:07.142Z,2024-12-04T12:13:08.131Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-11-20T10:24:07.142Z",
-        "updatedAt": "2024-11-20T10:24:07.142Z",
+        "updatedAt": "2024-12-04T12:13:10.014Z",
         "deleted": false,
         "policies": [
             {
@@ -26580,7 +26574,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-11-20T10:24:07.143Z",
-        "updatedAt": "2024-12-03T15:05:25.460Z",
+        "updatedAt": "2024-12-04T08:55:16.913Z",
         "deleted": false,
         "policies": [
             {
@@ -26755,7 +26749,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-11-20T10:24:07.143Z",
-        "updatedAt": "2024-11-28T09:40:27.626Z",
+        "updatedAt": "2024-12-04T11:04:07.252Z",
         "deleted": false,
         "policies": [
             {
@@ -26968,7 +26962,7 @@
                     }
                 ],
                 "queryParameters": [],
-                "body": "{\n  \"baseId\":{{JSON.stringify(dbSelect.selectedOptionValue)}},\n\t\"prompt\": {{JSON.stringify(prompt_custom.text)}},\n  \"model\": {{JSON.stringify(model_selectCopy.selectedOptionValue)}},\n\t\"systemName\":{{JSON.stringify(getAllBases.data[0].systemName)}}\n}",
+                "body": "{\n  \"baseId\":{{JSON.stringify(dbSelect.selectedOptionValue)}},\n\t\"prompt\": {{JSON.stringify(RichTextEditor1.text)}},\n  \"model\": {{JSON.stringify(model_selectCopy.selectedOptionValue)}},\n\t\"systemName\":{{JSON.stringify(getAllBases.data[0].systemName)}}\n}",
                 "bodyFormData": [],
                 "formData": {
                     "apiContentType": "none"
@@ -26992,15 +26986,16 @@
             "jsonPathKeys": [
                 "main.env.nodeUrl",
                 "JSON.stringify(dbSelect.selectedOptionValue)",
-                "JSON.stringify(prompt_custom.text)",
+                "JSON.stringify(RichTextEditor1.)",
                 "JSON.stringify(model_selectCopy.selectedOptionValue)",
-                "JSON.stringify(getAllBases.data[0].systemName)"
+                "JSON.stringify(getAllBases.data[0].systemName)",
+                "JSON.stringify(RichTextEditor1.text)"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-11-20T10:24:07.143Z",
-        "updatedAt": "2024-12-03T15:28:06.707Z",
+        "updatedAt": "2024-12-04T11:57:55.831Z",
         "deleted": false,
         "policies": [
             {
@@ -27074,7 +27069,7 @@
             "invalids": [],
             "jsonPathKeys": [
                 "main.env.nodeUrl",
-                "JSON.stringify(Select1.selectedOptionValue)",
+                "JSON.stringify(dbSelect.selectedOptionValue)",
                 "JSON.stringify(welcome.text)",
                 "JSON.stringify(unable.text)",
                 "JSON.stringify(getAllBases.data[0].systemName)"
@@ -27083,7 +27078,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-11-20T10:24:07.143Z",
-        "updatedAt": "2024-11-20T10:24:07.143Z",
+        "updatedAt": "2024-12-04T11:57:04.367Z",
         "deleted": false,
         "policies": [
             {
@@ -28919,6 +28914,10 @@
                     {
                         "key": "id",
                         "value": "{{dbSelect.selectedOptionValue}}"
+                    },
+                    {
+                        "key": "lang",
+                        "value": "{{main.user.auth_module.user.translation.lang}}"
                     }
                 ],
                 "bodyFormData": [],
@@ -28937,19 +28936,23 @@
                 },
                 {
                     "key": "queryParameters[0].value"
+                },
+                {
+                    "key": "queryParameters[1].value"
                 }
             ],
             "isValid": true,
             "invalids": [],
             "jsonPathKeys": [
                 "main.env.nodeUrl",
-                "dbSelect.selectedOptionValue"
+                "dbSelect.selectedOptionValue",
+                "main.user.auth_module.user.translation.lang"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-12-03T14:25:53.009Z",
-        "updatedAt": "2024-12-03T15:06:34.491Z",
+        "updatedAt": "2024-12-04T11:04:44.367Z",
         "deleted": false,
         "policies": [
             {

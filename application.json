@@ -654,12 +654,17 @@
                                     "key": "isVisible"
                                 }
                             ],
-                            "dynamicTriggerPathList": [],
+                            "dynamicTriggerPathList": [
+                                {
+                                    "key": "onClick"
+                                }
+                            ],
                             "dynamicPropertyPathList": [
                                 {
                                     "key": "isVisible"
                                 }
-                            ]
+                            ],
+                            "onClick": "{{navigateTo('Subscription', {})}}"
                         },
                         {
                             "isVisible": true,
