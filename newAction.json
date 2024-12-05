@@ -26061,14 +26061,13 @@
             "invalids": [],
             "jsonPathKeys": [
                 "main.env.nodeUrl",
-                "main.user.auth_module.user.info.user.email",
                 "main.user.auth_module.user.info.user._id"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-11-20T10:24:07.142Z",
-        "updatedAt": "2024-11-20T10:24:07.142Z",
+        "updatedAt": "2024-12-05T09:33:46.741Z",
         "deleted": false,
         "policies": [
             {
