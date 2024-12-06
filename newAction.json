@@ -844,7 +844,7 @@
         "pluginType": "API",
         "pluginId": "API",
         "createdAt": "2022-08-29T15:02:12.192Z",
-        "updatedAt": "2023-06-26T05:27:24.244Z",
+        "updatedAt": "2024-12-06T09:01:34.873Z",
         "deleted": false,
         "policies": [
             {
@@ -14407,7 +14407,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-06-09T17:24:34.827Z",
-        "updatedAt": "2024-07-06T14:21:25.026Z",
+        "updatedAt": "2024-12-06T10:54:56.375Z",
         "deleted": false,
         "policies": [
             {
@@ -14672,88 +14672,6 @@
         ]
     },
     {
-        "_id": "667c1e5967dfd9d3f359273c",
-        "applicationId": "jetsondashboard",
-        "organizationId": "Org",
-        "pluginType": "API",
-        "pluginId": "API",
-        "Action": {
-            "name": "askSupport",
-            "datasource": {
-                "name": "DEFAULT_REST_DATASOURCE",
-                "datasourceConfiguration": {
-                    "url": "{{main.env.nodeUrl}}/supportRequest"
-                },
-                "invalids": [],
-                "isValid": true,
-                "pluginId": "API",
-                "messages": []
-            },
-            "executeOnLoad": false,
-            "pageId": "Analytics",
-            "actionConfiguration": {
-                "timeoutInMillisecond": 10000,
-                "encodeParamsToggle": true,
-                "httpMethod": "POST",
-                "headers": [
-                    {
-                        "key": "content-type",
-                        "value": "application/json"
-                    }
-                ],
-                "queryParameters": [],
-                "bodyFormData": [],
-                "formData": {
-                    "apiContentType": "none"
-                },
-                "pluginSpecifiedTemplates": [
-                    {
-                        "value": true
-                    }
-                ],
-                "body": "{\n\t\"email\":{{JSON.stringify(support_user_email_input.text)}},\n\t\"name\": {{JSON.stringify(supportName2.text)}},\n\t\"message\":{{JSON.stringify(support_user_question_input.text)}}\n}"
-            },
-            "dynamicBindingPathList": [
-                {
-                    "key": "body"
-                },
-                {
-                    "key": "datasourceUrl"
-                }
-            ],
-            "isValid": true,
-            "invalids": [],
-            "jsonPathKeys": [
-                "main.env.nodeUrl",
-                "JSON.stringify(support_user_email_input.text)",
-                "JSON.stringify(supportName2.text)",
-                "JSON.stringify(support_user_question_input.text)"
-            ],
-            "userSetOnLoad": false,
-            "confirmBeforeExecute": false
-        },
-        "createdAt": "2024-06-26T13:57:45.501Z",
-        "updatedAt": "2024-11-06T16:28:34.797Z",
-        "deleted": false,
-        "policies": [
-            {
-                "permission": "read:actions",
-                "groups": [],
-                "users": []
-            },
-            {
-                "permission": "manage:actions",
-                "groups": [],
-                "users": []
-            },
-            {
-                "permission": "execute:actions",
-                "groups": [],
-                "users": []
-            }
-        ]
-    },
-    {
         "_id": "667c27fb67dfd9d3f359273d",
         "applicationId": "jetsondashboard",
         "organizationId": "Org",
@@ -14793,7 +14711,7 @@
                         "value": true
                     }
                 ],
-                "body": "{\n\t\"email\":{{JSON.stringify(support_user_email_input.text)}},\n\t\"name\": {{JSON.stringify(supportName2.text)}},\n\t\"message\":{{JSON.stringify(support_user_question_input.text)}}\n}"
+                "body": "{\n\t\"email\":{{JSON.stringify(support_user_email_input.text)}},\n\t\"message\":{{JSON.stringify(support_user_question_input.text)}}\n}"
             },
             "dynamicBindingPathList": [
                 {
@@ -14815,7 +14733,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-06-26T14:38:51.034Z",
-        "updatedAt": "2024-11-06T16:33:45.507Z",
+        "updatedAt": "2024-12-06T10:59:09.511Z",
         "deleted": false,
         "policies": [
             {
@@ -14875,7 +14793,7 @@
                         "value": true
                     }
                 ],
-                "body": "{\n\t\"email\":{{JSON.stringify(support_user_email_input.text)}},\n\t\"name\": {{JSON.stringify(supportName2.text)}},\n\t\"message\":{{JSON.stringify(support_user_question_input.text)}}\n}"
+                "body": "{\n\t\"email\":{{JSON.stringify(support_user_email_input.text)}},\n\t\"message\":{{JSON.stringify(support_user_question_input.text)}}\n}"
             },
             "dynamicBindingPathList": [
                 {
@@ -14897,7 +14815,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-06-26T14:40:18.403Z",
-        "updatedAt": "2024-11-06T16:33:34.929Z",
+        "updatedAt": "2024-12-06T10:58:55.509Z",
         "deleted": false,
         "policies": [
             {
@@ -14957,7 +14875,7 @@
                         "value": true
                     }
                 ],
-                "body": "{\n\t\"email\":{{JSON.stringify(support_user_email_input.text)}},\n\t\"name\": {{JSON.stringify(supportName2.text)}},\n\t\"message\":{{JSON.stringify(support_user_question_input.text)}}\n}"
+                "body": "{\n\t\"email\":{{JSON.stringify(support_user_email_input.text)}},\n\t\"message\":{{JSON.stringify(support_user_question_input.text)}}\n}"
             },
             "dynamicBindingPathList": [
                 {
@@ -14979,7 +14897,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-06-26T14:40:36.160Z",
-        "updatedAt": "2024-11-06T16:59:34.710Z",
+        "updatedAt": "2024-12-06T10:58:34.569Z",
         "deleted": false,
         "policies": [
             {
@@ -15039,7 +14957,7 @@
                         "value": true
                     }
                 ],
-                "body": "{\n\t\"email\":{{JSON.stringify(support_user_email_input.text)}},\n\t\"name\": {{JSON.stringify(supportName2.text)}},\n\t\"message\":{{JSON.stringify(support_user_question_input.text)}}\n}"
+                "body": "{\n\t\"email\":{{JSON.stringify(support_user_email_input.text)}},\n\t\"message\":{{JSON.stringify(support_user_question_input.text)}}\n}"
             },
             "dynamicBindingPathList": [
                 {
@@ -15054,14 +14972,14 @@
             "jsonPathKeys": [
                 "main.env.nodeUrl",
                 "JSON.stringify(support_user_email_input.text)",
-                "JSON.stringify(support_user_question_input.text)",
-                "JSON.stringify(supportName2.text)"
+                "JSON.stringify(supportName2.text)",
+                "JSON.stringify(support_user_question_input.text)"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-06-26T14:40:53.250Z",
-        "updatedAt": "2024-11-06T16:59:46.766Z",
+        "updatedAt": "2024-12-06T10:58:11.767Z",
         "deleted": false,
         "policies": [
             {
@@ -15135,7 +15053,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-06-26T14:41:15.740Z",
-        "updatedAt": "2024-07-01T09:48:37.959Z",
+        "updatedAt": "2024-12-06T10:57:54.693Z",
         "deleted": false,
         "policies": [
             {
@@ -15195,7 +15113,7 @@
                         "value": true
                     }
                 ],
-                "body": "{\n\t\"email\":{{JSON.stringify(support_user_email_input.text)}},\n\t\"name\": {{JSON.stringify(supportName2.text)}},\n\t\"message\":{{JSON.stringify(support_user_question_input.text)}}\n}"
+                "body": "{\n\t\"email\":{{JSON.stringify(support_user_email_input.text)}},\n\t\"message\":{{JSON.stringify(support_user_question_input.text)}}\n}"
             },
             "dynamicBindingPathList": [
                 {
@@ -15217,7 +15135,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-06-26T14:41:30.267Z",
-        "updatedAt": "2024-11-06T16:33:02.309Z",
+        "updatedAt": "2024-12-06T10:57:25.174Z",
         "deleted": false,
         "policies": [
             {
@@ -15277,7 +15195,7 @@
                         "value": true
                     }
                 ],
-                "body": "{\n\t\"email\":{{JSON.stringify(support_user_email_input.text)}},\n\t\"name\": {{JSON.stringify(supportName2.text)}},\n\t\"message\":{{JSON.stringify(support_user_question_input.text)}}\n}"
+                "body": "{\n\t\"email\":{{JSON.stringify(support_user_email_input.text)}},\n\t\"message\":{{JSON.stringify(support_user_question_input.text)}}\n}"
             },
             "dynamicBindingPathList": [
                 {
@@ -15299,7 +15217,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-06-26T14:42:37.190Z",
-        "updatedAt": "2024-11-06T16:33:12.368Z",
+        "updatedAt": "2024-12-06T10:57:42.306Z",
         "deleted": false,
         "policies": [
             {
@@ -15359,7 +15277,7 @@
                         "value": true
                     }
                 ],
-                "body": "{\n\t\"email\":{{JSON.stringify(support_user_email_input.text)}},\n\t\"name\": {{JSON.stringify(supportName2.text)}},\n\t\"message\":{{JSON.stringify(support_user_question_input.text)}}\n}"
+                "body": "{\n\t\"email\":{{JSON.stringify(support_user_email_input.text)}},\n\t\"message\":{{JSON.stringify(support_user_question_input.text)}}\n}"
             },
             "dynamicBindingPathList": [
                 {
@@ -15381,7 +15299,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-06-26T14:42:54.313Z",
-        "updatedAt": "2024-11-06T16:32:37.599Z",
+        "updatedAt": "2024-12-06T10:57:02.104Z",
         "deleted": false,
         "policies": [
             {
@@ -15455,7 +15373,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-06-26T14:43:06.954Z",
-        "updatedAt": "2024-06-26T14:43:07.493Z",
+        "updatedAt": "2024-12-06T10:56:43.357Z",
         "deleted": false,
         "policies": [
             {
@@ -15515,7 +15433,7 @@
                         "value": true
                     }
                 ],
-                "body": "{\n\t\"email\":{{JSON.stringify(support_user_email_input.text)}},\n\t\"name\": {{JSON.stringify(supportName2.text)}},\n\t\"message\":{{JSON.stringify(support_user_question_input.text)}}\n}"
+                "body": "{\n\t\"email\":{{JSON.stringify(support_user_email_input.text)}},\n\t\"message\":{{JSON.stringify(support_user_question_input.text)}}\n}"
             },
             "dynamicBindingPathList": [
                 {
@@ -15537,7 +15455,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-06-26T14:43:20.273Z",
-        "updatedAt": "2024-11-06T16:28:46.830Z",
+        "updatedAt": "2024-12-06T10:56:31.366Z",
         "deleted": false,
         "policies": [
             {
@@ -15597,7 +15515,7 @@
                         "value": true
                     }
                 ],
-                "body": "{\n\t\"email\":{{JSON.stringify(support_user_email_input.text)}},\n\t\"name\": {{JSON.stringify(supportName2.text)}},\n\t\"message\":{{JSON.stringify(support_user_question_input.text)}}\n}"
+                "body": "{\n\t\"email\":{{JSON.stringify(support_user_email_input.text)}},\n\t\"message\":{{JSON.stringify(support_user_question_input.text)}}\n}"
             },
             "dynamicBindingPathList": [
                 {
@@ -15619,7 +15537,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-06-26T14:43:37.131Z",
-        "updatedAt": "2024-11-06T16:28:20.465Z",
+        "updatedAt": "2024-12-06T10:56:05.877Z",
         "deleted": false,
         "policies": [
             {
@@ -15679,7 +15597,7 @@
                         "value": true
                     }
                 ],
-                "body": "{\n\t\"email\":{{JSON.stringify(support_user_email_input.text)}},\n\t\"name\": {{JSON.stringify(supportName2.text)}},\n\t\"message\":{{JSON.stringify(support_user_question_input.text)}}\n}"
+                "body": "{\n\t\"email\":{{JSON.stringify(support_user_email_input.text)}},\n\t\"message\":{{JSON.stringify(support_user_question_input.text)}}\n}"
             },
             "dynamicBindingPathList": [
                 {
@@ -15701,7 +15619,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-06-26T14:43:51.295Z",
-        "updatedAt": "2024-11-06T16:28:07.086Z",
+        "updatedAt": "2024-12-06T10:55:50.779Z",
         "deleted": false,
         "policies": [
             {
@@ -15761,7 +15679,7 @@
                         "value": true
                     }
                 ],
-                "body": "{\n\t\"email\":{{JSON.stringify(support_user_email_input.text)}},\n\t\"name\": {{JSON.stringify(supportName2.text)}},\n\t\"message\":{{JSON.stringify(support_user_question_input.text)}}\n}"
+                "body": "{\n\t\"email\":{{JSON.stringify(support_user_email_input.text)}},\n\t\"message\":{{JSON.stringify(support_user_question_input.text)}}\n}"
             },
             "dynamicBindingPathList": [
                 {
@@ -15783,7 +15701,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-06-26T14:44:07.370Z",
-        "updatedAt": "2024-11-06T16:27:55.271Z",
+        "updatedAt": "2024-12-06T10:55:36.425Z",
         "deleted": false,
         "policies": [
             {
@@ -15843,7 +15761,7 @@
                         "value": true
                     }
                 ],
-                "body": "{\n\t\"email\":{{JSON.stringify(support_user_email_input.text)}},\n\t\"name\": {{JSON.stringify(supportName2.text)}},\n\t\"message\":{{JSON.stringify(support_user_question_input.text)}}\n}"
+                "body": "{\n\t\"email\":{{JSON.stringify(support_user_email_input.text)}},\n\t\"message\":{{JSON.stringify(support_user_question_input.text)}}\n}"
             },
             "dynamicBindingPathList": [
                 {
@@ -15857,15 +15775,16 @@
             "invalids": [],
             "jsonPathKeys": [
                 "main.env.nodeUrl",
-                "JSON.stringify(support_user_email_input.text)",
-                "JSON.stringify(supportName2.text)",
-                "JSON.stringify(support_user_question_input.text)"
+                "JSON.stringify(support_user_email_input.text",
+                "JSON.stringify(support_user_question_input.text)",
+                "main.env.nodeUrl,2024-06-26T14:44:18.188Z,2024-12-06T10:55:04.753Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2024-06-26T14:44:18.188Z,2024-12-06T10:55:10.161Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl",
+                "JSON.stringify(support_user_email_input.text)"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-06-26T14:44:18.188Z",
-        "updatedAt": "2024-11-06T16:27:48.653Z",
+        "updatedAt": "2024-12-06T10:55:20.378Z",
         "deleted": false,
         "policies": [
             {
@@ -16068,7 +15987,7 @@
                         "value": true
                     }
                 ],
-                "body": "{\n\t\"email\":{{JSON.stringify(support_user_email_input.text)}},\n\t\"name\": {{JSON.stringify(supportName2.text)}},\n\t\"message\":{{JSON.stringify(support_user_question_input.text)}}\n}"
+                "body": "{\n\t\"email\":{{JSON.stringify(support_user_email_input.text)}},\n\t\"message\":{{JSON.stringify(support_user_question_input.text)}}\n}"
             },
             "dynamicBindingPathList": [
                 {
@@ -16090,7 +16009,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-06-29T13:33:26.091Z",
-        "updatedAt": "2024-11-06T16:27:39.651Z",
+        "updatedAt": "2024-12-06T10:54:42.752Z",
         "deleted": false,
         "policies": [
             {
@@ -16983,7 +16902,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-07-02T14:32:12.666Z",
-        "updatedAt": "2024-07-06T14:24:27.326Z",
+        "updatedAt": "2024-12-06T10:54:21.231Z",
         "deleted": false,
         "policies": [
             {
@@ -17543,7 +17462,7 @@
                         "value": true
                     }
                 ],
-                "body": "{\n\t\"email\":{{JSON.stringify(support_user_email_input.text)}},\n\t\"name\": {{JSON.stringify(supportName2.text)}},\n\t\"message\":{{JSON.stringify(support_user_question_input.text)}}\n}"
+                "body": "{\n\t\"email\":{{JSON.stringify(support_user_email_input.text)}},\n\t\"message\":{{JSON.stringify(support_user_question_input.text)}}\n}"
             },
             "dynamicBindingPathList": [
                 {
@@ -17565,7 +17484,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-07-06T14:23:49.500Z",
-        "updatedAt": "2024-11-06T16:27:29.916Z",
+        "updatedAt": "2024-12-06T10:53:54.344Z",
         "deleted": false,
         "policies": [
             {
@@ -17643,7 +17562,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-07-06T14:24:10.947Z",
-        "updatedAt": "2024-07-09T13:16:51.874Z",
+        "updatedAt": "2024-12-06T10:52:40.911Z",
         "deleted": false,
         "policies": [
             {
@@ -18434,7 +18353,7 @@
                         "value": true
                     }
                 ],
-                "body": "{\n\t\"email\":{{JSON.stringify(support_user_email_input.text)}},\n\t\"name\": {{JSON.stringify(supportName2.text)}},\n\t\"message\":{{JSON.stringify(support_user_question_input.text)}}\n}"
+                "body": "{\n\t\"email\":{{JSON.stringify(support_user_email_input.text)}},\n\t\"message\":{{JSON.stringify(support_user_question_input.text)}}\n}"
             },
             "dynamicBindingPathList": [
                 {
@@ -18449,14 +18368,13 @@
             "jsonPathKeys": [
                 "main.env.nodeUrl",
                 "JSON.stringify(support_user_email_input.text)",
-                "JSON.stringify(supportName2.text)",
                 "JSON.stringify(support_user_question_input.text)"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-07-10T10:18:00.747Z",
-        "updatedAt": "2024-11-06T16:27:01.144Z",
+        "updatedAt": "2024-12-06T12:15:20.758Z",
         "deleted": false,
         "policies": [
             {
@@ -19133,7 +19051,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-07-10T13:50:13.072Z",
-        "updatedAt": "2024-07-10T13:50:13.072Z",
+        "updatedAt": "2024-12-06T10:46:42.236Z",
         "deleted": false,
         "policies": [
             {
@@ -20751,7 +20669,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-07-11T18:56:46.281Z",
-        "updatedAt": "2024-07-11T18:56:46.281Z",
+        "updatedAt": "2024-12-06T10:46:20.157Z",
         "deleted": false,
         "policies": [
             {
@@ -22357,7 +22275,7 @@
                         "value": true
                     }
                 ],
-                "body": "{\n\t\"email\":{{JSON.stringify(support_user_email_input.text)}},\n\t\"name\": {{JSON.stringify(supportName2.text)}},\n\t\"message\":{{JSON.stringify(support_user_question_input.text)}}\n}"
+                "body": "{\n\t\"email\":{{JSON.stringify(support_user_email_input.text)}},\n\t\"message\":{{JSON.stringify(support_user_question_input.text)}}\n}"
             },
             "dynamicBindingPathList": [
                 {
@@ -22379,7 +22297,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-07-12T09:24:40.807Z",
-        "updatedAt": "2024-11-06T16:26:43.128Z",
+        "updatedAt": "2024-12-06T10:43:32.468Z",
         "deleted": false,
         "policies": [
             {
@@ -23929,7 +23847,7 @@
                         "value": true
                     }
                 ],
-                "body": "{\n\t\"email\": {{JSON.stringify(supportEmail.text)}},\n\t\"name\": {{JSON.stringify(supportName.text)}},\n\t\"message\": {{JSON.stringify(MessageSuppport.text)}}\n}"
+                "body": "{\n\t\"email\": {{JSON.stringify(supportEmail.text)}},\n\t\"message\": {{JSON.stringify(MessageSuppport.text)}}\n}"
             },
             "dynamicBindingPathList": [
                 {
@@ -23944,14 +23862,13 @@
             "jsonPathKeys": [
                 "main.env.nodeUrl",
                 "JSON.stringify(supportEmail.text)",
-                "JSON.stringify(supportName.text)",
                 "JSON.stringify(MessageSuppport.text)"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-10-29T17:49:39.859Z",
-        "updatedAt": "2024-11-06T16:27:10.742Z",
+        "updatedAt": "2024-12-06T12:15:25.878Z",
         "deleted": false,
         "policies": [
             {
@@ -24011,7 +23928,7 @@
                         "value": true
                     }
                 ],
-                "body": "{\n\t\"email\":{{JSON.stringify(support_user_email_input.text)}},\n\t\"name\": {{JSON.stringify(supportName2.text)}},\n\t\"message\":{{JSON.stringify(support_user_question_input.text)}}\n}"
+                "body": "{\n\t\"email\":{{JSON.stringify(support_user_email_input.text)}},\n\t\"message\":{{JSON.stringify(support_user_question_input.text)}}\n}"
             },
             "dynamicBindingPathList": [
                 {
@@ -24033,7 +23950,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-11-05T17:49:03.747Z",
-        "updatedAt": "2024-11-06T16:26:08.283Z",
+        "updatedAt": "2024-12-06T10:42:48.291Z",
         "deleted": false,
         "policies": [
             {
@@ -24093,7 +24010,7 @@
                         "value": true
                     }
                 ],
-                "body": "{\n\t\"email\":{{JSON.stringify(support_user_email_input.text)}},\n\t\"name\": {{JSON.stringify(supportName2.text)}},\n\t\"message\":{{JSON.stringify(support_user_question_input.text)}}\n}"
+                "body": "{\n\t\"email\":{{JSON.stringify(support_user_email_input.text)}},\n\t\"message\":{{JSON.stringify(support_user_question_input.text)}}\n}"
             },
             "dynamicBindingPathList": [
                 {
@@ -24115,7 +24032,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-11-05T17:49:28.326Z",
-        "updatedAt": "2024-11-08T10:36:19.487Z",
+        "updatedAt": "2024-12-06T10:43:04.358Z",
         "deleted": false,
         "policies": [
             {
@@ -26887,7 +26804,7 @@
                         "value": true
                     }
                 ],
-                "body": "{\n\t\"email\":{{JSON.stringify(support_user_email_input.text)}},\n\t\"name\": {{JSON.stringify(supportName2.text)}},\n\t\"message\":{{JSON.stringify(support_user_question_input.text)}}\n}"
+                "body": "{\n\t\"email\":{{JSON.stringify(support_user_email_input.text)}},\n\t\"message\":{{JSON.stringify(support_user_question_input.text)}}\n}"
             },
             "dynamicBindingPathList": [
                 {
@@ -26902,14 +26819,13 @@
             "jsonPathKeys": [
                 "main.env.nodeUrl",
                 "JSON.stringify(support_user_email_input.text)",
-                "JSON.stringify(supportName2.text)",
                 "JSON.stringify(support_user_question_input.text)"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-11-20T10:24:07.143Z",
-        "updatedAt": "2024-11-20T10:24:07.143Z",
+        "updatedAt": "2024-12-06T10:42:29.939Z",
         "deleted": false,
         "policies": [
             {
@@ -28621,7 +28537,7 @@
                         "value": true
                     }
                 ],
-                "body": "{\n\t\"email\":{{JSON.stringify(support_user_email_input.text)}},\n\t\"name\": {{JSON.stringify(supportName2.text)}},\n\t\"message\":{{JSON.stringify(support_user_question_input.text)}}\n}"
+                "body": "{\n\t\"email\":{{JSON.stringify(support_user_email_input.text)}},\n\t\"message\":{{JSON.stringify(support_user_question_input.text)}}\n}"
             },
             "dynamicBindingPathList": [
                 {
@@ -28643,7 +28559,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-12-03T10:01:45.115Z",
-        "updatedAt": "2024-12-03T10:01:45.115Z",
+        "updatedAt": "2024-12-06T10:40:57.898Z",
         "deleted": false,
         "policies": [
             {
@@ -28949,7 +28865,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-12-03T14:25:53.009Z",
-        "updatedAt": "2024-12-04T11:04:44.367Z",
+        "updatedAt": "2024-12-06T09:36:19.615Z",
         "deleted": false,
         "policies": [
             {
@@ -29098,6 +29014,84 @@
         },
         "createdAt": "2024-12-05T17:00:50.859Z",
         "updatedAt": "2024-12-05T17:01:00.408Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "6752eac96f8101b0cfc9387a",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "userOpenSupportWindow",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/supportRequest"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "Home",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "POST",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "body": "{\n\t\"email\": {{JSON.stringify(supportEmail.text)}},\n\t\"message\": \"The user has opened the support window.\"\n}",
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ]
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "body"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "JSON.stringify(supportEmail.text)",
+                "main.env.nodeUrl,2024-12-06T12:15:05.474Z,2024-12-06T12:21:07.947Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-12-06T12:15:05.474Z",
+        "updatedAt": "2024-12-06T12:21:11.274Z",
         "deleted": false,
         "policies": [
             {
