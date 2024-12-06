@@ -42,7 +42,7 @@
             "isDefault": false
         },
         {
-            "_id": "Bot Setup",
+            "_id": "Bot Setup1",
             "isDefault": false
         },
         {
@@ -122,7 +122,7 @@
             "isDefault": false
         },
         {
-            "_id": "Bot Setup Copy",
+            "_id": "Bot Setup",
             "isDefault": false
         }
     ],
@@ -620,11 +620,11 @@
                         },
                         {
                             "isVisible": "{{main.user.auth_module.user.daysLeft ? true : false}}",
-                            "text": "{{main.user.auth_module.user.translation.subscription.freeTrial}} {{main.user.auth_module.user.daysLeft}} {{main.user.auth_module.user.translation.subscription.days}}. {{main.user.auth_module.user.translation.subscription.please}} <a href=\"https://chatbot.ubos.tech/Subscription\">{{main.user.auth_module.user.translation.subscription.upgrade}}</a>.",
+                            "text": "{{main.user.auth_module.user.trialEnded ? main.user.auth_module.user.translation.subscription.expiredTrial \n    : `${main.user.auth_module.user.translation.subscription.freeTrial} ${main.user.auth_module.user.daysLeft} ${main.user.auth_module.user.translation.subscription.days}\n    ${main.user.auth_module.user.translation.subscription.please} \n\n${main.user.auth_module.user.translation.subscription.upgrade}`\n\n}} <a>{{main.user.auth_module.user.translation.subscription.up}}</a> \n",
                             "fontSize": "HEADING3",
                             "fontStyle": "",
                             "textAlign": "CENTER",
-                            "textColor": "#ff6d2b",
+                            "textColor": "{{main.user.auth_module.user.trialEnded ? '#ff6d2b' : '#3b82ff'}}",
                             "truncateButtonColor": "#FFC13D",
                             "widgetName": "Text55",
                             "shouldTruncate": false,
@@ -648,10 +648,13 @@
                             "parentId": "b8feb4cpvv",
                             "dynamicBindingPathList": [
                                 {
+                                    "key": "isVisible"
+                                },
+                                {
                                     "key": "text"
                                 },
                                 {
-                                    "key": "isVisible"
+                                    "key": "textColor"
                                 }
                             ],
                             "dynamicTriggerPathList": [
@@ -662,9 +665,13 @@
                             "dynamicPropertyPathList": [
                                 {
                                     "key": "isVisible"
+                                },
+                                {
+                                    "key": "textColor"
                                 }
                             ],
-                            "onClick": "{{navigateTo('Subscription', {})}}"
+                            "onClick": "{{navigateTo('Subscription', {})}}",
+                            "backgroundColor": ""
                         },
                         {
                             "isVisible": true,

@@ -270,7 +270,7 @@
     {
         "id": "652d7479ff0d1890fd5b921c",
         "name": "JSObject1",
-        "pageId": "Bot Setup",
+        "pageId": "Bot Setup1",
         "body": "export default {\n\tmyVar1: [],\n\tmyVar2: {},\n\n\n\nmyFun3:(i,cl)=>{\n\tstoreValue(i,cl,false)\n}\n}",
         "variables": [
             {
@@ -2030,7 +2030,7 @@
     {
         "id": "674ed7095d1c91a24d88a2af",
         "name": "JSObject1",
-        "pageId": "Bot Setup Copy",
+        "pageId": "Bot Setup",
         "body": "export default {\n\tmyVar1: [],\n\tmyVar2: {},\n\n\n\nmyFun3:(i,cl)=>{\n\tstoreValue(i,cl,false)\n}\n}",
         "variables": [
             {

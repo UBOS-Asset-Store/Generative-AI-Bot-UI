@@ -7722,7 +7722,7 @@
         "name": "myFun3",
         "collectionId": "652d7479ff0d1890fd5b921c",
         "executeOnLoad": false,
-        "pageId": "Bot Setup",
+        "pageId": "Bot Setup1",
         "actionConfiguration": {
             "body": "(i,cl)=>{\n\tstoreValue(i,cl,false)\n}",
             "isAsync": true,
@@ -7944,7 +7944,7 @@
                 "messages": []
             },
             "executeOnLoad": false,
-            "pageId": "Bot Setup",
+            "pageId": "Bot Setup1",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
                 "encodeParamsToggle": true,
@@ -8031,7 +8031,7 @@
                 "messages": []
             },
             "executeOnLoad": false,
-            "pageId": "Bot Setup",
+            "pageId": "Bot Setup1",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
                 "encodeParamsToggle": true,
@@ -8117,7 +8117,7 @@
                 "messages": []
             },
             "executeOnLoad": false,
-            "pageId": "Bot Setup",
+            "pageId": "Bot Setup1",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
                 "encodeParamsToggle": true,
@@ -8204,7 +8204,7 @@
                 "messages": []
             },
             "executeOnLoad": false,
-            "pageId": "Bot Setup",
+            "pageId": "Bot Setup1",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
                 "encodeParamsToggle": true,
@@ -8861,14 +8861,13 @@
             "invalids": [],
             "jsonPathKeys": [
                 "main.env.nodeUrl",
-                "main.user.auth_module.user.info.user._id)",
                 "main.user.auth_module.user.info.user._id"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-10-26T14:11:57.177Z",
-        "updatedAt": "2024-07-12T10:48:52.254Z",
+        "updatedAt": "2024-12-05T16:59:24.799Z",
         "deleted": false,
         "policies": [
             {
@@ -8907,7 +8906,7 @@
                 "messages": []
             },
             "executeOnLoad": false,
-            "pageId": "Bot Setup",
+            "pageId": "Bot Setup1",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
                 "encodeParamsToggle": true,
@@ -11564,7 +11563,7 @@
                 "messages": []
             },
             "executeOnLoad": false,
-            "pageId": "Bot Setup",
+            "pageId": "Bot Setup1",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
                 "encodeParamsToggle": true,
@@ -11645,7 +11644,7 @@
                 "messages": []
             },
             "executeOnLoad": false,
-            "pageId": "Bot Setup",
+            "pageId": "Bot Setup1",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
                 "encodeParamsToggle": true,
@@ -11716,7 +11715,7 @@
                 "messages": []
             },
             "executeOnLoad": false,
-            "pageId": "Bot Setup",
+            "pageId": "Bot Setup1",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
                 "encodeParamsToggle": true,
@@ -12595,7 +12594,7 @@
                 "messages": []
             },
             "executeOnLoad": true,
-            "pageId": "Bot Setup",
+            "pageId": "Bot Setup1",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
                 "encodeParamsToggle": true,
@@ -13908,7 +13907,7 @@
                 "messages": []
             },
             "executeOnLoad": false,
-            "pageId": "Bot Setup",
+            "pageId": "Bot Setup1",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
                 "encodeParamsToggle": true,
@@ -15339,7 +15338,7 @@
                 "messages": []
             },
             "executeOnLoad": false,
-            "pageId": "Bot Setup",
+            "pageId": "Bot Setup1",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
                 "encodeParamsToggle": true,
@@ -24935,7 +24934,7 @@
                 "messages": []
             },
             "executeOnLoad": false,
-            "pageId": "Bot Setup",
+            "pageId": "Bot Setup1",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
                 "encodeParamsToggle": true,
@@ -25023,7 +25022,7 @@
                 "messages": []
             },
             "executeOnLoad": false,
-            "pageId": "Bot Setup",
+            "pageId": "Bot Setup1",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
                 "encodeParamsToggle": true,
@@ -27786,7 +27785,7 @@
                 "messages": []
             },
             "executeOnLoad": false,
-            "pageId": "Bot Setup Copy",
+            "pageId": "Bot Setup",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
                 "encodeParamsToggle": true,
@@ -27873,7 +27872,7 @@
                 "messages": []
             },
             "executeOnLoad": false,
-            "pageId": "Bot Setup Copy",
+            "pageId": "Bot Setup",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
                 "encodeParamsToggle": true,
@@ -27914,13 +27913,13 @@
                 "JSON.stringify(whatsApp_token.text)",
                 "JSON.stringify(knowledge_base_whatsApp.selectedOptionLabel)",
                 "JSON.stringify(knowledge_base_whatsApp.selectedOptionValue)",
-                "main.user.auth_module.user.info.user.email),2023-10-23T15:01:51.668Z,2024-07-11T20:53:01.489Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,JSON.stringify(main.user.auth_module.user.info.user.email),2023-10-23T15:01:51.668Z,2024-07-11T20:53:03.373Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,JSON.stringify(main.user.auth_module.user.info.user._id),2023-10-23T15:01:51.668Z,2024-07-12T10:24:18.349Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2023-10-23T15:01:51.668Z,2024-07-12T10:24:22.071Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2023-10-23T15:01:51.668Z,2024-07-12T10:24:23.028Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl"
+                "main.env.nodeUrl,JSON.stringify(main.user.auth_module.user.info.user.email),2023-10-23T15:01:51.668Z,2024-07-11T20:53:03.373Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,JSON.stringify(main.user.auth_module.user.info.user._id),2023-10-23T15:01:51.668Z,2024-07-12T10:24:18.349Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2023-10-23T15:01:51.668Z,2024-07-12T10:24:22.071Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2023-10-23T15:01:51.668Z,2024-07-12T10:24:23.028Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2024-12-03T10:01:45.114Z,2024-12-03T10:01:45.114Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-12-03T10:01:45.114Z",
-        "updatedAt": "2024-12-03T10:01:45.114Z",
+        "updatedAt": "2024-12-06T07:46:53.382Z",
         "deleted": false,
         "policies": [
             {
@@ -27959,7 +27958,7 @@
                 "messages": []
             },
             "executeOnLoad": false,
-            "pageId": "Bot Setup Copy",
+            "pageId": "Bot Setup",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
                 "encodeParamsToggle": true,
@@ -28046,7 +28045,7 @@
                 "messages": []
             },
             "executeOnLoad": false,
-            "pageId": "Bot Setup Copy",
+            "pageId": "Bot Setup",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
                 "encodeParamsToggle": true,
@@ -28132,7 +28131,7 @@
                 "messages": []
             },
             "executeOnLoad": false,
-            "pageId": "Bot Setup Copy",
+            "pageId": "Bot Setup",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
                 "encodeParamsToggle": true,
@@ -28173,7 +28172,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-12-03T10:01:45.114Z",
-        "updatedAt": "2024-12-03T10:01:45.114Z",
+        "updatedAt": "2024-12-06T07:46:57.801Z",
         "deleted": false,
         "policies": [
             {
@@ -28211,8 +28210,8 @@
                 "pluginId": "API",
                 "messages": []
             },
-            "executeOnLoad": false,
-            "pageId": "Bot Setup Copy",
+            "executeOnLoad": true,
+            "pageId": "Bot Setup",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
                 "encodeParamsToggle": true,
@@ -28254,7 +28253,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-12-03T10:01:45.114Z",
-        "updatedAt": "2024-12-03T10:01:45.114Z",
+        "updatedAt": "2024-12-06T07:47:01.609Z",
         "deleted": false,
         "policies": [
             {
@@ -28293,7 +28292,7 @@
                 "messages": []
             },
             "executeOnLoad": false,
-            "pageId": "Bot Setup Copy",
+            "pageId": "Bot Setup",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
                 "encodeParamsToggle": true,
@@ -28325,7 +28324,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-12-03T10:01:45.115Z",
-        "updatedAt": "2024-12-03T10:01:45.115Z",
+        "updatedAt": "2024-12-05T16:58:45.806Z",
         "deleted": false,
         "policies": [
             {
@@ -28364,7 +28363,7 @@
                 "messages": []
             },
             "executeOnLoad": false,
-            "pageId": "Bot Setup Copy",
+            "pageId": "Bot Setup",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
                 "encodeParamsToggle": true,
@@ -28448,7 +28447,7 @@
                 "messages": []
             },
             "executeOnLoad": true,
-            "pageId": "Bot Setup Copy",
+            "pageId": "Bot Setup",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
                 "encodeParamsToggle": true,
@@ -28479,14 +28478,13 @@
             "invalids": [],
             "jsonPathKeys": [
                 "main.env.nodeUrl",
-                "main.store.l",
                 "main.store.lg"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-12-03T10:01:45.115Z",
-        "updatedAt": "2024-12-03T10:01:45.115Z",
+        "updatedAt": "2024-12-06T07:46:56.364Z",
         "deleted": false,
         "policies": [
             {
@@ -28525,7 +28523,7 @@
                 "messages": []
             },
             "executeOnLoad": false,
-            "pageId": "Bot Setup Copy",
+            "pageId": "Bot Setup",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
                 "encodeParamsToggle": true,
@@ -28602,7 +28600,7 @@
                 "messages": []
             },
             "executeOnLoad": false,
-            "pageId": "Bot Setup Copy",
+            "pageId": "Bot Setup",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
                 "encodeParamsToggle": true,
@@ -28684,7 +28682,7 @@
                 "messages": []
             },
             "executeOnLoad": false,
-            "pageId": "Bot Setup Copy",
+            "pageId": "Bot Setup",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
                 "encodeParamsToggle": true,
@@ -28725,15 +28723,15 @@
                 "JSON.stringify(main.user.auth_module.user.info.user._id)",
                 "JSON.stringify(main.user.auth_module.user.info.user.email)",
                 "JSON.stringify(knowledge_base_chawoot.selectedOptionLabel)",
-                "JSON.stringify(chatwoot_type.)",
-                "JSON.stringify(knowledge_base_chawoot.selectedOptionValue)",
-                "JSON.stringify(chatwoot_type.text)"
+                "JSON.stringify(chatwoot_type.text)",
+                "JSON.stringify(knowledge_base_chawoot22.selectedOptionValue)",
+                "JSON.stringify(knowledge_base_chawoot.selectedOptionValue)"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-12-03T10:01:45.115Z",
-        "updatedAt": "2024-12-03T10:01:45.115Z",
+        "updatedAt": "2024-12-06T07:52:39.291Z",
         "deleted": false,
         "policies": [
             {
@@ -28772,7 +28770,7 @@
                 "messages": []
             },
             "executeOnLoad": false,
-            "pageId": "Bot Setup Copy",
+            "pageId": "Bot Setup",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
                 "encodeParamsToggle": true,
@@ -28793,7 +28791,7 @@
                         "value": true
                     }
                 ],
-                "body": "{\n\t\"chatwoot_url\":{{JSON.stringify(chatwoot_url.text)}},\n\t\"chatwoot_token\": {{JSON.stringify(chatwoot_token.text)}},\n\t\"account_id\":{{JSON.stringify(chatwoot_account.text)}},\n\t\"base\": \"{{knowledge_base_chawoot2.selectedOptionValue}}\",\n\t\"ownerId\":{{JSON.stringify(main.user.auth_module.user.info.user._id)}},\n\t\"email\": {{JSON.stringify(main.user.auth_module.user.info.user.email)}},\n\t\"knowledge_baseName\":{{JSON.stringify(knowledge_base_chawoot2.selectedOptionLabel)}},\n\t\"knowledge_baseType\":{{JSON.stringify(chatwoot_typeCopy.text)}},\n\t\"id_base\":{{JSON.stringify(knowledge_base_chawoot2.selectedOptionValue)}}\n}"
+                "body": "{\n\t\"chatwoot_url\":{{JSON.stringify(chatwoot_url.text)}},\n\t\"chatwoot_token\": {{JSON.stringify(chatwoot_token.text)}},\n\t\"account_id\":{{JSON.stringify(chatwoot_account.text)}},\n\t\"base\": \"{{knowledge_base_chawoot222.selectedOptionValue}}\",\n\t\"ownerId\":{{JSON.stringify(main.user.auth_module.user.info.user._id)}},\n\t\"email\": {{JSON.stringify(main.user.auth_module.user.info.user.email)}},\n\t\"knowledge_baseName\":{{JSON.stringify(knowledge_base_chawoot222.selectedOptionLabel)}},\n\t\"knowledge_baseType\":{{JSON.stringify(chatwoot_typeCopy.text)}},\n\t\"id_base\":{{JSON.stringify(knowledge_base_chawoot222.selectedOptionValue)}}\n}"
             },
             "dynamicBindingPathList": [
                 {
@@ -28845,7 +28843,7 @@
         "name": "myFun3",
         "collectionId": "674ed7095d1c91a24d88a2af",
         "executeOnLoad": false,
-        "pageId": "Bot Setup Copy",
+        "pageId": "Bot Setup",
         "actionConfiguration": {
             "body": "(i,cl)=>{\n\tstoreValue(i,cl,false)\n}",
             "isAsync": true,
@@ -28952,6 +28950,154 @@
         },
         "createdAt": "2024-12-03T14:25:53.009Z",
         "updatedAt": "2024-12-04T11:04:44.367Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "6751dbac6f8101b0cfc93878",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "getenvai",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/getCredentials"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "Bot Setup",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "GET",
+                "headers": [],
+                "queryParameters": [
+                    {
+                        "key": "ownerId",
+                        "value": "{{main.user.auth_module.user.info.user._id}}"
+                    }
+                ],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ]
+            },
+            "dynamicBindingPathList": [],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "main.user.auth_module.user.info.user._id"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-12-05T16:58:20.858Z",
+        "updatedAt": "2024-12-06T07:47:00.193Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "6751dc426f8101b0cfc93879",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "saveCredentialsOpenAi",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/saveOpenAICredentials"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "Bot Setup",
+            "actionConfiguration": {
+                "timeoutInMillisecond": "20000",
+                "encodeParamsToggle": true,
+                "httpMethod": "POST",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ],
+                "body": "{\n\t\"ownerId\":{{JSON.stringify(main.user.auth_module.user.info.user._id)}},\n\t\"openai_api\":{{JSON.stringify(openai.text)}},\n\t\"role\": \"{{main.user.auth_module.user.info.user.role}}\",\n\t\"email\": \"{{main.user.auth_module.user.info.user.email}}\"\n}"
+            },
+            "dynamicBindingPathList": [],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "JSON.stringify(main.user.auth_module.user.info.user._id)",
+                "JSON.stringify(openai.text)",
+                "main.user.auth_module.user.info.user.role",
+                "main.user.auth_module.user.info.user.email"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-12-05T17:00:50.859Z",
+        "updatedAt": "2024-12-05T17:01:00.408Z",
         "deleted": false,
         "policies": [
             {
