@@ -6,7 +6,7 @@
     "isPublic": true,
     "isShowPlatformTag": false,
     "createdAt": "2023-03-02T13:50:57.853Z",
-    "updatedAt": "2024-11-29T21:29:19.023Z",
+    "updatedAt": "2024-12-09T13:16:27.599Z",
     "deleted": false,
     "pages": [
         {
@@ -152,7 +152,7 @@
         "favicon": "",
         "title": "AI Chatbot",
         "css": "${env.get(\"nodeUrl\")}/css",
-        "customScript": "<script>     window.chatwootSettings = {       hideMessageBubble: false,       position: \"left\",       locale: \"en\",       type: \"standart\",     };     (function (d, t) {       var BASE_URL = \"https://chatwoot-2438-671620977218781100000035.ubosaibotprod.ubos.tech\";       var g = d.createElement(t), s = d.getElementsByTagName(t)[0];       g.src = BASE_URL + \"/packs/js/sdk.js\";       g.defer = true;       g.async = true;       s.parentNode.insertBefore(g, s);       g.onload = function () {         window.chatwootSDK.run({           websiteToken: 'WMT3HuhXRKhwpX1s8ok5HGiQ',           baseUrl: BASE_URL         })       }     })(document, \"script\");   </script>"
+        "customScript": "<script>     window.chatwootSettings = {       hideMessageBubble: false,       position: \"right\",       locale: \"en\",       type: \"standart\",     };     (function (d, t) {       var BASE_URL = \"https://chatwoot-2438-671620977218781100000035.ubosaibotprod.ubos.tech\";       var g = d.createElement(t), s = d.getElementsByTagName(t)[0];       g.src = BASE_URL + \"/packs/js/sdk.js\";       g.defer = true;       g.async = true;       s.parentNode.insertBefore(g, s);       g.onload = function () {         window.chatwootSDK.run({           websiteToken: 'WMT3HuhXRKhwpX1s8ok5HGiQ',           baseUrl: BASE_URL         })       }     })(document, \"script\");   </script>"
     },
     "lastDeployedAt": "2022-10-19T15:59:36.363Z",
     "is_custom_auth": true,
@@ -232,7 +232,7 @@
                             "leftColumn": 0,
                             "rightColumn": 64,
                             "topRow": 6,
-                            "bottomRow": 66,
+                            "bottomRow": 58,
                             "parentId": "p71ikl65rn",
                             "dynamicBindingPathList": [
                                 {
@@ -304,6 +304,146 @@
                             ],
                             "classStyle": "setting_title",
                             "onClick": "{{navigateTo('Home', {})}}"
+                        },
+                        {
+                            "isVisible": "{{main.user.auth_module.user.daysLeft ? true : false}}",
+                            "backgroundColor": "#F6F7F8",
+                            "widgetName": "Container12",
+                            "containerStyle": "card",
+                            "borderColor": "transparent",
+                            "borderWidth": "1",
+                            "borderRadius": "10",
+                            "boxShadow": "NONE",
+                            "animateLoading": true,
+                            "children": [
+                                {
+                                    "isVisible": true,
+                                    "widgetName": "Canvas40",
+                                    "version": 1,
+                                    "detachFromLayout": true,
+                                    "type": "CANVAS_WIDGET",
+                                    "hideCard": true,
+                                    "displayName": "Canvas",
+                                    "key": "h4kfbvqdfx",
+                                    "containerStyle": "none",
+                                    "canExtend": false,
+                                    "children": [
+                                        {
+                                            "isVisible": true,
+                                            "animateLoading": true,
+                                            "text": "Upgrade",
+                                            "buttonColor": "#215484",
+                                            "buttonVariant": "PRIMARY",
+                                            "placement": "CENTER",
+                                            "widgetName": "Button3437",
+                                            "isDisabled": false,
+                                            "isDefaultClickDisabled": true,
+                                            "recaptchaType": "V3",
+                                            "version": 1,
+                                            "classStyle": "upgradeButton",
+                                            "type": "BUTTON_WIDGET",
+                                            "hideCard": false,
+                                            "displayName": "Button",
+                                            "key": "ovj4hu7woh",
+                                            "iconSVG": "/static/media/icon.cca02633.svg",
+                                            "widgetId": "wb2fbyvql9",
+                                            "renderMode": "CANVAS",
+                                            "isLoading": false,
+                                            "parentColumnSpace": 0.988037109375,
+                                            "parentRowSpace": 10,
+                                            "leftColumn": 0,
+                                            "rightColumn": 64,
+                                            "topRow": 0,
+                                            "bottomRow": 5,
+                                            "parentId": "46kvcu32ey",
+                                            "dynamicBindingPathList": [],
+                                            "dynamicTriggerPathList": [
+                                                {
+                                                    "key": "onClick"
+                                                }
+                                            ],
+                                            "borderRadius": "ROUNDED",
+                                            "boxShadow": "VARIANT2",
+                                            "iconName": "star-empty",
+                                            "iconAlign": "left",
+                                            "onClick": "{{navigateTo('Subscription', {})}}"
+                                        },
+                                        {
+                                            "isVisible": true,
+                                            "text": "<span style=\"font-size:12px\">© 2022 - 2024 UBOS™.</span>",
+                                            "fontSize": "PARAGRAPH2",
+                                            "fontStyle": "BOLD",
+                                            "textAlign": "CENTER",
+                                            "textColor": "#231F20",
+                                            "truncateButtonColor": "#FFC13D",
+                                            "widgetName": "Text57",
+                                            "shouldTruncate": false,
+                                            "overflow": "NONE",
+                                            "version": 1,
+                                            "animateLoading": true,
+                                            "type": "TEXT_WIDGET",
+                                            "hideCard": false,
+                                            "displayName": "Text",
+                                            "key": "s8ou5m2957",
+                                            "iconSVG": "/static/media/icon.97c59b52.svg",
+                                            "widgetId": "cd17j8pgk7",
+                                            "renderMode": "CANVAS",
+                                            "isLoading": false,
+                                            "parentColumnSpace": 0.9822845458984375,
+                                            "parentRowSpace": 10,
+                                            "leftColumn": 2,
+                                            "rightColumn": 64,
+                                            "topRow": 5,
+                                            "bottomRow": 10,
+                                            "parentId": "46kvcu32ey",
+                                            "dynamicBindingPathList": [],
+                                            "dynamicTriggerPathList": [],
+                                            "dynamicPropertyPathList": [],
+                                            "classStyle": "brandText"
+                                        }
+                                    ],
+                                    "minHeight": 400,
+                                    "widgetId": "46kvcu32ey",
+                                    "renderMode": "CANVAS",
+                                    "isLoading": false,
+                                    "parentColumnSpace": 1,
+                                    "parentRowSpace": 1,
+                                    "leftColumn": 0,
+                                    "rightColumn": 285.375,
+                                    "topRow": 0,
+                                    "bottomRow": 390,
+                                    "parentId": "yxts4gclya"
+                                }
+                            ],
+                            "version": 1,
+                            "classStyle": "upgradeMenuContainer",
+                            "type": "CONTAINER_WIDGET",
+                            "hideCard": false,
+                            "displayName": "Container",
+                            "key": "b7k20or8h0",
+                            "iconSVG": "/static/media/icon.1977dca3.svg",
+                            "isCanvas": true,
+                            "widgetId": "yxts4gclya",
+                            "renderMode": "CANVAS",
+                            "isLoading": false,
+                            "parentColumnSpace": 11.890625,
+                            "parentRowSpace": 10,
+                            "leftColumn": 1,
+                            "rightColumn": 61,
+                            "topRow": 58,
+                            "bottomRow": 70,
+                            "parentId": "p71ikl65rn",
+                            "dynamicBindingPathList": [
+                                {
+                                    "key": "isVisible"
+                                }
+                            ],
+                            "dynamicTriggerPathList": [],
+                            "dynamicPropertyPathList": [
+                                {
+                                    "key": "isVisible"
+                                }
+                            ]
                         }
                     ],
                     "minHeight": 400,
@@ -315,7 +455,7 @@
                     "leftColumn": 0,
                     "rightColumn": 557.625,
                     "topRow": 0,
-                    "bottomRow": 680,
+                    "bottomRow": 720,
                     "parentId": "fwf1s0p5xr"
                 }
             ],
