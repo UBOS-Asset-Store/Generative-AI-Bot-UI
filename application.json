@@ -124,6 +124,10 @@
         {
             "_id": "Bot Setup",
             "isDefault": false
+        },
+        {
+            "_id": "Book a call",
+            "isDefault": false
         }
     ],
     "policies": [
