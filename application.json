@@ -760,7 +760,7 @@
                         },
                         {
                             "isVisible": "{{main.user.auth_module.user.daysLeft ? true : false}}",
-                            "text": "{{main.user.auth_module.user.trialEnded ? main.user.auth_module.user.translation.subscription.expiredTrial \n    : `${main.user.auth_module.user.translation.subscription.freeTrial} ${main.user.auth_module.user.daysLeft} ${main.user.auth_module.user.translation.subscription.days}\n    ${main.user.auth_module.user.translation.subscription.please} \n\n${main.user.auth_module.user.translation.subscription.upgrade}`\n\n}} <a>{{main.user.auth_module.user.translation.subscription.up}}</a> \n",
+                            "text": "{{main.user.auth_module.user.trialEnded ? main.user.auth_module.user.translation.subscription.expiredTrial+'.' \n    : `${main.user.auth_module.user.translation.subscription.freeTrial} ${main.user.auth_module.user.daysLeft} ${main.user.auth_module.user.translation.subscription.days}.`\n\n}} <a>{{main.user.auth_module.user.translation.subscription.up}}.</a> \n",
                             "fontSize": "HEADING3",
                             "fontStyle": "",
                             "textAlign": "CENTER",
@@ -782,9 +782,9 @@
                             "parentColumnSpace": 13.234375,
                             "parentRowSpace": 10,
                             "leftColumn": 12,
-                            "rightColumn": 44,
-                            "topRow": 1,
-                            "bottomRow": 5,
+                            "rightColumn": 46,
+                            "topRow": 0,
+                            "bottomRow": 6,
                             "parentId": "b8feb4cpvv",
                             "dynamicBindingPathList": [
                                 {
@@ -891,7 +891,7 @@
                             "isLoading": false,
                             "parentColumnSpace": 13.234375,
                             "parentRowSpace": 10,
-                            "leftColumn": 44,
+                            "leftColumn": 46,
                             "rightColumn": 60,
                             "topRow": 1,
                             "bottomRow": 5,
