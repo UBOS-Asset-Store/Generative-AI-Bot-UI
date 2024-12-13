@@ -6246,7 +6246,7 @@
                 "messages": []
             },
             "executeOnLoad": false,
-            "pageId": "User Chats",
+            "pageId": "User Chats2",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
                 "encodeParamsToggle": true,
@@ -8664,7 +8664,7 @@
     },
     {
         "name": "myFun1",
-        "pageId": "User Chats",
+        "pageId": "User Chats2",
         "executeOnLoad": false,
         "actionConfiguration": {
             "body": "() => {\n\t\t//write code here\n\t}",
@@ -8702,7 +8702,7 @@
     },
     {
         "name": "myFun2",
-        "pageId": "User Chats",
+        "pageId": "User Chats2",
         "executeOnLoad": false,
         "actionConfiguration": {
             "body": "async () => {\nstoreValue(\"tab\",\"Telegram\")\n\t}",
@@ -12132,7 +12132,7 @@
                 "messages": []
             },
             "executeOnLoad": true,
-            "pageId": "User Chats",
+            "pageId": "User Chats2",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
                 "encodeParamsToggle": true,
@@ -14061,7 +14061,7 @@
                 "messages": []
             },
             "executeOnLoad": false,
-            "pageId": "User Chats",
+            "pageId": "User Chats2",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
                 "encodeParamsToggle": true,
@@ -15412,7 +15412,7 @@
                 "messages": []
             },
             "executeOnLoad": false,
-            "pageId": "User Chats",
+            "pageId": "User Chats2",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
                 "encodeParamsToggle": true,
@@ -25028,7 +25028,7 @@
                 "messages": []
             },
             "executeOnLoad": false,
-            "pageId": "User Chats",
+            "pageId": "User Chats2",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
                 "encodeParamsToggle": true,
@@ -28610,7 +28610,7 @@
                     }
                 ],
                 "queryParameters": [],
-                "body": "{\n\t\"name\": \"{{website_name.text}}\",\n\t\"url\": \"{{website_url.text}}\",\n\t\"base\": \"{{knowledge_base_chawoot.selectedOptionValue}}\",\n\t\"ownerId\":{{JSON.stringify(main.user.auth_module.user.info.user._id)}},\n\t\"email\": {{JSON.stringify(main.user.auth_module.user.info.user.email)}},\n\t\"knowledge_baseName\":{{JSON.stringify(knowledge_base_chawoot.selectedOptionLabel)}},\n\t\"knowledge_baseType\":{{JSON.stringify(chatwoot_type.text)}},\n\t\"id_base\":{{JSON.stringify(knowledge_base_chawoot.selectedOptionValue)}}\n}",
+                "body": "{\n\t\"name\": \"{{website_name3.text}}\",\n\t\"url\": \"{{website_url3.text}}\",\n\t\"base\": \"{{knowledge_base_chawoot23.selectedOptionValue}}\",\n\t\"ownerId\":{{JSON.stringify(main.user.auth_module.user.info.user._id)}},\n\t\"email\": {{JSON.stringify(main.user.auth_module.user.info.user.email)}},\n\t\"knowledge_baseName\":{{JSON.stringify(knowledge_base_chawoot23.selectedOptionLabel)}},\n\t\"knowledge_baseType\":{{JSON.stringify(chatwoot_type.text)}},\n\t\"id_base\":{{JSON.stringify(knowledge_base_chawoot23.selectedOptionValue)}}\n}",
                 "bodyFormData": [],
                 "formData": {
                     "apiContentType": "none"
@@ -28633,21 +28633,20 @@
             "invalids": [],
             "jsonPathKeys": [
                 "main.env.nodeUrl",
-                "website_name.text",
-                "website_url.text",
-                "knowledge_base_chawoot.selectedOptionValue",
+                "website_name3.text",
+                "website_url3.text",
+                "knowledge_base_chawoot23.selectedOptionValue",
                 "JSON.stringify(main.user.auth_module.user.info.user._id)",
                 "JSON.stringify(main.user.auth_module.user.info.user.email)",
-                "JSON.stringify(knowledge_base_chawoot.selectedOptionLabel)",
+                "JSON.stringify(knowledge_base_chawoot23.selectedOptionLabel)",
                 "JSON.stringify(chatwoot_type.text)",
-                "JSON.stringify(knowledge_base_chawoot22.selectedOptionValue)",
-                "JSON.stringify(knowledge_base_chawoot.selectedOptionValue)"
+                "JSON.stringify(knowledge_base_chawoot23.selectedOptionValue)"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-12-03T10:01:45.115Z",
-        "updatedAt": "2024-12-06T07:52:39.291Z",
+        "updatedAt": "2024-12-12T14:34:48.919Z",
         "deleted": false,
         "policies": [
             {
@@ -29092,6 +29091,476 @@
         },
         "createdAt": "2024-12-06T12:15:05.474Z",
         "updatedAt": "2024-12-06T12:21:11.274Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "675af9fa6f8101b0cfc9387f",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "getUsers",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/getUsersChat"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "User Chats",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "GET",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [
+                    {
+                        "key": "ownerId",
+                        "value": "{{main.user.auth_module.user.info.user._id}}"
+                    }
+                ],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "application/json"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ],
+                "path": ""
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "datasourceUrl"
+                },
+                {
+                    "key": "path"
+                },
+                {
+                    "key": "queryParameters[0].value"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "main.user.auth_module.user.info.user._id"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-12-12T14:58:02.179Z",
+        "updatedAt": "2024-12-12T14:58:02.179Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "675af9fa6f8101b0cfc93880",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "getMenu",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/getMenu"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": true,
+            "pageId": "User Chats",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "GET",
+                "headers": [],
+                "queryParameters": [
+                    {
+                        "key": "lang",
+                        "value": "{{main.store.lg}}"
+                    }
+                ],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ],
+                "path": ""
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "datasourceUrl"
+                },
+                {
+                    "key": "queryParameters[0].value"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "main.store.lg",
+                "main.env.nodeUrl,2024-12-12T14:58:02.183Z,2024-12-12T14:58:02.183Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-12-12T14:58:02.183Z",
+        "updatedAt": "2024-12-12T16:18:33.937Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "675af9fa6f8101b0cfc93881",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "change_lang",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/check_token2"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "User Chats",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "POST",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "body": "{\n\"lang\":{{JSON.stringify(main.store.lg)}}\n}",
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ]
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "body"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "JSON.stringify(main.store.lg)"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-12-12T14:58:02.183Z",
+        "updatedAt": "2024-12-12T14:58:02.183Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "675af9fa6f8101b0cfc93882",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "askSupport",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/supportRequest"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "User Chats",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "POST",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ],
+                "body": "{\n\t\"email\":{{JSON.stringify(support_user_email_input.text)}},\n\t\"message\":{{JSON.stringify(support_user_question_input.text)}}\n}"
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "body"
+                },
+                {
+                    "key": "datasourceUrl"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "JSON.stringify(support_user_email_input.text)",
+                "JSON.stringify(supportName2.text)",
+                "JSON.stringify(support_user_question_input.text)"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-12-12T14:58:02.183Z",
+        "updatedAt": "2024-12-12T14:58:02.183Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "name": "myFun1",
+        "pageId": "User Chats",
+        "executeOnLoad": false,
+        "actionConfiguration": {
+            "body": "() => {\n\t\t//write code here\n\t}",
+            "isAsync": false,
+            "timeoutInMillisecond": 10000,
+            "jsArguments": [],
+            "paginationType": "NONE",
+            "encodeParamsToggle": true
+        },
+        "clientSideExecution": true,
+        "_id": "675af9fa6f8101b0cfc93885",
+        "id": "675af9fa6f8101b0cfc93885",
+        "collectionId": "675af9fa6f8101b0cfc93884",
+        "confirmBeforeExecute": false,
+        "applicationId": "jetsondashboard",
+        "datasource": {
+            "isValid": true,
+            "messages": [],
+            "name": "UNUSED_DATASOURCE",
+            "new": true,
+            "pluginId": "",
+            "userPermissions": []
+        },
+        "dynamicBindingPathList": [
+            {
+                "key": "body"
+            }
+        ],
+        "fullyQualifiedName": "JSObject1.myFun1",
+        "isValid": true,
+        "jsonPathKeys": [
+            "() => {\n\t\t//write code here\n\t}"
+        ],
+        "pluginType": "JS"
+    },
+    {
+        "name": "myFun2",
+        "pageId": "User Chats",
+        "executeOnLoad": true,
+        "actionConfiguration": {
+            "body": "async () => {\n    getSSO.run(()=> {{navigateTo(getSSO.data, {},'NEW_WINDOW')}})\n\t}",
+            "isAsync": true,
+            "timeoutInMillisecond": 10000,
+            "jsArguments": [],
+            "paginationType": "NONE",
+            "encodeParamsToggle": true
+        },
+        "clientSideExecution": true,
+        "_id": "675af9fa6f8101b0cfc93886",
+        "id": "675af9fa6f8101b0cfc93886",
+        "collectionId": "675af9fa6f8101b0cfc93884",
+        "confirmBeforeExecute": false,
+        "applicationId": "jetsondashboard",
+        "datasource": {
+            "isValid": true,
+            "messages": [],
+            "name": "UNUSED_DATASOURCE",
+            "new": true,
+            "pluginId": "",
+            "userPermissions": []
+        },
+        "dynamicBindingPathList": [
+            {
+                "key": "body"
+            }
+        ],
+        "fullyQualifiedName": "JSObject1.myFun2",
+        "isValid": true,
+        "jsonPathKeys": [
+            "async () => {\n\t\t//use async-await or promises\n\t}"
+        ],
+        "pluginType": "JS"
+    },
+    {
+        "_id": "675b0cde6f8101b0cfc93887",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "getSSO",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/getSSOLinkForDashboard"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "User Chats",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "GET",
+                "headers": [],
+                "queryParameters": [],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ]
+            },
+            "dynamicBindingPathList": [],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-12-12T16:18:38.683Z",
+        "updatedAt": "2024-12-12T16:18:53.942Z",
         "deleted": false,
         "policies": [
             {

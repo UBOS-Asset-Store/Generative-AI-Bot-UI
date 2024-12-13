@@ -50,7 +50,7 @@
             "isDefault": false
         },
         {
-            "_id": "User Chats",
+            "_id": "User Chats2",
             "isDefault": false
         },
         {
@@ -127,6 +127,10 @@
         },
         {
             "_id": "Book a call",
+            "isDefault": false
+        },
+        {
+            "_id": "User Chats",
             "isDefault": false
         }
     ],
@@ -964,7 +968,7 @@
             "leftColumn": 7,
             "rightColumn": 64,
             "topRow": 0,
-            "bottomRow": 9,
+            "bottomRow": 7,
             "parentId": "0",
             "dynamicBindingPathList": [],
             "dynamicTriggerPathList": [],
