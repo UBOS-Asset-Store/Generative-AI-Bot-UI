@@ -2099,7 +2099,7 @@
         "id": "675af9fa6f8101b0cfc93884",
         "name": "JSObject1",
         "pageId": "User Chats",
-        "body": "export default {\n\tmyVar1: [],\n\tmyVar2: {},\n\tmyFun1: () => {\n\t\t//write code here\n\t},\n\tmyFun2: async () => {\n    getSSO.run(()=> {{navigateTo(getSSO.data, {},'NEW_WINDOW')}})\n\t}\n}",
+        "body": "export default {\n\tmyVar1: [],\n\tmyVar2: {},\n\tmyFun1: () => {\n\t\t//write code here\n\t},\n\tmyFun2: async () => {\n\t\t// ()=> {{navigateTo(getSSO.data, {},'NEW_WINDOW')}}\n    getSSO.run()\n\t}\n}",
         "variables": [
             {
                 "name": "myVar1",
@@ -2154,7 +2154,7 @@
                 "pageId": "User Chats",
                 "executeOnLoad": true,
                 "actionConfiguration": {
-                    "body": "async () => {\n    getSSO.run(()=> {{navigateTo(getSSO.data, {},'NEW_WINDOW')}})\n\t}",
+                    "body": "async () => {\n\t\t// ()=> {{navigateTo(getSSO.data, {},'NEW_WINDOW')}}\n    getSSO.run()\n\t}",
                     "isAsync": true,
                     "timeoutInMillisecond": 10000,
                     "jsArguments": [],

@@ -6,7 +6,7 @@
     "isPublic": true,
     "isShowPlatformTag": false,
     "createdAt": "2023-03-02T13:50:57.853Z",
-    "updatedAt": "2024-12-09T13:16:27.599Z",
+    "updatedAt": "2024-12-18T17:18:31.090Z",
     "deleted": false,
     "pages": [
         {
@@ -160,7 +160,7 @@
         "favicon": "",
         "title": "AI Chatbot",
         "css": "${env.get(\"nodeUrl\")}/css",
-        "customScript": "<script>     window.chatwootSettings = {       hideMessageBubble: false,       position: \"right\",       locale: \"en\",       type: \"standart\",     };     (function (d, t) {       var BASE_URL = \"https://chatwoot-2438-671620977218781100000035.ubosaibotprod.ubos.tech\";       var g = d.createElement(t), s = d.getElementsByTagName(t)[0];       g.src = BASE_URL + \"/packs/js/sdk.js\";       g.defer = true;       g.async = true;       s.parentNode.insertBefore(g, s);       g.onload = function () {         window.chatwootSDK.run({           websiteToken: 'WMT3HuhXRKhwpX1s8ok5HGiQ',           baseUrl: BASE_URL         })       }     })(document, \"script\");   </script>"
+        "customScript": "<script>     window.chatwootSettings = {      hideMessageBubble: false,       position: \"right\",       locale: \"en\",     type: \"expanded_bubble\",      launcherTitle: \"Chat with us now!\",  };     (function (d, t) {       var BASE_URL = \"https://chatwoot-2438-671620977218781100000035.ubosaibotprod.ubos.tech\";       var g = d.createElement(t), s = d.getElementsByTagName(t)[0];       g.src = BASE_URL + \"/packs/js/sdk.js\";       g.defer = true;       g.async = true;       s.parentNode.insertBefore(g, s);       g.onload = function () {         window.chatwootSDK.run({           websiteToken: 'WMT3HuhXRKhwpX1s8ok5HGiQ',           baseUrl: BASE_URL         })       }     })(document, \"script\");   </script>"
     },
     "lastDeployedAt": "2022-10-19T15:59:36.363Z",
     "is_custom_auth": true,
@@ -378,7 +378,7 @@
                                         },
                                         {
                                             "isVisible": true,
-                                            "text": "<span style=\"font-size:12px\">© 2022 - 2024 UBOS™.</span>",
+                                            "text": "<span style=\"font-size:12px\">© 2022 - 2024 UBOS</span>",
                                             "fontSize": "PARAGRAPH2",
                                             "fontStyle": "BOLD",
                                             "textAlign": "CENTER",

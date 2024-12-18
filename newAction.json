@@ -22943,7 +22943,7 @@
                     }
                 ],
                 "queryParameters": [],
-                "body": "{\n\t\"email\":{{JSON.stringify(nameSupp.text)}},\n\t\"name\": {{JSON.stringify(nameSupp.text)}},\n\t\"message\":{{JSON.stringify(messageSupport.text)}}\n}",
+                "body": "{\n\t\"email\":{{JSON.stringify(emailSupp.text)}},\n\t\"message\":{{JSON.stringify(messageSupport.text)}}\n}",
                 "bodyFormData": [],
                 "formData": {
                     "apiContentType": "none"
@@ -22966,15 +22966,16 @@
             "invalids": [],
             "jsonPathKeys": [
                 "main.env.nodeUrl",
-                "JSON.stringify(nameSupp.text)",
+                "JSON.stringify(e.text)",
                 "JSON.stringify(messageSupport.text)",
-                "main.env.nodeUrl,JSON.stringify(messageSupport.text),2024-07-17T06:51:26.156Z,2024-11-06T14:22:05.878Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2024-07-17T06:51:26.156Z,2024-11-06T14:23:32.256Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2024-07-17T06:51:26.156Z,2024-11-06T14:23:48.190Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2024-07-17T06:51:26.156Z,2024-11-06T16:26:20.189Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl"
+                "main.env.nodeUrl,2024-07-17T06:51:26.156Z,2024-11-06T16:26:21.269Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2024-07-17T06:51:26.156Z,2024-12-16T10:28:16.996Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2024-07-17T06:51:26.156Z,2024-12-16T10:28:22.853Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,JSON.stringify(e.text),2024-07-17T06:51:26.156Z,2024-12-16T10:28:24.554Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl",
+                "JSON.stringify(emailSupp.text)"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-07-17T06:51:26.156Z",
-        "updatedAt": "2024-11-06T16:26:21.269Z",
+        "updatedAt": "2024-12-16T10:28:25.353Z",
         "deleted": false,
         "policies": [
             {
@@ -27503,7 +27504,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-11-22T10:01:07.831Z",
-        "updatedAt": "2024-12-10T12:31:49.625Z",
+        "updatedAt": "2024-12-17T10:30:21.485Z",
         "deleted": false,
         "policies": [
             {
@@ -29481,7 +29482,7 @@
         "pageId": "User Chats",
         "executeOnLoad": true,
         "actionConfiguration": {
-            "body": "async () => {\n    getSSO.run(()=> {{navigateTo(getSSO.data, {},'NEW_WINDOW')}})\n\t}",
+            "body": "async () => {\n\t\t// ()=> {{navigateTo(getSSO.data, {},'NEW_WINDOW')}}\n    getSSO.run()\n\t}",
             "isAsync": true,
             "timeoutInMillisecond": 10000,
             "jsArguments": [],
