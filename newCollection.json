@@ -1721,7 +1721,7 @@
         "id": "673db8c7996ddc6e181d7a98",
         "name": "JSObject2",
         "pageId": "Training",
-        "body": "export default {\n\tmyVar1: [],\n\tmyVar2: {},\n\tmyFun2: async (id) => {\n await storeValue('idToDeleteOb', id)\n await deleteObject.run()\n\tgetKnowlegeFiles.run()\n\t},\n\tdbCreate: async () => {\n\tawait\tcreateNewBase.run(()=>getAllBases.run(()=> getKnowlegeFiles.run()) )\n    closeModal(\"Modal9\");\n    getIDbase.run();\n\t},\n\tmyFun3: async() => {\n\t\tawait getAllBases.run().then(()=>{\n\t\t\tgetKnowlegeFiles.run()\n\t\t\tgetPromts.run()\n\t\t})\t \n\t},\n\tmyFun4: (i,cl) => {\n\t\tstoreValue(i, cl, false)\n\t},\n\tmyFun5: () => {\n\t\tstoreValue('fileName','MyCompanyInformation' )\n\t},\n}",
+        "body": "export default {\n\tmyVar1: [],\n\tmyVar2: {},\n\tmyFun2: async (id) => {\n await storeValue('idToDeleteOb', id)\n await deleteObject.run()\n\tgetKnowlegeFiles.run()\n\t},\n\tdbCreate: async () => {\n\tawait\tcreateNewBase.run(()=>getAllBases.run(()=> getKnowlegeFiles.run()) )\n    closeModal(\"Modal9\");\n    getIDbase.run();\n\t},\n\tmyFun3: async() => {\n\t\tawait getAllBases.run().then(()=>{\n\t\t\tgetKnowlegeFiles.run()\n\t\t\tgetPromts.run()\n\t\t})\t \n\t},\n\tmyFun4: (i,cl) => {\n\t\tstoreValue(i, cl, false)\n\t},\n\tmyFun5: () => {\n\t\tstoreValue('fileName','MyCompanyInformation' )\n\t},\n\t\n}",
         "variables": [
             {
                 "name": "myVar1",
