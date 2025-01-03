@@ -2195,5 +2195,53 @@
         "actionIds": [],
         "archivedActionIds": [],
         "archivedActions": []
+    },
+    {
+        "id": "6777bacb6f8101b0cfc9388a",
+        "name": "JSObject3",
+        "pageId": "Training",
+        "body": "export default {\n    showAlert:()=> {\n   \t\tcloseModal('Modal12'),\n\t\t\tgetKnowlegeFiles.run(),\n\t\t\tshowAlert(Iframe1.message.text, Iframe1.message.status)\n\t\tconsole.log(Iframe1.message.status)\n\t\t}\n}\n",
+        "variables": [],
+        "actions": [
+            {
+                "name": "showAlert",
+                "collectionId": "6777bacb6f8101b0cfc9388a",
+                "executeOnLoad": false,
+                "pageId": "Training",
+                "actionConfiguration": {
+                    "body": "()=> {\n   \t\tcloseModal('Modal12'),\n\t\t\tgetKnowlegeFiles.run(),\n\t\t\tshowAlert(Iframe1.message.text, Iframe1.message.status)\n\t\tconsole.log(Iframe1.message.status)\n\t\t}",
+                    "isAsync": true,
+                    "timeoutInMillisecond": 10000,
+                    "jsArguments": [],
+                    "paginationType": "NONE",
+                    "encodeParamsToggle": true
+                },
+                "_id": "6777bace6f8101b0cfc9388e",
+                "id": "6777bace6f8101b0cfc9388e",
+                "applicationId": "jetsondashboard",
+                "datasource": {
+                    "isValid": true,
+                    "messages": [],
+                    "name": "UNUSED_DATASOURCE",
+                    "new": true,
+                    "pluginId": "",
+                    "userPermissions": []
+                },
+                "dynamicBindingPathList": [
+                    {
+                        "key": "body"
+                    }
+                ],
+                "fullyQualifiedName": "JSObject3.showAlert",
+                "isValid": true,
+                "jsonPathKeys": [
+                    "showAlert(data) {\n        if(data.status === 'success') {\n            showAlert(data.text, 'success');\n        } else if(data.status === 'warning') {\n            showAlert(data.text, 'warning');\n        } else {\n            showAlert(data.text, 'error');\n        }\n    }"
+                ],
+                "pluginType": "JS"
+            }
+        ],
+        "applicationId": "jetsondashboard",
+        "pluginType": "JS",
+        "_id": "6777bacb6f8101b0cfc9388a"
     }
 ]
