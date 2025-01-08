@@ -25538,7 +25538,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-11-20T10:24:07.139Z",
-        "updatedAt": "2024-11-20T10:24:07.139Z",
+        "updatedAt": "2025-01-03T13:53:28.381Z",
         "deleted": false,
         "policies": [
             {
@@ -25640,7 +25640,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-11-20T10:24:07.139Z",
-        "updatedAt": "2024-12-20T09:48:41.443Z",
+        "updatedAt": "2025-01-03T14:08:12.741Z",
         "deleted": false,
         "policies": [
             {
@@ -25906,7 +25906,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-11-20T10:24:07.141Z",
-        "updatedAt": "2024-12-03T15:06:29.211Z",
+        "updatedAt": "2025-01-03T12:22:17.190Z",
         "deleted": false,
         "policies": [
             {
@@ -26491,7 +26491,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-11-20T10:24:07.143Z",
-        "updatedAt": "2024-12-04T08:55:16.913Z",
+        "updatedAt": "2025-01-03T12:22:15.319Z",
         "deleted": false,
         "policies": [
             {
@@ -27412,14 +27412,13 @@
                 "JSON.stringify(split_rule_link.selectedOptionValue)",
                 "JSON.stringify(separator_select_link.selectedOptionValue)",
                 "JSON.stringify(Max_Tokens__Link.text)",
-                "main.user.auth_module.user.info.user._id",
                 "dbSelect.selectedOptionValue"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-11-22T09:08:41.184Z",
-        "updatedAt": "2024-11-27T13:30:55.489Z",
+        "updatedAt": "2025-01-03T14:13:30.231Z",
         "deleted": false,
         "policies": [
             {
@@ -29757,5 +29756,88 @@
             "showAlert(data) {\n        if(data.status === 'success') {\n            showAlert(data.text, 'success');\n        } else if(data.status === 'warning') {\n            showAlert(data.text, 'warning');\n        } else {\n            showAlert(data.text, 'error');\n        }\n    }"
         ],
         "pluginType": "JS"
+    },
+    {
+        "_id": "6777eb366f8101b0cfc9388f",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "refreshFile",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/refreshFile"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "Training",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "POST",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "body": "{\n\t\"id\":\"{{Table6.selectedRow._id}}\",\n\t\"splitRule\":{{JSON.stringify(split_rule_refresh.selectedOptionValue)}},\n\t\"separator\":{{JSON.stringify(separator_select_refresh.selectedOptionValue)}},\n\t\"token\":{{JSON.stringify(Max_Tokens_Refresh.text)}}\n}",
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ]
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "datasourceUrl"
+                },
+                {
+                    "key": "body"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "Table6.selectedRow._id",
+                "JSON.stringify(split_rule_refresh.selectedOptionValue)",
+                "JSON.stringify(separator_select_refresh.selectedOptionValue)",
+                "JSON.stringify(Max_Tokens_Refresh.text)"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2025-01-03T13:50:46.168Z",
+        "updatedAt": "2025-01-03T13:54:11.045Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
     }
 ]
