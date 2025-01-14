@@ -30058,7 +30058,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2025-01-09T15:29:32.971Z",
-        "updatedAt": "2025-01-09T16:18:04.730Z",
+        "updatedAt": "2025-01-14T09:08:16.729Z",
         "deleted": false,
         "policies": [
             {
@@ -30141,7 +30141,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2025-01-09T15:39:15.489Z",
-        "updatedAt": "2025-01-09T16:18:07.409Z",
+        "updatedAt": "2025-01-14T08:49:09.427Z",
         "deleted": false,
         "policies": [
             {
@@ -30208,10 +30208,10 @@
                     "key": "datasourceUrl"
                 },
                 {
-                    "key": "queryParameters[0].value"
+                    "key": "path"
                 },
                 {
-                    "key": "path"
+                    "key": "queryParameters[0].value"
                 }
             ],
             "isValid": true,
@@ -30224,7 +30224,87 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2025-01-09T16:15:01.498Z",
-        "updatedAt": "2025-01-09T16:22:26.106Z",
+        "updatedAt": "2025-01-14T08:48:59.251Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "678629016f8101b0cfc9389a",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "disconectTinny",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/disconectTiny"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "Agent",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "POST",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "body": "{\n\t\"ownerId\":{{JSON.stringify(main.user.auth_module.user.info.user._id)}}\n}",
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ]
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "datasourceUrl"
+                },
+                {
+                    "key": "body"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "JSON.stringify(main.user.auth_module.user.info.user._id)"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2025-01-14T09:06:09.272Z",
+        "updatedAt": "2025-01-14T09:16:52.285Z",
         "deleted": false,
         "policies": [
             {

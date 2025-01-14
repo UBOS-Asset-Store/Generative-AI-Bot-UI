@@ -6,7 +6,7 @@
     "isPublic": true,
     "isShowPlatformTag": false,
     "createdAt": "2023-03-02T13:50:57.853Z",
-    "updatedAt": "2025-01-09T16:12:28.667Z",
+    "updatedAt": "2025-01-14T12:17:39.232Z",
     "deleted": false,
     "pages": [
         {
@@ -164,7 +164,7 @@
         "favicon": "",
         "title": "AI Chatbot",
         "css": "${env.get(\"nodeUrl\")}/css",
-        "customScript": "<script src=\"https://apis.google.com/js/api.js\"></script><script>     window.chatwootSettings = {       hideMessageBubble: false,       position: \"right\",       locale: \"en\",       type: \"expanded_bubble\",       launcherTitle: \"Chat with us now!\"     };        (function(d, t) {       var BASE_URL = \"https://uboschat-6825-674858decc7268110000013e.chatwoot-prod.ubos.tech\";       var g = d.createElement(t), s = d.getElementsByTagName(t)[0];       g.src = BASE_URL + \"/packs/js/sdk.js\";       g.defer = true;       g.async = true;       s.parentNode.insertBefore(g, s);              g.onload = function() {         if (window.chatwootSDK) {           window.chatwootSDK.run({             websiteToken: 'FHKsyR2mCEJF4V4Vzp5Zs6YM',             baseUrl: BASE_URL           });         } else {           console.error('chatwootSDK is not available.');         }       };          g.onerror = function() {         console.error('Failed to load the Chatwoot SDK.');       };     })(document, \"script\");   </script>"
+        "customScript": "<script src=\"https://apis.google.com/js/api.js\"></script><script>     window.chatwootSettings = {       hideMessageBubble: false,       position: \"right\",       locale: \"en\",           };        (function(d, t) {       var BASE_URL = \"https://uboschat-6825-674858decc7268110000013e.chatwoot-prod.ubos.tech\";       var g = d.createElement(t), s = d.getElementsByTagName(t)[0];       g.src = BASE_URL + \"/packs/js/sdk.js\";       g.defer = true;       g.async = true;       s.parentNode.insertBefore(g, s);              g.onload = function() {         if (window.chatwootSDK) {           window.chatwootSDK.run({             websiteToken: 'FHKsyR2mCEJF4V4Vzp5Zs6YM',             baseUrl: BASE_URL           });         } else {           console.error('chatwootSDK is not available.');         }       };          g.onerror = function() {         console.error('Failed to load the Chatwoot SDK.');       };     })(document, \"script\");   </script>"
     },
     "lastDeployedAt": "2022-10-19T15:59:36.363Z",
     "is_custom_auth": true,
