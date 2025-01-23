@@ -22776,7 +22776,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-07-16T13:16:23.360Z",
-        "updatedAt": "2024-11-08T10:16:50.934Z",
+        "updatedAt": "2025-01-17T14:53:35.553Z",
         "deleted": false,
         "policies": [
             {
@@ -23330,7 +23330,7 @@
                     }
                 ],
                 "queryParameters": [],
-                "body": "{\n\t\"description\": {{JSON.stringify(Input1.text)}},\n\t\"_id\": \"{{main.user.auth_module.user.info.user._id}}\",\n\t\"email\": \"{{main.user.auth_module.user.info.user.email}}\"\n}",
+                "body": "{\n\t\"description\": {{JSON.stringify(Input1.text)}},\n\t\"_id\": \"{{main.user.auth_module.user.info.user._id}}\",\n\t\"email\": \"{{main.user.auth_module.user.info.user.email}}\",\n\t\"subscriptionId\":\"{{main.user.auth_module.user.info.user.subscriptionId}}\"\n}",
                 "bodyFormData": [],
                 "formData": {
                     "apiContentType": "none"
@@ -23355,13 +23355,14 @@
                 "main.env.nodeUrl",
                 "JSON.stringify(Input1.text)",
                 "main.user.auth_module.user.info.user._id",
-                "main.user.auth_module.user.info.user.email"
+                "main.user.auth_module.user.info.user.email",
+                "main.user.auth_module.user.info.user.subscriptionId"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-07-18T13:12:23.790Z",
-        "updatedAt": "2024-11-05T17:49:25.315Z",
+        "updatedAt": "2025-01-17T15:24:28.942Z",
         "deleted": false,
         "policies": [
             {
@@ -24582,7 +24583,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-11-08T10:18:05.772Z",
-        "updatedAt": "2024-11-08T11:06:35.801Z",
+        "updatedAt": "2025-01-17T14:54:31.256Z",
         "deleted": false,
         "policies": [
             {
@@ -24648,14 +24649,14 @@
             "isValid": true,
             "invalids": [],
             "jsonPathKeys": [
-                "main.user.auth_module.user.info.user.email",
-                "main.env.nodeUrl"
+                "main.env.nodeUrl",
+                "main.user.auth_module.user.info.user.email"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-11-08T10:18:43.769Z",
-        "updatedAt": "2024-11-08T10:18:59.238Z",
+        "updatedAt": "2025-01-17T14:53:34.047Z",
         "deleted": false,
         "policies": [
             {
@@ -24727,14 +24728,13 @@
             "jsonPathKeys": [
                 "main.env.nodeUrl",
                 "Text57.text",
-                "JSON.stringify(main.env.)",
                 "JSON.stringify(main.env.uiUrl)"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-11-08T10:48:35.585Z",
-        "updatedAt": "2024-11-08T11:06:28.125Z",
+        "updatedAt": "2025-01-17T14:55:07.319Z",
         "deleted": false,
         "policies": [
             {
@@ -28089,7 +28089,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-12-03T10:01:45.114Z",
-        "updatedAt": "2025-01-14T14:22:32.469Z",
+        "updatedAt": "2025-01-14T14:25:26.509Z",
         "deleted": false,
         "policies": [
             {
@@ -29968,15 +29968,14 @@
             "invalids": [],
             "jsonPathKeys": [
                 "main.env.nodeUrl",
-                "tinyToken.",
-                "JSON.stringify(main.user.auth_module.user.info.user._id)",
-                "tinyToken.text"
+                "tinyToken.text",
+                "JSON.stringify(main.user.auth_module.user.info.user._id)"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2025-01-09T13:12:01.406Z",
-        "updatedAt": "2025-01-09T14:05:24.994Z",
+        "updatedAt": "2025-01-15T08:56:13.021Z",
         "deleted": false,
         "policies": [
             {
@@ -30036,7 +30035,7 @@
                         "value": true
                     }
                 ],
-                "body": "{\n\t\"action\": {{tinyaction.selectedOptionValues}},\n\t\"channels\": {{tinyintegration.selectedOptionValues}},\n\t\"ownerId\":{{JSON.stringify(main.user.auth_module.user.info.user._id)}}\n}"
+                "body": "{\n\t\"action\": {{jtaction.selectedOptionValues}},\n\t\"channels\": {{jtintegration.selectedOptionValues}},\n\t\"ownerId\":{{JSON.stringify(main.user.auth_module.user.info.user._id)}}\n}"
             },
             "dynamicBindingPathList": [
                 {
@@ -30050,15 +30049,16 @@
             "invalids": [],
             "jsonPathKeys": [
                 "main.env.nodeUrl",
-                "tinyaction.selectedOptionValues",
-                "tinyintegration.selectedOptionValues",
-                "JSON.stringify(main.user.auth_module.user.info.user._id)"
+                "jtaction.selectedOptionValues",
+                "j.selectedOptionValues",
+                "JSON.stringify(main.user.auth_module.user.info.user._id)",
+                "jtintegration.selectedOptionValues"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2025-01-09T15:29:32.971Z",
-        "updatedAt": "2025-01-14T09:08:16.729Z",
+        "updatedAt": "2025-01-16T13:04:27.433Z",
         "deleted": false,
         "policies": [
             {
@@ -30141,7 +30141,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2025-01-09T15:39:15.489Z",
-        "updatedAt": "2025-01-14T08:49:09.427Z",
+        "updatedAt": "2025-01-16T14:03:08.427Z",
         "deleted": false,
         "policies": [
             {
@@ -30305,6 +30305,319 @@
         },
         "createdAt": "2025-01-14T09:06:09.272Z",
         "updatedAt": "2025-01-14T09:16:52.285Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "678778076f8101b0cfc9389b",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "saveJTExpress",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/saveJTExpress"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "Bot Setup",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "POST",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "body": "{\n\t\"apiAccount\":\"{{apiAccountJT.text}}\",\n\t\"privateKey\":\"{{privateKeyJT.text}}\",\n\t\"customerNumber\":\"{{customerCodeJT.text}}\",\n\t\"password\": \"{{passwordJT.text}}\",\n\t\"ownerId\":{{JSON.stringify(main.user.auth_module.user.info.user._id)}}\n}",
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ]
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "datasourceUrl"
+                },
+                {
+                    "key": "body"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "apiAccountJT.text",
+                "privateKeyJT.text",
+                "customerCodeJT.text",
+                "passwordJT.text",
+                "JSON.stringify(main.user.auth_module.user.info.user._id)"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2025-01-15T08:55:35.297Z",
+        "updatedAt": "2025-01-16T11:00:17.026Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "678903926f8101b0cfc9389c",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "saveJTBrazilDeliveryManager",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/saveJTExpressBrazilDeliveryManager"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "Agent",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "POST",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "body": "{\n\t\"action\": {{jtaction.selectedOptionValues}},\n\t\"channels\": {{jtintegration.selectedOptionValues}},\n\t\"ownerId\":{{JSON.stringify(main.user.auth_module.user.info.user._id)}}\n}",
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ]
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "body"
+                },
+                {
+                    "key": "datasourceUrl"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "jtaction.selectedOptionValues",
+                "jtintegration.selectedOptionValues",
+                "JSON.stringify(main.user.auth_module.user.info.user._id)"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2025-01-16T13:03:14.281Z",
+        "updatedAt": "2025-01-16T14:03:13.074Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "679116876f8101b0cfc9389d",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "getTinyProductList",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/getTinyProductList"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "Agent",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "GET",
+                "headers": [],
+                "queryParameters": [],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ]
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "datasourceUrl"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2025-01-22T16:02:15.354Z",
+        "updatedAt": "2025-01-22T16:20:42.064Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "67921dd16f8101b0cfc9389e",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "loginAs",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "pluginId": "API"
+            },
+            "executeOnLoad": false,
+            "pageId": "User Management",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "GET",
+                "headers": [
+                    {
+                        "key": "",
+                        "value": ""
+                    },
+                    {
+                        "key": "",
+                        "value": ""
+                    }
+                ],
+                "queryParameters": [
+                    {
+                        "key": "",
+                        "value": ""
+                    },
+                    {
+                        "key": "",
+                        "value": ""
+                    }
+                ],
+                "body": "",
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ]
+            },
+            "dynamicBindingPathList": [],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2025-01-23T10:45:37.533Z",
+        "updatedAt": "2025-01-23T10:45:37.533Z",
         "deleted": false,
         "policies": [
             {
