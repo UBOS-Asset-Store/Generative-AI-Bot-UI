@@ -30570,7 +30570,13 @@
             "name": "loginAs",
             "datasource": {
                 "name": "DEFAULT_REST_DATASOURCE",
-                "pluginId": "API"
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/loginAs"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
             },
             "executeOnLoad": false,
             "pageId": "User Management",
@@ -30578,27 +30584,13 @@
                 "timeoutInMillisecond": 10000,
                 "encodeParamsToggle": true,
                 "httpMethod": "GET",
-                "headers": [
-                    {
-                        "key": "",
-                        "value": ""
-                    },
-                    {
-                        "key": "",
-                        "value": ""
-                    }
-                ],
+                "headers": [],
                 "queryParameters": [
                     {
-                        "key": "",
-                        "value": ""
-                    },
-                    {
-                        "key": "",
-                        "value": ""
+                        "key": "id",
+                        "value": "{{Table1.selectedRow._id}}"
                     }
                 ],
-                "body": "",
                 "bodyFormData": [],
                 "formData": {
                     "apiContentType": "none"
@@ -30609,15 +30601,26 @@
                     }
                 ]
             },
-            "dynamicBindingPathList": [],
+            "dynamicBindingPathList": [
+                {
+                    "key": "datasourceUrl"
+                },
+                {
+                    "key": "queryParameters[0].value"
+                }
+            ],
             "isValid": true,
             "invalids": [],
-            "jsonPathKeys": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "Table1.s",
+                "Table1.selectedRow._id"
+            ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2025-01-23T10:45:37.533Z",
-        "updatedAt": "2025-01-23T10:45:37.533Z",
+        "updatedAt": "2025-01-23T10:47:11.765Z",
         "deleted": false,
         "policies": [
             {

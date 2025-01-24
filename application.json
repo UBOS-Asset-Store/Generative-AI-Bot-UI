@@ -874,7 +874,7 @@
                                     "label": "Explore the Platform",
                                     "widgetId": "f4l86f8s9g",
                                     "isDisabled": false,
-                                    "isVisible": true,
+                                    "isVisible": false,
                                     "onClick": "{{navigateTo('https://platform.ubos.tech/', {},'NEW_WINDOW')}}",
                                     "iconName": "double-chevron-right",
                                     "iconAlign": "right"
