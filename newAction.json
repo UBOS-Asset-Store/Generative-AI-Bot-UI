@@ -687,7 +687,7 @@
         "pluginType": "API",
         "pluginId": "API",
         "createdAt": "2022-08-29T15:09:27.661Z",
-        "updatedAt": "2023-03-07T09:07:31.000Z",
+        "updatedAt": "2025-01-24T10:00:53.763Z",
         "deleted": false,
         "policies": [
             {
@@ -30621,6 +30621,88 @@
         },
         "createdAt": "2025-01-23T10:45:37.533Z",
         "updatedAt": "2025-01-23T10:47:11.765Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "67935d4b6f8101b0cfc9389f",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "stopSubscription",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/cancelSubscription"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "User Management",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "PUT",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ],
+                "body": "{\n\t\"description\": \"canceled by admin\",\n\t\"_id\":\"{{Table1.selectedRow._id}}\",\n\t\"email\":\"{{Table1.selectedRow.email}}\",\n\t\"subscriptionId\": \"{{Table1.selectedRow.subscriptionId}}\"\n\t\n}"
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "body"
+                },
+                {
+                    "key": "datasourceUrl"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "Table1.selectedRow._id",
+                "Table1.selectedRow.email",
+                "Table1.selectedRow.subscriptionId"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2025-01-24T09:28:43.417Z",
+        "updatedAt": "2025-01-24T10:13:45.380Z",
         "deleted": false,
         "policies": [
             {
