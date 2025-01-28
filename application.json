@@ -6,7 +6,7 @@
     "isPublic": true,
     "isShowPlatformTag": false,
     "createdAt": "2023-03-02T13:50:57.853Z",
-    "updatedAt": "2024-12-26T11:12:59.715Z",
+    "updatedAt": "2025-01-14T12:17:39.232Z",
     "deleted": false,
     "pages": [
         {
@@ -132,6 +132,10 @@
         {
             "_id": "User Chats",
             "isDefault": false
+        },
+        {
+            "_id": "Agent",
+            "isDefault": false
         }
     ],
     "policies": [
@@ -160,7 +164,7 @@
         "favicon": "",
         "title": "AI Chatbot",
         "css": "${env.get(\"nodeUrl\")}/css",
-        "customScript": "<script src=\"https://apis.google.com/js/api.js\"></script><script>     window.chatwootSettings = {       hideMessageBubble: false,       position: \"right\",       locale: \"en\",       type: \"expanded_bubble\",       launcherTitle: \"Chat with us now!\"     };        (function(d, t) {       var BASE_URL = \"https://uboschat-6825-674858decc7268110000013e.chatwoot-prod.ubos.tech\";       var g = d.createElement(t), s = d.getElementsByTagName(t)[0];       g.src = BASE_URL + \"/packs/js/sdk.js\";       g.defer = true;       g.async = true;       s.parentNode.insertBefore(g, s);              g.onload = function() {         if (window.chatwootSDK) {           window.chatwootSDK.run({             websiteToken: 'FHKsyR2mCEJF4V4Vzp5Zs6YM',             baseUrl: BASE_URL           });         } else {           console.error('chatwootSDK is not available.');         }       };          g.onerror = function() {         console.error('Failed to load the Chatwoot SDK.');       };     })(document, \"script\");   </script>"
+        "customScript": "<script src=\"https://apis.google.com/js/api.js\"></script><script>     window.chatwootSettings = {       hideMessageBubble: false,       position: \"right\",       locale: \"en\",           };        (function(d, t) {       var BASE_URL = \"https://uboschat-6825-674858decc7268110000013e.chatwoot-prod.ubos.tech\";       var g = d.createElement(t), s = d.getElementsByTagName(t)[0];       g.src = BASE_URL + \"/packs/js/sdk.js\";       g.defer = true;       g.async = true;       s.parentNode.insertBefore(g, s);              g.onload = function() {         if (window.chatwootSDK) {           window.chatwootSDK.run({             websiteToken: 'FHKsyR2mCEJF4V4Vzp5Zs6YM',             baseUrl: BASE_URL           });         } else {           console.error('chatwootSDK is not available.');         }       };          g.onerror = function() {         console.error('Failed to load the Chatwoot SDK.');       };     })(document, \"script\");   </script>"
     },
     "lastDeployedAt": "2022-10-19T15:59:36.363Z",
     "is_custom_auth": true,
@@ -733,7 +737,7 @@
                         },
                         {
                             "isVisible": true,
-                            "text": "{{main.URL.fullPath.split('/').pop().split('?')[0].replace('%20', ' ') === 'Dashboard' ? main.user.auth_module.user.translation.dashboard.name : main.URL.fullPath.split('/').pop().split('?')[0].replace('%20', ' ') === 'Training' ? main.user.auth_module.user.translation.menu.training : main.URL.fullPath.split('/').pop().split('?')[0].replace('%20', ' ') === 'User Chats' ? main.user.auth_module.user.translation.userChats.name : main.URL.fullPath.split('/').pop().split('?')[0].replace('%20', ' ') === 'Bot Setup' ? main.user.auth_module.user.translation.menu.botsetup : main.URL.fullPath.split('/').pop().split('?')[0].replace('%20', ' ') === 'AI Setup' ? main.user.auth_module.user.translation.aiSetup.name : main.URL.fullPath.split('/').pop().split('?')[0].replace('%20', ' ') === 'DB Benchmark' ? main.user.auth_module.user.translation.dbBenchmark.name: main.URL.fullPath.split('/').pop().split('?')[0].replace('%20', ' ') === 'Model Testing' ? main.user.auth_module.user.translation.modelTesting.name : main.URL.fullPath.split('/').pop().split('?')[0].replace('%20', ' ') === 'Modules' ? main.user.auth_module.user.translation.modules.name : main.URL.fullPath.split('/').pop().split('?')[0].replace('%20', ' ') === 'AdminRoles' ? main.user.auth_module.user.translation.adminRoles.name : main.URL.fullPath.split('/').pop().split('?')[0].replace('%20', ' ') === 'User Management' ? main.user.auth_module.user.translation.userManagement.name : main.URL.fullPath.split('/').pop().split('?')[0].replace('%20', ' ') === 'Chat' ? main.user.auth_module.user.translation.chats.name : main.URL.fullPath.split('/').pop().split('?')[0].replace('%20', ' ') === 'App settings' ? main.user.auth_module.user.translation.appSettings.name : main.URL.fullPath.split('/').pop().split('?')[0].replace('%20', ' ') === 'Demo' ? main.user.auth_module.user.translation.demo.name : main.URL.fullPath.split('/').pop().split('?')[0].replace('%20', ' ') === 'Vectors' ? main.user.auth_module.user.translation.vectors.name : main.URL.fullPath.split('/').pop().split('?')[0].replace('%20', ' ') === 'Home' ? main.user.auth_module.user.translation.home.name : main.URL.fullPath.split('/').pop().split('?')[0].replace('%20', ' ') === 'Create Chatbot' ? main.user.auth_module.user.translation.menu.onboarding : ' '}}",
+                            "text": "{{main.URL.fullPath.split('/').pop().split('?')[0].replace('%20', ' ') === 'Dashboard' ? main.user.auth_module.user.translation.dashboard.name : main.URL.fullPath.split('/').pop().split('?')[0].replace('%20', ' ') === 'Training' ? main.user.auth_module.user.translation.menu.training : main.URL.fullPath.split('/').pop().split('?')[0].replace('%20', ' ') === 'User Chats' ? main.user.auth_module.user.translation.userChats.name : main.URL.fullPath.split('/').pop().split('?')[0].replace('%20', ' ') === 'Bot Setup' ? main.user.auth_module.user.translation.menu.botsetup : main.URL.fullPath.split('/').pop().split('?')[0].replace('%20', ' ') === 'AI Setup' ? main.user.auth_module.user.translation.aiSetup.name : main.URL.fullPath.split('/').pop().split('?')[0].replace('%20', ' ') === 'DB Benchmark' ? main.user.auth_module.user.translation.dbBenchmark.name: main.URL.fullPath.split('/').pop().split('?')[0].replace('%20', ' ') === 'Model Testing' ? main.user.auth_module.user.translation.modelTesting.name : main.URL.fullPath.split('/').pop().split('?')[0].replace('%20', ' ') === 'Modules' ? main.user.auth_module.user.translation.modules.name : main.URL.fullPath.split('/').pop().split('?')[0].replace('%20', ' ') === 'AdminRoles' ? main.user.auth_module.user.translation.adminRoles.name : main.URL.fullPath.split('/').pop().split('?')[0].replace('%20', ' ') === 'User Management' ? main.user.auth_module.user.translation.userManagement.name : main.URL.fullPath.split('/').pop().split('?')[0].replace('%20', ' ') === 'Chat' ? main.user.auth_module.user.translation.chats.name : main.URL.fullPath.split('/').pop().split('?')[0].replace('%20', ' ') === 'App settings' ? main.user.auth_module.user.translation.appSettings.name : main.URL.fullPath.split('/').pop().split('?')[0].replace('%20', ' ') === 'Demo' ? main.user.auth_module.user.translation.demo.name : main.URL.fullPath.split('/').pop().split('?')[0].replace('%20', ' ') === 'Vectors' ? main.user.auth_module.user.translation.vectors.name : main.URL.fullPath.split('/').pop().split('?')[0].replace('%20', ' ') === 'Home' ? main.user.auth_module.user.translation.home.name : main.URL.fullPath.split('/').pop().split('?')[0].replace('%20', ' ') === 'Create Chatbot' ? main.user.auth_module.user.translation.menu.onboarding : 'Agent'}}",
                             "fontSize": "HEADING1",
                             "fontStyle": "BOLD",
                             "textAlign": "LEFT",
@@ -870,7 +874,7 @@
                                     "label": "Explore the Platform",
                                     "widgetId": "f4l86f8s9g",
                                     "isDisabled": false,
-                                    "isVisible": true,
+                                    "isVisible": false,
                                     "onClick": "{{navigateTo('https://platform.ubos.tech/', {},'NEW_WINDOW')}}",
                                     "iconName": "double-chevron-right",
                                     "iconAlign": "right"
