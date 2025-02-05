@@ -344,7 +344,7 @@
                                             "isVisible": true,
                                             "animateLoading": true,
                                             "text": "Upgrade",
-                                            "buttonColor": "#215484",
+                                            "buttonColor": "{{main.env.mainColor}}",
                                             "buttonVariant": "PRIMARY",
                                             "placement": "CENTER",
                                             "widgetName": "Button3437c",
@@ -368,7 +368,11 @@
                                             "topRow": 0,
                                             "bottomRow": 5,
                                             "parentId": "46kvcu32ey",
-                                            "dynamicBindingPathList": [],
+                                            "dynamicBindingPathList": [
+                                                {
+                                                    "key": "buttonColor"
+                                                }
+                                            ],
                                             "dynamicTriggerPathList": [
                                                 {
                                                     "key": "onClick"
