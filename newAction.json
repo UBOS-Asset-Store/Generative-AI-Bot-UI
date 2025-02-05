@@ -469,7 +469,8 @@
         "jsonPathKeys": [
             "async () => {\n\t\tawait createUser.run();\n\t\tcloseModal('ModalCreateUser');\n\t\tgetUsers.run();\n\t}"
         ],
-        "pluginType": "JS"
+        "pluginType": "JS",
+        "id": "636a250dc2e17400119dc7f6"
     },
     {
         "_id": "6364e18ec2e17400119dc7f1",
@@ -478,7 +479,7 @@
         "organizationId": "Org",
         "executeOnLoad": false,
         "actionConfiguration": {
-            "body": "async () => {\n\t\tawait editUserRole.run();\n\t\tcloseModal('ModalEditRole');\n\t\tgetUsers.run();\n\t}",
+            "body": "async () => {\n\t\tawait upUserRole.run();\n\t\tcloseModal('ModalEditRole');\n\t\tgetUsers.run();\n\t}",
             "isAsync": true,
             "timeoutInMillisecond": 10000,
             "jsArguments": [],
@@ -517,7 +518,7 @@
         "pluginType": "API",
         "pluginId": "API",
         "createdAt": "2022-11-08T09:31:03.416Z",
-        "updatedAt": "2024-07-02T09:52:16.861Z",
+        "updatedAt": "2025-02-05T11:42:41.790Z",
         "deleted": false,
         "policies": [
             {
@@ -561,7 +562,7 @@
                     }
                 ],
                 "queryParameters": [],
-                "body": "{\n\t\"firstname\": \"{{firstname_field.text}}\",\n\t\"lastname\": \"{{lastname_field.text}}\",\n\t\"email\": \"{{email_field.text}}\",\n\t\"password\": \"{{pass_field.text}}\",\n\t\"role\": \"{{field_add_user_role.selectedOptionValue}}\",\n\t\"name\": \"{{field_add_user_role.selectedOptionLabel}}\"\n}",
+                "body": "{\n\t\"company\": \"{{firstname_field.text}}\",\n\t\"logo\": \"{{lastname_field.text}}\",\n\t\"email\": \"{{email_field.text}}\",\n\t\"password\": \"{{pass_field.text}}\",\n\t\"role\": \"{{field_add_user_role.selectedOptionValue}}\",\n\t\"name\": \"{{field_add_user_role.selectedOptionLabel}}\"\n}",
                 "bodyFormData": [],
                 "formData": {
                     "apiContentType": "none"
@@ -590,9 +591,7 @@
                 "email_field.text",
                 "pass_field.text",
                 "field_add_user_role.selectedOptionValue",
-                "field_add_user_role.selectedOptionLabel",
-                "JSON.stringify(SecretQSelect_new.selectedOptionValue)",
-                "JSON.stringify(SecretWInput_new.text)"
+                "field_add_user_role.selectedOptionLabel"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
@@ -687,7 +686,7 @@
         "pluginType": "API",
         "pluginId": "API",
         "createdAt": "2022-08-29T15:09:27.661Z",
-        "updatedAt": "2025-01-24T10:00:53.763Z",
+        "updatedAt": "2025-02-05T11:41:48.030Z",
         "deleted": false,
         "policies": [
             {
@@ -707,7 +706,7 @@
             }
         ],
         "Action": {
-            "name": "editUserRole",
+            "name": "upUserRole",
             "datasource": {
                 "invalids": [],
                 "datasourceConfiguration": {
@@ -733,7 +732,7 @@
                     }
                 ],
                 "queryParameters": [],
-                "body": "{\n\t\"role\": \"{{field_user_role.selectedOptionValue}}\",\n\t\"_id\": \"{{Table1.selectedRow._id}}\"\n}",
+                "body": "{\n\t\"_id\": \"{{Table1.selectedRow._id}}\",\n\t\"logo\":\"{{logo.text}}\",\n\t\"company\":\"{{company.text}}\"\n}",
                 "bodyFormData": [],
                 "formData": {
                     "apiContentType": "none"
@@ -758,7 +757,9 @@
             "jsonPathKeys": [
                 "main.env.nodeUrl",
                 "field_user_role.selectedOptionValue",
-                "Table1.selectedRow._id"
+                "Table1.selectedRow._id",
+                "logo.text",
+                "company.text"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
@@ -9349,7 +9350,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-11-02T13:13:34.882Z",
-        "updatedAt": "2023-12-13T10:33:19.440Z",
+        "updatedAt": "2025-02-05T10:47:43.951Z",
         "deleted": false,
         "policies": [
             {
@@ -30702,7 +30703,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2025-01-24T09:28:43.417Z",
-        "updatedAt": "2025-01-24T10:13:45.380Z",
+        "updatedAt": "2025-02-05T11:42:14.273Z",
         "deleted": false,
         "policies": [
             {
@@ -30782,7 +30783,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2025-02-05T09:09:59.828Z",
-        "updatedAt": "2025-02-05T09:09:59.828Z",
+        "updatedAt": "2025-02-05T11:50:47.687Z",
         "deleted": false,
         "policies": [
             {
@@ -30863,7 +30864,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2025-02-05T09:09:59.828Z",
-        "updatedAt": "2025-02-05T09:09:59.828Z",
+        "updatedAt": "2025-02-05T11:50:45.199Z",
         "deleted": false,
         "policies": [
             {
@@ -31156,7 +31157,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2025-02-05T09:09:59.828Z",
-        "updatedAt": "2025-02-05T09:09:59.828Z",
+        "updatedAt": "2025-02-05T11:50:48.915Z",
         "deleted": false,
         "policies": [
             {
@@ -31468,14 +31469,13 @@
             "invalids": [],
             "jsonPathKeys": [
                 "main.env.nodeUrl",
-                "main.user.auth_module.user.info.user._",
                 "main.user.auth_module.user.info.user._id"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2025-02-05T09:09:59.828Z",
-        "updatedAt": "2025-02-05T09:09:59.828Z",
+        "updatedAt": "2025-02-05T11:51:06.202Z",
         "deleted": false,
         "policies": [
             {
@@ -31729,5 +31729,86 @@
             "async () => {\n\t\t//use async-await or promises\n\t}"
         ],
         "pluginType": "JS"
+    },
+    {
+        "_id": "67a34cc516d17f96056e42ab",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "activateSubscription",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/activateSubscription"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "User Management",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "POST",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "body": "{\n\t\"description\": \"canceled by admin\",\n\t\"_id\":\"{{Table1.selectedRow._id}}\",\n\t\"email\":\"{{Table1.selectedRow.email}}\"\n}",
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ]
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "body"
+                },
+                {
+                    "key": "datasourceUrl"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "Table1.selectedRow._id",
+                "Table1.selectedRow.email"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2025-02-05T11:34:29.215Z",
+        "updatedAt": "2025-02-05T11:35:14.976Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
     }
 ]
