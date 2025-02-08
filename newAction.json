@@ -686,7 +686,7 @@
         "pluginType": "API",
         "pluginId": "API",
         "createdAt": "2022-08-29T15:09:27.661Z",
-        "updatedAt": "2025-02-05T11:41:48.030Z",
+        "updatedAt": "2025-02-07T19:41:32.154Z",
         "deleted": false,
         "policies": [
             {
@@ -756,7 +756,6 @@
             "invalids": [],
             "jsonPathKeys": [
                 "main.env.nodeUrl",
-                "field_user_role.selectedOptionValue",
                 "Table1.selectedRow._id",
                 "logo.text",
                 "company.text"
@@ -31354,7 +31353,7 @@
                 "pluginId": "API",
                 "messages": []
             },
-            "executeOnLoad": false,
+            "executeOnLoad": true,
             "pageId": "Home Page",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
@@ -31395,7 +31394,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2025-02-05T09:09:59.828Z",
-        "updatedAt": "2025-02-05T09:09:59.828Z",
+        "updatedAt": "2025-02-07T19:44:02.629Z",
         "deleted": false,
         "policies": [
             {
@@ -31753,7 +31752,7 @@
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
                 "encodeParamsToggle": true,
-                "httpMethod": "POST",
+                "httpMethod": "PUT",
                 "headers": [
                     {
                         "key": "content-type",
@@ -31791,7 +31790,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2025-02-05T11:34:29.215Z",
-        "updatedAt": "2025-02-05T11:35:14.976Z",
+        "updatedAt": "2025-02-07T19:16:34.535Z",
         "deleted": false,
         "policies": [
             {
@@ -31842,7 +31841,7 @@
                     }
                 ],
                 "queryParameters": [],
-                "body": "{\n\t\"freeTrial\": {{freeTrial.isChecked}},\n\t\"trialDays\": {{trialDays.text}},\n\t\"payPerClient\": {{payPerClient.isChecked}},\n\t\"clientCost\": {{clientCost.text}},\n\t\"devOrgID\": \"{{orgID.text}}\",\n\t\"stripeID\": \"{{stripeCustomer.text}}\",\n\t\"whiteLabelPrice\": \"{{whiteLabelPriceID.text}}\",\n\t\"backendURL\": \"{{webhookURL.text}}\",\n\t\"chatDashboardURL\": \"{{chatDashboardUrl.text}}\",\n\t\"botDashboardURL\": \"{{Bot_dashboadr_url.text}}\",\n\t\"companyName\": \"{{companyName.text}}\"\n}",
+                "body": "{\n\t\"freeTrial\": {{freeTrial.isChecked}},\n\t\"trialDays\": {{trialDays.text}},\n\t\"payPerClient\": {{payPerClient.isChecked}},\n\t\"clientCost\": {{clientCost.text}},\n\t\"devOrgID\": \"{{orgID.text}}\",\n\t\"stripeID\": \"{{stripeCustomer.text}}\",\n\t\"whiteLabelPrice\": \"{{whiteLabelPriceID.text}}\",\n\t\"backendURL\": \"{{webhookURL.text}}\",\n\t\"chatDashboardURL\": \"{{chatDashboardUrl.text}}\",\n\t\"botDashboardURL\": \"{{Bot_dashboadr_url.text}}\",\n\t\"companyName\": \"{{companyName.text}}\",\n\t\"googleAppPassword\":\"{{appPassword.text}}\",\n\t\"companyEmail\": \"{{email.text}}\"\n}",
                 "bodyFormData": [],
                 "formData": {
                     "apiContentType": "none"
@@ -31875,13 +31874,721 @@
                 "webhookURL.text",
                 "chatDashboardUrl.text",
                 "Bot_dashboadr_url.text",
-                "companyName.text"
+                "companyName.text",
+                "appPassword.text}\",\n\t\"companyEmail\": \"{{email.text",
+                "email.text,email.text,email.text,email.text,main.env.nodeUrl,email.text,2025-02-07T11:01:27.842Z,2025-02-07T19:18:08.250Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,}app},\n\t\"companyEmail\": \"{{email.text,2025-02-07T11:01:27.842Z,2025-02-07T19:18:09.901Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,}appPassword.},\n\t\"companyEmail\": \"{{email.text,2025-02-07T11:01:27.842Z,2025-02-07T19:18:12.046Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,}appPassword.text},\n\t\"companyEmail\": \"{{email.text,2025-02-07T11:01:27.842Z,2025-02-07T19:18:13.679Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,appPassword.text},\n\t\"companyEmail\": \"{{email.text,2025-02-07T11:01:27.842Z,2025-02-07T19:18:16.976Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,appPassword.text}\",\n\t\"companyEmail\": \"{{email.text,2025-02-07T11:01:27.842Z,2025-02-07T19:18:21.018Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl",
+                "appPassword.text",
+                "email.text"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2025-02-07T11:01:27.842Z",
-        "updatedAt": "2025-02-07T14:37:35.233Z",
+        "updatedAt": "2025-02-07T19:18:24.400Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "67a6648416d17f96056e42af",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "subscribeToPro",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/subscribeToBot"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "Subscription Page",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "POST",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ],
+                "body": "{\n\t\"email\":\"{{main.user.auth_module.user.info.user.email}}\"\n}",
+                "path": ""
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "body"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "main.user.auth_module.user.info.user.email"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2025-02-07T19:52:36.204Z",
+        "updatedAt": "2025-02-07T19:52:36.204Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "67a6648416d17f96056e42b0",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "contactUS",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/supportRequest"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "Subscription Page",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "POST",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "body": "{\n\t\"email\":{{JSON.stringify(emailSupp.text)}},\n\t\"message\":{{JSON.stringify(messageSupport.text)}}\n}",
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ]
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "body"
+                },
+                {
+                    "key": "datasourceUrl"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "JSON.stringify(e.text)",
+                "JSON.stringify(messageSupport.text)",
+                "main.env.nodeUrl,2024-07-17T06:51:26.156Z,2024-11-06T16:26:21.269Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2024-07-17T06:51:26.156Z,2024-12-16T10:28:16.996Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2024-07-17T06:51:26.156Z,2024-12-16T10:28:22.853Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,JSON.stringify(e.text),2024-07-17T06:51:26.156Z,2024-12-16T10:28:24.554Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl",
+                "JSON.stringify(emailSupp.text)"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2025-02-07T19:52:36.204Z",
+        "updatedAt": "2025-02-07T19:52:36.204Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "67a6648416d17f96056e42b1",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "change_lang",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/check_token2"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "Subscription Page",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "POST",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ],
+                "body": "{\n\"lang\":{{JSON.stringify(main.store.lg)}}\n}"
+            },
+            "dynamicBindingPathList": [],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "JSON.stringify(main.store.lg)"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2025-02-07T19:52:36.204Z",
+        "updatedAt": "2025-02-07T19:52:36.204Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "67a6648416d17f96056e42b2",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "getProfile",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/getProfile"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": true,
+            "pageId": "Subscription Page",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "GET",
+                "headers": [],
+                "queryParameters": [
+                    {
+                        "key": "_id",
+                        "value": "{{main.user.auth_module.user.info.user._id}}"
+                    }
+                ],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ],
+                "path": ""
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "datasourceUrl"
+                },
+                {
+                    "key": "queryParameters[0].value"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "main.user.auth_module.user.info.user._id"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2025-02-07T19:52:36.204Z",
+        "updatedAt": "2025-02-07T19:52:36.204Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "67a6648416d17f96056e42b3",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "askSupport",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/supportRequest"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "Subscription Page",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "POST",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ],
+                "body": "{\n\t\"email\":{{JSON.stringify(support_user_email_input.text)}},\n\t\"message\":{{JSON.stringify(support_user_question_input.text)}}\n}"
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "body"
+                },
+                {
+                    "key": "datasourceUrl"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "JSON.stringify(support_user_email_input.text)",
+                "JSON.stringify(supportName2.text)",
+                "JSON.stringify(support_user_question_input.text)"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2025-02-07T19:52:36.204Z",
+        "updatedAt": "2025-02-07T19:52:36.204Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "67a6648416d17f96056e42b4",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "getProduct",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/getProduct"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": true,
+            "pageId": "Subscription Page",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "GET",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "none"
+                    }
+                ],
+                "queryParameters": [],
+                "body": "",
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ]
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "datasourceUrl"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2025-02-07T19:52:36.204Z",
+        "updatedAt": "2025-02-07T19:52:36.204Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "67a6648416d17f96056e42b5",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "createCheckoutSession",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/createCheckoutSession"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "Subscription Page",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "POST",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ],
+                "body": "{\n\t\"id\": \"{{Text56.text}}\",\n\t\"uiURL\": {{JSON.stringify(main.env.uiUrl)}}\n}"
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "datasourceUrl"
+                },
+                {
+                    "key": "body"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "Text56.text",
+                "JSON.stringify(main.env.uiUrl)"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2025-02-07T19:52:36.204Z",
+        "updatedAt": "2025-02-07T19:52:36.204Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "67a6648416d17f96056e42b6",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "subscribeToBot",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/subscribeToBot"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "Subscription Page",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "POST",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "body": "{\n\t\"email\":\"{{main.user.auth_module.user.info.user.email}}\",\n\t\"forkTemplate\":true\n}",
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "application/json"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ]
+            },
+            "dynamicBindingPathList": [],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "main.user.auth_module.user.info.user.email"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2025-02-07T19:52:36.204Z",
+        "updatedAt": "2025-02-07T19:52:36.204Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "67a6648416d17f96056e42b7",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "createSession",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/createCheckoutSession"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "Subscription Page",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "POST",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ],
+                "body": "{\n\t\"id\": \"{{Text57.text}}\",\n\t\"uiURL\": {{JSON.stringify(main.env.uiUrl)}}\n}"
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "body"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "Text57.text",
+                "JSON.stringify(main.env.uiUrl)"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2025-02-07T19:52:36.204Z",
+        "updatedAt": "2025-02-07T19:52:36.204Z",
         "deleted": false,
         "policies": [
             {

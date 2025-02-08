@@ -140,6 +140,10 @@
         {
             "_id": "Home Page",
             "isDefault": false
+        },
+        {
+            "_id": "Subscription Page",
+            "isDefault": false
         }
     ],
     "policies": [
