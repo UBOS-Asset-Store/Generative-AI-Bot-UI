@@ -771,7 +771,7 @@
         "pluginType": "API",
         "pluginId": "API",
         "createdAt": "2022-08-29T15:05:45.060Z",
-        "updatedAt": "2023-03-07T09:18:56.882Z",
+        "updatedAt": "2025-02-08T17:49:52.269Z",
         "deleted": false,
         "policies": [
             {
@@ -31875,16 +31875,15 @@
                 "chatDashboardUrl.text",
                 "Bot_dashboadr_url.text",
                 "companyName.text",
-                "appPassword.text}\",\n\t\"companyEmail\": \"{{email.text",
-                "email.text,email.text,email.text,email.text,main.env.nodeUrl,email.text,2025-02-07T11:01:27.842Z,2025-02-07T19:18:08.250Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,}app},\n\t\"companyEmail\": \"{{email.text,2025-02-07T11:01:27.842Z,2025-02-07T19:18:09.901Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,}appPassword.},\n\t\"companyEmail\": \"{{email.text,2025-02-07T11:01:27.842Z,2025-02-07T19:18:12.046Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,}appPassword.text},\n\t\"companyEmail\": \"{{email.text,2025-02-07T11:01:27.842Z,2025-02-07T19:18:13.679Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,appPassword.text},\n\t\"companyEmail\": \"{{email.text,2025-02-07T11:01:27.842Z,2025-02-07T19:18:16.976Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,appPassword.text}\",\n\t\"companyEmail\": \"{{email.text,2025-02-07T11:01:27.842Z,2025-02-07T19:18:21.018Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl",
                 "appPassword.text",
-                "email.text"
+                "email.text",
+                "email.text,email.text,email.text,email.text,email.text,main.env.nodeUrl,email.text,2025-02-07T11:01:27.842Z,2025-02-07T19:18:08.250Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,}app},\n\t\"companyEmail\": \"{{email.text,2025-02-07T11:01:27.842Z,2025-02-07T19:18:09.901Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,}appPassword.},\n\t\"companyEmail\": \"{{email.text,2025-02-07T11:01:27.842Z,2025-02-07T19:18:12.046Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,}appPassword.text},\n\t\"companyEmail\": \"{{email.text,2025-02-07T11:01:27.842Z,2025-02-07T19:18:13.679Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,appPassword.text},\n\t\"companyEmail\": \"{{email.text,2025-02-07T11:01:27.842Z,2025-02-07T19:18:16.976Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,appPassword.text}\",\n\t\"companyEmail\": \"{{email.text,2025-02-07T11:01:27.842Z,2025-02-07T19:18:21.018Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,appPassword.text,email.text,2025-02-07T11:01:27.842Z,2025-02-07T19:18:24.400Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2025-02-07T11:01:27.842Z",
-        "updatedAt": "2025-02-07T19:18:24.400Z",
+        "updatedAt": "2025-02-08T17:30:55.924Z",
         "deleted": false,
         "policies": [
             {
@@ -32356,7 +32355,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2025-02-07T19:52:36.204Z",
-        "updatedAt": "2025-02-07T19:52:36.204Z",
+        "updatedAt": "2025-02-08T09:51:59.395Z",
         "deleted": false,
         "policies": [
             {
@@ -32541,7 +32540,7 @@
             "datasource": {
                 "name": "DEFAULT_REST_DATASOURCE",
                 "datasourceConfiguration": {
-                    "url": "{{main.env.nodeUrl}}/createCheckoutSession"
+                    "url": "{{main.env.nodeUrl}}/checkout/sessions"
                 },
                 "invalids": [],
                 "isValid": true,
@@ -32575,6 +32574,9 @@
             "dynamicBindingPathList": [
                 {
                     "key": "body"
+                },
+                {
+                    "key": "datasourceUrl"
                 }
             ],
             "isValid": true,
@@ -32588,7 +32590,289 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2025-02-07T19:52:36.204Z",
-        "updatedAt": "2025-02-07T19:52:36.204Z",
+        "updatedAt": "2025-02-08T09:35:45.028Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "67a7348a16d17f96056e42b8",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "checkPaymentMethod",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/checkPaymentMethod"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "User Management",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "GET",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "none"
+                    }
+                ],
+                "queryParameters": [],
+                "body": "",
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ]
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "datasourceUrl"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2025-02-08T10:40:10.558Z",
+        "updatedAt": "2025-02-08T16:29:17.881Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "67a734e716d17f96056e42b9",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "getAppAdmin",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/getAppAdmin"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": true,
+            "pageId": "User Management",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "GET",
+                "headers": [],
+                "queryParameters": [],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ]
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "datasourceUrl"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2025-02-08T10:41:43.028Z",
+        "updatedAt": "2025-02-08T17:49:48.641Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "67a7977616d17f96056e42ba",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "managePaymentMethod",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/managePaymentMethod"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "Subscription Page",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "GET",
+                "headers": [],
+                "queryParameters": [],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ]
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "datasourceUrl"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2025-02-08T17:42:14.368Z",
+        "updatedAt": "2025-02-08T17:47:40.416Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "67a7994616d17f96056e42bb",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "getAppAdmin",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/getAppAdmin"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "Subscription Page",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "GET",
+                "headers": [],
+                "queryParameters": [],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ]
+            },
+            "dynamicBindingPathList": [],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2025-02-08T17:49:58.432Z",
+        "updatedAt": "2025-02-08T17:51:17.784Z",
         "deleted": false,
         "policies": [
             {
