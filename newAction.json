@@ -31845,7 +31845,7 @@
                     }
                 ],
                 "queryParameters": [],
-                "body": "{\n\t\"freeTrial\": {{freeTrial.isChecked}},\n\t\"trialDays\": {{trialDays.text}},\n\t\"payPerClient\": {{payPerClient.isChecked}},\n\t\"clientCost\": {{clientCost.text}},\n\t\"devOrgID\": \"{{orgID.text}}\",\n\t\"stripeID\": \"{{stripeCustomer.text}}\",\n\t\"whiteLabelPrice\": \"{{whiteLabelPriceID.text}}\",\n\t\"backendURL\": \"{{webhookURL.text}}\",\n\t\"chatDashboardURL\": \"{{chatDashboardUrl.text}}\",\n\t\"botDashboardURL\": \"{{Bot_dashboadr_url.text}}\",\n\t\"companyName\": \"{{companyName.text}}\",\n\t\"googleAppPassword\":\"{{appPassword.text}}\",\n\t\"companyEmail\": \"{{email.text}}\"\n}",
+                "body": "{\n\t\"freeTrial\": {{freeTrial.isChecked}},\n\t\"trialDays\": {{trialDays.text}},\n\t\"payPerClient\": {{payPerClient.isChecked}},\n\t\"clientCost\": {{clientCost.text}},\n\t\"devOrgID\": \"{{orgID.text}}\",\n\t\"stripeID\": \"{{stripeCustomer.text}}\",\n\t\"whiteLabelPrice\": \"{{whiteLabelPriceID.text}}\",\n\t\"backendURL\": \"{{webhookURL.text}}\",\n\t\"chatDashboardURL\": \"{{chatDashboardUrl.text}}\",\n\t\"botDashboardURL\": \"{{Bot_dashboadr_url.text}}\",\n\t\"companyName\": \"{{companyName.text}}\",\n\t\"emailPassword\":\"{{appPassword.text}}\",\n\t\"companyEmail\": \"{{email.text}}\",\n\t\"host\": \"{{host.text}}\"\n}",
                 "bodyFormData": [],
                 "formData": {
                     "apiContentType": "none"
@@ -31881,13 +31881,14 @@
                 "companyName.text",
                 "appPassword.text",
                 "email.text",
-                "email.text,email.text,email.text,email.text,email.text,main.env.nodeUrl,email.text,2025-02-07T11:01:27.842Z,2025-02-07T19:18:08.250Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,}app},\n\t\"companyEmail\": \"{{email.text,2025-02-07T11:01:27.842Z,2025-02-07T19:18:09.901Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,}appPassword.},\n\t\"companyEmail\": \"{{email.text,2025-02-07T11:01:27.842Z,2025-02-07T19:18:12.046Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,}appPassword.text},\n\t\"companyEmail\": \"{{email.text,2025-02-07T11:01:27.842Z,2025-02-07T19:18:13.679Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,appPassword.text},\n\t\"companyEmail\": \"{{email.text,2025-02-07T11:01:27.842Z,2025-02-07T19:18:16.976Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,appPassword.text}\",\n\t\"companyEmail\": \"{{email.text,2025-02-07T11:01:27.842Z,2025-02-07T19:18:21.018Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,appPassword.text,email.text,2025-02-07T11:01:27.842Z,2025-02-07T19:18:24.400Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl"
+                "host.text",
+                "email.text,2025-02-07T11:01:27.842Z,2025-02-07T19:18:13.679Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,appPassword.text},\n\t\"companyEmail\": \"{{email.text,2025-02-07T11:01:27.842Z,2025-02-07T19:18:16.976Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,appPassword.text}\",\n\t\"companyEmail\": \"{{email.text,2025-02-07T11:01:27.842Z,2025-02-07T19:18:21.018Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,appPassword.text,email.text,2025-02-07T11:01:27.842Z,2025-02-07T19:18:24.400Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2025-02-07T11:01:27.842Z,2025-02-08T17:30:55.924Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2025-02-07T11:01:27.842Z,2025-02-14T13:04:55.516Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2025-02-07T11:01:27.842Z,2025-02-14T13:04:59.805Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2025-02-07T11:01:27.842Z,2025-02-14T13:05:01.326Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2025-02-07T11:01:27.842Z,2025-02-14T13:05:03.683Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,host.text,2025-02-07T11:01:27.842Z,2025-02-14T13:05:11.562Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2025-02-07T11:01:27.842Z",
-        "updatedAt": "2025-02-08T17:30:55.924Z",
+        "updatedAt": "2025-02-14T13:06:09.381Z",
         "deleted": false,
         "policies": [
             {
