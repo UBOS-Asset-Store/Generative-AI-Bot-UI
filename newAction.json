@@ -28296,7 +28296,7 @@
                     }
                 ],
                 "queryParameters": [],
-                "body": "{\n\t\"ownerId\":{{JSON.stringify(main.user.auth_module.user.info.user._id)}},\n\t\"email\": {{JSON.stringify(main.user.auth_module.user.info.user.email)}},\n\t\"knowledge_baseName\":{{JSON.stringify(knowledge_base_customChat.selectedOptionLabel)}},\n\t\"knowledge_baseType\":{{JSON.stringify(customchattype.text)}},\n\t\"id_base\":{{JSON.stringify(knowledge_base_customChat.selectedOptionValue)}}\n}",
+                "body": "{\n\t\"ownerId\":{{JSON.stringify(main.user.auth_module.user.info.user._id)}},\n\t\"email\": {{JSON.stringify(main.user.auth_module.user.info.user.email)}},\n\t\"knowledge_baseName\":{{JSON.stringify(knowledge_base_api.selectedOptionLabel)}},\n\t\"knowledge_baseType\":{{JSON.stringify(apitype.text)}},\n\t\"id_base\":{{JSON.stringify(knowledge_base_api.selectedOptionValue)}}\n}",
                 "bodyFormData": [],
                 "formData": {
                     "apiContentType": "none"
@@ -28739,7 +28739,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-12-03T10:01:45.115Z",
-        "updatedAt": "2025-01-09T15:38:42.624Z",
+        "updatedAt": "2025-02-14T09:13:24.576Z",
         "deleted": false,
         "policies": [
             {
@@ -32877,6 +32877,89 @@
         },
         "createdAt": "2025-02-08T17:49:58.432Z",
         "updatedAt": "2025-02-08T17:51:17.784Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "67af092616d17f96056e42bc",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "saveAPI",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/saveApiChannel"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "Bot Setup",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "POST",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "body": "{\n\t\"apiCallback\":{{JSON.stringify(apiCallback.text)}},\n\t\"base\": \"{{knowledge_base_api.selectedOptionValue}}\",\n\t\"ownerId\":{{JSON.stringify(main.user.auth_module.user.info.user._id)}},\n\t\"email\": {{JSON.stringify(main.user.auth_module.user.info.user.email)}},\n\t\"knowledge_baseName\":{{JSON.stringify(knowledge_base_api.selectedOptionLabel)}},\n\t\"knowledge_baseType\":{{JSON.stringify(apitype.text)}},\n\t\"id_base\":{{JSON.stringify(knowledge_base_api.selectedOptionValue)}}\n}",
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ]
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "datasourceUrl"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "JSON.stringify(apiCallback.text)",
+                "knowledge_base_api.selectedOptionValue",
+                "JSON.stringify(main.user.auth_module.user.info.user._id)",
+                "JSON.stringify(main.user.auth_module.user.info.user.email)",
+                "JSON.stringify(knowledge_base_api.selectedOptionLabel)",
+                "JSON.stringify(apitype.text)",
+                "JSON.stringify(knowledge_base_api.selectedOptionValue)"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2025-02-14T09:13:10.376Z",
+        "updatedAt": "2025-02-14T09:27:15.357Z",
         "deleted": false,
         "policies": [
             {
