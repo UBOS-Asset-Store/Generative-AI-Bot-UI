@@ -29979,7 +29979,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2025-01-09T13:12:01.406Z",
-        "updatedAt": "2025-01-15T08:56:13.021Z",
+        "updatedAt": "2025-03-05T08:32:12.439Z",
         "deleted": false,
         "policies": [
             {
@@ -33274,6 +33274,87 @@
         },
         "createdAt": "2025-02-19T12:33:06.374Z",
         "updatedAt": "2025-02-19T12:34:01.639Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "67c80a879020ddff67f06c1f",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "saveCustomIntegration",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/saveCustomIntegration"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "Bot Setup",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "POST",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "body": "{\n\t\"code\":{{JSON.stringify(Code1Copy.value)}}\n}",
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ]
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "datasourceUrl"
+                },
+                {
+                    "key": "body"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "JSON.stringify()(Code1Copy.value)",
+                "JSON.stringify(Code1Copy.value)"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2025-03-05T08:25:43.074Z",
+        "updatedAt": "2025-03-05T08:32:28.862Z",
         "deleted": false,
         "policies": [
             {
