@@ -28081,6 +28081,9 @@
                 },
                 {
                     "key": "queryParameters[0].value"
+                },
+                {
+                    "key": "path"
                 }
             ],
             "isValid": true,
@@ -28093,7 +28096,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-12-03T10:01:45.114Z",
-        "updatedAt": "2025-01-14T14:25:26.509Z",
+        "updatedAt": "2025-03-05T09:09:10.745Z",
         "deleted": false,
         "policies": [
             {
@@ -28941,7 +28944,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-12-05T16:58:20.858Z",
-        "updatedAt": "2024-12-06T07:47:00.193Z",
+        "updatedAt": "2025-03-05T09:09:09.830Z",
         "deleted": false,
         "policies": [
             {
@@ -33324,7 +33327,7 @@
                     }
                 ],
                 "queryParameters": [],
-                "body": "{\n\t\"code\":{{JSON.stringify(Code1Copy.value)}}\n}",
+                "body": "{\n\t\"code\":{{JSON.stringify(customIntegration.text)}}\n}",
                 "bodyFormData": [],
                 "formData": {
                     "apiContentType": "none"
@@ -33347,14 +33350,14 @@
             "invalids": [],
             "jsonPathKeys": [
                 "main.env.nodeUrl",
-                "JSON.stringify()(Code1Copy.value)",
-                "JSON.stringify(Code1Copy.value)"
+                "JSON.stringify(customIntegration.)",
+                "JSON.stringify(customIntegration.text)"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2025-03-05T08:25:43.074Z",
-        "updatedAt": "2025-03-05T08:32:28.862Z",
+        "updatedAt": "2025-03-05T08:54:01.009Z",
         "deleted": false,
         "policies": [
             {
