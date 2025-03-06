@@ -24273,14 +24273,13 @@
             "invalids": [],
             "jsonPathKeys": [
                 "main.env.nodeUrl",
-                "JSON.stringify(pr)",
                 "JSON.stringify(priceID.text)"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-11-08T06:53:28.020Z",
-        "updatedAt": "2024-11-08T06:54:19.921Z",
+        "updatedAt": "2025-03-05T14:13:01.832Z",
         "deleted": false,
         "policies": [
             {
