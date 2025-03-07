@@ -26905,16 +26905,15 @@
             "jsonPathKeys": [
                 "main.env.nodeUrl",
                 "JSON.stringify(dbSelect.selectedOptionValue)",
-                "JSON.stringify(RichTextEditor1.)",
+                "JSON.stringify(RichTextEditor1.text)",
                 "JSON.stringify(model_selectCopy.selectedOptionValue)",
-                "JSON.stringify(getAllBases.data[0].systemName)",
-                "JSON.stringify(RichTextEditor1.text)"
+                "JSON.stringify(getAllBases.data[0].systemName)"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-11-20T10:24:07.143Z",
-        "updatedAt": "2024-12-04T11:57:55.831Z",
+        "updatedAt": "2025-03-06T15:32:34.266Z",
         "deleted": false,
         "policies": [
             {
@@ -26974,7 +26973,7 @@
                         "value": true
                     }
                 ],
-                "body": "{\n  \"baseId\":{{JSON.stringify(dbSelect.selectedOptionValue)}},\n\t\"welcomeMessage\":{{JSON.stringify(welcome.text)}},\n\t\"errorMessage\":{{JSON.stringify(unable.text)}},\n\t\"systemName\":{{JSON.stringify(getAllBases.data[0].systemName)}}\n}"
+                "body": "{\n  \"baseId\":{{JSON.stringify(dbSelect.selectedOptionValue)}},\n\t\"errorMessage\":{{JSON.stringify(unable.text)}},\n\t\"systemName\":{{JSON.stringify(getAllBases.data[0].systemName)}}\n}"
             },
             "dynamicBindingPathList": [
                 {
@@ -26989,7 +26988,6 @@
             "jsonPathKeys": [
                 "main.env.nodeUrl",
                 "JSON.stringify(dbSelect.selectedOptionValue)",
-                "JSON.stringify(welcome.text)",
                 "JSON.stringify(unable.text)",
                 "JSON.stringify(getAllBases.data[0].systemName)"
             ],
@@ -26997,7 +26995,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-11-20T10:24:07.143Z",
-        "updatedAt": "2025-01-03T10:51:28.247Z",
+        "updatedAt": "2025-03-07T15:00:24.481Z",
         "deleted": false,
         "policies": [
             {
